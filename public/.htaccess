@@ -8,7 +8,7 @@
     # LiteSpeed & Apache WebSocket Reverse Proxy for Game Server
     RewriteCond %{HTTP:Upgrade} websocket [NC]
     RewriteCond %{HTTP:Connection} upgrade [NC]
-    RewriteRule ^nadsocket(.*)$ http://127.0.0.1:18080/nadsocket$1 [P,L]
+    RewriteRule ^nadsocket(.*)$ ws://127.0.0.1:18080/nadsocket$1 [P,L]
 
     # Direct Game version & update handlers (high-speed native Cocos2d-x compatibility)
     RewriteRule ^game/version/?$ game/version.php [L,QSA]

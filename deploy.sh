@@ -90,7 +90,7 @@ if [ -n "$PY_BIN" ]; then
     pkill -f "game_server.py" 2>/dev/null || true
     sleep 1
     nohup "$PY_BIN" game_server.py > game_server.log 2>&1 &
-    sleep 2
+    sleep 3
     if pgrep -f "game_server.py" >/dev/null 2>&1; then
         echo "   [✔] Game Server (Python daemon) berhasil dijalankan aktif di background!"
         if [ -f ".game_port" ]; then
@@ -98,6 +98,8 @@ if [ -n "$PY_BIN" ]; then
             echo "   [+] Port aktif WebSocket lokal: $ACTIVE_PORT"
             sed -i "s|127.0.0.1:[0-9]*|127.0.0.1:$ACTIVE_PORT|g" public/.htaccess
         fi
+        echo "   [+] Log startup game server:"
+        tail -n 10 game_server.log 2>/dev/null || true
     else
         echo "   [!] Game Server gagal berjalan di background. Isi game_server.log:"
         tail -n 25 game_server.log 2>/dev/null || true

@@ -1101,6 +1101,8 @@ async def main():
     try:
         with open(port_file, 'w', encoding='utf-8') as pf:
             pf.write(str(bound_port))
+            pf.flush()
+            os.fsync(pf.fileno())
     except Exception:
         pass
 
