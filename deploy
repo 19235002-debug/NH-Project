@@ -27,8 +27,8 @@ fi
 # 2. Sinkronisasi Git dari GitHub
 echo "📥 [1/6] Menarik update kode terbaru dari GitHub..."
 git fetch origin main || git fetch origin master || true
-CURRENT_BRANCH=$(git branch --show-current 2>/dev/null || echo "main")
-git reset --hard "origin/$CURRENT_BRANCH" 2>/dev/null || git pull origin "$CURRENT_BRANCH" 2>/dev/null || true
+git checkout -B main origin/main 2>/dev/null || git reset --hard origin/main 2>/dev/null || git reset --hard FETCH_HEAD 2>/dev/null || true
+echo "   [+] Kode berhasil disinkronkan ke commit: $(git rev-parse --short HEAD 2>/dev/null || echo 'terbaru')"
 
 # 3. Environment & Configuration Check
 echo "⚙️ [2/6] Memeriksa file konfigurasi environment (.env)..."
