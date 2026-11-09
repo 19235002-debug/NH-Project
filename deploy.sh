@@ -33,22 +33,17 @@ git reset --hard "origin/$CURRENT_BRANCH" 2>/dev/null || git pull origin "$CURRE
 # 3. Environment & Configuration Check
 echo "⚙️ [2/6] Memeriksa file konfigurasi environment (.env)..."
 if [ ! -f ".env" ]; then
-    if [ -f ".env.example" ]; then
-        cp .env.example .env
-        echo "   [+] File .env berhasil dibuat dari .env.example."
-        if command -v php >/dev/null 2>&1; then
-            php artisan key:generate || true
-        fi
-    fi
+    cp .env.example .env
+    echo "   [+] File .env berhasil dibuat dari .env.example."
 fi
 
-# Auto-set database credentials if in cPanel environment
-if grep -q "DB_DATABASE=ninja_heroes" .env 2>/dev/null || grep -q "DB_USERNAME=root" .env 2>/dev/null; then
-    sed -i "s/DB_DATABASE=.*/DB_DATABASE=digisla3_ninja/" .env
-    sed -i "s/DB_USERNAME=.*/DB_USERNAME=digisla3_ninja/" .env
-    sed -i 's/DB_PASSWORD=.*/DB_PASSWORD="NinjaPro2026Secure"/' .env
-    echo "   [+] Database .env otomatis disesuaikan ke digisla3_ninja."
-fi
+# Always ensure .env is correctly connected to cPanel MySQL & APP_DEBUG is set
+sed -i "s/DB_DATABASE=.*/DB_DATABASE=digisla3_ninja/" .env
+sed -i "s/DB_USERNAME=.*/DB_USERNAME=digisla3_ninja/" .env
+sed -i 's/DB_PASSWORD=.*/DB_PASSWORD="NinjaPro2026Secure"/' .env
+sed -i "s/DB_HOST=.*/DB_HOST=localhost/" .env
+sed -i "s/APP_DEBUG=.*/APP_DEBUG=true/" .env
+echo "   [+] Kredensial database .env berhasil dikonfigurasi ke digisla3_ninja."
 
 # 4. Storage & Directory Permissions
 echo "🔒 [3/6] Mengatur permissions direktori..."
