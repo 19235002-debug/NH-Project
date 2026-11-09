@@ -42,6 +42,14 @@ if [ ! -f ".env" ]; then
     fi
 fi
 
+# Auto-set database credentials if in cPanel environment
+if grep -q "DB_DATABASE=ninja_heroes" .env 2>/dev/null || grep -q "DB_USERNAME=root" .env 2>/dev/null; then
+    sed -i "s/DB_DATABASE=.*/DB_DATABASE=digisla3_ninja/" .env
+    sed -i "s/DB_USERNAME=.*/DB_USERNAME=digisla3_ninja/" .env
+    sed -i 's/DB_PASSWORD=.*/DB_PASSWORD="NinjaPro2026Secure"/' .env
+    echo "   [+] Database .env otomatis disesuaikan ke digisla3_ninja."
+fi
+
 # 4. Storage & Directory Permissions
 echo "🔒 [3/6] Mengatur permissions direktori..."
 chmod -R 755 . 2>/dev/null || true
@@ -89,3 +97,4 @@ echo "🎉 DEPLOY SELESAI & BERHASIL!"
 echo "   Situs & Backend Aktif : http://nh.digislams.my.id"
 echo "   Download Game APK     : http://nh.digislams.my.id/download/OkkaNHNE-Private.apk"
 echo "=================================================================="
+

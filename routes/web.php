@@ -22,16 +22,20 @@ use App\Http\Controllers\Game\GameClientAdapterController;
 | Mobile APK Game Client Routes (Cocos2d-x APK Compatibility)
 |--------------------------------------------------------------------------
 */
-Route::match(['get', 'post'], '/game/checkClientVersion', [GameClientAdapterController::class, 'checkClientVersion']);
-Route::match(['get', 'post'], '/game/servers', [GameClientAdapterController::class, 'servers']);
-Route::match(['get', 'post'], '/game/notice', [GameClientAdapterController::class, 'notice']);
-Route::match(['get', 'post'], '/notice', [GameClientAdapterController::class, 'notice']);
-Route::match(['get', 'post'], '/game/banStatus', [GameClientAdapterController::class, 'banStatus']);
-Route::match(['get', 'post'], '/game/createRole', [GameClientAdapterController::class, 'createRole']);
-Route::match(['get', 'post'], '/game/login', [GameClientAdapterController::class, 'handleAuth']);
-Route::match(['get', 'post'], '/game/lyto/login', [GameClientAdapterController::class, 'handleAuth']);
-Route::match(['get', 'post'], '/game/register', [GameClientAdapterController::class, 'handleAuth']);
-Route::match(['get', 'post'], '/game/lyto/register', [GameClientAdapterController::class, 'handleAuth']);
+Route::withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class])->group(function () {
+    Route::match(['get', 'post'], '/game/checkClientVersion', [GameClientAdapterController::class, 'checkClientVersion']);
+    Route::match(['get', 'post'], '/game/servers', [GameClientAdapterController::class, 'servers']);
+    Route::match(['get', 'post'], '/game/notice', [GameClientAdapterController::class, 'notice']);
+    Route::match(['get', 'post'], '/notice', [GameClientAdapterController::class, 'notice']);
+    Route::match(['get', 'post'], '/game/banStatus', [GameClientAdapterController::class, 'banStatus']);
+    Route::match(['get', 'post'], '/game/createRole', [GameClientAdapterController::class, 'createRole']);
+    Route::match(['get', 'post'], '/game/login', [GameClientAdapterController::class, 'handleAuth']);
+    Route::match(['get', 'post'], '/game/lyto/login', [GameClientAdapterController::class, 'handleAuth']);
+    Route::match(['get', 'post'], '/game/register', [GameClientAdapterController::class, 'handleAuth']);
+    Route::match(['get', 'post'], '/game/lyto/register', [GameClientAdapterController::class, 'handleAuth']);
+    Route::match(['get', 'post'], '/game/{any}', [GameClientAdapterController::class, 'fallback'])->where('any', '.*');
+});
+
 Route::get('/download', [ApkController::class, 'download'])->name('public.download');
 Route::get('/download-apk', [ApkController::class, 'download']);
 
