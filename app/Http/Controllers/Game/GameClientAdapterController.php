@@ -215,6 +215,30 @@ class GameClientAdapterController extends Controller
     }
 
     /**
+     * Native C++ Version Check (/game/version)
+     * Format: <version>#<bytes_size>
+     */
+    public function version(Request $request)
+    {
+        $this->logPacket($request);
+        $v = $request->input('v', '1.1.1');
+        return response($v . '#0', 200, [
+            'Content-Type' => 'text/plain; charset=utf-8'
+        ]);
+    }
+
+    /**
+     * Channel Update Check (/game/isUpdateLytoByChannel)
+     */
+    public function isUpdateLytoByChannel(Request $request)
+    {
+        $this->logPacket($request);
+        return response('0', 200, [
+            'Content-Type' => 'text/plain; charset=utf-8'
+        ]);
+    }
+
+    /**
      * Fallback for any other game client route
      */
     public function fallback(Request $request)

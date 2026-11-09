@@ -23,6 +23,8 @@ use App\Http\Controllers\Game\GameClientAdapterController;
 |--------------------------------------------------------------------------
 */
 Route::withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class])->group(function () {
+    Route::match(['get', 'post'], '/game/version', [GameClientAdapterController::class, 'version']);
+    Route::match(['get', 'post'], '/game/isUpdateLytoByChannel', [GameClientAdapterController::class, 'isUpdateLytoByChannel']);
     Route::match(['get', 'post'], '/game/checkClientVersion', [GameClientAdapterController::class, 'checkClientVersion']);
     Route::match(['get', 'post'], '/game/servers', [GameClientAdapterController::class, 'servers']);
     Route::match(['get', 'post'], '/game/notice', [GameClientAdapterController::class, 'notice']);
