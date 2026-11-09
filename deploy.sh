@@ -41,8 +41,9 @@ fi
 sed -i "s/DB_DATABASE=.*/DB_DATABASE=digisla3_ninja/" .env
 sed -i "s/DB_USERNAME=.*/DB_USERNAME=digisla3_ninja/" .env
 sed -i 's/DB_PASSWORD=.*/DB_PASSWORD="NinjaPro2026Secure"/' .env
-sed -i "s/DB_HOST=.*/DB_HOST=localhost/" .env
+sed -i "s/DB_HOST=.*/DB_HOST=127.0.0.1/" .env
 sed -i "s/APP_DEBUG=.*/APP_DEBUG=true/" .env
+sed -i "s/GAME_HOST=.*/GAME_HOST=nh.digislams.my.id/" .env
 echo "   [+] Kredensial database .env berhasil dikonfigurasi ke digisla3_ninja."
 
 # 4. Storage & Directory Permissions
@@ -71,20 +72,34 @@ fi
 
 # 7. Background WebSocket Game Server Management
 echo "🎮 [6/6] Memeriksa WebSocket Game Server (game_server.py)..."
-if pgrep -f "game_server.py" >/dev/null 2>&1; then
-    echo "   [✔] Game Server sudah aktif berjalan."
-else
-    if command -v python3 >/dev/null 2>&1; then
-        nohup python3 game_server.py > game_server.log 2>&1 &
-        sleep 1
-        if pgrep -f "game_server.py" >/dev/null 2>&1; then
-            echo "   [✔] Game Server (Python daemon) berhasil dijalankan di background!"
-        else
-            echo "   [i] Python server dapat dijalankan manual: python3 game_server.py &"
+
+PY_BIN=""
+for candidate in python3 python3.11 python3.10 python3.9 python3.8 python /usr/bin/python3 /usr/local/bin/python3 /usr/bin/python /opt/alt/python311/bin/python3 /opt/alt/python310/bin/python3 /opt/alt/python39/bin/python3 /opt/alt/python38/bin/python3 /opt/cpanel/ea-python3/bin/python3; do
+    if command -v "$candidate" >/dev/null 2>&1 || [ -x "$candidate" ]; then
+        PY_VER=$("$candidate" --version 2>&1 || true)
+        if echo "$PY_VER" | grep -qi "Python 3"; then
+            PY_BIN="$candidate"
+            echo "   [+] Ditemukan runtime: $candidate ($PY_VER)"
+            break
         fi
-    else
-        echo "   [i] Python3 tidak ditemukan di PATH terminal host. Layanan HTTP API tetap berjalan aktif."
     fi
+done
+
+if [ -n "$PY_BIN" ]; then
+    pkill -f "game_server.py" 2>/dev/null || true
+    sleep 1
+    nohup "$PY_BIN" game_server.py > game_server.log 2>&1 &
+    sleep 2
+    if pgrep -f "game_server.py" >/dev/null 2>&1; then
+        echo "   [✔] Game Server (Python daemon) berhasil dijalankan aktif di background!"
+    else
+        echo "   [!] Game Server gagal berjalan di background. Isi game_server.log:"
+        head -n 20 game_server.log 2>/dev/null || true
+    fi
+else
+    echo "   [!] Python 3 tidak ditemukan di PATH terminal host."
+    echo "       PATH saat ini: $PATH"
+    which python python3 2>&1 || true
 fi
 
 echo "=================================================================="

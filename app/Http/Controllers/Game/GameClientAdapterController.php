@@ -64,7 +64,7 @@ class GameClientAdapterController extends Controller
             }
         }
 
-        $wsPort = (int) env('GAME_WS_PORT', 8080);
+        $wsPort = (int) env('GAME_WS_PORT', ($hostIp === 'nh.digislams.my.id' || str_contains($hostIp, 'digislams.my.id')) ? 80 : 8080);
 
         $serverList = [
             [

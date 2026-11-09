@@ -5,12 +5,19 @@ Listens on 0.0.0.0:8080 with endpoint /nadsocket
 Connects to MySQL `ninja_heroes` and serves player data to the Cocos2d-x game client.
 """
 
+import sys
+import os
+
+# Vendorized pure-python modules (pymysql, websockets)
+_base_dir = os.path.dirname(os.path.abspath(__file__))
+_vendor_dir = os.path.join(_base_dir, 'py_modules')
+if os.path.exists(_vendor_dir) and _vendor_dir not in sys.path:
+    sys.path.insert(0, _vendor_dir)
+
 import asyncio
 import json
 import time
 import datetime
-import sys
-import os
 import re
 import pymysql
 
@@ -37,6 +44,8 @@ def load_env():
 load_env()
 
 DB_HOST = os.environ.get('DB_HOST', '127.0.0.1')
+if DB_HOST == 'localhost':
+    DB_HOST = '127.0.0.1'
 DB_PORT = int(os.environ.get('DB_PORT', 3306))
 DB_USER = os.environ.get('DB_USERNAME', 'root')
 DB_PASS = os.environ.get('DB_PASSWORD', '')
@@ -1021,21 +1030,22 @@ async def handler(websocket):
 
 async def network_ip_monitor():
     try:
-        from sync_network import get_current_local_ip, get_last_synced_ip, sync_network
-        while True:
-            await asyncio.sleep(15)
-            curr = get_current_local_ip()
-            last = get_last_synced_ip()
-            if curr and last and curr != last:
-                print(f"\n[NETWORK CHANGE DETECTED] IP changed from {last} -> {curr}!", flush=True)
-                print("[*] Running background network auto-synchronizer...", flush=True)
-                try:
-                    await asyncio.to_thread(sync_network, True)
-                    print(f"[+] Successfully adapted to new IP: {curr}\n", flush=True)
-                except Exception as ex:
-                    print(f"[!] Auto-sync error: {ex}", flush=True)
-    except Exception as e:
-        print(f"[!] Network monitor error: {e}", flush=True)
+        if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sync_network.py')):
+            from sync_network import get_current_local_ip, get_last_synced_ip, sync_network
+            while True:
+                await asyncio.sleep(15)
+                curr = get_current_local_ip()
+                last = get_last_synced_ip()
+                if curr and last and curr != last:
+                    print(f"\n[NETWORK CHANGE DETECTED] IP changed from {last} -> {curr}!", flush=True)
+                    print("[*] Running background network auto-synchronizer...", flush=True)
+                    try:
+                        await asyncio.to_thread(sync_network, True)
+                        print(f"[+] Successfully adapted to new IP: {curr}\n", flush=True)
+                    except Exception as ex:
+                        print(f"[!] Auto-sync error: {ex}", flush=True)
+    except Exception:
+        pass
 
 async def main():
     port = WS_PORT
@@ -1043,7 +1053,7 @@ async def main():
     print(f"===========================================================", flush=True)
     print(f" [*] Ninja Heroes Local Game WebSocket Server Starting...  ", flush=True)
     print(f" Listening on ws://{host}:{port}/nadsocket                 ", flush=True)
-    print(f" Database: {DB_NAME} on {DB_HOST}:3306                     ", flush=True)
+    print(f" Database: {DB_NAME} on {DB_HOST}:{DB_PORT}                 ", flush=True)
     print(f"===========================================================", flush=True)
 
     # Start live network IP monitor in background
@@ -1051,15 +1061,30 @@ async def main():
 
     # CRITICAL: compression=None prevents InvalidHeaderFormat on Cocos2d-x empty Sec-WebSocket-Extensions
     # ping_interval=None prevents native client disconnects
-    async with serve(
+    server_main = await serve(
         handler,
         host,
         port,
         compression=None,
         ping_interval=None,
         max_size=None
-    ):
-        await asyncio.Future()  # run forever
+    )
+
+    if port != 6001:
+        try:
+            await serve(
+                handler,
+                host,
+                6001,
+                compression=None,
+                ping_interval=None,
+                max_size=None
+            )
+            print(f" [+] Also listening on ws://{host}:6001/nadsocket", flush=True)
+        except Exception as e_6001:
+            print(f" [i] Port 6001 direct bind skipped ({e_6001}); relying on port {port} reverse proxy.", flush=True)
+
+    await asyncio.Future()  # run forever
 
 if __name__ == "__main__":
     asyncio.run(main())
