@@ -571,9 +571,20 @@ async def handler(websocket):
                 source = pkt.get("source", [])
                 if isinstance(source, list) and len(source) > 0:
                     current_user = str(source[0])
+                elif isinstance(source, dict) and "user" in source:
+                    current_user = str(source["user"])
                 print(f"[*] Player login request for user: '{current_user}'", flush=True)
 
-                # Send START event (type: 26 = nad.START)
+                # 1. Send LOG_IN_SUCCESS (type: 11 = nad.LOG_IN_SUCCESS) -> dismisses loading spinner & triggers client loginSuccess!
+                succ_evt = {
+                    "type": 11,
+                    "source": 0,
+                    "timeStamp": now_ms()
+                }
+                await websocket.send(json.dumps(succ_evt))
+                print(f"-> SENT: nad.LOG_IN_SUCCESS (type 11)", flush=True)
+
+                # 2. Send START event (type: 26 = nad.START)
                 start_evt = {
                     "type": 26,
                     "source": 0,
@@ -581,6 +592,20 @@ async def handler(websocket):
                 }
                 await websocket.send(json.dumps(start_evt))
                 print(f"-> SENT: nad.START (type 26)", flush=True)
+
+                # 3. Pre-send full player payload (type 29) to load the village scene immediately
+                try:
+                    player_data = get_player_full_data(current_user)
+                    data_evt = {
+                        "type": 29,
+                        "cName": "com.jelly.player.DefaultPlayerEvent",
+                        "source": player_data,
+                        "timeStamp": now_ms()
+                    }
+                    await websocket.send(json.dumps(data_evt))
+                    print(f"-> SENT: Player Data & EnterGame (type 29) for '{current_user}'", flush=True)
+                except Exception as ex_pdata:
+                    print(f"[!] Error fetching player data on login: {ex_pdata}", flush=True)
 
             # 2. Network message / CNameEvent (type: 29) or Session message (type: 28)
             elif pkt_type in (28, 29):
@@ -604,6 +629,7 @@ async def handler(websocket):
                     player_data = get_player_full_data(current_user)
                     data_evt = {
                         "type": 29,
+                        "cName": "com.jelly.player.DefaultPlayerEvent",
                         "source": player_data,
                         "timeStamp": now_ms()
                     }

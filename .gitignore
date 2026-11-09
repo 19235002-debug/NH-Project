@@ -12,3 +12,8 @@ yarn-error.log
 game_server.log
 *.tmp
 *.temp
+__pycache__/
+.game_port
+storage/framework/views/*
+storage/framework/sessions/*
+storage/framework/cache/*

@@ -40,6 +40,7 @@ Route::withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class])->group(f
 
 Route::get('/download', [ApkController::class, 'download'])->name('public.download');
 Route::get('/download-apk', [ApkController::class, 'download']);
+Route::get('/download/OkkaNHNE-Private.apk', [ApkController::class, 'download']);
 
 /*
 |--------------------------------------------------------------------------
