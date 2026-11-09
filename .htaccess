@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Prevent direct access to sensitive files
+    RewriteRule ^(\.env|\.git|composer\.(json|lock)|package(-lock)?\.json|game_server\.py|database\.sql|deploy(\.sh)?) - [F,L,NC]
+
+    # Send all traffic to public/
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

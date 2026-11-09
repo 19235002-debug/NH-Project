@@ -1,0 +1,877 @@
+{
+  "version": 86,
+  "name": "d86",
+  "base": "http://192.168.100.87/ninja/gamedata/files/",
+  "files": [
+    {
+      "p": "UI/backend-adapter.js",
+      "s": 684480,
+      "h": "41d54f919e8a6063f29c3b8534fd59eae1d1f59db54893da1e2eb6e243b352d4"
+    },
+    {
+      "p": "sound/5bomb02.mp3",
+      "s": 7973,
+      "h": "7804178a5ccc68d9ab61c4330b817b8ff1f9e20649f45feb487af774bd568a78"
+    },
+    {
+      "p": "sound/account.mp3",
+      "s": 7346,
+      "h": "3f8313b1383aaca9aa38b4b2cdb1221a9de13856fb2a11dd56aa95ceb645ae3b"
+    },
+    {
+      "p": "sound/act01.mp3",
+      "s": 7346,
+      "h": "a8154bbe7a012df4e840741f65adf37bf572721a80edbe2aef1b178f7c7742d1"
+    },
+    {
+      "p": "sound/act03.mp3",
+      "s": 5256,
+      "h": "18fc941f83553bebb74dddbf397b04e628604be746b02d66bf87136389eb966c"
+    },
+    {
+      "p": "sound/act05.mp3",
+      "s": 9645,
+      "h": "65c8e8f7c67ead6d3b56cf0351cbf4269ea6a00f5e01f15d68d0da08434ca603"
+    },
+    {
+      "p": "sound/act06.mp3",
+      "s": 6719,
+      "h": "d0aa80037c74a13759df27f0b88f30af5f91ca993f9d12d844ef38ed9e546add"
+    },
+    {
+      "p": "sound/act07.mp3",
+      "s": 13406,
+      "h": "9c693dba82df23263a62b0366fb61ec730927c98564fa0dea09cbeb738504ed0"
+    },
+    {
+      "p": "sound/attack03.mp3",
+      "s": 11525,
+      "h": "56e8e4057517fab5de114caf58d74bfeaf2547372a5efa84f3f01bf47a1c1b5b"
+    },
+    {
+      "p": "sound/bird03.mp3",
+      "s": 5465,
+      "h": "3aee982509eeed9407dee53c6fb52198949c7c510fd5a390adb4a216abfe3a41"
+    },
+    {
+      "p": "sound/bomb01.mp3",
+      "s": 14242,
+      "h": "0a1d4cc11f89401ae4413cb6a5a3648c86cf5281f71d757ce26f7f1f0dd65e84"
+    },
+    {
+      "p": "sound/bomb02.mp3",
+      "s": 9645,
+      "h": "e51b90eb031a37ca737c4c6a8d7f5f486a01985f0f52f2de53a2da19484d5882"
+    },
+    {
+      "p": "sound/bomb03.mp3",
+      "s": 5674,
+      "h": "839d367573f19130efccd16493acd0fde4d367ded9d225c71b8c5b63f1cc537b"
+    },
+    {
+      "p": "sound/bomb_long01.mp3",
+      "s": 17168,
+      "h": "641b806a2ca1186c984a3a21232d75b9be8dfd41a56d78b70dc36c1a7f29823b"
+    },
+    {
+      "p": "sound/bomb_long03.mp3",
+      "s": 20512,
+      "h": "25e396995eb0b935608988481c5549e54c7ef283d5ab945dee58843cefc34046"
+    },
+    {
+      "p": "sound/bomb_long05.mp3",
+      "s": 19676,
+      "h": "ff6d6b6c4ed26cc332d8d5192987f5435a4c68ac21decfef1bbed7fa89d96d37"
+    },
+    {
+      "p": "sound/bone01.mp3",
+      "s": 15914,
+      "h": "774a910854d6b51de909e4105f085ab9300d388fb2d08c2610878d58e97eda53"
+    },
+    {
+      "p": "sound/bubble01.mp3",
+      "s": 6510,
+      "h": "18cbf8f9a3a02663a0ab8ad9832561dba447015cbb1063c0199a286f127a711e"
+    },
+    {
+      "p": "sound/bubble05.mp3",
+      "s": 7346,
+      "h": "5327fdad169e567ecd11a8278408a18614c68dac321e1f7aa8845cd1cb5e1a8b"
+    },
+    {
+      "p": "sound/bubble_bomb2.mp3",
+      "s": 20512,
+      "h": "5ce6b8c75d48721c8099cb2c757b7e7a77c22b1c078ddd23a3b2f1e67b2731f8"
+    },
+    {
+      "p": "sound/build.mp3",
+      "s": 17377,
+      "h": "ff1a2288eebf25823a7d8d69723399b86d4699290c0789a96357d3ff299bda31"
+    },
+    {
+      "p": "sound/casual.mp3",
+      "s": 215489,
+      "h": "57af105660f07f5c907f7bed901fa6dbb4822d9ba2c7d3010213dca846e20966"
+    },
+    {
+      "p": "sound/catchpeople.mp3",
+      "s": 29916,
+      "h": "3e72deb8efb9be6e0cb016274fad2f7539573805fd4ca1b5113c01a7133adab2"
+    },
+    {
+      "p": "sound/change01.mp3",
+      "s": 11943,
+      "h": "b11d855fa8ae336dc6086eca8e51d76fbee45b5f0a503bc70da5c91c128ef9dd"
+    },
+    {
+      "p": "sound/change02.mp3",
+      "s": 3584,
+      "h": "3467da9ff97627738651d005d6b36b0d3d32d299aadf9bd63b0f10260ee0d7bf"
+    },
+    {
+      "p": "sound/child.mp3",
+      "s": 2957,
+      "h": "748fb009eefb3e708552e60d15972a5586385c3e51f6e9443bee1aca73939671"
+    },
+    {
+      "p": "sound/child04.mp3",
+      "s": 13197,
+      "h": "6d60fef1d5f8ea54ea242fe2f3ecb1322d64b2dbaefba6dd88f1bcb05cfe42b0"
+    },
+    {
+      "p": "sound/click.mp3",
+      "s": 2507,
+      "h": "759d52a40d9b605a959fe2370ecb8b7ff7f34f0f4ae836733ae748164d44cbb9"
+    },
+    {
+      "p": "sound/collection.mp3",
+      "s": 2330,
+      "h": "e283a8aa3a04269592fe8413ef3d1b74b6ad7d676b08b6585a36ce2b21a1d1e7"
+    },
+    {
+      "p": "sound/cry01.mp3",
+      "s": 3166,
+      "h": "312729c8f790ee8e79828e75f4ea8bcaa9d05a2f4bf80004a3df37ceb92bf260"
+    },
+    {
+      "p": "sound/cry02.mp3",
+      "s": 7764,
+      "h": "7e3a9b1f896215985f4d974de6aab9a702edd36c14b8dd89526a21bc9329e805"
+    },
+    {
+      "p": "sound/cry_water01.mp3",
+      "s": 15914,
+      "h": "80d0aacc290a38fba6e511ecadfb88594f7ef46a9dd9afcf3957c90867fa7c73"
+    },
+    {
+      "p": "sound/cure01.mp3",
+      "s": 15078,
+      "h": "5cc0016af113c6691c5f3e3719270d9896c7b78b48b026f1d23955cfecf02740"
+    },
+    {
+      "p": "sound/cure02.mp3",
+      "s": 15914,
+      "h": "6f76a385f6c6104e00b59122c2905dc931fc1cf4dbba343f7a01c6e3692b2c88"
+    },
+    {
+      "p": "sound/cure03.mp3",
+      "s": 9018,
+      "h": "d3acffd65abb215854a50b539262ef0d9cf776ce95605c1d8f0f278834a141f7"
+    },
+    {
+      "p": "sound/cute.mp3",
+      "s": 136704,
+      "h": "5784b3c146f7e716e1eb3160f9b19dcaa3f063013481f386aee1e5c23139e74b"
+    },
+    {
+      "p": "sound/delusion01.mp3",
+      "s": 4002,
+      "h": "4373acc180cec356ac5d5ef2ee2710660052ec174e70f05926b771b6aea9da5b"
+    },
+    {
+      "p": "sound/delusion02.mp3",
+      "s": 10689,
+      "h": "b590a215ff9efeacea08bd4f83d76e22b6716e4f7dd271754c93db34c19f824b"
+    },
+    {
+      "p": "sound/delusion04.mp3",
+      "s": 11734,
+      "h": "c98957b6e7d860559c63ff5dd7ab1529a89fdaaa72132599877f2f7fbb9d9f46"
+    },
+    {
+      "p": "sound/delusion05.mp3",
+      "s": 11316,
+      "h": "b8d8e9943a1cdfdfd0aeb7665da2d7ef814c207a765eebd211757a812def2daa"
+    },
+    {
+      "p": "sound/delusion06.mp3",
+      "s": 12779,
+      "h": "602a322ac8f7654b51e4bf524b0629eddb9246236542c10292cb544850dc5e72"
+    },
+    {
+      "p": "sound/drums.mp3",
+      "s": 8391,
+      "h": "b6e5285320e96c0fb69d3c9b20ad0c0f651977b4bf488191c6a12d159c49b5c0"
+    },
+    {
+      "p": "sound/eat.mp3",
+      "s": 13197,
+      "h": "205182eab0c1d459356b21db6c0114d3b6eecb78fd311dd3bd28c01f261e2ce1"
+    },
+    {
+      "p": "sound/eye01.mp3",
+      "s": 8809,
+      "h": "264404bc298f86abc1bce755b98b23b73fc652a6712ac3e06b29a22cbb1d9f11"
+    },
+    {
+      "p": "sound/eyerevolve01.mp3",
+      "s": 42663,
+      "h": "bae23e7e4ec4362285293abc384a268ed0df99365bde4407dbcda6e1fd5e65eb"
+    },
+    {
+      "p": "sound/fart01.mp3",
+      "s": 7555,
+      "h": "389fe38d1c5fe713dae0be4b1df5660afedd85277a0f9fde406c185dead9b832"
+    },
+    {
+      "p": "sound/fire01.mp3",
+      "s": 6092,
+      "h": "fce61b580f1f7a59c4cfe04c1866b9fdac7f9d0044d666d05c5617ec9ee67d4b"
+    },
+    {
+      "p": "sound/fire02.mp3",
+      "s": 9227,
+      "h": "ca19e459240678b41dede340b6e394dd477723ce45e8b5265999af722982e161"
+    },
+    {
+      "p": "sound/fire04.mp3",
+      "s": 4629,
+      "h": "4eafa12c503317dda4148431c0e719f613001996c9405cc488c63569e5771316"
+    },
+    {
+      "p": "sound/fly01.mp3",
+      "s": 5256,
+      "h": "4081b687fec983f08461f363ab69307ad202d4b78694e56e29649a26f52dc8c9"
+    },
+    {
+      "p": "sound/fly02.mp3",
+      "s": 14451,
+      "h": "cc697bd31bd534c7e70726d35f2fd46eb0c6f702f3be6e451d979255331cbdae"
+    },
+    {
+      "p": "sound/fly03.mp3",
+      "s": 12570,
+      "h": "536f93338bf4eeb38d50c88345c832ea0c9ad9ab72c2b603183587e2f236e932"
+    },
+    {
+      "p": "sound/freez01.mp3",
+      "s": 6092,
+      "h": "fa5f1882475edb318a3a111550ba79e47d937bac6ab1e8d92d79b906823c9eb7"
+    },
+    {
+      "p": "sound/frog02.mp3",
+      "s": 6928,
+      "h": "2e55d7159dc59c73bf9a596a0ca08e4e27b36c9165eef15f2dc2286d3e6c90a7"
+    },
+    {
+      "p": "sound/gamblehit.mp3",
+      "s": 3375,
+      "h": "30250339e3dc076c912e7deb701eb9a57dd785242510665c0085b0c878fa0a70"
+    },
+    {
+      "p": "sound/gamblerevolve.mp3",
+      "s": 26990,
+      "h": "97c6a0a19e8d66268281a7b62110d15b94b6e65eeecf1a2b116a70c81b56ffb0"
+    },
+    {
+      "p": "sound/gameSound.mp3",
+      "s": 324786,
+      "h": "66716071dc5a0944a546d8c5bf215e1a6bdfaac8d530f159183d36df07c680f6"
+    },
+    {
+      "p": "sound/ghost02.mp3",
+      "s": 9645,
+      "h": "f54e4f8100da13c49aaec4130a7575a722e06fd75ccce1c7893b76f071e15f04"
+    },
+    {
+      "p": "sound/ghost03.mp3",
+      "s": 15914,
+      "h": "80bd2e7f188f1c2a90e8c4f078777fb831e9c627763ea2c25e3ed2d866839086"
+    },
+    {
+      "p": "sound/hit03.mp3",
+      "s": 16750,
+      "h": "d1d878264b5de45ed97ce20f6d4f5f2a8ac44ca78be17ea08552ee220569acff"
+    },
+    {
+      "p": "sound/hit04.mp3",
+      "s": 3166,
+      "h": "8d96b6c8b109d99405045d2ac3f467c7fe5f11a652437165120e60ab214d3164"
+    },
+    {
+      "p": "sound/hit05.mp3",
+      "s": 9227,
+      "h": "721076d0b02dd6236b397387a38a57e1b18b0f2c6ae194731777dfd288fe5901"
+    },
+    {
+      "p": "sound/hit06.mp3",
+      "s": 9227,
+      "h": "91b2981b605925431185068d7f32c73752558b36f1c4e5e4fdefe41549559869"
+    },
+    {
+      "p": "sound/hit08.mp3",
+      "s": 7555,
+      "h": "a1527110fd4e5ad224402956ae6ed5a8bf0d7b46d37cc1a573014b23ed01ed34"
+    },
+    {
+      "p": "sound/hitmouse.mp3",
+      "s": 1703,
+      "h": "5a8829f6e595a30f3a8f33c10181fd149fa80212f13e805171482ea695d5ba05"
+    },
+    {
+      "p": "sound/hit_knock01.mp3",
+      "s": 2539,
+      "h": "c1c7456954604df6feec85fbb4bb0053d14a6de2158d7e1f63b506a9ec035eb9"
+    },
+    {
+      "p": "sound/hit_knock02.mp3",
+      "s": 2539,
+      "h": "61d6852422b83c7cde58a71caa987bf12cb0f85a776a82743c82b9e4d5e3a1f0"
+    },
+    {
+      "p": "sound/hit_knock03.mp3",
+      "s": 2748,
+      "h": "fd47e67499420680b7611f147e6f45294b65c83c8f804e8982c85dd61b779215"
+    },
+    {
+      "p": "sound/hit_knock04.mp3",
+      "s": 4420,
+      "h": "2ae02ae6e193977524ed48cce3d1f4ead8ac2b69310e5578fb7cb20e79ae7812"
+    },
+    {
+      "p": "sound/hit_knock05.mp3",
+      "s": 6092,
+      "h": "756468875d209b8801b41f6860e18bb3b36c634e6627d56f8af0216d1001c671"
+    },
+    {
+      "p": "sound/hit_knock06.mp3",
+      "s": 13615,
+      "h": "5db5cde592155e71f9f26b5bdb8ddbd9288f9d7e5d498c7120792fdb1937329d"
+    },
+    {
+      "p": "sound/hit_knock07.mp3",
+      "s": 4838,
+      "h": "f2328660bc7887935b57e8e28fba8e86819de1c8a47eebdf00c3a65155b69436"
+    },
+    {
+      "p": "sound/hit_strong01.mp3",
+      "s": 6719,
+      "h": "330d15324ecf570e97eb37ab480934ae3eb1c740e4036b6e80a4ad258e54da5d"
+    },
+    {
+      "p": "sound/hit_sword01.mp3",
+      "s": 2330,
+      "h": "3b52b10562c4125a8cedbc6a0b3764dfa049229998154c51c10cb73b81da1675"
+    },
+    {
+      "p": "sound/hit_sword02.mp3",
+      "s": 1912,
+      "h": "8a12699ebd23cf85b8e15b093709441ff7368a049714ce5f59b304873830a487"
+    },
+    {
+      "p": "sound/hit_sword08.mp3",
+      "s": 2957,
+      "h": "900841cde6ed3b549057f0b829bfca9ed04f3798e57d7cedcf3cd206a3f28f16"
+    },
+    {
+      "p": "sound/hit_sword09.mp3",
+      "s": 3793,
+      "h": "b622c4e4727d21d23dcdf773fd384d9e336e52d438befe4eafca2ae788172ed7"
+    },
+    {
+      "p": "sound/hit_sword10.mp3",
+      "s": 6092,
+      "h": "b3da46742ce0bd634e94ca8886b27bdf48080b3e53cb92f2b9688d36276ae4c5"
+    },
+    {
+      "p": "sound/hit_twopeople01.mp3",
+      "s": 8809,
+      "h": "30384737fe812927bce125d56c1a0f3cb7f84af0333279cdd15b680e29320c48"
+    },
+    {
+      "p": "sound/homeSound0.mp3",
+      "s": 584129,
+      "h": "c17a55ef5faadec3bc19e7480bb4f668b720355ac4f40b347045dd4df54f8fa4"
+    },
+    {
+      "p": "sound/ice01.mp3",
+      "s": 7973,
+      "h": "58ab7d1b829ae6114c23a467dd0a6e79331fd969d9573ebb5c2453602ca98569"
+    },
+    {
+      "p": "sound/ice02.mp3",
+      "s": 8391,
+      "h": "1d01d481c1d473812909f8702b8109f0a6614c7feef6fb399975ab1fe0729b5c"
+    },
+    {
+      "p": "sound/ice03.mp3",
+      "s": 10272,
+      "h": "43bb84895e6816fea2c229b1433039cbe1ff499231f6e0b030072fb10b618930"
+    },
+    {
+      "p": "sound/ice05.mp3",
+      "s": 9227,
+      "h": "5cf6d46898e5b10916f8b58fc025e796491a20eaa8fbfed0a27520bffa77c33e"
+    },
+    {
+      "p": "sound/invadeadventure.mp3",
+      "s": 259166,
+      "h": "2076b180e02f40307e9500eac4e2f45ccbed5f46111edb03f605fcbce25f53e3"
+    },
+    {
+      "p": "sound/japaneseknock.mp3",
+      "s": 5047,
+      "h": "4e304cf71ee900dced6b885e46bad5b0ca63eb7c608280584b91bd36c426d990"
+    },
+    {
+      "p": "sound/jump01.mp3",
+      "s": 3375,
+      "h": "05ec17fe381ad3b386ee6925e4c97876faec8972c53e59002768c5e14c0d894c"
+    },
+    {
+      "p": "sound/levelup.mp3",
+      "s": 16959,
+      "h": "6a10818dfcf003a86a0d307bee883d4b1bfe7eabd56c6347774b3e06afb61853"
+    },
+    {
+      "p": "sound/lightning01.mp3",
+      "s": 6092,
+      "h": "4e8db0bcf8027f48bdc4b7f17a5b2ecc48d981335f1e40f0c7b2e42844d485bc"
+    },
+    {
+      "p": "sound/lightning02.mp3",
+      "s": 17377,
+      "h": "86b823993d6ebd6db7c6ff7e08e7dc4f350f1d3e2bbdf8b7bb690f01fc946910"
+    },
+    {
+      "p": "sound/lightning04.mp3",
+      "s": 8391,
+      "h": "cc8e242cf1e6244d436a4779a31ecd229adca60f73d036a3c39a85d59dc96fcf"
+    },
+    {
+      "p": "sound/lightning05.mp3",
+      "s": 8600,
+      "h": "3fb62757124d5b712cd52d74b6b236664af6741d55af228b6225c4d074f97a7c"
+    },
+    {
+      "p": "sound/lightning06.mp3",
+      "s": 11734,
+      "h": "c8f7161743c023415576b10516fe88e8d5f2fb9c5ece8d4dfe8f41bfbb841220"
+    },
+    {
+      "p": "sound/lightning_long1.mp3",
+      "s": 18004,
+      "h": "520a97f9b36abaaf83a6924ee9efafecab3b16be1e4830618880aab66f2bd48f"
+    },
+    {
+      "p": "sound/lose.mp3",
+      "s": 37648,
+      "h": "7a6bece11236636515fff700dd9e344341c47770b0cc748a0e68b5b33f742fd1"
+    },
+    {
+      "p": "sound/machine01.mp3",
+      "s": 11107,
+      "h": "575c79b70f22848618c204d9bb269e8aabdb5ce2c6f89d41d79cf157cb800c1d"
+    },
+    {
+      "p": "sound/machine02.mp3",
+      "s": 7346,
+      "h": "d01c26906eebe6824576dad84cdb1a9ca6c6a5fa5244da6a2b7033df8a923f26"
+    },
+    {
+      "p": "sound/many_attack01.mp3",
+      "s": 9854,
+      "h": "4b7c5cb276785225e417378804f0380d6024417604b3303243ffdd1f2f8dec41"
+    },
+    {
+      "p": "sound/many_attack02.mp3",
+      "s": 9018,
+      "h": "7348f09888a8f826bfe6e4dc9f1606e6952d6e05ff08511f48a1169a03e67111"
+    },
+    {
+      "p": "sound/many_attack03.mp3",
+      "s": 5883,
+      "h": "c75deee54630f1e99687d183653b3977d43efff8e536929e9fe2291289fcbafb"
+    },
+    {
+      "p": "sound/many_attack04.mp3",
+      "s": 11107,
+      "h": "c0897e2ff013569f686c31d275e0ec951e9f97a6e78187a0e64ee61ca86a2697"
+    },
+    {
+      "p": "sound/many_attack05.mp3",
+      "s": 10898,
+      "h": "b6da0d0c8b06c2975d5d1cc9459b03ff7525643bffd45525bf4d46d462dcb04a"
+    },
+    {
+      "p": "sound/money.mp3",
+      "s": 7137,
+      "h": "84a03022b13fcf398e73e1a6984c5f27b4c89c3b8a1830fff0f0edc2dcc8fe16"
+    },
+    {
+      "p": "sound/monkey01.mp3",
+      "s": 18213,
+      "h": "c6b00e07d4892f486027fd29fb4ad6faea527aa9583f9db281cbe445fa0d015f"
+    },
+    {
+      "p": "sound/monkey02.mp3",
+      "s": 5256,
+      "h": "79c4de5584fedaf940a4396bd5b5fbb5d95fbbe5bda3c0d627da92e492cc6a1e"
+    },
+    {
+      "p": "sound/monster01.mp3",
+      "s": 10898,
+      "h": "63d356c20524b3e883e0a4d66f93147a605b70016a95b3da67574bd4c3ed26d3"
+    },
+    {
+      "p": "sound/monster02.mp3",
+      "s": 13615,
+      "h": "22796626f2dd933eac1221ee3277ed2740cb9384d9a276b0d6e7bb30d0c36f30"
+    },
+    {
+      "p": "sound/monster03.mp3",
+      "s": 18422,
+      "h": "979a756aaaba3587c51ad1e5442d423da771be0edefdfa48afb9bbe39e60dcff"
+    },
+    {
+      "p": "sound/monster04.mp3",
+      "s": 9436,
+      "h": "86ee7aa29326d150ac844470ef6cbb2c85ef8285b40f43c97a2784c62270983a"
+    },
+    {
+      "p": "sound/monster05.mp3",
+      "s": 5465,
+      "h": "531566f1469838f5ae31a09e60c77abd67d64f7202e13db39203cfe265efcd6e"
+    },
+    {
+      "p": "sound/monster06.mp3",
+      "s": 12152,
+      "h": "6243700d927f292a972a69b8b3db8aa1469a97f7475d2891043a274e9657915e"
+    },
+    {
+      "p": "sound/monster07.mp3",
+      "s": 11734,
+      "h": "dffbc2ca81ad731e9b1f6c23fd4c6aa19d30c56c012f6890ae7a8d7e4c1696db"
+    },
+    {
+      "p": "sound/monster08.mp3",
+      "s": 12570,
+      "h": "4ae849e830d38206ae36369316bf8ec6634ce9186ddeb8011f696a01614c2831"
+    },
+    {
+      "p": "sound/monster09.mp3",
+      "s": 10272,
+      "h": "3a80f442b8458ad5d46bbb92f21022ef7fc39ee8b5e2737940dfaaa9d036408e"
+    },
+    {
+      "p": "sound/monsterinvade.mp3",
+      "s": 356760,
+      "h": "5396f4128efc2f34586dbc4b00a65eed8ac2f2b227b38bc4b3bb9a5dc0111f9c"
+    },
+    {
+      "p": "sound/monstertransport.mp3",
+      "s": 13197,
+      "h": "d207f6d65725e05a406f01ec305e15725817195e7a4ec6d14f43b7f975a95654"
+    },
+    {
+      "p": "sound/mousejump.mp3",
+      "s": 867,
+      "h": "c9e5f18371b13b3f09a82e79b5b57e4cf74fc15f55d88083deb0b163cc6073a3"
+    },
+    {
+      "p": "sound/move.mp3",
+      "s": 240,
+      "h": "3e595aa7de9206260ae22d1dc58230c1ccf72715eb332bff249e85d7933f3f91"
+    },
+    {
+      "p": "sound/prepare02.mp3",
+      "s": 9645,
+      "h": "bd766c125306ce055bbe6973c0bbf8157b0ba1b2623ff04ec0d7de0d29d4b6a8"
+    },
+    {
+      "p": "sound/recommend.mp3",
+      "s": 5047,
+      "h": "cc0dd1ce1dc81811d0f467884d82388ccd815aecad447b08a75d3995818f9454"
+    },
+    {
+      "p": "sound/revovle02.mp3",
+      "s": 9645,
+      "h": "99395d7535c68cef9b5c8abbff71aed3dfc9d3d0ec7b4ad86090dce63ddce32e"
+    },
+    {
+      "p": "sound/revovle03.mp3",
+      "s": 11107,
+      "h": "1fa41eb5cf2a35d81980143fdaa1c16d9e2888c8f5dee9a6cf02cd6c46cb3e75"
+    },
+    {
+      "p": "sound/reward.mp3",
+      "s": 11107,
+      "h": "794cdf5edbd4408f2c31c8c149bdd4842e587b7bfd2299eb1bf5461a32d54fad"
+    },
+    {
+      "p": "sound/ring01.mp3",
+      "s": 5465,
+      "h": "04ab40e677fa3f58dbdb0279804f5cdbb94b7f9740c2cb9b669192df2d17a446"
+    },
+    {
+      "p": "sound/run.mp3",
+      "s": 11107,
+      "h": "5300f8385fa17b338819192ed15ec5cc9cac793a89a92c575748f436580a55b9"
+    },
+    {
+      "p": "sound/run01.mp3",
+      "s": 16750,
+      "h": "c01c2f9aeeec490e74b23b67e2e35cd3dbdc77e9c4416a73ee90261ec6b6575f"
+    },
+    {
+      "p": "sound/save01.mp3",
+      "s": 7764,
+      "h": "e298b8d0150d8f3c0f6e32d13fdab07828797e58ac41182f19f8afb324fbf43e"
+    },
+    {
+      "p": "sound/save02.mp3",
+      "s": 16541,
+      "h": "0d5db580166b38206e78702d46f8aef5bd478c5a93cc5c0362c16a637823d664"
+    },
+    {
+      "p": "sound/save03.mp3",
+      "s": 7346,
+      "h": "d5f6185a8ff80b012508b7e4b603854b4f87b2fedb819c7a7bfdcee90cb430d5"
+    },
+    {
+      "p": "sound/shield02.mp3",
+      "s": 19676,
+      "h": "5e9c4c949cb3df3e9e8235f999b549d2771ea7aa4f5dda4832fbbb33d354ed08"
+    },
+    {
+      "p": "sound/smoke01.mp3",
+      "s": 6510,
+      "h": "e5a04ab374526a76c12742a829ccd5bc97663a8aed3652a4c7633a0fd9d819d9"
+    },
+    {
+      "p": "sound/smoke02.mp3",
+      "s": 6510,
+      "h": "ebb97976292761e2cff55262712e753f90d82021edf221c2d3638edb2670ff53"
+    },
+    {
+      "p": "sound/smoke3.mp3",
+      "s": 4838,
+      "h": "68949719d41dafa47b51d71172d230c253a649b9b7775782b826d78717a7cd5d"
+    },
+    {
+      "p": "sound/snake01.mp3",
+      "s": 15914,
+      "h": "69f5833ebcf50618ff7ef5b924131e8f439cb0e59a609cf34d6894ef71ab85d3"
+    },
+    {
+      "p": "sound/snake02.mp3",
+      "s": 4002,
+      "h": "e97dabb9cf9540fe30391df1f064be18bfbaa7eb5c23ab67e539239040f83a2c"
+    },
+    {
+      "p": "sound/specialmusic.mp3",
+      "s": 220714,
+      "h": "fbd370f079747bc2dc1888b66765fdfd567cb45cec7a0d50536777d9926d853e"
+    },
+    {
+      "p": "sound/start01.mp3",
+      "s": 250807,
+      "h": "a86e9f2de06f88e46981e84dee2512848aadf6dfccd71e7d0b7c15a54c6cdeb2"
+    },
+    {
+      "p": "sound/step01.mp3",
+      "s": 3375,
+      "h": "0fe466020c2f81c4b3c70ce62099316fee89558a1c8ec75ca6b30ff3d3e41856"
+    },
+    {
+      "p": "sound/step03.mp3",
+      "s": 16332,
+      "h": "67db88f4c04841e50313a010c7d2775b4b0ce9eec74a680b9ab4d41a5f0e7855"
+    },
+    {
+      "p": "sound/stick01.mp3",
+      "s": 6092,
+      "h": "142071ac3f811336a1eab9c07473c0be899bf049da5998b7712c24b9dbe4dc38"
+    },
+    {
+      "p": "sound/stick02.mp3",
+      "s": 14660,
+      "h": "5611aefb08e6cb07a4a987e00f11fb499f7e1208eb6da4d95ccdff9d7d48d13b"
+    },
+    {
+      "p": "sound/stone01.mp3",
+      "s": 9227,
+      "h": "36e7eb1c6e1a0b737f983822272b686fa6f2df75282919d05e30ea56454bd3d5"
+    },
+    {
+      "p": "sound/stone02.mp3",
+      "s": 7973,
+      "h": "30af3fb7a0b7f97ddb1e72dd9b417a2f1d55ae7f20f6ca4175653a1c8d58ab25"
+    },
+    {
+      "p": "sound/stone03.mp3",
+      "s": 7764,
+      "h": "a8ba91817cb04cb7c17b7e62ed1494535de2d9a0ffe71aa5f536173503914446"
+    },
+    {
+      "p": "sound/stone05.mp3",
+      "s": 8182,
+      "h": "93d62bb7b3ba360cca9c08ac95a2bd3230c68370447640887f8a4320df225311"
+    },
+    {
+      "p": "sound/stone06.mp3",
+      "s": 7973,
+      "h": "17038e9ba7a9ef9bea6922f4e1787d7549e54b4037f9f1170f26ec1f41eeb69f"
+    },
+    {
+      "p": "sound/streamwater.mp3",
+      "s": 9645,
+      "h": "755575295a38aa9d2a1049edbefddec4881797e17da0ec36435c218e137e6632"
+    },
+    {
+      "p": "sound/strengthsuccess.mp3",
+      "s": 4838,
+      "h": "56d03dfc0feecf0363256e58d21a4c2abf6c80c484c786d6fe3f2d76041cef48"
+    },
+    {
+      "p": "sound/studyskill.mp3",
+      "s": 20303,
+      "h": "82bd8f19002f1a1ec67cb1e14107c7f93c0ce7e6c1780e25be70d0819ed286dd"
+    },
+    {
+      "p": "sound/throw04.mp3",
+      "s": 14033,
+      "h": "36bdc5a489b24e90a8e88099cc9220752477df9964c861a8615d07de3b65c87a"
+    },
+    {
+      "p": "sound/throw06.mp3",
+      "s": 2330,
+      "h": "f5521cd148c57f9e74c33090ee2690871758d717d829217dfd4d48600a05096e"
+    },
+    {
+      "p": "sound/throw07.mp3",
+      "s": 4420,
+      "h": "31317ba0cf4acf64974cb0921543fecce56bdbc3ac45eeade64941ff96026c2b"
+    },
+    {
+      "p": "sound/thunder01.mp3",
+      "s": 16750,
+      "h": "870b3f3a67a0ac94dbe45a9158a9baee107de9be05137ef7db6ce7aeadec6eaf"
+    },
+    {
+      "p": "sound/time01.mp3",
+      "s": 13197,
+      "h": "a1e33bc69c032945be16821999e9537d01767f8fb827aeb100e631dbc363e863"
+    },
+    {
+      "p": "sound/time02.mp3",
+      "s": 25109,
+      "h": "051ae23e4c5f45c0ed58dc80e3363defca5af202f840aeca585b0044bf953f3d"
+    },
+    {
+      "p": "sound/transport.mp3",
+      "s": 15914,
+      "h": "3141f6c66a896d7393827ed6f54b07e6f50608363121c741d17264a8a46cdbaf"
+    },
+    {
+      "p": "sound/treat02.mp3",
+      "s": 13615,
+      "h": "a3fc13fe86ed0f62a54db9f614ca3a50db2d7745ff7b4cca991b4c226eb847e5"
+    },
+    {
+      "p": "sound/waitrecruit.mp3",
+      "s": 5465,
+      "h": "97fef2e1294539f9bf64553a3d47a10cc2642a9fb8268746cf0cfc94390b0d6b"
+    },
+    {
+      "p": "sound/water03.mp3",
+      "s": 12988,
+      "h": "f42da7b7dd36e5c8948281706c4060f426568c6ec789960a3b5d7501d0bed702"
+    },
+    {
+      "p": "sound/water04.mp3",
+      "s": 7346,
+      "h": "fc3108f88fb378346ae852258d7e6740d8fc2511de1fd5cf3a08968571b0031b"
+    },
+    {
+      "p": "sound/water05.mp3",
+      "s": 10272,
+      "h": "033cb4b61cf646392770b066111d319f7e79d183ceca8b47ac700301c6c7fe21"
+    },
+    {
+      "p": "sound/water06.mp3",
+      "s": 6301,
+      "h": "4224ca726fa11ea0b120e56a28b10faa885d83474382aa9a34a22be9eba639cc"
+    },
+    {
+      "p": "sound/win.mp3",
+      "s": 27199,
+      "h": "0cafee6d4a10434b1cb10817931041d6f43803ee5e219f91bdb3ae3d9c5688d4"
+    },
+    {
+      "p": "sound/wind01.mp3",
+      "s": 10272,
+      "h": "060aa080cb78e725ba95b2becba3a71b1966c5687f4930077b00f64e48af43e1"
+    },
+    {
+      "p": "sound/wind03.mp3",
+      "s": 6092,
+      "h": "075052987cdde1347d21727cee2641fb9a4d418f5654e5c94b6f4aa1401ab968"
+    },
+    {
+      "p": "sound/wind04.mp3",
+      "s": 23437,
+      "h": "a0dbe5df4408e5057bd78a962d72e67f7ef32930906be8fb5e6f9b5a816a7ed5"
+    },
+    {
+      "p": "sound/wind06.mp3",
+      "s": 20512,
+      "h": "969704811a17cc79e24f38622289d13f5f0e1498a409f8c98116a5efb64c9568"
+    },
+    {
+      "p": "sound/wind07.mp3",
+      "s": 12570,
+      "h": "488288f0f38ad51e5e8f9ca52867c6af4aae450024b1cac4e78b2574a9bf9097"
+    },
+    {
+      "p": "sound/woman01.mp3",
+      "s": 13197,
+      "h": "05c15f2ee7e02f5186244db37ca93a0bd10890814049527486b006b668de97b5"
+    },
+    {
+      "p": "sound/xray03.mp3",
+      "s": 6092,
+      "h": "9763a65c4dafceac6ca386433dedba18a9c539e3d90b8f81355403f59ccce75c"
+    },
+    {
+      "p": "sound/xray05.mp3",
+      "s": 16332,
+      "h": "5d37611e61cc7d6d12a629df5948cba903fe8864727ae92c741a158c9052e0d5"
+    },
+    {
+      "p": "sound/xray06.mp3",
+      "s": 7346,
+      "h": "344ea1be27cfb3fdb722b5cceb40a1170db318219b27e2de25e02d35ca11ba45"
+    },
+    {
+      "p": "UI/image/btn_switch_acc.png",
+      "s": 362,
+      "h": "61846152016636cf09a91099b4f6cec368994f28c658c233c0119b85da55ab7b"
+    },
+    {
+      "p": "UI/image/ibg/bg_loginscene_lyto.png",
+      "s": 391465,
+      "h": "6dc8d84552a198c3ff49485f3d6efc2730d196f394039000327a9016dbd4729b"
+    }
+  ]
+}
