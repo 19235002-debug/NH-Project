@@ -44,6 +44,7 @@ sed -i 's/DB_PASSWORD=.*/DB_PASSWORD="NinjaPro2026Secure"/' .env
 sed -i "s/DB_HOST=.*/DB_HOST=127.0.0.1/" .env
 sed -i "s/APP_DEBUG=.*/APP_DEBUG=true/" .env
 sed -i "s/GAME_HOST=.*/GAME_HOST=nh.digislams.my.id/" .env
+sed -i "s/GAME_WS_PORT=.*/GAME_WS_PORT=18080/" .env
 echo "   [+] Kredensial database .env berhasil dikonfigurasi ke digisla3_ninja."
 
 # 4. Storage & Directory Permissions
@@ -92,9 +93,14 @@ if [ -n "$PY_BIN" ]; then
     sleep 2
     if pgrep -f "game_server.py" >/dev/null 2>&1; then
         echo "   [✔] Game Server (Python daemon) berhasil dijalankan aktif di background!"
+        if [ -f ".game_port" ]; then
+            ACTIVE_PORT=$(cat .game_port)
+            echo "   [+] Port aktif WebSocket lokal: $ACTIVE_PORT"
+            sed -i "s|127.0.0.1:[0-9]*|127.0.0.1:$ACTIVE_PORT|g" public/.htaccess
+        fi
     else
         echo "   [!] Game Server gagal berjalan di background. Isi game_server.log:"
-        head -n 20 game_server.log 2>/dev/null || true
+        tail -n 25 game_server.log 2>/dev/null || true
     fi
 else
     echo "   [!] Python 3 tidak ditemukan di PATH terminal host."

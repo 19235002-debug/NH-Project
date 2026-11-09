@@ -1048,41 +1048,61 @@ async def network_ip_monitor():
         pass
 
 async def main():
-    port = WS_PORT
-    host = "0.0.0.0"
     print(f"===========================================================", flush=True)
     print(f" [*] Ninja Heroes Local Game WebSocket Server Starting...  ", flush=True)
-    print(f" Listening on ws://{host}:{port}/nadsocket                 ", flush=True)
     print(f" Database: {DB_NAME} on {DB_HOST}:{DB_PORT}                 ", flush=True)
     print(f"===========================================================", flush=True)
 
     # Start live network IP monitor in background
     asyncio.create_task(network_ip_monitor())
 
-    # CRITICAL: compression=None prevents InvalidHeaderFormat on Cocos2d-x empty Sec-WebSocket-Extensions
-    # ping_interval=None prevents native client disconnects
-    server_main = await serve(
-        handler,
-        host,
-        port,
-        compression=None,
-        ping_interval=None,
-        max_size=None
-    )
+    candidate_ports = [
+        int(os.environ.get('GAME_WS_PORT', 18080)),
+        18080,
+        28080,
+        38080,
+        48080,
+        19001,
+        6001,
+        8080
+    ]
+    seen = set()
+    ports_to_try = [p for p in candidate_ports if not (p in seen or seen.add(p))]
 
-    if port != 6001:
-        try:
-            await serve(
-                handler,
-                host,
-                6001,
-                compression=None,
-                ping_interval=None,
-                max_size=None
-            )
-            print(f" [+] Also listening on ws://{host}:6001/nadsocket", flush=True)
-        except Exception as e_6001:
-            print(f" [i] Port 6001 direct bind skipped ({e_6001}); relying on port {port} reverse proxy.", flush=True)
+    server_main = None
+    bound_port = None
+    bound_host = None
+
+    for host in ["127.0.0.1", "0.0.0.0"]:
+        for p in ports_to_try:
+            try:
+                server_main = await serve(
+                    handler,
+                    host,
+                    p,
+                    compression=None,
+                    ping_interval=None,
+                    max_size=None
+                )
+                bound_port = p
+                bound_host = host
+                print(f"[+] Successfully listening on ws://{host}:{p}/nadsocket", flush=True)
+                break
+            except Exception as e:
+                print(f"[i] Could not bind ws://{host}:{p}/nadsocket ({e}), trying next...", flush=True)
+        if server_main:
+            break
+
+    if not server_main:
+        raise RuntimeError("Failed to bind any WebSocket port on host!")
+
+    # Write bound port to .game_port file
+    port_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.game_port')
+    try:
+        with open(port_file, 'w', encoding='utf-8') as pf:
+            pf.write(str(bound_port))
+    except Exception:
+        pass
 
     await asyncio.Future()  # run forever
 
