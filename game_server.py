@@ -1069,20 +1069,29 @@ async def handler(websocket):
 
 async def network_ip_monitor():
     try:
-        if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sync_network.py')):
-            from sync_network import get_current_local_ip, get_last_synced_ip, sync_network
-            while True:
-                await asyncio.sleep(15)
-                curr = get_current_local_ip()
-                last = get_last_synced_ip()
-                if curr and last and curr != last:
-                    print(f"\n[NETWORK CHANGE DETECTED] IP changed from {last} -> {curr}!", flush=True)
-                    print("[*] Running background network auto-synchronizer...", flush=True)
-                    try:
-                        await asyncio.to_thread(sync_network, True)
-                        print(f"[+] Successfully adapted to new IP: {curr}\n", flush=True)
-                    except Exception as ex:
-                        print(f"[!] Auto-sync error: {ex}", flush=True)
+        sync_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sync_network.py')
+        if os.path.exists(sync_file):
+            import importlib.util
+            spec = importlib.util.spec_from_file_location("sync_network", sync_file)
+            if spec and spec.loader:
+                sn_mod = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(sn_mod)
+                get_current_local_ip = getattr(sn_mod, 'get_current_local_ip', None)
+                get_last_synced_ip = getattr(sn_mod, 'get_last_synced_ip', None)
+                sync_network_fn = getattr(sn_mod, 'sync_network', None)
+                while True:
+                    await asyncio.sleep(15)
+                    if get_current_local_ip and get_last_synced_ip and sync_network_fn:
+                        curr = get_current_local_ip()
+                        last = get_last_synced_ip()
+                        if curr and last and curr != last:
+                            print(f"\n[NETWORK CHANGE DETECTED] IP changed from {last} -> {curr}!", flush=True)
+                            print("[*] Running background network auto-synchronizer...", flush=True)
+                            try:
+                                await asyncio.to_thread(sync_network_fn, True)
+                                print(f"[+] Successfully adapted to new IP: {curr}\n", flush=True)
+                            except Exception as ex:
+                                print(f"[!] Auto-sync error: {ex}", flush=True)
     except Exception:
         pass
 
@@ -1098,8 +1107,11 @@ async def main():
     try:
         conn = get_db()
         with conn.cursor() as cur:
-            cur.execute("UPDATE player_ninjas SET is_main = 0 WHERE user_id = 1 AND id = 75")
-            cur.execute("UPDATE player_ninjas SET is_main = 1 WHERE user_id = 1 AND id = 1")
+            # Demote any custom ninjas (> 107) from active combat or deploy slots across all accounts
+            cur.execute("UPDATE player_ninjas SET is_main = 0 WHERE ninja_id > 107 AND is_main > 0")
+            cur.execute("UPDATE player_ninjas SET deploy_slot = 0 WHERE ninja_id > 107 AND deploy_slot > 0")
+            # Ensure user 1 has an authentic leader
+            cur.execute("UPDATE player_ninjas SET is_main = 1 WHERE user_id = 1 AND ninja_id <= 107 AND is_main = 0 ORDER BY id ASC LIMIT 1")
             conn.commit()
         conn.close()
         print("[+] Verified authentic player formation in database.", flush=True)

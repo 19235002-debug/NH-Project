@@ -13,11 +13,10 @@ if '// 2e. Safeguard Config.roleObject' in ui_main:
 hook_marker = '// 2b. Neutralize TalkingData analytics & AppsFlyer native JNI bridges immediately'
 assert hook_marker in ui_main, 'Hook marker not found in assets/UI/main.js!'
 
-role_guard_code = '''    // 2e. Safeguard Config.roleObject & ArmatureTools against missing/custom ninja IDs (fixes empty battle screen)
+role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, GameData, ArmatureTools against missing/custom ninjas
     try {
-        var _polyfillRoleObject = function(cfg) {
-            if (!cfg || !cfg.roleObject) return;
-            var ro = cfg.roleObject;
+        var _polyFillAllRoles = function(ro) {
+            if (!ro || typeof ro !== "object") return;
             var base = ro[17] || ro[9] || ro[1];
             if (!base) {
                 for (var k in ro) {
@@ -29,7 +28,10 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject & ArmatureTools agai
             }
             if (!base) return;
 
-            for (var nid = 0; nid <= 500; nid++) {
+            if (ro.__nhRolesGuarded && ro[193] && ro[108]) return;
+            ro.__nhRolesGuarded = true;
+
+            for (var nid = 0; nid <= 1000; nid++) {
                 if (!ro[nid]) {
                     var clone = {};
                     for (var prop in base) {
@@ -43,13 +45,28 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject & ArmatureTools agai
                     clone.xmlfile = base.xmlfile || "mingren";
                     clone.quality = 5;
                     clone.chakra = [1];
+                    clone.speed = 100;
+                    clone.hp = 1000;
+                    clone.attack = 100;
+                    clone.def = 50;
                     ro[nid] = clone;
                 } else if (!ro[nid].xmlfile) {
                     ro[nid].xmlfile = base.xmlfile || "mingren";
                 }
             }
+
+            ro[undefined] = ro[17] || base;
+            ro["undefined"] = ro[17] || base;
+            ro[null] = ro[17] || base;
+            ro["null"] = ro[17] || base;
+            ro[0] = ro[17] || base;
+            ro["0"] = ro[17] || base;
+            ro[""] = ro[17] || base;
+            ro[NaN] = ro[17] || base;
+            ro["NaN"] = ro[17] || base;
+
             if (typeof cc !== "undefined" && cc.log) {
-                cc.log("[NH Config] Safeguarded roleObject (0..500) against undefined ninjas");
+                cc.log("[NH Safeguard] Successfully polyfilled roleObject (0..1000) with authentic armatures");
             }
         };
 
@@ -64,9 +81,8 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject & ArmatureTools agai
                     _inConfigCall = true;
                     try {
                         var inst = _origConfigGetInstance.apply(this, arguments);
-                        if (inst && inst.roleObject && !inst.__nhRoleGuarded) {
-                            inst.__nhRoleGuarded = true;
-                            _polyfillRoleObject(inst);
+                        if (inst && inst.roleObject) {
+                            _polyFillAllRoles(inst.roleObject);
                         }
                         return inst;
                     } finally {
@@ -74,6 +90,95 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject & ArmatureTools agai
                     }
                 };
             }
+            if (Config.prototype && Config.prototype.processRole) {
+                var _origProcessRole = Config.prototype.processRole;
+                Config.prototype.processRole = function () {
+                    var res = _origProcessRole.apply(this, arguments);
+                    try {
+                        if (this.roleObject) {
+                            _polyFillAllRoles(this.roleObject);
+                        }
+                    } catch(ePR) {}
+                    return res;
+                };
+            }
+        }
+
+        if (typeof GameUserInfor !== "undefined" && GameUserInfor.prototype) {
+            if (GameUserInfor.prototype.setImage) {
+                var _origSetImage = GameUserInfor.prototype.setImage;
+                GameUserInfor.prototype.setImage = function () {
+                    try {
+                        var cfg = typeof Config !== "undefined" && Config.getInstance ? Config.getInstance() : null;
+                        if (cfg && cfg.roleObject) {
+                            _polyFillAllRoles(cfg.roleObject);
+                        }
+                        if (this.roleList && Array.isArray(this.roleList)) {
+                            for (var i = 0; i < this.roleList.length; i++) {
+                                var f = this.roleList[i];
+                                if (f && (!f.id || (cfg && cfg.roleObject && !cfg.roleObject[f.id]))) {
+                                    f.id = 17;
+                                }
+                            }
+                        }
+                    } catch (ePreImg) {}
+                    try {
+                        return _origSetImage.apply(this, arguments);
+                    } catch (errSetImage) {
+                        if (typeof cc !== "undefined" && cc.log) {
+                            cc.log("[NH Guard] Intercepted GameUserInfor.setImage: " + errSetImage);
+                        }
+                    }
+                };
+            }
+            if (GameUserInfor.prototype.setImageRefresh) {
+                var _origSetImageRefresh = GameUserInfor.prototype.setImageRefresh;
+                GameUserInfor.prototype.setImageRefresh = function () {
+                    try {
+                        var cfg = typeof Config !== "undefined" && Config.getInstance ? Config.getInstance() : null;
+                        if (cfg && cfg.roleObject) {
+                            _polyFillAllRoles(cfg.roleObject);
+                        }
+                        if (this.roleList && Array.isArray(this.roleList)) {
+                            for (var i = 0; i < this.roleList.length; i++) {
+                                var f = this.roleList[i];
+                                if (f && (!f.id || (cfg && cfg.roleObject && !cfg.roleObject[f.id]))) {
+                                    f.id = 17;
+                                }
+                            }
+                        }
+                    } catch (ePreRef) {}
+                    try {
+                        return _origSetImageRefresh.apply(this, arguments);
+                    } catch (errRef) {
+                        if (typeof cc !== "undefined" && cc.log) {
+                            cc.log("[NH Guard] Intercepted GameUserInfor.setImageRefresh: " + errRef);
+                        }
+                    }
+                };
+            }
+        }
+
+        if (typeof GameData !== "undefined" && GameData.prototype && GameData.prototype.getFighters) {
+            var _origGetFighters = GameData.prototype.getFighters;
+            GameData.prototype.getFighters = function () {
+                var list = _origGetFighters.apply(this, arguments);
+                try {
+                    var cfg = typeof Config !== "undefined" && Config.getInstance ? Config.getInstance() : null;
+                    if (cfg && cfg.roleObject) {
+                        _polyFillAllRoles(cfg.roleObject);
+                    }
+                    if (Array.isArray(list)) {
+                        for (var i = 0; i < list.length; i++) {
+                            var f = list[i];
+                            if (f && (!f.id || (cfg && cfg.roleObject && !cfg.roleObject[f.id]))) {
+                                f.id = 17;
+                            }
+                        }
+                    }
+                } catch(eGF) {}
+                return list;
+            };
         }
 
         if (typeof ArmatureTools !== "undefined") {
