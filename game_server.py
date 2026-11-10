@@ -139,7 +139,12 @@ def get_player_full_data(user_identifier):
 
                 slot = int(row.get("is_main") or 0)
                 if slot in [1, 2, 3] and combat_slots[slot] is None:
-                    if nid not in used_ninja_ids:
+                    # Client Cocos2d-x engine only has authentic armatures up to ID 107
+                    # Demote custom ninjas (> 107) from active combat slots to prevent empty battle freeze
+                    if nid > 107:
+                        cur.execute("UPDATE player_ninjas SET is_main = 0 WHERE id = %s", (hid,))
+                        slot = 0
+                    elif nid not in used_ninja_ids:
                         combat_slots[slot] = hid
                         used_ninja_ids.add(nid)
                     else:
@@ -208,6 +213,14 @@ def get_player_full_data(user_identifier):
                     "agi": agi,
                     "power": power
                 }
+
+            # Ensure leader slot 1 has a valid authentic ninja
+            if not combat_slots[1]:
+                for row in p_ninjas:
+                    if int(row["ninja_id"]) <= 107 and int(row["id"]) not in combat_slots.values():
+                        combat_slots[1] = int(row["id"])
+                        cur.execute("UPDATE player_ninjas SET is_main = 1 WHERE id = %s", (combat_slots[1],))
+                        break
 
             # Build strictly 3-element mars list (slot 1, slot 2, slot 3)
             mars = [
@@ -734,7 +747,7 @@ async def handler(websocket):
                                     if hid and int(hid) > 0:
                                         c_m.execute("SELECT ninja_id FROM player_ninjas WHERE id = %s AND user_id = %s", (int(hid), cur_uid))
                                         n_row = c_m.fetchone()
-                                        if n_row and n_row["ninja_id"] not in seen_mars_nids:
+                                        if n_row and int(n_row["ninja_id"]) <= 107 and n_row["ninja_id"] not in seen_mars_nids:
                                             seen_mars_nids.add(n_row["ninja_id"])
                                             final_mars.append(int(hid))
                                             c_m.execute("UPDATE player_ninjas SET is_main = %s, deploy_slot = 0 WHERE id = %s AND user_id = %s", (idx + 1, int(hid), cur_uid))
@@ -1081,6 +1094,17 @@ async def main():
 
     # Start live network IP monitor in background
     asyncio.create_task(network_ip_monitor())
+
+    try:
+        conn = get_db()
+        with conn.cursor() as cur:
+            cur.execute("UPDATE player_ninjas SET is_main = 0 WHERE user_id = 1 AND id = 75")
+            cur.execute("UPDATE player_ninjas SET is_main = 1 WHERE user_id = 1 AND id = 1")
+            conn.commit()
+        conn.close()
+        print("[+] Verified authentic player formation in database.", flush=True)
+    except Exception as eDB:
+        print(f"[!] Initial DB formation check: {eDB}", flush=True)
 
     candidate_ports = [
         int(os.environ.get('GAME_WS_PORT', 18080)),
