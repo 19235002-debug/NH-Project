@@ -43,7 +43,7 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
                     clone.alt = "Shinobi " + nid;
                     clone.name = "Shinobi " + nid;
                     clone.xmlfile = base.xmlfile || "mingren";
-                    clone.quality = 5;
+                    clone.quality = (base && typeof base.quality !== "undefined") ? base.quality : 1;
                     clone.chakra = [1];
                     clone.speed = 100;
                     clone.hp = 1000;

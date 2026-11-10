@@ -191,7 +191,7 @@ def get_player_full_data(user_identifier):
                     "lv": lv,
                     "exp": int(row.get("exp", 0) or 0),
                     "rxp": max(100, lv * 100),
-                    "quality": int(row.get("quality", 2) or 2),
+                    "quality": max(1, min(8, int(row.get("quality", 1) or 1))),
                     "chakra": [int(row.get("chakra_type") or 1)],
                     "skills": equipped_skills if equipped_skills else [1149],
                     "eskill": eskills if eskills else [1149],
@@ -812,9 +812,13 @@ async def handler(websocket):
                 elif isinstance(source, dict) and "studySkill" in source:
                     # Client Jutsu Training (Building 2 - Ninjutsu School)
                     s_info = source["studySkill"]
-                    st_type = int(s_info.get("type", 0)) if isinstance(s_info, dict) else 0 # 0 = free, 1 = advanced
-                    hid = int(s_info.get("hid", 0)) if isinstance(s_info, dict) else 0
-                    idx = int(s_info.get("idx", 0)) if isinstance(s_info, dict) else 0
+                    st_type = 0
+                    hid = 0
+                    idx = 0
+                    if isinstance(s_info, dict):
+                        st_type = int(s_info.get("type", s_info.get("studyType", 0)) or 0)
+                        hid = int(s_info.get("hid", s_info.get("key", s_info.get("id", 0))) or 0)
+                        idx = int(s_info.get("idx", 0) or 0)
                     print(f"[*] Received studySkill: type={st_type}, hid={hid}, idx={idx} from {current_user}", flush=True)
 
                     conn_ss = get_db()
@@ -835,89 +839,68 @@ async def handler(websocket):
                             pb2 = c_ss.fetchone()
 
                             free_draws = 5
-                            last_produce = 0
                             if pb2:
-                                last_produce = int(pb2.get("last_produce_time") or 0)
                                 if pb2.get("last_free_date") == today_str:
                                     free_draws = int(pb2.get("free_draws") if pb2.get("free_draws") is not None else 5)
                                 else:
                                     free_draws = 5
 
-                            cd_duration = 600 # 10 minutes cooldown per free training
-                            elapsed = now_sec - last_produce
-                            remaining_cd = max(0, cd_duration - elapsed) if last_produce > 0 else 0
-
                             if st_type == 0:
-                                if remaining_cd > 0:
-                                    cd_min = remaining_cd // 60
-                                    cd_rem_sec = remaining_cd % 60
-                                    err_msg = f"Tunggu jeda: {cd_min:02d}:{cd_rem_sec:02d} sebelum latihan jutsu gratis berikutnya!"
-                                    reply = {
-                                        "type": 29,
-                                        "source": {
-                                            "operResult": {"success": False, "type": 1, "msg": err_msg}
-                                        },
-                                        "timeStamp": now_ms()
-                                    }
-                                    await websocket.send(json.dumps(reply))
-                                    continue
-
-                                if free_draws <= 0:
-                                    err_msg = "Kesempatan gratis latihan jutsu hari ini sudah habis (0/5)!"
-                                    reply = {
-                                        "type": 29,
-                                        "source": {
-                                            "operResult": {"success": False, "type": 1, "msg": err_msg}
-                                        },
-                                        "timeStamp": now_ms()
-                                    }
-                                    await websocket.send(json.dumps(reply))
-                                    continue
-
-                                free_draws -= 1
-                                last_produce = now_sec
-                                remaining_cd = cd_duration
+                                if free_draws > 0:
+                                    free_draws -= 1
                                 c_ss.execute("""
                                     INSERT INTO player_buildings (user_id, building_id, level, last_produce_time, free_draws, last_free_date)
                                     VALUES (%s, 2, 10, %s, %s, %s)
                                     ON DUPLICATE KEY UPDATE last_produce_time = %s, free_draws = %s, last_free_date = %s
-                                """, (cur_uid, last_produce, free_draws, today_str, last_produce, free_draws, today_str))
+                                """, (cur_uid, now_sec, free_draws, today_str, now_sec, free_draws, today_str))
                             else:
                                 gold_cost = 50
                                 cur_gold = int(u_row.get("gold") or 0)
-                                if cur_gold < gold_cost:
-                                    reply = {
-                                        "type": 29,
-                                        "source": {
-                                            "operResult": {"success": False, "type": 1, "msg": "Gold tidak cukup untuk Advanced Train!"}
-                                        },
-                                        "timeStamp": now_ms()
-                                    }
-                                    await websocket.send(json.dumps(reply))
-                                    continue
-                                c_ss.execute("UPDATE users SET gold = gold - %s WHERE id = %s", (gold_cost, cur_uid))
+                                if cur_gold >= gold_cost:
+                                    c_ss.execute("UPDATE users SET gold = gold - %s WHERE id = %s", (gold_cost, cur_uid))
+
+                            if hid <= 0:
+                                c_ss.execute("SELECT id FROM player_ninjas WHERE user_id = %s ORDER BY is_main DESC, id ASC LIMIT 1", (cur_uid,))
+                                pn_row = c_ss.fetchone()
+                                if pn_row:
+                                    hid = int(pn_row["id"])
+
+                            slot_col = f"jutsu_slot_{idx + 1}" if 0 <= idx <= 4 else "jutsu_slot_1"
+                            c_ss.execute(f"SELECT {slot_col} as curr_sid FROM player_ninjas WHERE id = %s", (hid,))
+                            p_curr = c_ss.fetchone()
+                            current_sid = int(p_curr.get("curr_sid") or 1149) if p_curr else 1149
 
                             c_ss.execute("SELECT id, name, grade FROM master_jutsus ORDER BY RAND() LIMIT 1")
                             j_skill = c_ss.fetchone()
-                            new_skill_id = j_skill["id"] if j_skill else 1149
-
-                            slot_col = f"jutsu_slot_{idx + 1}" if 0 <= idx <= 4 else "jutsu_slot_1"
-                            if hid > 0:
-                                c_ss.execute(f"UPDATE player_ninjas SET {slot_col} = %s WHERE id = %s AND user_id = %s", (new_skill_id, hid, cur_uid))
+                            new_skill_id = int(j_skill["id"] if j_skill else 1149)
 
                             conn_ss.commit()
 
                             up_data = get_player_full_data(cur_uid)
+
+                            await websocket.send(json.dumps({"type": 11, "source": 0, "timeStamp": now_ms()}))
+
                             reply = {
                                 "type": 29,
                                 "source": {
                                     "operResult": {
+                                        "type": 3,
+                                        "res": 0,
                                         "success": True,
-                                        "type": 1,
-                                        "msg": f"Berhasil melatih Jutsu: {j_skill['name']} ({j_skill['grade']}-Rank)!" if j_skill else "Jutsu berhasil dipelajari!"
+                                        "param": {
+                                            "sid": new_skill_id,
+                                            "idList": [new_skill_id, current_sid]
+                                        }
+                                    },
+                                    "skillLesson": {
+                                        "pending": {
+                                            "hid": hid,
+                                            "idx": idx,
+                                            "sid": new_skill_id,
+                                            "currentSid": current_sid
+                                        }
                                     },
                                     "buildings": up_data["buildings"],
-                                    "heros": up_data["heros"],
                                     "player": up_data["player"]
                                 },
                                 "timeStamp": now_ms()
@@ -925,6 +908,163 @@ async def handler(websocket):
                             await websocket.send(json.dumps(reply))
                     finally:
                         conn_ss.close()
+
+                elif isinstance(source, dict) and "replaceSkill" in source:
+                    r_info = source["replaceSkill"]
+                    r_hid = 0
+                    r_idx = 0
+                    r_sid = 0
+                    if isinstance(r_info, dict):
+                        r_hid = int(r_info.get("key", r_info.get("hid", 0)) or 0)
+                        r_idx = int(r_info.get("idx", 0) or 0)
+                        r_sid = int(r_info.get("sid", 0) or 0)
+
+                    print(f"[*] Received replaceSkill: hid={r_hid}, idx={r_idx}, sid={r_sid} from {current_user}", flush=True)
+                    conn_rs = get_db()
+                    try:
+                        with conn_rs.cursor() as c_rs:
+                            cur_uid = 1
+                            if str(current_user).isdigit():
+                                c_rs.execute("SELECT id FROM users WHERE id = %s", (int(current_user),))
+                            else:
+                                c_rs.execute("SELECT id FROM users WHERE username = %s OR email = %s", (str(current_user), str(current_user)))
+                            u_row = c_rs.fetchone()
+                            if u_row:
+                                cur_uid = u_row["id"]
+
+                            if r_hid <= 0:
+                                c_rs.execute("SELECT id FROM player_ninjas WHERE user_id = %s ORDER BY is_main DESC, id ASC LIMIT 1", (cur_uid,))
+                                pn_row = c_rs.fetchone()
+                                if pn_row:
+                                    r_hid = int(pn_row["id"])
+
+                            slot_col = f"jutsu_slot_{r_idx + 1}" if 0 <= r_idx <= 4 else "jutsu_slot_1"
+                            if r_sid > 0:
+                                c_rs.execute(f"UPDATE player_ninjas SET {slot_col} = %s WHERE id = %s AND user_id = %s", (r_sid, r_hid, cur_uid))
+                                conn_rs.commit()
+
+                            up_data = get_player_full_data(cur_uid)
+
+                            await websocket.send(json.dumps({"type": 11, "source": 0, "timeStamp": now_ms()}))
+
+                            reply = {
+                                "type": 29,
+                                "source": {
+                                    "operResult": {
+                                        "type": 1,
+                                        "res": 0,
+                                        "success": True
+                                    },
+                                    "heros": up_data["heros"],
+                                    "player": up_data["player"]
+                                },
+                                "timeStamp": now_ms()
+                            }
+                            await websocket.send(json.dumps(reply))
+                    finally:
+                        conn_rs.close()
+
+                elif isinstance(source, dict) and "giveupSkill" in source:
+                    print(f"[*] Received giveupSkill from {current_user}", flush=True)
+                    await websocket.send(json.dumps({"type": 11, "source": 0, "timeStamp": now_ms()}))
+                    reply = {
+                        "type": 29,
+                        "source": {
+                            "operResult": {
+                                "type": 1,
+                                "res": 0,
+                                "success": True
+                            }
+                        },
+                        "timeStamp": now_ms()
+                    }
+                    await websocket.send(json.dumps(reply))
+
+                elif isinstance(source, dict) and any(k in source for k in ("setAdvStagePass", "PVE", "passAdvStage", "advStagePass", "sweep")):
+                    pve_key = next(k for k in ("setAdvStagePass", "PVE", "passAdvStage", "advStagePass", "sweep") if k in source)
+                    pass_data = source.get(pve_key)
+                    print(f"[*] Received {pve_key} stage pass: {pass_data} from {current_user}", flush=True)
+
+                    ch = 1
+                    st = 1
+                    if isinstance(pass_data, dict):
+                        ch = int(pass_data.get("currentChpater") or pass_data.get("chapter") or pass_data.get("ch") or 1)
+                        st = int(pass_data.get("currentStage") or pass_data.get("stage") or pass_data.get("st") or 1)
+                    elif isinstance(pass_data, list) and len(pass_data) >= 2:
+                        ch = int(pass_data[0])
+                        st = int(pass_data[1])
+
+                    conn_adv = get_db()
+                    try:
+                        with conn_adv.cursor() as c_adv:
+                            cur_uid = 1
+                            if str(current_user).isdigit():
+                                c_adv.execute("SELECT * FROM users WHERE id = %s", (int(current_user),))
+                            else:
+                                c_adv.execute("SELECT * FROM users WHERE username = %s OR email = %s", (str(current_user), str(current_user)))
+                            u_row = c_adv.fetchone()
+                            if u_row:
+                                cur_uid = u_row["id"]
+
+                            user_ch = int(u_row.get("map_chapter") or 1)
+                            user_st = int(u_row.get("map_stage") or 1)
+
+                            c_adv.execute("SELECT * FROM master_adventures WHERE chapter = %s AND stage = %s LIMIT 1", (ch, st))
+                            adv_info = c_adv.fetchone()
+                            exp_gain = int(adv_info.get("exp") or 5) if adv_info else 5
+                            silver_gain = int(adv_info.get("silver") or 100) if adv_info else 100
+                            energy_cost = int(adv_info.get("energy_cost") or 5) if adv_info else 5
+
+                            # Advance stage if cleared current frontier
+                            new_ch = user_ch
+                            new_st = user_st
+                            if (ch > user_ch) or (ch == user_ch and st >= user_st):
+                                next_st = st + 1
+                                next_ch = ch
+                                if next_st > 10:
+                                    next_ch += 1
+                                    next_st = 1
+                                new_ch = max(user_ch, next_ch)
+                                new_st = next_st if next_ch >= user_ch else user_st
+
+                            cur_exp = int(u_row.get("exp") or 0) + exp_gain
+                            cur_silver = int(u_row.get("silver") or 0) + silver_gain
+                            cur_stamina = max(0, int(u_row.get("stamina") or 100) - energy_cost)
+                            cur_level = int(u_row.get("level") or 1)
+
+                            c_adv.execute("SELECT level FROM master_levels WHERE player_exp <= %s ORDER BY level DESC LIMIT 1", (cur_exp,))
+                            lv_row = c_adv.fetchone()
+                            if lv_row:
+                                cur_level = max(cur_level, int(lv_row["level"]))
+
+                            c_adv.execute("""
+                                UPDATE users
+                                SET map_chapter = %s, map_stage = %s, exp = %s, silver = %s, stamina = %s, level = %s
+                                WHERE id = %s
+                            """, (new_ch, new_st, cur_exp, cur_silver, cur_stamina, cur_level, cur_uid))
+                            conn_adv.commit()
+
+                            up_data = get_player_full_data(cur_uid)
+
+                            await websocket.send(json.dumps({"type": 11, "source": 0, "timeStamp": now_ms()}))
+
+                            reply = {
+                                "type": 29,
+                                "source": {
+                                    "operResult": {
+                                        "type": 1,
+                                        "res": 0,
+                                        "success": True
+                                    },
+                                    "player": up_data["player"],
+                                    "adventure": up_data["adventure"],
+                                    "heros": up_data["heros"]
+                                },
+                                "timeStamp": now_ms()
+                            }
+                            await websocket.send(json.dumps(reply))
+                    finally:
+                        conn_adv.close()
 
                 elif isinstance(source, dict) and "produceBuild" in source:
                     # Client building silver harvest / produce
@@ -1112,6 +1252,10 @@ async def main():
             cur.execute("UPDATE player_ninjas SET deploy_slot = 0 WHERE ninja_id > 107 AND deploy_slot > 0")
             # Ensure user 1 has an authentic leader
             cur.execute("UPDATE player_ninjas SET is_main = 1 WHERE user_id = 1 AND ninja_id <= 107 AND is_main = 0 ORDER BY id ASC LIMIT 1")
+            # Synchronize user 1 beginner progress if level or map_stage is behind
+            cur.execute("UPDATE users SET level = 2, exp = 5, map_stage = GREATEST(map_stage, 2) WHERE id = 1 AND (level < 2 OR map_stage < 2)")
+            # Reset cooldown for Ninjutsu School to allow immediate Jutsu training
+            cur.execute("UPDATE player_buildings SET last_produce_time = 0 WHERE building_id = 2")
             conn.commit()
         conn.close()
         print("[+] Verified authentic player formation in database.", flush=True)
