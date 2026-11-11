@@ -178,17 +178,17 @@ class GameClientAdapterController extends Controller
                 'gold' => 500,
                 'stamina' => 100,
                 'vip_level' => 0,
-                'avatar_ninja_id' => 9
+                'avatar_ninja_id' => 17
             ]);
 
-            // Starter Naruto
+            // Starter Naruto (ID 17, Grade C, Sexy Jutsu ID 1092)
             PlayerNinja::create([
                 'user_id' => $user->id,
-                'ninja_id' => 9,
+                'ninja_id' => 17,
                 'level' => 1,
                 'exp' => 0,
                 'is_main' => 1,
-                'jutsu_slot_1' => 6
+                'jutsu_slot_1' => 1092
             ]);
         }
 

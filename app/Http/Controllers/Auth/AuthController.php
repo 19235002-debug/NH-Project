@@ -94,13 +94,14 @@ class AuthController extends Controller
             'gold' => 500,
             'stamina' => 100,
             'vip_level' => 0,
+            'avatar_ninja_id' => 17,
             'exam_floor' => 1,
             'gacha_pity' => 0,
             'crane_pity' => 0
         ]);
 
-        // Grant default starter ninja (Naruto / Mingren ID 1)
-        $starterNinja = MasterNinja::find(1) ?? MasterNinja::first();
+        // Grant default starter ninja (Naruto ID 17, Grade C)
+        $starterNinja = MasterNinja::find(17) ?? MasterNinja::first();
         if ($starterNinja) {
             PlayerNinja::create([
                 'user_id' => $user->id,
@@ -108,7 +109,7 @@ class AuthController extends Controller
                 'level' => 1,
                 'exp' => 0,
                 'is_main' => 1,
-                'jutsu_slot_1' => $starterNinja->special_jutsu_id ?? 1149,
+                'jutsu_slot_1' => $starterNinja->special_jutsu_id ?? 1092,
                 'jutsu_slot_2' => 0,
                 'jutsu_slot_3' => 0
             ]);

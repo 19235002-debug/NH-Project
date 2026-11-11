@@ -22,6 +22,76 @@ assert hook_marker in ui_main, 'Hook marker not found in assets/UI/main.js!'
 
 role_guard_code = f'''    // 2e. Safeguard Config.roleObject, GameUserInfor, GameData, ArmatureTools against missing/custom ninjas
     try {{
+        // 2e-quality: Extend qualityIconlist and qualityCol for authentic UR (quality 8) tier
+        try {{
+            if (typeof qualityIconlist !== "undefined" && Array.isArray(qualityIconlist)) {{
+                while (qualityIconlist.length <= 15) {{
+                    qualityIconlist.push("SSS");
+                }}
+            }}
+            if (typeof qualityCol !== "undefined" && Array.isArray(qualityCol)) {{
+                while (qualityCol.length <= 15) {{
+                    qualityCol.push(qualityCol[qualityCol.length - 1] || null);
+                }}
+            }}
+        }} catch(eQual) {{}}
+
+        // 2e-armature: Safeguard ArmatureLoad and ArmatureTools against missing skeletal models
+        try {{
+            var _VALID_ARMS = {{
+                "afei":1,"ai":1,"anbu1":1,"anbu2":1,"aomoyi":1,"asima":1,"bai":1,"ban":1,"banzang":1,
+                "bingzuleitong":1,"buzhihuoxuanjian":1,"changshilang":1,"chitongkai":1,"chutian":1,
+                "cilangfang":1,"dahe":1,"daitu":1,"daluyi":1,"dashedou":1,"dashewan":1,"dayemu":1,
+                "didala":1,"dingci":1,"dou":1,"duoyouye":1,"erdaishuiying":1,"erweirenzhuli":1,
+                "feiduan":1,"feijian":1,"fengyingwoailuo":1,"gangshou":1,"guijiao":1,"guitongwan":1,
+                "hongdou":1,"huibisi":1,"jianmeicheng":1,"jiaodu":1,"jingye":1,"jingyin":1,"jinjiao":1,
+                "jiuweimingren":1,"jue":1,"junmalv":1,"kai":1,"kakaxi":1,"kanjiulang":1,"karuyi":1,
+                "liudaoban":1,"liudaodaitu":1,"liuweirenzhuli":1,"luwan":1,"maji":1,"mingren":1,
+                "muyeshaobing":1,"muyeshouwei":1,"muyewan":1,"ningci":1,"peien":1,"qiandaipopo":1,
+                "qilabi":1,"qing":1,"qiweirenzhuli":1,"quanzhongya":1,"sakedeng":1,"sandaihuoying":1,
+                "sandaileiying":1,"sanweirenzhuli":1,"shanchengqingye":1,"shayinshaobing":1,
+                "shayinshouwei":1,"shouju":1,"shuimen":1,"shuimu":1,"shuiyue":1,"sidaifengying":1,
+                "siweirenzhuli":1,"tiantian":1,"tuanzang":1,"tuosizhen":1,"wanhuatongzuozhu":1,
+                "weapon":1,"woailuo":1,"wu":1,"wuweirenzhuli":1,"wuyinshaobing":1,"wuyinshouwei":1,
+                "xianglin":1,"xianrenmingren":1,"xiaoli":1,"xiaonan":1,"xiaoying":1,"xie":1,
+                "xirihong":1,"yibixi":1,"yiluka":1,"yinjiao":1,"you":1,"yueguangjifeng":1,
+                "zaibuzhan":1,"zhaomeiming":1,"zhinai":1,"zhongwu":1,"zhouyinzuozhu":1,"zhujian":1,
+                "zilaiye":1,"zuojing":1,"zuojinyoujin":1,"zuozhu":1,"ashuraotsusuki":1,"fukasaku":1
+            }};
+
+            if (typeof ArmatureLoad !== "undefined" && ArmatureLoad.prototype) {{
+                if (ArmatureLoad.prototype.addXML) {{
+                    var _origAddXML = ArmatureLoad.prototype.addXML;
+                    ArmatureLoad.prototype.addXML = function(xmlfile) {{
+                        if (!xmlfile || !_VALID_ARMS[xmlfile]) {{
+                            xmlfile = "xianrenmingren";
+                        }}
+                        return _origAddXML.call(this, xmlfile);
+                    }};
+                }}
+            }}
+
+            if (typeof ArmatureTools !== "undefined") {{
+                if (ArmatureTools.roleArmature) {{
+                    var _origRoleArmature = ArmatureTools.roleArmature;
+                    ArmatureTools.roleArmature = function(rid) {{
+                        var cfg = (typeof Config !== "undefined" && Config.getInstance) ? Config.getInstance() : null;
+                        var ro = (cfg && cfg.roleObject) ? cfg.roleObject[rid] : null;
+                        var origXml = null;
+                        if (ro && ro.xmlfile && !_VALID_ARMS[ro.xmlfile]) {{
+                            origXml = ro.xmlfile;
+                            ro.xmlfile = "xianrenmingren";
+                        }}
+                        var arm = _origRoleArmature.apply(this, arguments);
+                        if (ro && origXml) {{
+                            ro.xmlfile = origXml;
+                        }}
+                        return arm;
+                    }};
+                }}
+            }}
+        }} catch(eArmSafe) {{}}
+
         var _MN = {js_mn_literal};
         var _polyFillAllRoles = function(ro) {{
             if (!ro || typeof ro !== "object") return;
@@ -36,7 +106,7 @@ role_guard_code = f'''    // 2e. Safeguard Config.roleObject, GameUserInfor, Gam
             }}
             if (!base) return;
 
-            if (ro.__nhRolesGuarded && ro[170] && ro[199] && ro[170].name !== "Shinobi 170") return;
+            if (ro.__nhRolesGuarded && ro[170] && ro[199] && ro[170].xmlfile === "ashuraotsusuki") return;
             ro.__nhRolesGuarded = true;
 
             for (var nid = 0; nid <= 1000; nid++) {{
@@ -58,6 +128,8 @@ role_guard_code = f'''    // 2e. Safeguard Config.roleObject, GameUserInfor, Gam
                     clone.attack = d ? d[5] : 100;
                     clone.def = d ? d[6] : 50;
                     clone.speed = d ? d[7] : 100;
+                    clone.skill = (d && d[8]) ? [d[8]] : (base.skill || [1149]);
+                    clone.special_jutsu = (d && d[8]) ? d[8] : (base.special_jutsu || 1149);
                     ro[nid] = clone;
                 }} else if (d) {{
                     ro[nid].name = d[0];
@@ -65,6 +137,12 @@ role_guard_code = f'''    // 2e. Safeguard Config.roleObject, GameUserInfor, Gam
                     ro[nid].quality = d[1];
                     ro[nid].xmlfile = d[2];
                     ro[nid].chakra = d[3];
+                    if (d[8]) {{
+                        ro[nid].special_jutsu = d[8];
+                        if (!ro[nid].skill || !Array.isArray(ro[nid].skill) || ro[nid].skill.length === 0) {{
+                            ro[nid].skill = [d[8]];
+                        }}
+                    }}
                 }}
             }}
 
@@ -482,15 +560,60 @@ ui_main_fixed = ui_main.replace(hook_marker, role_guard_code + '\n    ' + hook_m
 # Repack APK
 with zipfile.ZipFile('OkkaNHNE-Private.apk', 'r') as zin:
     with zipfile.ZipFile('temp_repack.apk', 'w', compression=zipfile.ZIP_DEFLATED) as zout:
+        existing_files = set()
+        xianren_xml = None
+        xianren_plist = None
+        xianren_png = None
+
         for item in zin.infolist():
             if item.filename.startswith('META-INF/'):
                 continue
+            if item.filename.startswith('assets/UI/image/iroleHead/'):
+                continue
+            if item.filename.startswith('assets/UI/image/iskillicon/'):
+                continue
+            if 'ashuraotsusuki' in item.filename or 'fukasaku' in item.filename:
+                continue
+            existing_files.add(item.filename)
+            if item.filename == 'assets/armatures/resXML-iphonehd/xianrenmingren.xml':
+                xianren_xml = zin.read(item.filename)
+            elif item.filename == 'assets/armatures/resXML-iphonehd/xianrenmingren.plist':
+                xianren_plist = zin.read(item.filename)
+            elif item.filename == 'assets/armatures/resXML-iphonehd/xianrenmingren.png':
+                xianren_png = zin.read(item.filename)
+
             if item.filename == 'assets/UI/main.js':
                 zout.writestr(item, ui_main_fixed.encode('utf-8'))
             elif item.filename == 'assets/main.js':
                 zout.writestr(item, ui_main_fixed.encode('utf-8'))
             else:
                 zout.writestr(item, zin.read(item.filename))
+
+        # Inject all ninja heads from public/images/ninja_heads/
+        if os.path.exists('public/images/ninja_heads'):
+            for fname in os.listdir('public/images/ninja_heads'):
+                if fname.lower().endswith('.png'):
+                    target_path = f'assets/UI/image/iroleHead/{fname}'
+                    with open(os.path.join('public/images/ninja_heads', fname), 'rb') as hf:
+                        zout.writestr(target_path, hf.read())
+            print(f"[+] Injected authentic ninja head icons into assets/UI/image/iroleHead/")
+
+        # Inject all skill icons from public/images/skills/
+        if os.path.exists('public/images/skills'):
+            for fname in os.listdir('public/images/skills'):
+                if fname.lower().endswith('.png'):
+                    target_path = f'assets/UI/image/iskillicon/{fname}'
+                    with open(os.path.join('public/images/skills', fname), 'rb') as sf:
+                        zout.writestr(target_path, sf.read())
+            print(f"[+] Injected authentic skill icons into assets/UI/image/iskillicon/")
+
+        # Provide armature assets for ashuraotsusuki and fukasaku if xianrenmingren available
+        if xianren_xml and xianren_plist and xianren_png:
+            for custom_arm in ['ashuraotsusuki', 'fukasaku']:
+                zout.writestr(f'assets/armatures/resXML-iphonehd/{custom_arm}.xml', xianren_xml)
+                zout.writestr(f'assets/armatures/resXML-iphonehd/{custom_arm}.plist', xianren_plist)
+                zout.writestr(f'assets/armatures/resXML-iphonehd/{custom_arm}.png', xianren_png)
+            print(f"[+] Provided armature fallbacks for ashuraotsusuki and fukasaku")
 
 build_tools = r'C:\Users\Administrator\AppData\Local\Android\Sdk\build-tools\34.0.0'
 apksigner = os.path.join(build_tools, 'apksigner.bat')

@@ -1,1 +1,2862 @@
-{"1": ["Konohamaru", 1, "muyewan", [1], 291, 57, 57, 57], "2": ["Mizuki", 1, "shuimu", [2], 297, 54, 60, 54], "3": ["Misthide Guard", 1, "wuyinshouwei", [5], 285, 57, 57, 57], "4": ["Misthide Sentry", 1, "wuyinshaobing", [5], 294, 54, 60, 54], "5": ["Sandhide Guard", 1, "shayinshouwei", [2], 294, 54, 60, 54], "6": ["Sandhide Sentry", 1, "shayinshaobing", [2], 285, 57, 57, 57], "7": ["Omoi", 1, "aomoyi", [3], 282, 57, 57, 57], "8": ["Karui", 1, "karuyi", [3], 294, 60, 60, 60], "9": ["Konoha Guard", 1, "muyeshouwei", [1], 291, 60, 60, 63], "10": ["Konoha Sentry", 1, "muyeshaobing", [1], 309, 57, 63, 57], "11": ["Flameplate Brigand", 1, "chitongkai", [4], 306, 60, 60, 60], "12": ["Yoroi", 1, "sakedeng", [4], 291, 63, 57, 63], "13": ["Tsurugi Misumi", 1, "jianmeicheng", [5], 300, 60, 60, 60], "14": ["Kimada", 1, "tuosizhen", [3], 297, 60, 60, 60], "15": ["Anbu Guard", 1, "anbu1", [4], 312, 57, 63, 57], "16": ["Anbu Sentry", 1, "anbu2", [4], 309, 57, 63, 57], "17": ["Naruto", 2, "mingren", [2], 389, 64, 64, 64], "18": ["Sakura", 2, "xiaoying", [5], 400, 62, 67, 62], "19": ["Ino", 2, "jingye", [5], 420, 64, 70, 64], "20": ["Tenten", 2, "tiantian", [3], 386, 70, 64, 70], "21": ["Choji", 2, "dingci", [3], 400, 62, 67, 62], "22": ["Kiba Inuzuka", 2, "quanzhongya", [4], 409, 67, 67, 67], "23": ["Shino", 2, "zhinai", [4], 403, 67, 67, 67], "24": ["Hinata", 2, "chutian", [1], 400, 73, 67, 73], "25": ["Nenji", 2, "ningci", [1], 403, 73, 67, 73], "26": ["Lee", 2, "xiaoli", [1], 428, 70, 70, 70], "27": ["Sasuke", 2, "zuozhu", [3], 420, 70, 70, 70], "28": ["Shikamaru", 2, "luwan", [4], 420, 70, 70, 70], "29": ["Shizune", 2, "jingyin", [5], 417, 70, 70, 70], "30": ["Iruka", 2, "yiluka", [1], 420, 76, 70, 76], "31": ["Temari", 2, "shouju", [2], 428, 76, 70, 76], "32": ["Kankuro", 2, "kanjiulang", [2], 442, 73, 73, 73], "33": ["Ebisu", 3, "yibixi", [3], 545, 78, 78, 78], "34": ["Ibiki", 3, "huibisi", [1], 559, 76, 81, 76], "35": ["Gekkou Hayate", 3, "yueguangjifeng", [2], 589, 78, 84, 78], "36": ["Aoba Yamashiro", 3, "shanchengqingye", [1], 578, 78, 84, 78], "37": ["Raido Ashinami", 3, "bingzuleitong", [2], 556, 84, 78, 84], "38": ["Genma Shiranui", 3, "buzhihuoxuanjian", [4], 562, 81, 81, 81], "39": ["Anko Mitarashi", 3, "hongdou", [1], 564, 81, 81, 81], "40": ["Gaara", 3, "woailuo", [4], 599, 81, 86, 81], "41": ["Zabuza", 3, "zaibuzhan", [5], 572, 86, 81, 86], "42": ["Haku", 3, "bai", [5], 599, 81, 86, 81], "43": ["Kidomaru", 3, "guitongwan", [2], 602, 81, 86, 81], "44": ["Tayuya", 3, "duoyouye", [3], 570, 86, 81, 86], "45": ["Sakon and Ukon", 3, "zuojinyoujin", [1], 624, 84, 89, 84], "46": ["Jirobo", 3, "cilangfang", [4], 618, 84, 89, 84], "47": ["Kimimaro", 3, "junmalv", [4], 605, 86, 86, 86], "48": ["Sai", 3, "zuojing", [3], 605, 86, 86, 86], "49": ["Suigetsu", 3, "shuiyue", [5], 591, 89, 84, 89], "50": ["Karin", 3, "xianglin", [3], 637, 86, 92, 86], "51": ["Jugo", 3, "zhongwu", [2], 602, 92, 86, 92], "52": ["Kabuto", 3, "dou", [5], 605, 92, 86, 92], "53": ["Cursed Seal Sasuke", 4, "zhouyinzuozhu", [3], 738, 87, 92, 87], "54": ["Yuuhi Kurenai", 4, "xirihong", [1], 759, 90, 94, 90], "55": ["Asuma", 4, "asima", [2], 706, 97, 87, 97], "56": ["Yamato", 4, "dahe", [4], 706, 97, 87, 97], "57": ["Baki", 4, "maji", [2], 706, 97, 87, 97], "58": ["Granny Chiyo", 4, "qiandaipopo", [4], 773, 92, 97, 92], "59": ["Two Tails Jinchuriki", 4, "erweirenzhuli", [3], 768, 92, 97, 92], "60": ["Three Tails Jinchuriki", 4, "sanweirenzhuli", [5], 757, 94, 94, 94], "61": ["Four Tails Jinchuriki", 4, "siweirenzhuli", [1], 738, 97, 97, 101], "62": ["Five Tails Jinchuriki", 4, "wuweirenzhuli", [4], 764, 97, 97, 97], "63": ["Six Tails Jinchuriki", 4, "liuweirenzhuli", [3], 796, 99, 94, 94], "64": ["Seven Tails Jinchuriki", 4, "qiweirenzhuli", [2], 794, 99, 99, 99], "65": ["Hidan", 4, "feiduan", [1], 810, 99, 101, 94], "66": ["Kakuzu", 4, "jiaodu", [5], 814, 99, 101, 94], "67": ["Sasori", 4, "xie", [4], 810, 101, 97, 97], "68": ["Deidara", 4, "didala", [4], 830, 101, 101, 99], "69": ["Zetsu", 4, "jue", [4], 782, 106, 97, 106], "70": ["Konan", 4, "xiaonan", [3], 812, 101, 101, 101], "71": ["Kisame", 4, "guijiao", [5], 807, 106, 101, 106], "72": ["Hanzo", 4, "banzang", [1], 835, 104, 104, 104], "73": ["Chojuro", 4, "changshilang", [5], 796, 108, 99, 108], "74": ["Ao", 4, "qing", [5], 830, 104, 104, 104], "75": ["Darui", 4, "daluyi", [3], 812, 110, 101, 110], "76": ["Danzo", 4, "tuanzang", [2], 823, 108, 104, 108], "77": ["Killer Bee", 5, "qilabi", [3], 1172, 130, 130, 130], "78": ["Kabuto Yakushi", 5, "dashedou", [5], 1172, 134, 130, 134], "79": ["Pain", 5, "peien", [2], 1210, 130, 134, 130], "80": ["Sage Naruto", 5, "xianrenmingren", [2], 1202, 130, 134, 130], "81": ["Tobi", 5, "afei", [1], 1206, 130, 134, 130], "82": ["Itachi", 5, "you", [1], 1212, 134, 134, 134], "83": ["Kakashi", 5, "kakaxi", [3], 1228, 132, 136, 132], "84": ["Guy", 5, "kai", [1], 1212, 134, 134, 134], "85": ["Ginkaku", 5, "yinjiao", [2], 1222, 132, 136, 132], "86": ["Kinkaku", 5, "jinjiao", [2], 1170, 142, 130, 142], "87": ["4th Kazekage", 5, "sidaifengying", [4], 1244, 134, 138, 134], "88": ["3rd Raikage", 5, "sandaileiying", [3], 1192, 140, 132, 140], "89": ["Orochimaru", 5, "dashewan", [4], 1274, 136, 140, 136], "90": ["Tsunade", 5, "gangshou", [5], 1294, 132, 144, 132], "91": ["Jiraiya", 5, "zilaiye", [2], 1234, 140, 136, 140], "92": ["Mei Terumi", 5, "zhaomeiming", [5], 1250, 138, 138, 138], "93": ["Onoki", 5, "dayemu", [4], 1306, 136, 144, 136], "94": ["A", 5, "ai", [3], 1270, 140, 140, 140], "95": ["Mu", 5, "wu", [4], 1316, 134, 146, 134], "96": ["2nd Mizukage", 5, "erdaishuiying", [5], 1304, 136, 144, 136], "97": ["Kazekage Gaara", 5, "fengyingwoailuo", [4], 1234, 144, 140, 148], "98": ["Obito", 5, "daitu", [1], 1344, 142, 142, 136], "99": ["Minato", 6, "shuimen", [2], 1950, 184, 193, 196], "100": ["3rd Hokage", 6, "sandaihuoying", [4], 1940, 177, 192, 177], "101": ["Tobirama", 6, "feijian", [5], 2000, 190, 194, 184], "102": ["Madara", 6, "ban", [1], 1890, 191, 195, 201], "103": ["Hashirama", 6, "zhujian", [4], 1888, 198, 190, 200], "104": ["Six Paths Obito", 6, "liudaodaitu", [5], 1910, 199, 191, 199], "105": ["Mangekyo Sasuke", 6, "wanhuatongzuozhu", [3], 1970, 196, 191, 188], "106": ["Nine Tails Naruto", 6, "jiuweimingren", [2], 1960, 200, 188, 188], "107": ["Six Paths Madara", 6, "liudaoban", [1], 1950, 203, 191, 203], "108": ["Uchiha Sarada", 7, "sui", [3], 2041, 188, 198, 193], "109": ["Sage Mitsuki", 7, "xianrenmingren", [5], 2145, 214, 216, 215], "110": ["Kashin Koji", 7, "yubozhiban", [1], 1977, 204, 197, 205], "111": ["Momoshiki", 7, "yubozhiban", [4], 2310, 214, 230, 210], "112": ["Kawaki", 7, "yubozhiban", [1], 2345, 234, 230, 233], "113": ["Boruto Karma", 7, "xianrenmingren", [2], 2325, 234, 231, 234], "114": ["Rinegan Sasuke", 7, "sui", [3], 2380, 234, 231, 235], "115": ["Kaguya", 7, "yubozhiban", [4], 2365, 234, 240, 231], "116": ["Naruto Hokage", 7, "xianrenmingren", [2], 2420, 238, 232, 230], "117": ["Isshiki", 7, "yubozhiban", [4], 2435, 237, 229, 234], "118": ["Boruto", 5, "mingren", [2], 1140, 126, 124, 128], "119": ["Deruta", 7, "sui", [3], 1976, 198, 198, 198], "120": ["Boro", 7, "xianrenmingren", [5], 2009, 196, 201, 196], "121": ["Garo", 6, "yubozhizhixi", [1], 1556, 148, 155, 148], "122": ["Jigen", 6, "yubozhizhixi", [4], 1778, 175, 179, 175], "123": ["Jigen Karma", 7, "yubozhiban", [4], 2390, 230, 237, 232], "124": ["Amado", 6, "mingren", [2], 1561, 146, 156, 146], "125": ["Ao Cyborg Mode", 6, "mingren", [5], 1790, 162, 172, 156], "126": ["Kakashi D.S", 7, "sui", [3], 2335, 235, 230, 235], "127": ["Gaara War Captain", 6, "yubozhizhixi", [4], 1751, 172, 182, 179], "128": ["Shikadai Nara", 7, "xianrenmingren", [2], 1946, 200, 197, 201], "129": ["Denki Kaminarimon", 6, "kakaxi", [3], 1564, 158, 155, 160], "130": ["Victor", 6, "mingren", [2], 1734, 172, 175, 172], "131": ["Kinshiki", 7, "yubozhiban", [1], 2255, 218, 222, 215], "132": ["Urashiki", 7, "xianrenmingren", [5], 2250, 216, 221, 218], "133": ["Momoshiki Karma", 7, "yubozhiban", [4], 2355, 231, 235, 232], "134": ["Metal Lee ", 6, "yubozhizhixi", [1], 1870, 180, 173, 184], "135": ["Choco Akimichi", 6, "yubozhizhixi", [4], 1870, 167, 184, 156], "136": ["Code", 7, "yubozhiban", [4], 2365, 232, 227, 238], "137": ["Guy 8th Gate ", 7, "yubozhiban", [1], 2365, 237, 233, 229], "138": ["Hagoromo", 7, "sui", [3], 2375, 232, 234, 234], "139": ["Sage Jiraiya", 7, "xianrenmingren", [2], 2116, 213, 209, 213], "140": ["Himawari Uzumaki", 6, "yubozhizhixi", [1], 1790, 179, 183, 179], "141": ["Sakura Uchiha", 7, "xianrenmingren", [5], 2200, 220, 215, 213], "142": ["Hinata Uzumaki", 6, "yubozhizhixi", [1], 1717, 167, 175, 168], "143": ["Hanabi Hyuga", 6, "kakaxi", [3], 1632, 162, 168, 160], "144": ["Menma Uzumaki", 8, "xianrenmingren", [2], 2615, 270, 265, 272], "145": ["Madara Edo Tensei", 8, "yubozhiban", [4], 2760, 278, 270, 277], "146": ["Sage Hashirama", 8, "yubozhiban", [4], 2800, 274, 275, 273], "147": ["Hiruzen Sarutobi", 8, "yubozhiban", [4], 2680, 274, 265, 270], "148": ["Ten Tails Madara", 8, "yubozhiban", [4], 2785, 279, 276, 275], "149": [" Sumire Kakei", 6, "mingren", [5], 1615, 163, 170, 160], "150": ["Shinki", 7, "yubozhiban", [4], 2079, 213, 209, 203], "151": ["Human Cloning", 6, "mingren", [2], 1683, 175, 167, 172], "152": ["Uchiha Shin", 7, "xianrenmingren", [2], 2079, 213, 209, 203], "153": ["Itachi Edo Tensei", 8, "yubozhiban", [1], 2725, 275, 268, 278], "154": ["Sasuke Wanderer", 8, "sui", [3], 2700, 279, 275, 279], "155": ["Naruto The Last", 8, "xianrenmingren", [2], 2800, 279, 274, 272], "156": ["Daemon", 8, "xianrenmingren", [2], 2810, 268, 282, 272], "157": ["Eida", 8, "xianrenmingren", [5], 2700, 278, 275, 274], "158": ["Urashiki Karma", 7, "xianrenmingren", [5], 2245, 218, 225, 217], "159": ["Sasuke Akatsuki", 6, "kakaxi", [3], 1785, 184, 180, 189], "160": ["Shisui Uchiha", 8, "xianrenmingren", [5], 2712, 270, 265, 275], "161": ["Code No Limiter", 8, "yubozhiban", [4], 2790, 274, 270, 277], "162": ["Hamura Otsutsuki", 8, "xianrenmingren", [2], 2820, 280, 273, 272], "163": ["Konohamaru Sarutobi", 8, "xianrenmingren", [2], 2680, 262, 271, 264], "164": ["Toneri", 8, "sui", [3], 2715, 273, 269, 272], "165": ["Toneri\u00a0Tenseigan", 8, "sui", [3], 2770, 274, 272, 276], "166": ["Shikamaru\u00a0Hokage", 8, "yubozhiban", [4], 2680, 262, 261, 270], "167": ["Kisame Shark", 7, "xianrenmingren", [5], 2125, 213, 209, 217], "168": ["Sage Tsunade", 8, "xianrenmingren", [5], 2700, 272, 270, 265], "169": ["Cursed Kimimaro", 8, "yubozhiban", [4], 2655, 258, 267, 262], "170": ["Ashura Otsusuki", 8, "xianrenmingren", [2], 2800, 278, 274, 271], "171": ["Indra Otsusuki", 8, "sui", [3], 2745, 273, 275, 279], "172": ["Minato Kyuubi Mode", 8, "xianrenmingren", [2], 2740, 275, 271, 276], "173": ["Baryon Naruto", 8, "yubozhiban", [1], 2810, 279, 275, 277], "174": ["Kurotsuchi", 8, "yubozhiban", [4], 2690, 271, 267, 262], "175": ["Jirobo Cursed Mode", 6, "mingren", [2], 1819, 184, 180, 189], "176": ["Gara Jinchuriki", 7, "yubozhiban", [4], 2198, 206, 221, 205], "177": ["Tayuya Cursed Mode", 7, "xianrenmingren", [5], 2067, 210, 215, 218], "178": ["Mitsuki", 7, "xianrenmingren", [5], 2017, 210, 207, 213], "179": ["Kushina Uzumaki", 8, "yubozhiban", [1], 2630, 261, 269, 271], "180": ["Kakashi Hokage", 8, "sui", [3], 2705, 276, 271, 277], "181": ["Chojuro Mizukage", 8, "xianrenmingren", [5], 2690, 266, 262, 272], "182": ["Prime Isshiki", 8, "yubozhiban", [4], 2805, 279, 274, 279], "183": ["Kakuzu 4 Heart Mode", 7, "xianrenmingren", [5], 2300, 208, 200, 215], "184": ["Hidan Mode Jashin", 8, "yubozhiban", [1], 2715, 256, 267, 271], "185": ["Kidomaru Cursed Mode", 7, "xianrenmingren", [2], 2080, 218, 210, 215], "186": ["Sakon & Ukon Cursed", 7, "yubozhiban", [1], 2158, 210, 211, 215], "187": ["Prime Hagoromo", 8, "sui", [3], 2800, 279, 274, 277], "188": ["Prime Kaguya", 8, "yubozhiban", [4], 2775, 278, 276, 279], "189": ["T-Obito", 8, "yubozhiban", [1], 2760, 273, 270, 275], "190": ["Ten Tails Obito", 8, "xianrenmingren", [5], 2775, 275, 277, 277], "191": ["Boruto Timeskip", 8, "xianrenmingren", [2], 2750, 279, 274, 278], "192": ["Byakugan Kaguya", 8, "yubozhiban", [4], 2800, 275, 278, 278], "193": ["Kawaki Karma", 8, "yubozhiban", [1], 2795, 276, 274, 276], "194": ["Mangekyou Sarada", 8, "sui", [3], 2775, 273, 275, 275], "195": ["Nagato Edo Tensei", 8, "xianrenmingren", [5], 2764, 268, 275, 274], "196": ["Sakumo Hatake", 8, "xianrenmingren", [2], 2740, 268, 271, 273], "197": ["Might Duy", 8, "yubozhiban", [1], 2750, 273, 270, 272], "198": ["Himawari Timeskip", 8, "xianrenmingren", [2], 2770, 277, 271, 276], "199": ["Fukasaku", 8, "xianrenmingren", [5], 2630, 262, 265, 262], "200": ["Mamushi Shinju", 8, "xianrenmingren", [5], 2770, 271, 278, 275], "201": ["Matsuri Shinju", 8, "xianrenmingren", [2], 2750, 275, 275, 276], "202": ["Ryu Shinju", 8, "yubozhiban", [4], 2760, 275, 274, 276], "203": ["Hidari Shinju", 8, "sui", [3], 2760, 274, 275, 279], "204": ["Jura Shinju", 8, "yubozhiban", [4], 2810, 278, 272, 278], "205": ["Hikari Uchiha", 8, "sui", [3], 2678, 278, 277, 278], "206": ["Nanashi Uchiha", 8, "sui", [3], 2690, 278, 276, 278], "207": ["Merz", 8, "xianrenmingren", [5], 2700, 280, 275, 278], "208": ["Prime Sasuke", 8, "sui", [3], 2720, 280, 280, 280], "209": ["Prime Naruto", 8, "xianrenmingren", [2], 2750, 281, 278, 279], "210": ["Reto Kazekage", 8, "xianrenmingren", [2], 2650, 278, 281, 278], "211": ["Chino Base Mode", 8, "xianrenmingren", [5], 2700, 273, 269, 273], "212": ["Guren", 8, "xianrenmingren", [5], 2758, 276, 271, 280], "213": ["Uzumaki Ashina", 8, "xianrenmingren", [2], 2720, 274, 276, 280], "214": ["Shikaku Nara", 8, "yubozhiban", [4], 2700, 278, 275, 278], "215": ["Choza Akimichi", 8, "yubozhiban", [4], 2845, 269, 280, 270], "216": ["Konan Angel", 8, "sui", [3], 2845, 269, 280, 270], "217": ["Mitsuki Timeskip", 8, "xianrenmingren", [5], 2845, 269, 280, 270], "218": ["Pain Tendo", 8, "xianrenmingren", [2], 2845, 269, 280, 270], "219": ["Prime Sakura", 8, "xianrenmingren", [5], 2845, 269, 280, 270], "220": ["Tobirama Edo Tensei", 8, "xianrenmingren", [5], 2845, 269, 280, 270]}
+{
+  "1": [
+    "Konohamaru",
+    1,
+    "muyewan",
+    [
+      1
+    ],
+    291,
+    57,
+    57,
+    57,
+    1149
+  ],
+  "2": [
+    "Mizuki",
+    1,
+    "shuimu",
+    [
+      2
+    ],
+    297,
+    54,
+    60,
+    54,
+    1015
+  ],
+  "3": [
+    "Misthide Guard",
+    1,
+    "wuyinshouwei",
+    [
+      5
+    ],
+    285,
+    57,
+    57,
+    57,
+    1086
+  ],
+  "4": [
+    "Misthide Sentry",
+    1,
+    "wuyinshaobing",
+    [
+      5
+    ],
+    294,
+    54,
+    60,
+    54,
+    1143
+  ],
+  "5": [
+    "Sandhide Guard",
+    1,
+    "shayinshouwei",
+    [
+      2
+    ],
+    294,
+    54,
+    60,
+    54,
+    1086
+  ],
+  "6": [
+    "Sandhide Sentry",
+    1,
+    "shayinshaobing",
+    [
+      2
+    ],
+    285,
+    57,
+    57,
+    57,
+    1035
+  ],
+  "7": [
+    "Omoi",
+    1,
+    "aomoyi",
+    [
+      3
+    ],
+    282,
+    57,
+    57,
+    57,
+    1015
+  ],
+  "8": [
+    "Karui",
+    1,
+    "karuyi",
+    [
+      3
+    ],
+    294,
+    60,
+    60,
+    60,
+    1015
+  ],
+  "9": [
+    "Konoha Guard",
+    1,
+    "muyeshouwei",
+    [
+      1
+    ],
+    291,
+    60,
+    60,
+    63,
+    1007
+  ],
+  "10": [
+    "Konoha Sentry",
+    1,
+    "muyeshaobing",
+    [
+      1
+    ],
+    309,
+    57,
+    63,
+    57,
+    1149
+  ],
+  "11": [
+    "Flameplate Brigand",
+    1,
+    "chitongkai",
+    [
+      4
+    ],
+    306,
+    60,
+    60,
+    60,
+    1086
+  ],
+  "12": [
+    "Yoroi",
+    1,
+    "sakedeng",
+    [
+      4
+    ],
+    291,
+    63,
+    57,
+    63,
+    1149
+  ],
+  "13": [
+    "Tsurugi Misumi",
+    1,
+    "jianmeicheng",
+    [
+      5
+    ],
+    300,
+    60,
+    60,
+    60,
+    1086
+  ],
+  "14": [
+    "Kimada",
+    1,
+    "tuosizhen",
+    [
+      3
+    ],
+    297,
+    60,
+    60,
+    60,
+    1035
+  ],
+  "15": [
+    "Anbu Guard",
+    1,
+    "anbu1",
+    [
+      4
+    ],
+    312,
+    57,
+    63,
+    57,
+    1015
+  ],
+  "16": [
+    "Anbu Sentry",
+    1,
+    "anbu2",
+    [
+      4
+    ],
+    309,
+    57,
+    63,
+    57,
+    1015
+  ],
+  "17": [
+    "Naruto",
+    2,
+    "mingren",
+    [
+      2
+    ],
+    389,
+    64,
+    64,
+    64,
+    1092
+  ],
+  "18": [
+    "Sakura",
+    2,
+    "xiaoying",
+    [
+      5
+    ],
+    400,
+    62,
+    67,
+    62,
+    1003
+  ],
+  "19": [
+    "Ino",
+    2,
+    "jingye",
+    [
+      5
+    ],
+    420,
+    64,
+    70,
+    64,
+    1016
+  ],
+  "20": [
+    "Tenten",
+    2,
+    "tiantian",
+    [
+      3
+    ],
+    386,
+    70,
+    64,
+    70,
+    1007
+  ],
+  "21": [
+    "Choji",
+    2,
+    "dingci",
+    [
+      3
+    ],
+    400,
+    62,
+    67,
+    62,
+    1145
+  ],
+  "22": [
+    "Kiba Inuzuka",
+    2,
+    "quanzhongya",
+    [
+      4
+    ],
+    409,
+    67,
+    67,
+    67,
+    1112
+  ],
+  "23": [
+    "Shino",
+    2,
+    "zhinai",
+    [
+      4
+    ],
+    403,
+    67,
+    67,
+    67,
+    1085
+  ],
+  "24": [
+    "Hinata",
+    2,
+    "chutian",
+    [
+      1
+    ],
+    400,
+    73,
+    67,
+    73,
+    1005
+  ],
+  "25": [
+    "Nenji",
+    2,
+    "ningci",
+    [
+      1
+    ],
+    403,
+    73,
+    67,
+    73,
+    1011
+  ],
+  "26": [
+    "Lee",
+    2,
+    "xiaoli",
+    [
+      1
+    ],
+    428,
+    70,
+    70,
+    70,
+    1009
+  ],
+  "27": [
+    "Sasuke",
+    2,
+    "zuozhu",
+    [
+      3
+    ],
+    420,
+    70,
+    70,
+    70,
+    1035
+  ],
+  "28": [
+    "Shikamaru",
+    2,
+    "luwan",
+    [
+      4
+    ],
+    420,
+    70,
+    70,
+    70,
+    1104
+  ],
+  "29": [
+    "Shizune",
+    2,
+    "jingyin",
+    [
+      5
+    ],
+    417,
+    70,
+    70,
+    70,
+    1004
+  ],
+  "30": [
+    "Iruka",
+    2,
+    "yiluka",
+    [
+      1
+    ],
+    420,
+    76,
+    70,
+    76,
+    1086
+  ],
+  "31": [
+    "Temari",
+    2,
+    "shouju",
+    [
+      2
+    ],
+    428,
+    76,
+    70,
+    76,
+    1133
+  ],
+  "32": [
+    "Kankuro",
+    2,
+    "kanjiulang",
+    [
+      2
+    ],
+    442,
+    73,
+    73,
+    73,
+    1027
+  ],
+  "33": [
+    "Ebisu",
+    3,
+    "yibixi",
+    [
+      3
+    ],
+    545,
+    78,
+    78,
+    78,
+    1016
+  ],
+  "34": [
+    "Ibiki",
+    3,
+    "huibisi",
+    [
+      1
+    ],
+    559,
+    76,
+    81,
+    76,
+    1007
+  ],
+  "35": [
+    "Gekkou Hayate",
+    3,
+    "yueguangjifeng",
+    [
+      2
+    ],
+    589,
+    78,
+    84,
+    78,
+    1106
+  ],
+  "36": [
+    "Aoba Yamashiro",
+    3,
+    "shanchengqingye",
+    [
+      1
+    ],
+    578,
+    78,
+    84,
+    78,
+    1098
+  ],
+  "37": [
+    "Raido Ashinami",
+    3,
+    "bingzuleitong",
+    [
+      2
+    ],
+    556,
+    84,
+    78,
+    84,
+    1099
+  ],
+  "38": [
+    "Genma Shiranui",
+    3,
+    "buzhihuoxuanjian",
+    [
+      4
+    ],
+    562,
+    81,
+    81,
+    81,
+    1097
+  ],
+  "39": [
+    "Anko Mitarashi",
+    3,
+    "hongdou",
+    [
+      1
+    ],
+    564,
+    81,
+    81,
+    81,
+    1016
+  ],
+  "40": [
+    "Gaara",
+    3,
+    "woailuo",
+    [
+      4
+    ],
+    599,
+    81,
+    86,
+    81,
+    1133
+  ],
+  "41": [
+    "Zabuza",
+    3,
+    "zaibuzhan",
+    [
+      5
+    ],
+    572,
+    86,
+    81,
+    86,
+    1018
+  ],
+  "42": [
+    "Haku",
+    3,
+    "bai",
+    [
+      5
+    ],
+    599,
+    81,
+    86,
+    81,
+    1019
+  ],
+  "43": [
+    "Kidomaru",
+    3,
+    "guitongwan",
+    [
+      2
+    ],
+    602,
+    81,
+    86,
+    81,
+    1015
+  ],
+  "44": [
+    "Tayuya",
+    3,
+    "duoyouye",
+    [
+      3
+    ],
+    570,
+    86,
+    81,
+    86,
+    1007
+  ],
+  "45": [
+    "Sakon and Ukon",
+    3,
+    "zuojinyoujin",
+    [
+      1
+    ],
+    624,
+    84,
+    89,
+    84,
+    1016
+  ],
+  "46": [
+    "Jirobo",
+    3,
+    "cilangfang",
+    [
+      4
+    ],
+    618,
+    84,
+    89,
+    84,
+    1145
+  ],
+  "47": [
+    "Kimimaro",
+    3,
+    "junmalv",
+    [
+      4
+    ],
+    605,
+    86,
+    86,
+    86,
+    1022
+  ],
+  "48": [
+    "Sai",
+    3,
+    "zuojing",
+    [
+      3
+    ],
+    605,
+    86,
+    86,
+    86,
+    1144
+  ],
+  "49": [
+    "Suigetsu",
+    3,
+    "shuiyue",
+    [
+      5
+    ],
+    591,
+    89,
+    84,
+    89,
+    1031
+  ],
+  "50": [
+    "Karin",
+    3,
+    "xianglin",
+    [
+      3
+    ],
+    637,
+    86,
+    92,
+    86,
+    1004
+  ],
+  "51": [
+    "Jugo",
+    3,
+    "zhongwu",
+    [
+      2
+    ],
+    602,
+    92,
+    86,
+    92,
+    1099
+  ],
+  "52": [
+    "Kabuto",
+    3,
+    "dou",
+    [
+      5
+    ],
+    605,
+    92,
+    86,
+    92,
+    1015
+  ],
+  "53": [
+    "Cursed Seal Sasuke",
+    4,
+    "zhouyinzuozhu",
+    [
+      3
+    ],
+    738,
+    87,
+    92,
+    87,
+    1025
+  ],
+  "54": [
+    "Yuuhi Kurenai",
+    4,
+    "xirihong",
+    [
+      1
+    ],
+    759,
+    90,
+    94,
+    90,
+    1101
+  ],
+  "55": [
+    "Asuma",
+    4,
+    "asima",
+    [
+      2
+    ],
+    706,
+    97,
+    87,
+    97,
+    1092
+  ],
+  "56": [
+    "Yamato",
+    4,
+    "dahe",
+    [
+      4
+    ],
+    706,
+    97,
+    87,
+    97,
+    1012
+  ],
+  "57": [
+    "Baki",
+    4,
+    "maji",
+    [
+      2
+    ],
+    706,
+    97,
+    87,
+    97,
+    1131
+  ],
+  "58": [
+    "Granny Chiyo",
+    4,
+    "qiandaipopo",
+    [
+      4
+    ],
+    773,
+    92,
+    97,
+    92,
+    1139
+  ],
+  "59": [
+    "Two Tails Jinchuriki",
+    4,
+    "erweirenzhuli",
+    [
+      3
+    ],
+    768,
+    92,
+    97,
+    92,
+    1101
+  ],
+  "60": [
+    "Three Tails Jinchuriki",
+    4,
+    "sanweirenzhuli",
+    [
+      5
+    ],
+    757,
+    94,
+    94,
+    94,
+    1134
+  ],
+  "61": [
+    "Four Tails Jinchuriki",
+    4,
+    "siweirenzhuli",
+    [
+      1
+    ],
+    738,
+    97,
+    97,
+    101,
+    1108
+  ],
+  "62": [
+    "Five Tails Jinchuriki",
+    4,
+    "wuweirenzhuli",
+    [
+      4
+    ],
+    764,
+    97,
+    97,
+    97,
+    1015
+  ],
+  "63": [
+    "Six Tails Jinchuriki",
+    4,
+    "liuweirenzhuli",
+    [
+      3
+    ],
+    796,
+    99,
+    94,
+    94,
+    1004
+  ],
+  "64": [
+    "Seven Tails Jinchuriki",
+    4,
+    "qiweirenzhuli",
+    [
+      2
+    ],
+    794,
+    99,
+    99,
+    99,
+    1085
+  ],
+  "65": [
+    "Hidan",
+    4,
+    "feiduan",
+    [
+      1
+    ],
+    810,
+    99,
+    101,
+    94,
+    1012
+  ],
+  "66": [
+    "Kakuzu",
+    4,
+    "jiaodu",
+    [
+      5
+    ],
+    814,
+    99,
+    101,
+    94,
+    1145
+  ],
+  "67": [
+    "Sasori",
+    4,
+    "xie",
+    [
+      4
+    ],
+    810,
+    101,
+    97,
+    97,
+    1139
+  ],
+  "68": [
+    "Deidara",
+    4,
+    "didala",
+    [
+      4
+    ],
+    830,
+    101,
+    101,
+    99,
+    1028
+  ],
+  "69": [
+    "Zetsu",
+    4,
+    "jue",
+    [
+      4
+    ],
+    782,
+    106,
+    97,
+    106,
+    1083
+  ],
+  "70": [
+    "Konan",
+    4,
+    "xiaonan",
+    [
+      3
+    ],
+    812,
+    101,
+    101,
+    101,
+    1142
+  ],
+  "71": [
+    "Kisame",
+    4,
+    "guijiao",
+    [
+      5
+    ],
+    807,
+    106,
+    101,
+    106,
+    1141
+  ],
+  "72": [
+    "Hanzo",
+    4,
+    "banzang",
+    [
+      1
+    ],
+    835,
+    104,
+    104,
+    104,
+    1134
+  ],
+  "73": [
+    "Chojuro",
+    4,
+    "changshilang",
+    [
+      5
+    ],
+    796,
+    108,
+    99,
+    108,
+    1019
+  ],
+  "74": [
+    "Ao",
+    4,
+    "qing",
+    [
+      5
+    ],
+    830,
+    104,
+    104,
+    104,
+    1004
+  ],
+  "75": [
+    "Darui",
+    4,
+    "daluyi",
+    [
+      3
+    ],
+    812,
+    110,
+    101,
+    110,
+    1035
+  ],
+  "76": [
+    "Danzo",
+    4,
+    "tuanzang",
+    [
+      2
+    ],
+    823,
+    108,
+    104,
+    108,
+    1096
+  ],
+  "77": [
+    "Killer Bee",
+    5,
+    "qilabi",
+    [
+      3
+    ],
+    1172,
+    130,
+    130,
+    130,
+    1093
+  ],
+  "78": [
+    "Kabuto Yakushi",
+    5,
+    "dashedou",
+    [
+      5
+    ],
+    1172,
+    134,
+    130,
+    134,
+    1134
+  ],
+  "79": [
+    "Pain",
+    5,
+    "peien",
+    [
+      2
+    ],
+    1210,
+    130,
+    134,
+    130,
+    1042
+  ],
+  "80": [
+    "Sage Naruto",
+    5,
+    "xianrenmingren",
+    [
+      2
+    ],
+    1202,
+    130,
+    134,
+    130,
+    1001
+  ],
+  "81": [
+    "Tobi",
+    5,
+    "afei",
+    [
+      1
+    ],
+    1206,
+    130,
+    134,
+    130,
+    1148
+  ],
+  "82": [
+    "Itachi",
+    5,
+    "you",
+    [
+      1
+    ],
+    1212,
+    134,
+    134,
+    134,
+    1040
+  ],
+  "83": [
+    "Kakashi",
+    5,
+    "kakaxi",
+    [
+      3
+    ],
+    1228,
+    132,
+    136,
+    132,
+    1095
+  ],
+  "84": [
+    "Guy",
+    5,
+    "kai",
+    [
+      1
+    ],
+    1212,
+    134,
+    134,
+    134,
+    1128
+  ],
+  "85": [
+    "Ginkaku",
+    5,
+    "yinjiao",
+    [
+      2
+    ],
+    1222,
+    132,
+    136,
+    132,
+    1087
+  ],
+  "86": [
+    "Kinkaku",
+    5,
+    "jinjiao",
+    [
+      2
+    ],
+    1170,
+    142,
+    130,
+    142,
+    1088
+  ],
+  "87": [
+    "4th Kazekage",
+    5,
+    "sidaifengying",
+    [
+      4
+    ],
+    1244,
+    134,
+    138,
+    134,
+    1136
+  ],
+  "88": [
+    "3rd Raikage",
+    5,
+    "sandaileiying",
+    [
+      3
+    ],
+    1192,
+    140,
+    132,
+    140,
+    1096
+  ],
+  "89": [
+    "Orochimaru",
+    5,
+    "dashewan",
+    [
+      4
+    ],
+    1274,
+    136,
+    140,
+    136,
+    1024
+  ],
+  "90": [
+    "Tsunade",
+    5,
+    "gangshou",
+    [
+      5
+    ],
+    1294,
+    132,
+    144,
+    132,
+    1126
+  ],
+  "91": [
+    "Jiraiya",
+    5,
+    "zilaiye",
+    [
+      2
+    ],
+    1234,
+    140,
+    136,
+    140,
+    1100
+  ],
+  "92": [
+    "Mei Terumi",
+    5,
+    "zhaomeiming",
+    [
+      5
+    ],
+    1250,
+    138,
+    138,
+    138,
+    1141
+  ],
+  "93": [
+    "Onoki",
+    5,
+    "dayemu",
+    [
+      4
+    ],
+    1306,
+    136,
+    144,
+    136,
+    1028
+  ],
+  "94": [
+    "A",
+    5,
+    "ai",
+    [
+      3
+    ],
+    1270,
+    140,
+    140,
+    140,
+    1096
+  ],
+  "95": [
+    "Mu",
+    5,
+    "wu",
+    [
+      4
+    ],
+    1316,
+    134,
+    146,
+    134,
+    1109
+  ],
+  "96": [
+    "2nd Mizukage",
+    5,
+    "erdaishuiying",
+    [
+      5
+    ],
+    1304,
+    136,
+    144,
+    136,
+    1135
+  ],
+  "97": [
+    "Kazekage Gaara",
+    5,
+    "fengyingwoailuo",
+    [
+      4
+    ],
+    1234,
+    144,
+    140,
+    148,
+    1136
+  ],
+  "98": [
+    "Obito",
+    5,
+    "daitu",
+    [
+      1
+    ],
+    1344,
+    142,
+    142,
+    136,
+    1041
+  ],
+  "99": [
+    "Minato",
+    6,
+    "shuimen",
+    [
+      2
+    ],
+    1950,
+    184,
+    193,
+    196,
+    1087
+  ],
+  "100": [
+    "3rd Hokage",
+    6,
+    "sandaihuoying",
+    [
+      4
+    ],
+    1940,
+    177,
+    192,
+    177,
+    1115
+  ],
+  "101": [
+    "Tobirama",
+    6,
+    "feijian",
+    [
+      5
+    ],
+    2000,
+    190,
+    194,
+    184,
+    1034
+  ],
+  "102": [
+    "Madara",
+    6,
+    "ban",
+    [
+      1
+    ],
+    1890,
+    191,
+    195,
+    201,
+    1132
+  ],
+  "103": [
+    "Hashirama",
+    6,
+    "zhujian",
+    [
+      4
+    ],
+    1888,
+    198,
+    190,
+    200,
+    1140
+  ],
+  "104": [
+    "Six Paths Obito",
+    6,
+    "liudaodaitu",
+    [
+      5
+    ],
+    1910,
+    199,
+    191,
+    199,
+    1137
+  ],
+  "105": [
+    "Mangekyo Sasuke",
+    6,
+    "wanhuatongzuozhu",
+    [
+      3
+    ],
+    1970,
+    196,
+    191,
+    188,
+    1132
+  ],
+  "106": [
+    "Nine Tails Naruto",
+    6,
+    "jiuweimingren",
+    [
+      2
+    ],
+    1960,
+    200,
+    188,
+    188,
+    1150
+  ],
+  "107": [
+    "Six Paths Madara",
+    6,
+    "liudaoban",
+    [
+      1
+    ],
+    1950,
+    203,
+    191,
+    203,
+    1110
+  ],
+  "108": [
+    "Uchiha Sarada",
+    7,
+    "zuoliangna",
+    [
+      3
+    ],
+    2041,
+    188,
+    198,
+    193,
+    1161
+  ],
+  "109": [
+    "Sage Mitsuki",
+    7,
+    "siyue",
+    [
+      5
+    ],
+    2145,
+    214,
+    216,
+    215,
+    1163
+  ],
+  "110": [
+    "Kashin Koji",
+    7,
+    "guoxinjushi",
+    [
+      1
+    ],
+    1977,
+    204,
+    197,
+    205,
+    1160
+  ],
+  "111": [
+    "Momoshiki",
+    7,
+    "taoshi",
+    [
+      4
+    ],
+    2310,
+    214,
+    230,
+    210,
+    1159
+  ],
+  "112": [
+    "Kawaki",
+    7,
+    "chuanmu",
+    [
+      1
+    ],
+    2345,
+    234,
+    230,
+    233,
+    1158
+  ],
+  "113": [
+    "Boruto Karma",
+    7,
+    "boren",
+    [
+      2
+    ],
+    2325,
+    234,
+    231,
+    234,
+    1156
+  ],
+  "114": [
+    "Rinegan Sasuke",
+    7,
+    "zuozhulunhuiyan",
+    [
+      3
+    ],
+    2380,
+    234,
+    231,
+    235,
+    1132
+  ],
+  "115": [
+    "Kaguya",
+    7,
+    "huiye",
+    [
+      4
+    ],
+    2365,
+    234,
+    240,
+    231,
+    1162
+  ],
+  "116": [
+    "Naruto Hokage",
+    7,
+    "narutohokage",
+    [
+      2
+    ],
+    2420,
+    238,
+    232,
+    230,
+    1157
+  ],
+  "117": [
+    "Isshiki",
+    7,
+    "yishi",
+    [
+      4
+    ],
+    2435,
+    237,
+    229,
+    234,
+    1164
+  ],
+  "118": [
+    "Boruto",
+    5,
+    "boruto",
+    [
+      2
+    ],
+    1140,
+    126,
+    124,
+    128,
+    1001
+  ],
+  "119": [
+    "Deruta",
+    7,
+    "deruta",
+    [
+      3
+    ],
+    1976,
+    198,
+    198,
+    198,
+    1165
+  ],
+  "120": [
+    "Boro",
+    7,
+    "boro",
+    [
+      5
+    ],
+    2009,
+    196,
+    201,
+    196,
+    1166
+  ],
+  "121": [
+    "Garo",
+    6,
+    "garo",
+    [
+      1
+    ],
+    1556,
+    148,
+    155,
+    148,
+    1167
+  ],
+  "122": [
+    "Jigen",
+    6,
+    "jigen",
+    [
+      4
+    ],
+    1778,
+    175,
+    179,
+    175,
+    1168
+  ],
+  "123": [
+    "Jigen Karma",
+    7,
+    "jigenkarmamode",
+    [
+      4
+    ],
+    2390,
+    230,
+    237,
+    232,
+    1168
+  ],
+  "124": [
+    "Amado",
+    6,
+    "amado",
+    [
+      2
+    ],
+    1561,
+    146,
+    156,
+    146,
+    1170
+  ],
+  "125": [
+    "Ao Cyborg Mode",
+    6,
+    "aocyborgmode",
+    [
+      5
+    ],
+    1790,
+    162,
+    172,
+    156,
+    1175
+  ],
+  "126": [
+    "Kakashi D.S",
+    7,
+    "kakashidoublesharingan",
+    [
+      3
+    ],
+    2335,
+    235,
+    230,
+    235,
+    1171
+  ],
+  "127": [
+    "Gaara War Captain",
+    6,
+    "gaarashinobicommander",
+    [
+      4
+    ],
+    1751,
+    172,
+    182,
+    179,
+    1173
+  ],
+  "128": [
+    "Shikadai Nara",
+    7,
+    "shikadainara",
+    [
+      2
+    ],
+    1946,
+    200,
+    197,
+    201,
+    1174
+  ],
+  "129": [
+    "Denki Kaminarimon",
+    6,
+    "denkikaminarimon",
+    [
+      3
+    ],
+    1564,
+    158,
+    155,
+    160,
+    1172
+  ],
+  "130": [
+    "Victor",
+    6,
+    "victor",
+    [
+      2
+    ],
+    1734,
+    172,
+    175,
+    172,
+    1176
+  ],
+  "131": [
+    "Kinshiki",
+    7,
+    "otsutsukikinshiki",
+    [
+      1
+    ],
+    2255,
+    218,
+    222,
+    215,
+    1177
+  ],
+  "132": [
+    "Urashiki",
+    7,
+    "otsutsukiurashiki",
+    [
+      5
+    ],
+    2250,
+    216,
+    221,
+    218,
+    1178
+  ],
+  "133": [
+    "Momoshiki Karma",
+    7,
+    "otsutsukimomoshiki",
+    [
+      4
+    ],
+    2355,
+    231,
+    235,
+    232,
+    1179
+  ],
+  "134": [
+    "Metal Lee ",
+    6,
+    "metallee",
+    [
+      1
+    ],
+    1870,
+    180,
+    173,
+    184,
+    1180
+  ],
+  "135": [
+    "Choco Akimichi",
+    6,
+    "chocoakimichi",
+    [
+      4
+    ],
+    1870,
+    167,
+    184,
+    156,
+    1181
+  ],
+  "136": [
+    "Code",
+    7,
+    "code",
+    [
+      4
+    ],
+    2365,
+    232,
+    227,
+    238,
+    1185
+  ],
+  "137": [
+    "Guy 8th Gate ",
+    7,
+    "kaibamen",
+    [
+      1
+    ],
+    2365,
+    237,
+    233,
+    229,
+    1183
+  ],
+  "138": [
+    "Hagoromo",
+    7,
+    "otsutsukihagoromo",
+    [
+      3
+    ],
+    2375,
+    232,
+    234,
+    234,
+    1184
+  ],
+  "139": [
+    "Sage Jiraiya",
+    7,
+    "sagejiraiya",
+    [
+      2
+    ],
+    2116,
+    213,
+    209,
+    213,
+    1182
+  ],
+  "140": [
+    "Himawari Uzumaki",
+    6,
+    "himawariuzumaki",
+    [
+      1
+    ],
+    1790,
+    179,
+    183,
+    179,
+    1187
+  ],
+  "141": [
+    "Sakura Uchiha",
+    7,
+    "sagesakura",
+    [
+      5
+    ],
+    2200,
+    220,
+    215,
+    213,
+    1186
+  ],
+  "142": [
+    "Hinata Uzumaki",
+    6,
+    "hinatauzumaki",
+    [
+      1
+    ],
+    1717,
+    167,
+    175,
+    168,
+    1188
+  ],
+  "143": [
+    "Hanabi Hyuga",
+    6,
+    "hanabihyuga",
+    [
+      3
+    ],
+    1632,
+    162,
+    168,
+    160,
+    1189
+  ],
+  "144": [
+    "Menma Uzumaki",
+    8,
+    "menmauzumaki",
+    [
+      2
+    ],
+    2615,
+    270,
+    265,
+    272,
+    1193
+  ],
+  "145": [
+    "Madara Edo Tensei",
+    8,
+    "madarasusanoo",
+    [
+      4
+    ],
+    2760,
+    278,
+    270,
+    277,
+    1195
+  ],
+  "146": [
+    "Sage Hashirama",
+    8,
+    "hashiramasagemode",
+    [
+      4
+    ],
+    2800,
+    274,
+    275,
+    273,
+    1190
+  ],
+  "147": [
+    "Hiruzen Sarutobi",
+    8,
+    "hiruzensarutobiwarmode",
+    [
+      4
+    ],
+    2680,
+    274,
+    265,
+    270,
+    1191
+  ],
+  "148": [
+    "Ten Tails Madara",
+    8,
+    "tentailsmadara",
+    [
+      4
+    ],
+    2785,
+    279,
+    276,
+    275,
+    1196
+  ],
+  "149": [
+    " Sumire Kakei",
+    6,
+    "sumirekakei",
+    [
+      5
+    ],
+    1615,
+    163,
+    170,
+    160,
+    1198
+  ],
+  "150": [
+    "Shinki",
+    7,
+    "shinki",
+    [
+      4
+    ],
+    2079,
+    213,
+    209,
+    203,
+    1200
+  ],
+  "151": [
+    "Human Cloning",
+    6,
+    "humancloning",
+    [
+      2
+    ],
+    1683,
+    175,
+    167,
+    172,
+    1199
+  ],
+  "152": [
+    "Uchiha Shin",
+    7,
+    "uchihashin",
+    [
+      2
+    ],
+    2079,
+    213,
+    209,
+    203,
+    1197
+  ],
+  "153": [
+    "Itachi Edo Tensei",
+    8,
+    "itachiedotensei",
+    [
+      1
+    ],
+    2725,
+    275,
+    268,
+    278,
+    1201
+  ],
+  "154": [
+    "Sasuke Wanderer",
+    8,
+    "sasukewanderer",
+    [
+      3
+    ],
+    2700,
+    279,
+    275,
+    279,
+    1202
+  ],
+  "155": [
+    "Naruto The Last",
+    8,
+    "narutokyuubimode",
+    [
+      2
+    ],
+    2800,
+    279,
+    274,
+    272,
+    1203
+  ],
+  "156": [
+    "Daemon",
+    8,
+    "daemon",
+    [
+      2
+    ],
+    2810,
+    268,
+    282,
+    272,
+    1205
+  ],
+  "157": [
+    "Eida",
+    8,
+    "eida",
+    [
+      5
+    ],
+    2700,
+    278,
+    275,
+    274,
+    1211
+  ],
+  "158": [
+    "Urashiki Karma",
+    7,
+    "urashikikarma",
+    [
+      5
+    ],
+    2245,
+    218,
+    225,
+    217,
+    1209
+  ],
+  "159": [
+    "Sasuke Akatsuki",
+    6,
+    "sasukeakatsuki",
+    [
+      3
+    ],
+    1785,
+    184,
+    180,
+    189,
+    1206
+  ],
+  "160": [
+    "Shisui Uchiha",
+    8,
+    "shisuiuchiha",
+    [
+      5
+    ],
+    2712,
+    270,
+    265,
+    275,
+    1207
+  ],
+  "161": [
+    "Code No Limiter",
+    8,
+    "codenolimiter",
+    [
+      4
+    ],
+    2790,
+    274,
+    270,
+    277,
+    1208
+  ],
+  "162": [
+    "Hamura Otsutsuki",
+    8,
+    "hamuraotsutsuki",
+    [
+      2
+    ],
+    2820,
+    280,
+    273,
+    272,
+    1204
+  ],
+  "163": [
+    "Konohamaru Sarutobi",
+    8,
+    "konohamarusarutobi",
+    [
+      2
+    ],
+    2680,
+    262,
+    271,
+    264,
+    1210
+  ],
+  "164": [
+    "Toneri",
+    8,
+    "toneri",
+    [
+      3
+    ],
+    2715,
+    273,
+    269,
+    272,
+    1212
+  ],
+  "165": [
+    "Toneri\u00a0Tenseigan",
+    8,
+    "toneritenseigan",
+    [
+      3
+    ],
+    2770,
+    274,
+    272,
+    276,
+    1213
+  ],
+  "166": [
+    "Shikamaru\u00a0Hokage",
+    8,
+    "shikamaruhokage",
+    [
+      4
+    ],
+    2680,
+    262,
+    261,
+    270,
+    1214
+  ],
+  "167": [
+    "Kisame Shark",
+    7,
+    "kisameshark",
+    [
+      5
+    ],
+    2125,
+    213,
+    209,
+    217,
+    1231
+  ],
+  "168": [
+    "Sage Tsunade",
+    8,
+    "tsunadesage",
+    [
+      5
+    ],
+    2700,
+    272,
+    270,
+    265,
+    1232
+  ],
+  "169": [
+    "Cursed Kimimaro",
+    8,
+    "kimimarocursed",
+    [
+      4
+    ],
+    2655,
+    258,
+    267,
+    262,
+    1233
+  ],
+  "170": [
+    "Ashura Otsusuki",
+    8,
+    "ashuraotsusuki",
+    [
+      2
+    ],
+    2800,
+    278,
+    274,
+    271,
+    1234
+  ],
+  "171": [
+    "Indra Otsusuki",
+    8,
+    "indraotsusuki",
+    [
+      3
+    ],
+    2745,
+    273,
+    275,
+    279,
+    1235
+  ],
+  "172": [
+    "Minato Kyuubi Mode",
+    8,
+    "minatokyuubi",
+    [
+      2
+    ],
+    2740,
+    275,
+    271,
+    276,
+    1236
+  ],
+  "173": [
+    "Baryon Naruto",
+    8,
+    "baryonnaruto",
+    [
+      1
+    ],
+    2810,
+    279,
+    275,
+    277,
+    1273
+  ],
+  "174": [
+    "Kurotsuchi",
+    8,
+    "kurotsuchi",
+    [
+      4
+    ],
+    2690,
+    271,
+    267,
+    262,
+    1238
+  ],
+  "175": [
+    "Jirobo Cursed Mode",
+    6,
+    "jirobocursed",
+    [
+      2
+    ],
+    1819,
+    184,
+    180,
+    189,
+    1239
+  ],
+  "176": [
+    "Gara Jinchuriki",
+    7,
+    "garajinchuriki",
+    [
+      4
+    ],
+    2198,
+    206,
+    221,
+    205,
+    1240
+  ],
+  "177": [
+    "Tayuya Cursed Mode",
+    7,
+    "tayuyacursed",
+    [
+      5
+    ],
+    2067,
+    210,
+    215,
+    218,
+    1241
+  ],
+  "178": [
+    "Mitsuki",
+    7,
+    "mitsuki",
+    [
+      5
+    ],
+    2017,
+    210,
+    207,
+    213,
+    1242
+  ],
+  "179": [
+    "Kushina Uzumaki",
+    8,
+    "kushinauzumaki",
+    [
+      1
+    ],
+    2630,
+    261,
+    269,
+    271,
+    1261
+  ],
+  "180": [
+    "Kakashi Hokage",
+    8,
+    "kakashihokage",
+    [
+      3
+    ],
+    2705,
+    276,
+    271,
+    277,
+    1262
+  ],
+  "181": [
+    "Chojuro Mizukage",
+    8,
+    "chojuromizukage",
+    [
+      5
+    ],
+    2690,
+    266,
+    262,
+    272,
+    1263
+  ],
+  "182": [
+    "Prime Isshiki",
+    8,
+    "primelsshiki",
+    [
+      4
+    ],
+    2805,
+    279,
+    274,
+    279,
+    1264
+  ],
+  "183": [
+    "Kakuzu 4 Heart Mode",
+    7,
+    "kakuzu4heart",
+    [
+      5
+    ],
+    2300,
+    208,
+    200,
+    215,
+    1265
+  ],
+  "184": [
+    "Hidan Mode Jashin",
+    8,
+    "hidan",
+    [
+      1
+    ],
+    2715,
+    256,
+    267,
+    271,
+    1266
+  ],
+  "185": [
+    "Kidomaru Cursed Mode",
+    7,
+    "kidomarucursed",
+    [
+      2
+    ],
+    2080,
+    218,
+    210,
+    215,
+    1267
+  ],
+  "186": [
+    "Sakon & Ukon Cursed",
+    7,
+    "sakonukoncursed",
+    [
+      1
+    ],
+    2158,
+    210,
+    211,
+    215,
+    1268
+  ],
+  "187": [
+    "Prime Hagoromo",
+    8,
+    "primehagoromo",
+    [
+      3
+    ],
+    2800,
+    279,
+    274,
+    277,
+    1269
+  ],
+  "188": [
+    "Prime Kaguya",
+    8,
+    "primekaguya",
+    [
+      4
+    ],
+    2775,
+    278,
+    276,
+    279,
+    1271
+  ],
+  "189": [
+    "T-Obito",
+    8,
+    "whitemaskobito",
+    [
+      1
+    ],
+    2760,
+    273,
+    270,
+    275,
+    1270
+  ],
+  "190": [
+    "Ten Tails Obito",
+    8,
+    "tentailsobito",
+    [
+      5
+    ],
+    2775,
+    275,
+    277,
+    277,
+    1272
+  ],
+  "191": [
+    "Boruto Timeskip",
+    8,
+    "borutotimeskip",
+    [
+      2
+    ],
+    2750,
+    279,
+    274,
+    278,
+    1274
+  ],
+  "192": [
+    "Byakugan Kaguya",
+    8,
+    "byakugankaguya",
+    [
+      4
+    ],
+    2800,
+    275,
+    278,
+    278,
+    1275
+  ],
+  "193": [
+    "Kawaki Karma",
+    8,
+    "kawakikarma",
+    [
+      1
+    ],
+    2795,
+    276,
+    274,
+    276,
+    1276
+  ],
+  "194": [
+    "Mangekyou Sarada",
+    8,
+    "mangekyousarada",
+    [
+      3
+    ],
+    2775,
+    273,
+    275,
+    275,
+    1277
+  ],
+  "195": [
+    "Nagato Edo Tensei",
+    8,
+    "nagatoedotensei",
+    [
+      5
+    ],
+    2764,
+    268,
+    275,
+    274,
+    1278
+  ],
+  "196": [
+    "Sakumo Hatake",
+    8,
+    "sakumohatake",
+    [
+      2
+    ],
+    2740,
+    268,
+    271,
+    273,
+    1279
+  ],
+  "197": [
+    "Might Duy",
+    8,
+    "mightduy",
+    [
+      1
+    ],
+    2750,
+    273,
+    270,
+    272,
+    1280
+  ],
+  "198": [
+    "Himawari Timeskip",
+    8,
+    "himawaritimeskip",
+    [
+      2
+    ],
+    2770,
+    277,
+    271,
+    276,
+    1281
+  ],
+  "199": [
+    "Fukasaku",
+    8,
+    "fukasaku",
+    [
+      5
+    ],
+    2630,
+    262,
+    265,
+    262,
+    1282
+  ],
+  "200": [
+    "Mamushi Shinju",
+    8,
+    "mamushishinju",
+    [
+      5
+    ],
+    2770,
+    271,
+    278,
+    275,
+    1289
+  ],
+  "201": [
+    "Matsuri Shinju",
+    8,
+    "matsurishinju",
+    [
+      2
+    ],
+    2750,
+    275,
+    275,
+    276,
+    1290
+  ],
+  "202": [
+    "Ryu Shinju",
+    8,
+    "ryushinju",
+    [
+      4
+    ],
+    2760,
+    275,
+    274,
+    276,
+    1291
+  ],
+  "203": [
+    "Hidari Shinju",
+    8,
+    "hidarishinju",
+    [
+      3
+    ],
+    2760,
+    274,
+    275,
+    279,
+    1292
+  ],
+  "204": [
+    "Jura Shinju",
+    8,
+    "jurashinju",
+    [
+      4
+    ],
+    2810,
+    278,
+    272,
+    278,
+    1293
+  ],
+  "205": [
+    "Hikari Uchiha",
+    8,
+    "hikariuchiha",
+    [
+      3
+    ],
+    2678,
+    278,
+    277,
+    278,
+    1294
+  ],
+  "206": [
+    "Nanashi Uchiha",
+    8,
+    "nanashiuchiha",
+    [
+      3
+    ],
+    2690,
+    278,
+    276,
+    278,
+    1295
+  ],
+  "207": [
+    "Merz",
+    8,
+    "merz",
+    [
+      5
+    ],
+    2700,
+    280,
+    275,
+    278,
+    1296
+  ],
+  "208": [
+    "Prime Sasuke",
+    8,
+    "sasukeindramode",
+    [
+      3
+    ],
+    2720,
+    280,
+    280,
+    280,
+    1297
+  ],
+  "209": [
+    "Prime Naruto",
+    8,
+    "narutoashuramode",
+    [
+      2
+    ],
+    2750,
+    281,
+    278,
+    279,
+    1298
+  ],
+  "210": [
+    "Reto Kazekage",
+    8,
+    "retokazekage",
+    [
+      2
+    ],
+    2650,
+    278,
+    281,
+    278,
+    1311
+  ],
+  "211": [
+    "Chino Base Mode",
+    8,
+    "chinobasemode",
+    [
+      5
+    ],
+    2700,
+    273,
+    269,
+    273,
+    1312
+  ],
+  "212": [
+    "Guren",
+    8,
+    "guren",
+    [
+      5
+    ],
+    2758,
+    276,
+    271,
+    280,
+    1317
+  ],
+  "213": [
+    "Uzumaki Ashina",
+    8,
+    "uzumakiashina",
+    [
+      2
+    ],
+    2720,
+    274,
+    276,
+    280,
+    1318
+  ],
+  "214": [
+    "Shikaku Nara",
+    8,
+    "shikakunara",
+    [
+      4
+    ],
+    2700,
+    278,
+    275,
+    278,
+    1319
+  ],
+  "215": [
+    "Choza Akimichi",
+    8,
+    "chozaakimichi",
+    [
+      4
+    ],
+    2845,
+    269,
+    280,
+    270,
+    1320
+  ],
+  "216": [
+    "Konan Angel",
+    8,
+    "konanangel",
+    [
+      3
+    ],
+    2845,
+    269,
+    280,
+    270,
+    1325
+  ],
+  "217": [
+    "Mitsuki Timeskip",
+    8,
+    "mitsukitimeskip",
+    [
+      5
+    ],
+    2845,
+    269,
+    280,
+    270,
+    1326
+  ],
+  "218": [
+    "Pain Tendo",
+    8,
+    "paintendo",
+    [
+      2
+    ],
+    2845,
+    269,
+    280,
+    270,
+    1327
+  ],
+  "219": [
+    "Prime Sakura",
+    8,
+    "primesakura",
+    [
+      5
+    ],
+    2845,
+    269,
+    280,
+    270,
+    1328
+  ],
+  "220": [
+    "Tobirama Edo Tensei",
+    8,
+    "tobiramaedotensei",
+    [
+      5
+    ],
+    2845,
+    269,
+    280,
+    270,
+    1329
+  ]
+}

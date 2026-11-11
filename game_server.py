@@ -131,11 +131,9 @@ def get_player_full_data(user_identifier):
             """, (user_id,))
             p_ninjas = cur.fetchall()
 
-            # If no ninjas in DB, give starter pack (Naruto, Sasuke, Madara)
+            # If no ninjas in DB, give default starter ninja Naruto (ID 17, Grade C, Sexy Jutsu ID 1092)
             if not p_ninjas:
-                default_ninja_ids = [17, 27, 102] # Naruto, Sasuke, Madara
-                for nid in default_ninja_ids:
-                    cur.execute("INSERT INTO player_ninjas (user_id, ninja_id, level, exp, is_main, jutsu_slot_1) VALUES (%s, %s, 50, 0, 1, 1)", (user_id, nid))
+                cur.execute("INSERT INTO player_ninjas (user_id, ninja_id, level, exp, is_main, jutsu_slot_1) VALUES (%s, 17, 1, 0, 1, 1092)", (user_id,))
                 cur.execute("""
                     SELECT pn.*, mn.name as ninja_name, mn.quality, mn.grade, mn.chakra_type, mn.special_jutsu_id, mn.learnable_jutsus,
                            mn.base_hp, mn.base_atk, mn.base_def, mn.base_speed
@@ -191,6 +189,12 @@ def get_player_full_data(user_identifier):
                     if val and int(val) > 0:
                         equipped_skills.append(int(val))
 
+                spec_j = int(row.get("special_jutsu_id") or 0)
+                if not equipped_skills and spec_j > 0:
+                    equipped_skills.append(spec_j)
+                elif equipped_skills and spec_j > 0 and int(row.get("jutsu_slot_1") or 0) == 0:
+                    equipped_skills.insert(0, spec_j)
+
                 lv = max(1, int(row.get("level", 1) or 1))
                 base_hp = int(row.get("base_hp") or 300)
                 base_atk = int(row.get("base_atk") or 60)
@@ -212,7 +216,8 @@ def get_player_full_data(user_identifier):
                     "rxp": max(100, lv * 100),
                     "quality": max(1, min(8, int(row.get("quality", 1) or 1))),
                     "chakra": [int(row.get("chakra_type") or 1)],
-                    "skills": equipped_skills if equipped_skills else [1149],
+                    "skill": equipped_skills if equipped_skills else ([spec_j] if spec_j > 0 else [1149]),
+                    "skills": equipped_skills if equipped_skills else ([spec_j] if spec_j > 0 else [1149]),
                     "eskill": eskills if eskills else [1149],
                     "star": 1,
                     "costume": 0,
@@ -321,7 +326,7 @@ def get_player_full_data(user_identifier):
                     "lv": b_lv,
                     "state": 0,
                     "num": free_quota if b_id == 2 else 0,
-                    "cd": [remaining_cd, 0, 0, 0]
+                    "cd": [remaining_cd, remaining_cd, remaining_cd, remaining_cd]
                 }
 
             data = {
@@ -889,11 +894,12 @@ async def handler(websocket):
                     while len(final_mars) < 3:
                         final_mars.append(0)
 
+                    up_data = get_player_full_data(cur_uid)
                     reply = {
                         "type": 29,
                         "source": {
                             "operResult": {"success": True, "type": 1},
-                            "heros": {"mars": final_mars[:3]}
+                            "heros": up_data["heros"]
                         },
                         "timeStamp": now_ms()
                     }
@@ -1010,6 +1016,18 @@ async def handler(websocket):
                             new_skill_id = int(j_skill["id"] if j_skill else 1007)
                             print(f"[+] studySkill: rolled skill {new_skill_id} ({j_skill['name'] if j_skill else 'Kagura Shuriken'}) for user {cur_uid}", flush=True)
 
+                            # Equip the learned jutsu into empty slot or target slot
+                            c_ss.execute("SELECT jutsu_slot_1, jutsu_slot_2, jutsu_slot_3, jutsu_slot_4, jutsu_slot_5 FROM player_ninjas WHERE id = %s", (hid,))
+                            pn_slots = c_ss.fetchone() or {}
+                            if 0 < idx <= 4:
+                                target_col = f"jutsu_slot_{idx + 1}"
+                            else:
+                                target_col = "jutsu_slot_2"
+                                for col in ["jutsu_slot_2", "jutsu_slot_3", "jutsu_slot_4", "jutsu_slot_5"]:
+                                    if not pn_slots.get(col) or int(pn_slots.get(col) or 0) == 0:
+                                        target_col = col
+                                        break
+                            c_ss.execute(f"UPDATE player_ninjas SET {target_col} = %s WHERE id = %s AND user_id = %s", (new_skill_id, hid, cur_uid))
                             conn_ss.commit()
 
                             up_data = get_player_full_data(cur_uid)
@@ -1037,7 +1055,8 @@ async def handler(websocket):
                                         }
                                     },
                                     "buildings": up_data["buildings"],
-                                    "player": up_data["player"]
+                                    "player": up_data["player"],
+                                    "heros": up_data["heros"]
                                 },
                                 "timeStamp": now_ms()
                             }
@@ -1189,43 +1208,46 @@ async def handler(websocket):
                                 except:
                                     enemy_nid = 1
 
-                            c_adv.execute("SELECT * FROM player_ninjas WHERE user_id = %s ORDER BY is_main DESC, id ASC LIMIT 1", (cur_uid,))
-                            p_ninja = c_adv.fetchone()
-                            player_nid = 1
-                            player_lv = 1
-                            if p_ninja:
-                                player_lv = max(int(p_ninja.get("level") or 1), 1)
-                                try:
-                                    player_nid = max(1, int(p_ninja.get("ninja_id") or 1))
-                                except:
-                                    player_nid = 1
+                            fighters = []
+                            h_map = up_data["heros"].get("heros", {})
+                            mars_list = up_data["heros"].get("mars", [])
+                            for m_hid in mars_list:
+                                if m_hid and str(m_hid) in h_map:
+                                    h_obj = h_map[str(m_hid)]
+                                    fighters.append({
+                                        "id": h_obj["id"],
+                                        "hp": h_obj["hp"],
+                                        "currHp": h_obj["hp"],
+                                        "skillList": h_obj.get("skill") or [1149],
+                                        "lv": h_obj["lv"],
+                                        "exp": 0
+                                    })
+                            if not fighters:
+                                fighters.append({
+                                    "id": 17,
+                                    "hp": 1000,
+                                    "currHp": 1000,
+                                    "skillList": [1092],
+                                    "lv": 1,
+                                    "exp": 0
+                                })
 
-                            p_hp = 1000 + (player_lv * 50)
                             e_hp = 500 + (st * 30)
+                            fighters.append({
+                                "id": enemy_nid,
+                                "hp": e_hp,
+                                "currHp": e_hp,
+                                "skillList": [1149],
+                                "lv": max(st, 1),
+                                "exp": 0
+                            })
 
                             combat_payload = {
                                 "win": 1,
                                 "pass": 1,
-                                "fighters": [
-                                    {
-                                        "id": player_nid,
-                                        "hp": p_hp,
-                                        "currHp": p_hp,
-                                        "skillList": [1149],
-                                        "lv": player_lv,
-                                        "exp": 0
-                                    },
-                                    {
-                                        "id": enemy_nid,
-                                        "hp": e_hp,
-                                        "currHp": e_hp,
-                                        "skillList": [1149],
-                                        "lv": max(st, 1),
-                                        "exp": 0
-                                    }
-                                ],
+                                "fighters": fighters,
                                 "combat": [
-                                    {"idx": 0, "when": 1, "tid": 1, "sid": 1149, "bhp": -e_hp, "status": 1}
+                                    {"idx": 0, "when": 1, "tid": len(fighters) - 1, "sid": 1149, "bhp": -e_hp, "status": 1}
                                 ],
                                 "reward": {
                                     "silver": silver_gain,
