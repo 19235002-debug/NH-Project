@@ -204,6 +204,17 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
                         return;
                     }
 
+                    if (acc) {
+                        try {
+                            if (typeof sys !== "undefined" && sys.localStorage) {
+                                sys.localStorage.setItem("nh_active_account", acc.toLowerCase());
+                            }
+                            if (typeof accountUtil !== "undefined" && accountUtil.saveAccount) {
+                                accountUtil.saveAccount(acc.toLowerCase());
+                            }
+                        } catch(eAccSave) {}
+                    }
+
                     var channel = 1;
                     if (typeof serverUtil !== "undefined" && serverUtil.getChannel) {
                         channel = serverUtil.getChannel();
@@ -246,6 +257,17 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
                         return;
                     }
 
+                    if (acc) {
+                        try {
+                            if (typeof sys !== "undefined" && sys.localStorage) {
+                                sys.localStorage.setItem("nh_active_account", acc.toLowerCase());
+                            }
+                            if (typeof accountUtil !== "undefined" && accountUtil.saveAccount) {
+                                accountUtil.saveAccount(acc.toLowerCase());
+                            }
+                        } catch(eAccSave) {}
+                    }
+
                     var channel = 1;
                     if (typeof serverUtil !== "undefined" && serverUtil.getChannel) {
                         channel = serverUtil.getChannel();
@@ -269,6 +291,17 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
                     pwd = String(pwd || "").trim();
                     if (!acc || acc.length < 3) return;
                     if (!pwd || pwd.length < 1) return;
+                    if (acc) {
+                        try {
+                            if (typeof sys !== "undefined" && sys.localStorage) {
+                                sys.localStorage.setItem("nh_active_account", acc.toLowerCase());
+                            }
+                            if (typeof accountUtil !== "undefined" && accountUtil.saveAccount) {
+                                accountUtil.saveAccount(acc.toLowerCase());
+                            }
+                        } catch(eAccSave) {}
+                    }
+
                     var channel = 1;
                     if (typeof serverUtil !== "undefined" && serverUtil.getChannel) {
                         channel = serverUtil.getChannel();
@@ -282,6 +315,50 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
                 };
             }
         } catch (eLoginFix) {}
+
+        // 2g. Hook nad.sessionFactory to pass active account in login packet
+        try {
+            if (typeof nad !== "undefined" && nad && nad.sessionFactory) {
+                var _origNadSessionFactory = nad.sessionFactory;
+                nad.sessionFactory = function () {
+                    var args = Array.prototype.slice.call(arguments);
+                    args[0] = "ws://nh.digislams.my.id:80/nadsocket";
+                    if (typeof cc !== "undefined" && cc.log) {
+                        cc.log("[NH nad.sessionFactory] connecting to " + args[0]);
+                    }
+                    var sess = _origNadSessionFactory.apply(this, args);
+                    if (sess && typeof sess.send === "function" && !sess.__nhWrapped) {
+                        sess.__nhWrapped = true;
+                        var _origSessSend = sess.send;
+                        sess.send = function (data) {
+                            try {
+                                if (typeof data === "string" && (data.indexOf('"type":8') !== -1 || data.indexOf('"type": 8') !== -1)) {
+                                    var p = JSON.parse(data);
+                                    if (p && p.type === 8 && Array.isArray(p.source)) {
+                                        var activeAcc = null;
+                                        if (typeof sys !== "undefined" && sys.localStorage) {
+                                            activeAcc = sys.localStorage.getItem("nh_active_account");
+                                        }
+                                        if (!activeAcc && typeof accountUtil !== "undefined" && accountUtil.getAccount) {
+                                            activeAcc = accountUtil.getAccount();
+                                        }
+                                        if (activeAcc) {
+                                            p.source[0] = String(activeAcc).trim();
+                                            data = JSON.stringify(p);
+                                            if (typeof cc !== "undefined" && cc.log) {
+                                                cc.log("[NH Session] Injected active account into login packet: " + activeAcc);
+                                            }
+                                        }
+                                    }
+                                }
+                            } catch(eSendHook) {}
+                            return _origSessSend.call(this, data);
+                        };
+                    }
+                    return sess;
+                };
+            }
+        } catch (eNadHook) {}
     } catch (eRoleGuard) {
         if (typeof cc !== "undefined" && cc.log) cc.log("[NH Error] eRoleGuard: " + eRoleGuard);
     }

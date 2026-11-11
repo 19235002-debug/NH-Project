@@ -197,6 +197,18 @@ class GameClientAdapterController extends Controller
             $user->update(['remember_token' => $token]);
         } catch (\Exception $eToken) {}
 
+        // Persist active login session cache for WebSocket game server
+        try {
+            $lastLoginPayload = json_encode([
+                'username' => $user->username,
+                'user_id' => $user->id,
+                'time' => time(),
+                'ip' => $request->ip()
+            ]);
+            @file_put_contents(base_path('storage/last_login.json'), $lastLoginPayload);
+            @file_put_contents(base_path('.last_login'), $lastLoginPayload);
+        } catch (\Exception $eLL) {}
+
         $payloadData = [
             'sgin' => $token,
             'account' => $user->username,

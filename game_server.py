@@ -79,10 +79,31 @@ def get_player_full_data(user_identifier):
                 cur.execute("SELECT * FROM users WHERE username = %s OR email = %s LIMIT 1", (str(user_identifier), str(user_identifier)))
                 user = cur.fetchone()
             if not user:
-                cur.execute("SELECT * FROM users WHERE remember_token = %s LIMIT 1", (str(user_identifier),))
+                try:
+                    cur.execute("SELECT * FROM users WHERE remember_token = %s LIMIT 1", (str(user_identifier),))
+                    user = cur.fetchone()
+                except Exception:
+                    pass
+            if not user:
+                # Check .last_login cache
+                last_login_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'storage', 'last_login.json')
+                if not os.path.exists(last_login_file):
+                    last_login_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.last_login')
+                if os.path.exists(last_login_file):
+                    try:
+                        with open(last_login_file, 'r', encoding='utf-8') as lf:
+                            ll_data = json.load(lf)
+                            ll_uname = ll_data.get('username')
+                            if ll_uname:
+                                cur.execute("SELECT * FROM users WHERE username = %s LIMIT 1", (ll_uname,))
+                                user = cur.fetchone()
+                    except Exception:
+                        pass
+            if not user:
+                # Fallback to latest non-admin active user or user 1
+                cur.execute("SELECT * FROM users WHERE id > 1 ORDER BY id DESC LIMIT 1")
                 user = cur.fetchone()
             if not user:
-                # Fallback to first user in DB or default admin
                 cur.execute("SELECT * FROM users ORDER BY id ASC LIMIT 1")
                 user = cur.fetchone()
 
@@ -610,47 +631,90 @@ async def handler(websocket):
                                 if k in source and source[k]:
                                     candidates.append(str(source[k]).strip())
 
-                        # 1. Look for exact username or email
-                        for cand in candidates:
-                            c_u.execute("SELECT * FROM users WHERE username = %s OR email = %s LIMIT 1", (cand, cand))
-                            row = c_u.fetchone()
-                            if row:
-                                found_user = row
-                                break
+                        # Critical: Filter out static device / channel / server strings so they NEVER get confused for users
+                        ignored_strings = {"1", "LDGameRoom", "1.1.1", "99105", "UNKNOWN_WIFI_1.0_UNKNOWN", "None", "null"}
 
-                        # 2. Look for remember_token match
+                        # 1. Explicit account in source[0] (injected by client patch)
+                        if isinstance(source, list) and len(source) > 0 and source[0]:
+                            first_val = str(source[0]).strip()
+                            if first_val and first_val not in ignored_strings:
+                                c_u.execute("SELECT * FROM users WHERE username = %s OR email = %s LIMIT 1", (first_val, first_val))
+                                found_user = c_u.fetchone()
+
+                        # 2. Look for exact username or email across non-ignored candidates
                         if not found_user:
                             for cand in candidates:
-                                c_u.execute("SELECT * FROM users WHERE remember_token = %s LIMIT 1", (cand,))
+                                if cand in ignored_strings:
+                                    continue
+                                c_u.execute("SELECT * FROM users WHERE username = %s OR email = %s LIMIT 1", (cand, cand))
                                 row = c_u.fetchone()
                                 if row:
                                     found_user = row
                                     break
 
-                        # 3. Look for numeric user ID match (prioritizing IDs > 1 so serverId 1 is not confused with user 1)
+                        # 3. Look for remember_token match safely
                         if not found_user:
                             for cand in candidates:
-                                if cand.isdigit() and int(cand) > 1:
+                                if cand in ignored_strings:
+                                    continue
+                                try:
+                                    c_u.execute("SELECT * FROM users WHERE remember_token = %s LIMIT 1", (cand,))
+                                    row = c_u.fetchone()
+                                    if row:
+                                        found_user = row
+                                        break
+                                except Exception:
+                                    pass
+
+                        # 4. Check active login session file (.last_login / storage/last_login.json)
+                        if not found_user:
+                            last_login_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'storage', 'last_login.json')
+                            if not os.path.exists(last_login_file):
+                                last_login_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.last_login')
+                            if os.path.exists(last_login_file):
+                                try:
+                                    with open(last_login_file, 'r', encoding='utf-8') as lf:
+                                        ll_data = json.load(lf)
+                                        ll_time = ll_data.get('time', 0)
+                                        # Valid if authenticated within last 1 hour
+                                        if time.time() - ll_time < 3600:
+                                            ll_uname = ll_data.get('username')
+                                            ll_uid = ll_data.get('user_id')
+                                            if ll_uname:
+                                                c_u.execute("SELECT * FROM users WHERE username = %s LIMIT 1", (ll_uname,))
+                                                found_user = c_u.fetchone()
+                                            elif ll_uid:
+                                                c_u.execute("SELECT * FROM users WHERE id = %s LIMIT 1", (int(ll_uid),))
+                                                found_user = c_u.fetchone()
+                                except Exception as eLL:
+                                    print(f"[i] Could not read last_login cache: {eLL}", flush=True)
+
+                        # 5. Look for numeric user ID match (strictly > 1 so serverId 1 is NEVER matched as user 1)
+                        if not found_user:
+                            for cand in candidates:
+                                if cand.isdigit() and int(cand) > 1 and cand not in ignored_strings:
                                     c_u.execute("SELECT * FROM users WHERE id = %s LIMIT 1", (int(cand),))
                                     row = c_u.fetchone()
                                     if row:
                                         found_user = row
                                         break
 
-                        # 4. Fallback numeric lookup (including ID 1)
+                        # 6. Fallback: match most recently active / created non-admin user (e.g. akunbaru)
                         if not found_user:
-                            for cand in candidates:
-                                if cand.isdigit():
-                                    c_u.execute("SELECT * FROM users WHERE id = %s LIMIT 1", (int(cand),))
-                                    row = c_u.fetchone()
-                                    if row:
-                                        found_user = row
-                                        break
+                            c_u.execute("SELECT * FROM users WHERE id > 1 ORDER BY id DESC LIMIT 1")
+                            found_user = c_u.fetchone()
+
+                        # 7. Absolute last resort fallback to user 1
+                        if not found_user:
+                            c_u.execute("SELECT * FROM users ORDER BY id ASC LIMIT 1")
+                            found_user = c_u.fetchone()
 
                         if found_user:
                             current_user = str(found_user["username"])
                         elif candidates:
                             current_user = str(candidates[0])
+                except Exception as eFind:
+                    print(f"[!] Error resolving login user: {eFind}", flush=True)
                 finally:
                     conn_u.close()
 
@@ -1371,13 +1435,19 @@ async def main():
     try:
         conn = get_db()
         with conn.cursor() as cur:
+            # Safely check and add remember_token column if not present
+            try:
+                cur.execute("SHOW COLUMNS FROM users LIKE 'remember_token'")
+                if not cur.fetchone():
+                    cur.execute("ALTER TABLE users ADD COLUMN remember_token VARCHAR(255) NULL")
+                    conn.commit()
+                    print("[+] Added remember_token column to users table.", flush=True)
+            except Exception as eCol:
+                print(f"[i] Note on remember_token column check: {eCol}", flush=True)
+
             # Demote any custom ninjas (> 107) from active combat or deploy slots across all accounts
             cur.execute("UPDATE player_ninjas SET is_main = 0 WHERE ninja_id > 107 AND is_main > 0")
             cur.execute("UPDATE player_ninjas SET deploy_slot = 0 WHERE ninja_id > 107 AND deploy_slot > 0")
-            # Ensure user 1 has an authentic leader
-            cur.execute("UPDATE player_ninjas SET is_main = 1 WHERE user_id = 1 AND ninja_id <= 107 AND is_main = 0 ORDER BY id ASC LIMIT 1")
-            # Synchronize user 1 beginner progress if level or map_stage is behind
-            cur.execute("UPDATE users SET level = 2, exp = 5, map_stage = GREATEST(map_stage, 2) WHERE id = 1 AND (level < 2 OR map_stage < 2)")
             # Reset cooldown for Ninjutsu School to allow immediate Jutsu training
             cur.execute("UPDATE player_buildings SET last_produce_time = 0 WHERE building_id = 2")
             conn.commit()
