@@ -997,9 +997,18 @@ async def handler(websocket):
                             p_curr = c_ss.fetchone()
                             current_sid = int(p_curr.get("curr_sid") or 1149) if p_curr else 1149
 
-                            c_ss.execute("SELECT id, name, grade FROM master_jutsus ORDER BY RAND() LIMIT 1")
+                            # Free basic training (type 0) draws authentic standard jutsus (id 1001..1200)
+                            # Advanced scroll training (type > 0) draws higher grade jutsus
+                            if st_type == 0:
+                                c_ss.execute("SELECT id, name, grade FROM master_jutsus WHERE id BETWEEN 1001 AND 1200 AND quality <= 2 AND icon IS NOT NULL AND icon != '' ORDER BY RAND() LIMIT 1")
+                            else:
+                                c_ss.execute("SELECT id, name, grade FROM master_jutsus WHERE id BETWEEN 1001 AND 1250 AND icon IS NOT NULL AND icon != '' ORDER BY RAND() LIMIT 1")
                             j_skill = c_ss.fetchone()
-                            new_skill_id = int(j_skill["id"] if j_skill else 1149)
+                            if not j_skill:
+                                c_ss.execute("SELECT id, name, grade FROM master_jutsus WHERE id BETWEEN 1001 AND 1200 ORDER BY RAND() LIMIT 1")
+                                j_skill = c_ss.fetchone()
+                            new_skill_id = int(j_skill["id"] if j_skill else 1007)
+                            print(f"[+] studySkill: rolled skill {new_skill_id} ({j_skill['name'] if j_skill else 'Kagura Shuriken'}) for user {cur_uid}", flush=True)
 
                             conn_ss.commit()
 

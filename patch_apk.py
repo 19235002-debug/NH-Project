@@ -83,6 +83,55 @@ role_guard_code = f'''    // 2e. Safeguard Config.roleObject, GameUserInfor, Gam
             }}
         }};
 
+        var _polyFillAllSkills = function(so) {{
+            if (!so || typeof so !== "object") return;
+            var baseSkill = so[1149] || so[1007] || so[1001];
+            if (!baseSkill) {{
+                for (var k in so) {{
+                    if (so.hasOwnProperty(k) && so[k] && typeof so[k].quality !== "undefined") {{
+                        baseSkill = so[k];
+                        break;
+                    }}
+                }}
+            }}
+            if (!baseSkill) return;
+            if (so.__nhSkillsGuarded) return;
+            so.__nhSkillsGuarded = true;
+
+            var cfg = (typeof Config !== "undefined" && Config.getInstance) ? Config.getInstance() : null;
+            var sqo = cfg ? cfg.skillQualityObj : null;
+
+            for (var sid = 1000; sid <= 3000; sid++) {{
+                if (!so[sid]) {{
+                    var clone = {{}};
+                    for (var prop in baseSkill) {{
+                        if (baseSkill.hasOwnProperty(prop)) {{
+                            clone[prop] = baseSkill[prop];
+                        }}
+                    }}
+                    clone.id = sid;
+                    clone.quality = 1;
+                    clone.alt = "Jutsu " + sid;
+                    clone.name = "Jutsu " + sid;
+                    clone.type = 1;
+                    clone.icon = "skill_001";
+                    clone.chakra = "1";
+                    clone.timelineAReady = [];
+                    clone.timelineARun = [];
+                    clone.timelineAHit = [];
+                    so[sid] = clone;
+                }}
+                var q = so[sid].quality || 1;
+                if (sqo) {{
+                    if (!sqo[q]) sqo[q] = [];
+                    if (sqo[q].indexOf(sid) === -1) sqo[q].push(sid);
+                }}
+            }}
+            if (typeof cc !== "undefined" && cc.log) {{
+                cc.log("[NH Safeguard] Successfully polyfilled skillObject & skillQualityObj (1000..3000)");
+            }}
+        }};
+
         if (typeof Config !== "undefined") {{
             if (Config.getInstance) {{
                 var _origConfigGetInstance = Config.getInstance;
@@ -96,6 +145,9 @@ role_guard_code = f'''    // 2e. Safeguard Config.roleObject, GameUserInfor, Gam
                         var inst = _origConfigGetInstance.apply(this, arguments);
                         if (inst && inst.roleObject) {{
                             _polyFillAllRoles(inst.roleObject);
+                        }}
+                        if (inst && inst.skillObject) {{
+                            _polyFillAllSkills(inst.skillObject);
                         }}
                         return inst;
                     }} finally {{
@@ -112,6 +164,18 @@ role_guard_code = f'''    // 2e. Safeguard Config.roleObject, GameUserInfor, Gam
                             _polyFillAllRoles(this.roleObject);
                         }}
                     }} catch(ePR) {{}}
+                    return res;
+                }};
+            }}
+            if (Config.prototype && Config.prototype.processSkill) {{
+                var _origProcessSkill = Config.prototype.processSkill;
+                Config.prototype.processSkill = function () {{
+                    var res = _origProcessSkill.apply(this, arguments);
+                    try {{
+                        if (this.skillObject) {{
+                            _polyFillAllSkills(this.skillObject);
+                        }}
+                    }} catch(ePS) {{}}
                     return res;
                 }};
             }}
@@ -393,19 +457,6 @@ role_guard_code = f'''    // 2e. Safeguard Config.roleObject, GameUserInfor, Gam
                         }}
                         if (this.lvNum && typeof this.lvNum.updata === "function") {{
                             this.lvNum.updata(vlv);
-                        }}
-                        if (!this.__nhVipLabel) {{
-                            this.__nhVipLabel = cc.LabelTTF.create("VIP " + vlv, "Helvetica", 16);
-                            this.__nhVipLabel.setColor(cc.c3b(255, 175, 0));
-                            if (this.vipNode) {{
-                                this.vipNode.addChild(this.__nhVipLabel, 50);
-                            }} else {{
-                                this.addChild(this.__nhVipLabel, 50);
-                            }}
-                        }}
-                        if (this.__nhVipLabel) {{
-                            this.__nhVipLabel.setString("VIP " + vlv);
-                            this.__nhVipLabel.setVisible(true);
                         }}
                     }} catch(eVip) {{}}
                     return res;
