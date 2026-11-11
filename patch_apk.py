@@ -258,52 +258,6 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
                         lv: 1
                     };
                 };
-
-                // Add "GANTI AKUN" button to EntranceLayer and handle switchAccount
-                var _origLoginTouchesEnded = LoginScene.prototype.onTouchesEnded;
-                LoginScene.prototype.onTouchesEnded = function (touches) {
-                    try {
-                        var touch = touches && touches[0];
-                        if (touch && this.btn_switchAccount && this.currentLayer === this.EntranceLayer) {
-                            var p = touch.getLocation ? touch.getLocation() : cc.p(touch.x, touch.y);
-                            var box = this.btn_switchAccount.getBoundingBoxToWorld ? this.btn_switchAccount.getBoundingBoxToWorld() : this.btn_switchAccount.getBoundingBox();
-                            if (box && cc.rectContainsPoint(box, p)) {
-                                if (typeof accountUtil !== "undefined" && accountUtil.saveAccount) {
-                                    try { accountUtil.saveAccount(null); } catch (eClear) {}
-                                }
-                                if (typeof this.switchLayer === "function") {
-                                    this.switchLayer(this.RegButtonLayer || null);
-                                }
-                                return;
-                            }
-                        }
-                    } catch(eTouchSw) {}
-                    if (_origLoginTouchesEnded) {
-                        return _origLoginTouchesEnded.apply(this, arguments);
-                    }
-                };
-
-                var _origShowEntranceLayer = LoginScene.prototype.showEntranceLayer;
-                LoginScene.prototype.showEntranceLayer = function () {
-                    var res = _origShowEntranceLayer ? _origShowEntranceLayer.apply(this, arguments) : undefined;
-                    try {
-                        if (this.EntranceLayer && !this.btn_switchAccount) {
-                            var winSize = cc.Director.getInstance().getVisibleSize();
-                            var origin = cc.Director.getInstance().getVisibleOrigin ? cc.Director.getInstance().getVisibleOrigin() : cc.p(0, 0);
-                            var cx = origin.x + winSize.width / 2;
-                            var cy = origin.y + winSize.height / 2;
-
-                            var swLabel = cc.LabelTTF.create("GANTI AKUN / LOGOUT", "Helvetica", 22);
-                            if (swLabel) {
-                                swLabel.setColor(cc.c3b(255, 220, 100));
-                                swLabel.setPosition(cc.p(cx, cy - 130));
-                                this.EntranceLayer.addChild(swLabel, 99);
-                                this.btn_switchAccount = swLabel;
-                            }
-                        }
-                    } catch (eAddSw) {}
-                    return res;
-                };
             }
 
             if (typeof RegisterBox !== "undefined" && RegisterBox.prototype) {
