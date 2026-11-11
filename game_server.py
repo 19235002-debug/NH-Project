@@ -632,7 +632,7 @@ async def handler(websocket):
                                     candidates.append(str(source[k]).strip())
 
                         # Critical: Filter out static device / channel / server strings so they NEVER get confused for users
-                        ignored_strings = {"1", "LDGameRoom", "1.1.1", "99105", "UNKNOWN_WIFI_1.0_UNKNOWN", "None", "null"}
+                        ignored_strings = {"1", "LDGameRoom", "1.1.1", "99105", "UNKNOWN_WIFI_1.0_UNKNOWN", "None", "null", "[object Object]", "object"}
 
                         # 1. Explicit account in source[0] (injected by client patch)
                         if isinstance(source, list) and len(source) > 0 and source[0]:
