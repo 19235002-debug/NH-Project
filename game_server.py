@@ -163,12 +163,7 @@ def get_player_full_data(user_identifier):
 
                 slot = int(row.get("is_main") or 0)
                 if slot in [1, 2, 3] and combat_slots[slot] is None:
-                    # Client Cocos2d-x engine only has authentic armatures up to ID 107
-                    # Demote custom ninjas (> 107) from active combat slots to prevent empty battle freeze
-                    if nid > 107:
-                        cur.execute("UPDATE player_ninjas SET is_main = 0 WHERE id = %s", (hid,))
-                        slot = 0
-                    elif nid not in used_ninja_ids:
+                    if nid not in used_ninja_ids:
                         combat_slots[slot] = hid
                         used_ninja_ids.add(nid)
                     else:
@@ -241,7 +236,7 @@ def get_player_full_data(user_identifier):
             # Ensure leader slot 1 has a valid authentic ninja
             if not combat_slots[1]:
                 for row in p_ninjas:
-                    if int(row["ninja_id"]) <= 107 and int(row["id"]) not in combat_slots.values():
+                    if int(row["id"]) not in combat_slots.values():
                         combat_slots[1] = int(row["id"])
                         cur.execute("UPDATE player_ninjas SET is_main = 1 WHERE id = %s", (combat_slots[1],))
                         break
@@ -879,7 +874,7 @@ async def handler(websocket):
                                     if hid and int(hid) > 0:
                                         c_m.execute("SELECT ninja_id FROM player_ninjas WHERE id = %s AND user_id = %s", (int(hid), cur_uid))
                                         n_row = c_m.fetchone()
-                                        if n_row and int(n_row["ninja_id"]) <= 107 and n_row["ninja_id"] not in seen_mars_nids:
+                                        if n_row and n_row["ninja_id"] not in seen_mars_nids:
                                             seen_mars_nids.add(n_row["ninja_id"])
                                             final_mars.append(int(hid))
                                             c_m.execute("UPDATE player_ninjas SET is_main = %s, deploy_slot = 0 WHERE id = %s AND user_id = %s", (idx + 1, int(hid), cur_uid))
@@ -1181,9 +1176,7 @@ async def handler(websocket):
                             enemy_nid = 1
                             if adv_info and adv_info.get("enemy"):
                                 try:
-                                    enemy_nid = int(adv_info["enemy"])
-                                    if enemy_nid > 107 or enemy_nid <= 0:
-                                        enemy_nid = 1
+                                    enemy_nid = max(1, int(adv_info["enemy"]))
                                 except:
                                     enemy_nid = 1
 
@@ -1194,9 +1187,7 @@ async def handler(websocket):
                             if p_ninja:
                                 player_lv = max(int(p_ninja.get("level") or 1), 1)
                                 try:
-                                    pn_val = int(p_ninja.get("ninja_id") or 1)
-                                    if 1 <= pn_val <= 107:
-                                        player_nid = pn_val
+                                    player_nid = max(1, int(p_ninja.get("ninja_id") or 1))
                                 except:
                                     player_nid = 1
 
@@ -1348,7 +1339,8 @@ async def handler(websocket):
                         await websocket.send(json.dumps(reply))
                     else:
                         print(f"[+] Building {b_id} harvest success: +{reward_silver} silver (total: {new_silver}), cd started: {cd_sec}s", flush=True)
-                        # 2. Send operResult type 9 + player silver + updated building cd
+                        up_data = get_player_full_data(cur_uid)
+                        # 2. Send operResult type 9 + full player data (preserving VIP, gold, stamina) + updated building cd
                         reply = {
                             "type": 29,
                             "source": {
@@ -1359,9 +1351,7 @@ async def handler(websocket):
                                         "silver": reward_silver
                                     }
                                 },
-                                "player": {
-                                    "silver": new_silver
-                                },
+                                "player": up_data["player"],
                                 "buildings": {
                                     "bd": {
                                         str(b_id): {
@@ -1446,8 +1436,6 @@ async def main():
                 print(f"[i] Note on remember_token column check: {eCol}", flush=True)
 
             # Demote any custom ninjas (> 107) from active combat or deploy slots across all accounts
-            cur.execute("UPDATE player_ninjas SET is_main = 0 WHERE ninja_id > 107 AND is_main > 0")
-            cur.execute("UPDATE player_ninjas SET deploy_slot = 0 WHERE ninja_id > 107 AND deploy_slot > 0")
             # Reset cooldown for Ninjutsu School to allow immediate Jutsu training
             cur.execute("UPDATE player_buildings SET last_produce_time = 0 WHERE building_id = 2")
             conn.commit()

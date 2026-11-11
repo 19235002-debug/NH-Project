@@ -1,0 +1,3522 @@
+{
+  "1": {
+    "id": 1,
+    "name": "Konohamaru",
+    "alt": "Konohamaru",
+    "xmlfile": "muyewan",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      1
+    ],
+    "hp": 291,
+    "attack": 57,
+    "def": 57,
+    "speed": 57,
+    "special_jutsu": 1149
+  },
+  "2": {
+    "id": 2,
+    "name": "Mizuki",
+    "alt": "Mizuki",
+    "xmlfile": "shuimu",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      2
+    ],
+    "hp": 297,
+    "attack": 54,
+    "def": 60,
+    "speed": 54,
+    "special_jutsu": 1015
+  },
+  "3": {
+    "id": 3,
+    "name": "Misthide Guard",
+    "alt": "Misthide Guard",
+    "xmlfile": "wuyinshouwei",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      5
+    ],
+    "hp": 285,
+    "attack": 57,
+    "def": 57,
+    "speed": 57,
+    "special_jutsu": 1086
+  },
+  "4": {
+    "id": 4,
+    "name": "Misthide Sentry",
+    "alt": "Misthide Sentry",
+    "xmlfile": "wuyinshaobing",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      5
+    ],
+    "hp": 294,
+    "attack": 54,
+    "def": 60,
+    "speed": 54,
+    "special_jutsu": 1143
+  },
+  "5": {
+    "id": 5,
+    "name": "Sandhide Guard",
+    "alt": "Sandhide Guard",
+    "xmlfile": "shayinshouwei",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      2
+    ],
+    "hp": 294,
+    "attack": 54,
+    "def": 60,
+    "speed": 54,
+    "special_jutsu": 1086
+  },
+  "6": {
+    "id": 6,
+    "name": "Sandhide Sentry",
+    "alt": "Sandhide Sentry",
+    "xmlfile": "shayinshaobing",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      2
+    ],
+    "hp": 285,
+    "attack": 57,
+    "def": 57,
+    "speed": 57,
+    "special_jutsu": 1035
+  },
+  "7": {
+    "id": 7,
+    "name": "Omoi",
+    "alt": "Omoi",
+    "xmlfile": "aomoyi",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      3
+    ],
+    "hp": 282,
+    "attack": 57,
+    "def": 57,
+    "speed": 57,
+    "special_jutsu": 1015
+  },
+  "8": {
+    "id": 8,
+    "name": "Karui",
+    "alt": "Karui",
+    "xmlfile": "karuyi",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      3
+    ],
+    "hp": 294,
+    "attack": 60,
+    "def": 60,
+    "speed": 60,
+    "special_jutsu": 1015
+  },
+  "9": {
+    "id": 9,
+    "name": "Konoha Guard",
+    "alt": "Konoha Guard",
+    "xmlfile": "muyeshouwei",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      1
+    ],
+    "hp": 291,
+    "attack": 60,
+    "def": 60,
+    "speed": 63,
+    "special_jutsu": 1007
+  },
+  "10": {
+    "id": 10,
+    "name": "Konoha Sentry",
+    "alt": "Konoha Sentry",
+    "xmlfile": "muyeshaobing",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      1
+    ],
+    "hp": 309,
+    "attack": 57,
+    "def": 63,
+    "speed": 57,
+    "special_jutsu": 1149
+  },
+  "11": {
+    "id": 11,
+    "name": "Flameplate Brigand",
+    "alt": "Flameplate Brigand",
+    "xmlfile": "chitongkai",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      4
+    ],
+    "hp": 306,
+    "attack": 60,
+    "def": 60,
+    "speed": 60,
+    "special_jutsu": 1086
+  },
+  "12": {
+    "id": 12,
+    "name": "Yoroi",
+    "alt": "Yoroi",
+    "xmlfile": "sakedeng",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      4
+    ],
+    "hp": 291,
+    "attack": 63,
+    "def": 57,
+    "speed": 63,
+    "special_jutsu": 1149
+  },
+  "13": {
+    "id": 13,
+    "name": "Tsurugi Misumi",
+    "alt": "Tsurugi Misumi",
+    "xmlfile": "jianmeicheng",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      5
+    ],
+    "hp": 300,
+    "attack": 60,
+    "def": 60,
+    "speed": 60,
+    "special_jutsu": 1086
+  },
+  "14": {
+    "id": 14,
+    "name": "Kimada",
+    "alt": "Kimada",
+    "xmlfile": "tuosizhen",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      3
+    ],
+    "hp": 297,
+    "attack": 60,
+    "def": 60,
+    "speed": 60,
+    "special_jutsu": 1035
+  },
+  "15": {
+    "id": 15,
+    "name": "Anbu Guard",
+    "alt": "Anbu Guard",
+    "xmlfile": "anbu1",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      4
+    ],
+    "hp": 312,
+    "attack": 57,
+    "def": 63,
+    "speed": 57,
+    "special_jutsu": 1015
+  },
+  "16": {
+    "id": 16,
+    "name": "Anbu Sentry",
+    "alt": "Anbu Sentry",
+    "xmlfile": "anbu2",
+    "quality": 1,
+    "grade": "D",
+    "chakra": [
+      4
+    ],
+    "hp": 309,
+    "attack": 57,
+    "def": 63,
+    "speed": 57,
+    "special_jutsu": 1015
+  },
+  "17": {
+    "id": 17,
+    "name": "Naruto",
+    "alt": "Naruto",
+    "xmlfile": "mingren",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      2
+    ],
+    "hp": 389,
+    "attack": 64,
+    "def": 64,
+    "speed": 64,
+    "special_jutsu": 1092
+  },
+  "18": {
+    "id": 18,
+    "name": "Sakura",
+    "alt": "Sakura",
+    "xmlfile": "xiaoying",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      5
+    ],
+    "hp": 400,
+    "attack": 62,
+    "def": 67,
+    "speed": 62,
+    "special_jutsu": 1003
+  },
+  "19": {
+    "id": 19,
+    "name": "Ino",
+    "alt": "Ino",
+    "xmlfile": "jingye",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      5
+    ],
+    "hp": 420,
+    "attack": 64,
+    "def": 70,
+    "speed": 64,
+    "special_jutsu": 1016
+  },
+  "20": {
+    "id": 20,
+    "name": "Tenten",
+    "alt": "Tenten",
+    "xmlfile": "tiantian",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      3
+    ],
+    "hp": 386,
+    "attack": 70,
+    "def": 64,
+    "speed": 70,
+    "special_jutsu": 1007
+  },
+  "21": {
+    "id": 21,
+    "name": "Choji",
+    "alt": "Choji",
+    "xmlfile": "dingci",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      3
+    ],
+    "hp": 400,
+    "attack": 62,
+    "def": 67,
+    "speed": 62,
+    "special_jutsu": 1145
+  },
+  "22": {
+    "id": 22,
+    "name": "Kiba Inuzuka",
+    "alt": "Kiba Inuzuka",
+    "xmlfile": "quanzhongya",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      4
+    ],
+    "hp": 409,
+    "attack": 67,
+    "def": 67,
+    "speed": 67,
+    "special_jutsu": 1112
+  },
+  "23": {
+    "id": 23,
+    "name": "Shino",
+    "alt": "Shino",
+    "xmlfile": "zhinai",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      4
+    ],
+    "hp": 403,
+    "attack": 67,
+    "def": 67,
+    "speed": 67,
+    "special_jutsu": 1085
+  },
+  "24": {
+    "id": 24,
+    "name": "Hinata",
+    "alt": "Hinata",
+    "xmlfile": "chutian",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      1
+    ],
+    "hp": 400,
+    "attack": 73,
+    "def": 67,
+    "speed": 73,
+    "special_jutsu": 1005
+  },
+  "25": {
+    "id": 25,
+    "name": "Nenji",
+    "alt": "Nenji",
+    "xmlfile": "ningci",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      1
+    ],
+    "hp": 403,
+    "attack": 73,
+    "def": 67,
+    "speed": 73,
+    "special_jutsu": 1011
+  },
+  "26": {
+    "id": 26,
+    "name": "Lee",
+    "alt": "Lee",
+    "xmlfile": "xiaoli",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      1
+    ],
+    "hp": 428,
+    "attack": 70,
+    "def": 70,
+    "speed": 70,
+    "special_jutsu": 1009
+  },
+  "27": {
+    "id": 27,
+    "name": "Sasuke",
+    "alt": "Sasuke",
+    "xmlfile": "zuozhu",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      3
+    ],
+    "hp": 420,
+    "attack": 70,
+    "def": 70,
+    "speed": 70,
+    "special_jutsu": 1035
+  },
+  "28": {
+    "id": 28,
+    "name": "Shikamaru",
+    "alt": "Shikamaru",
+    "xmlfile": "luwan",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      4
+    ],
+    "hp": 420,
+    "attack": 70,
+    "def": 70,
+    "speed": 70,
+    "special_jutsu": 1104
+  },
+  "29": {
+    "id": 29,
+    "name": "Shizune",
+    "alt": "Shizune",
+    "xmlfile": "jingyin",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      5
+    ],
+    "hp": 417,
+    "attack": 70,
+    "def": 70,
+    "speed": 70,
+    "special_jutsu": 1004
+  },
+  "30": {
+    "id": 30,
+    "name": "Iruka",
+    "alt": "Iruka",
+    "xmlfile": "yiluka",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      1
+    ],
+    "hp": 420,
+    "attack": 76,
+    "def": 70,
+    "speed": 76,
+    "special_jutsu": 1086
+  },
+  "31": {
+    "id": 31,
+    "name": "Temari",
+    "alt": "Temari",
+    "xmlfile": "shouju",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      2
+    ],
+    "hp": 428,
+    "attack": 76,
+    "def": 70,
+    "speed": 76,
+    "special_jutsu": 1133
+  },
+  "32": {
+    "id": 32,
+    "name": "Kankuro",
+    "alt": "Kankuro",
+    "xmlfile": "kanjiulang",
+    "quality": 2,
+    "grade": "C",
+    "chakra": [
+      2
+    ],
+    "hp": 442,
+    "attack": 73,
+    "def": 73,
+    "speed": 73,
+    "special_jutsu": 1027
+  },
+  "33": {
+    "id": 33,
+    "name": "Ebisu",
+    "alt": "Ebisu",
+    "xmlfile": "yibixi",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      3
+    ],
+    "hp": 545,
+    "attack": 78,
+    "def": 78,
+    "speed": 78,
+    "special_jutsu": 1016
+  },
+  "34": {
+    "id": 34,
+    "name": "Ibiki",
+    "alt": "Ibiki",
+    "xmlfile": "huibisi",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      1
+    ],
+    "hp": 559,
+    "attack": 76,
+    "def": 81,
+    "speed": 76,
+    "special_jutsu": 1007
+  },
+  "35": {
+    "id": 35,
+    "name": "Gekkou Hayate",
+    "alt": "Gekkou Hayate",
+    "xmlfile": "yueguangjifeng",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      2
+    ],
+    "hp": 589,
+    "attack": 78,
+    "def": 84,
+    "speed": 78,
+    "special_jutsu": 1106
+  },
+  "36": {
+    "id": 36,
+    "name": "Aoba Yamashiro",
+    "alt": "Aoba Yamashiro",
+    "xmlfile": "shanchengqingye",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      1
+    ],
+    "hp": 578,
+    "attack": 78,
+    "def": 84,
+    "speed": 78,
+    "special_jutsu": 1098
+  },
+  "37": {
+    "id": 37,
+    "name": "Raido Ashinami",
+    "alt": "Raido Ashinami",
+    "xmlfile": "bingzuleitong",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      2
+    ],
+    "hp": 556,
+    "attack": 84,
+    "def": 78,
+    "speed": 84,
+    "special_jutsu": 1099
+  },
+  "38": {
+    "id": 38,
+    "name": "Genma Shiranui",
+    "alt": "Genma Shiranui",
+    "xmlfile": "buzhihuoxuanjian",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      4
+    ],
+    "hp": 562,
+    "attack": 81,
+    "def": 81,
+    "speed": 81,
+    "special_jutsu": 1097
+  },
+  "39": {
+    "id": 39,
+    "name": "Anko Mitarashi",
+    "alt": "Anko Mitarashi",
+    "xmlfile": "hongdou",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      1
+    ],
+    "hp": 564,
+    "attack": 81,
+    "def": 81,
+    "speed": 81,
+    "special_jutsu": 1016
+  },
+  "40": {
+    "id": 40,
+    "name": "Gaara",
+    "alt": "Gaara",
+    "xmlfile": "woailuo",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      4
+    ],
+    "hp": 599,
+    "attack": 81,
+    "def": 86,
+    "speed": 81,
+    "special_jutsu": 1133
+  },
+  "41": {
+    "id": 41,
+    "name": "Zabuza",
+    "alt": "Zabuza",
+    "xmlfile": "zaibuzhan",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      5
+    ],
+    "hp": 572,
+    "attack": 86,
+    "def": 81,
+    "speed": 86,
+    "special_jutsu": 1018
+  },
+  "42": {
+    "id": 42,
+    "name": "Haku",
+    "alt": "Haku",
+    "xmlfile": "bai",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      5
+    ],
+    "hp": 599,
+    "attack": 81,
+    "def": 86,
+    "speed": 81,
+    "special_jutsu": 1019
+  },
+  "43": {
+    "id": 43,
+    "name": "Kidomaru",
+    "alt": "Kidomaru",
+    "xmlfile": "guitongwan",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      2
+    ],
+    "hp": 602,
+    "attack": 81,
+    "def": 86,
+    "speed": 81,
+    "special_jutsu": 1015
+  },
+  "44": {
+    "id": 44,
+    "name": "Tayuya",
+    "alt": "Tayuya",
+    "xmlfile": "duoyouye",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      3
+    ],
+    "hp": 570,
+    "attack": 86,
+    "def": 81,
+    "speed": 86,
+    "special_jutsu": 1007
+  },
+  "45": {
+    "id": 45,
+    "name": "Sakon and Ukon",
+    "alt": "Sakon and Ukon",
+    "xmlfile": "zuojinyoujin",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      1
+    ],
+    "hp": 624,
+    "attack": 84,
+    "def": 89,
+    "speed": 84,
+    "special_jutsu": 1016
+  },
+  "46": {
+    "id": 46,
+    "name": "Jirobo",
+    "alt": "Jirobo",
+    "xmlfile": "cilangfang",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      4
+    ],
+    "hp": 618,
+    "attack": 84,
+    "def": 89,
+    "speed": 84,
+    "special_jutsu": 1145
+  },
+  "47": {
+    "id": 47,
+    "name": "Kimimaro",
+    "alt": "Kimimaro",
+    "xmlfile": "junmalv",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      4
+    ],
+    "hp": 605,
+    "attack": 86,
+    "def": 86,
+    "speed": 86,
+    "special_jutsu": 1022
+  },
+  "48": {
+    "id": 48,
+    "name": "Sai",
+    "alt": "Sai",
+    "xmlfile": "zuojing",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      3
+    ],
+    "hp": 605,
+    "attack": 86,
+    "def": 86,
+    "speed": 86,
+    "special_jutsu": 1144
+  },
+  "49": {
+    "id": 49,
+    "name": "Suigetsu",
+    "alt": "Suigetsu",
+    "xmlfile": "shuiyue",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      5
+    ],
+    "hp": 591,
+    "attack": 89,
+    "def": 84,
+    "speed": 89,
+    "special_jutsu": 1031
+  },
+  "50": {
+    "id": 50,
+    "name": "Karin",
+    "alt": "Karin",
+    "xmlfile": "xianglin",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      3
+    ],
+    "hp": 637,
+    "attack": 86,
+    "def": 92,
+    "speed": 86,
+    "special_jutsu": 1004
+  },
+  "51": {
+    "id": 51,
+    "name": "Jugo",
+    "alt": "Jugo",
+    "xmlfile": "zhongwu",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      2
+    ],
+    "hp": 602,
+    "attack": 92,
+    "def": 86,
+    "speed": 92,
+    "special_jutsu": 1099
+  },
+  "52": {
+    "id": 52,
+    "name": "Kabuto",
+    "alt": "Kabuto",
+    "xmlfile": "dou",
+    "quality": 3,
+    "grade": "B",
+    "chakra": [
+      5
+    ],
+    "hp": 605,
+    "attack": 92,
+    "def": 86,
+    "speed": 92,
+    "special_jutsu": 1015
+  },
+  "53": {
+    "id": 53,
+    "name": "Cursed Seal Sasuke",
+    "alt": "Cursed Seal Sasuke",
+    "xmlfile": "zhouyinzuozhu",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      3
+    ],
+    "hp": 738,
+    "attack": 87,
+    "def": 92,
+    "speed": 87,
+    "special_jutsu": 1025
+  },
+  "54": {
+    "id": 54,
+    "name": "Yuuhi Kurenai",
+    "alt": "Yuuhi Kurenai",
+    "xmlfile": "xirihong",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      1
+    ],
+    "hp": 759,
+    "attack": 90,
+    "def": 94,
+    "speed": 90,
+    "special_jutsu": 1101
+  },
+  "55": {
+    "id": 55,
+    "name": "Asuma",
+    "alt": "Asuma",
+    "xmlfile": "asima",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      2
+    ],
+    "hp": 706,
+    "attack": 97,
+    "def": 87,
+    "speed": 97,
+    "special_jutsu": 1092
+  },
+  "56": {
+    "id": 56,
+    "name": "Yamato",
+    "alt": "Yamato",
+    "xmlfile": "dahe",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      4
+    ],
+    "hp": 706,
+    "attack": 97,
+    "def": 87,
+    "speed": 97,
+    "special_jutsu": 1012
+  },
+  "57": {
+    "id": 57,
+    "name": "Baki",
+    "alt": "Baki",
+    "xmlfile": "maji",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      2
+    ],
+    "hp": 706,
+    "attack": 97,
+    "def": 87,
+    "speed": 97,
+    "special_jutsu": 1131
+  },
+  "58": {
+    "id": 58,
+    "name": "Granny Chiyo",
+    "alt": "Granny Chiyo",
+    "xmlfile": "qiandaipopo",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      4
+    ],
+    "hp": 773,
+    "attack": 92,
+    "def": 97,
+    "speed": 92,
+    "special_jutsu": 1139
+  },
+  "59": {
+    "id": 59,
+    "name": "Two Tails Jinchuriki",
+    "alt": "Two Tails Jinchuriki",
+    "xmlfile": "erweirenzhuli",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      3
+    ],
+    "hp": 768,
+    "attack": 92,
+    "def": 97,
+    "speed": 92,
+    "special_jutsu": 1101
+  },
+  "60": {
+    "id": 60,
+    "name": "Three Tails Jinchuriki",
+    "alt": "Three Tails Jinchuriki",
+    "xmlfile": "sanweirenzhuli",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      5
+    ],
+    "hp": 757,
+    "attack": 94,
+    "def": 94,
+    "speed": 94,
+    "special_jutsu": 1134
+  },
+  "61": {
+    "id": 61,
+    "name": "Four Tails Jinchuriki",
+    "alt": "Four Tails Jinchuriki",
+    "xmlfile": "siweirenzhuli",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      1
+    ],
+    "hp": 738,
+    "attack": 97,
+    "def": 97,
+    "speed": 101,
+    "special_jutsu": 1108
+  },
+  "62": {
+    "id": 62,
+    "name": "Five Tails Jinchuriki",
+    "alt": "Five Tails Jinchuriki",
+    "xmlfile": "wuweirenzhuli",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      4
+    ],
+    "hp": 764,
+    "attack": 97,
+    "def": 97,
+    "speed": 97,
+    "special_jutsu": 1015
+  },
+  "63": {
+    "id": 63,
+    "name": "Six Tails Jinchuriki",
+    "alt": "Six Tails Jinchuriki",
+    "xmlfile": "liuweirenzhuli",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      3
+    ],
+    "hp": 796,
+    "attack": 99,
+    "def": 94,
+    "speed": 94,
+    "special_jutsu": 1004
+  },
+  "64": {
+    "id": 64,
+    "name": "Seven Tails Jinchuriki",
+    "alt": "Seven Tails Jinchuriki",
+    "xmlfile": "qiweirenzhuli",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      2
+    ],
+    "hp": 794,
+    "attack": 99,
+    "def": 99,
+    "speed": 99,
+    "special_jutsu": 1085
+  },
+  "65": {
+    "id": 65,
+    "name": "Hidan",
+    "alt": "Hidan",
+    "xmlfile": "feiduan",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      1
+    ],
+    "hp": 810,
+    "attack": 99,
+    "def": 101,
+    "speed": 94,
+    "special_jutsu": 1012
+  },
+  "66": {
+    "id": 66,
+    "name": "Kakuzu",
+    "alt": "Kakuzu",
+    "xmlfile": "jiaodu",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      5
+    ],
+    "hp": 814,
+    "attack": 99,
+    "def": 101,
+    "speed": 94,
+    "special_jutsu": 1145
+  },
+  "67": {
+    "id": 67,
+    "name": "Sasori",
+    "alt": "Sasori",
+    "xmlfile": "xie",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      4
+    ],
+    "hp": 810,
+    "attack": 101,
+    "def": 97,
+    "speed": 97,
+    "special_jutsu": 1139
+  },
+  "68": {
+    "id": 68,
+    "name": "Deidara",
+    "alt": "Deidara",
+    "xmlfile": "didala",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      4
+    ],
+    "hp": 830,
+    "attack": 101,
+    "def": 101,
+    "speed": 99,
+    "special_jutsu": 1028
+  },
+  "69": {
+    "id": 69,
+    "name": "Zetsu",
+    "alt": "Zetsu",
+    "xmlfile": "jue",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      4
+    ],
+    "hp": 782,
+    "attack": 106,
+    "def": 97,
+    "speed": 106,
+    "special_jutsu": 1083
+  },
+  "70": {
+    "id": 70,
+    "name": "Konan",
+    "alt": "Konan",
+    "xmlfile": "xiaonan",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      3
+    ],
+    "hp": 812,
+    "attack": 101,
+    "def": 101,
+    "speed": 101,
+    "special_jutsu": 1142
+  },
+  "71": {
+    "id": 71,
+    "name": "Kisame",
+    "alt": "Kisame",
+    "xmlfile": "guijiao",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      5
+    ],
+    "hp": 807,
+    "attack": 106,
+    "def": 101,
+    "speed": 106,
+    "special_jutsu": 1141
+  },
+  "72": {
+    "id": 72,
+    "name": "Hanzo",
+    "alt": "Hanzo",
+    "xmlfile": "banzang",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      1
+    ],
+    "hp": 835,
+    "attack": 104,
+    "def": 104,
+    "speed": 104,
+    "special_jutsu": 1134
+  },
+  "73": {
+    "id": 73,
+    "name": "Chojuro",
+    "alt": "Chojuro",
+    "xmlfile": "changshilang",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      5
+    ],
+    "hp": 796,
+    "attack": 108,
+    "def": 99,
+    "speed": 108,
+    "special_jutsu": 1019
+  },
+  "74": {
+    "id": 74,
+    "name": "Ao",
+    "alt": "Ao",
+    "xmlfile": "qing",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      5
+    ],
+    "hp": 830,
+    "attack": 104,
+    "def": 104,
+    "speed": 104,
+    "special_jutsu": 1004
+  },
+  "75": {
+    "id": 75,
+    "name": "Darui",
+    "alt": "Darui",
+    "xmlfile": "daluyi",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      3
+    ],
+    "hp": 812,
+    "attack": 110,
+    "def": 101,
+    "speed": 110,
+    "special_jutsu": 1035
+  },
+  "76": {
+    "id": 76,
+    "name": "Danzo",
+    "alt": "Danzo",
+    "xmlfile": "tuanzang",
+    "quality": 4,
+    "grade": "A",
+    "chakra": [
+      2
+    ],
+    "hp": 823,
+    "attack": 108,
+    "def": 104,
+    "speed": 108,
+    "special_jutsu": 1096
+  },
+  "77": {
+    "id": 77,
+    "name": "Killer Bee",
+    "alt": "Killer Bee",
+    "xmlfile": "qilabi",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      3
+    ],
+    "hp": 1172,
+    "attack": 130,
+    "def": 130,
+    "speed": 130,
+    "special_jutsu": 1093
+  },
+  "78": {
+    "id": 78,
+    "name": "Kabuto Yakushi",
+    "alt": "Kabuto Yakushi",
+    "xmlfile": "dashedou",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      5
+    ],
+    "hp": 1172,
+    "attack": 134,
+    "def": 130,
+    "speed": 134,
+    "special_jutsu": 1134
+  },
+  "79": {
+    "id": 79,
+    "name": "Pain",
+    "alt": "Pain",
+    "xmlfile": "peien",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      2
+    ],
+    "hp": 1210,
+    "attack": 130,
+    "def": 134,
+    "speed": 130,
+    "special_jutsu": 1042
+  },
+  "80": {
+    "id": 80,
+    "name": "Sage Naruto",
+    "alt": "Sage Naruto",
+    "xmlfile": "xianrenmingren",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      2
+    ],
+    "hp": 1202,
+    "attack": 130,
+    "def": 134,
+    "speed": 130,
+    "special_jutsu": 1001
+  },
+  "81": {
+    "id": 81,
+    "name": "Tobi",
+    "alt": "Tobi",
+    "xmlfile": "afei",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      1
+    ],
+    "hp": 1206,
+    "attack": 130,
+    "def": 134,
+    "speed": 130,
+    "special_jutsu": 1148
+  },
+  "82": {
+    "id": 82,
+    "name": "Itachi",
+    "alt": "Itachi",
+    "xmlfile": "you",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      1
+    ],
+    "hp": 1212,
+    "attack": 134,
+    "def": 134,
+    "speed": 134,
+    "special_jutsu": 1040
+  },
+  "83": {
+    "id": 83,
+    "name": "Kakashi",
+    "alt": "Kakashi",
+    "xmlfile": "kakaxi",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      3
+    ],
+    "hp": 1228,
+    "attack": 132,
+    "def": 136,
+    "speed": 132,
+    "special_jutsu": 1095
+  },
+  "84": {
+    "id": 84,
+    "name": "Guy",
+    "alt": "Guy",
+    "xmlfile": "kai",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      1
+    ],
+    "hp": 1212,
+    "attack": 134,
+    "def": 134,
+    "speed": 134,
+    "special_jutsu": 1128
+  },
+  "85": {
+    "id": 85,
+    "name": "Ginkaku",
+    "alt": "Ginkaku",
+    "xmlfile": "yinjiao",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      2
+    ],
+    "hp": 1222,
+    "attack": 132,
+    "def": 136,
+    "speed": 132,
+    "special_jutsu": 1087
+  },
+  "86": {
+    "id": 86,
+    "name": "Kinkaku",
+    "alt": "Kinkaku",
+    "xmlfile": "jinjiao",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      2
+    ],
+    "hp": 1170,
+    "attack": 142,
+    "def": 130,
+    "speed": 142,
+    "special_jutsu": 1088
+  },
+  "87": {
+    "id": 87,
+    "name": "4th Kazekage",
+    "alt": "4th Kazekage",
+    "xmlfile": "sidaifengying",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      4
+    ],
+    "hp": 1244,
+    "attack": 134,
+    "def": 138,
+    "speed": 134,
+    "special_jutsu": 1136
+  },
+  "88": {
+    "id": 88,
+    "name": "3rd Raikage",
+    "alt": "3rd Raikage",
+    "xmlfile": "sandaileiying",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      3
+    ],
+    "hp": 1192,
+    "attack": 140,
+    "def": 132,
+    "speed": 140,
+    "special_jutsu": 1096
+  },
+  "89": {
+    "id": 89,
+    "name": "Orochimaru",
+    "alt": "Orochimaru",
+    "xmlfile": "dashewan",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      4
+    ],
+    "hp": 1274,
+    "attack": 136,
+    "def": 140,
+    "speed": 136,
+    "special_jutsu": 1024
+  },
+  "90": {
+    "id": 90,
+    "name": "Tsunade",
+    "alt": "Tsunade",
+    "xmlfile": "gangshou",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      5
+    ],
+    "hp": 1294,
+    "attack": 132,
+    "def": 144,
+    "speed": 132,
+    "special_jutsu": 1126
+  },
+  "91": {
+    "id": 91,
+    "name": "Jiraiya",
+    "alt": "Jiraiya",
+    "xmlfile": "zilaiye",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      2
+    ],
+    "hp": 1234,
+    "attack": 140,
+    "def": 136,
+    "speed": 140,
+    "special_jutsu": 1100
+  },
+  "92": {
+    "id": 92,
+    "name": "Mei Terumi",
+    "alt": "Mei Terumi",
+    "xmlfile": "zhaomeiming",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      5
+    ],
+    "hp": 1250,
+    "attack": 138,
+    "def": 138,
+    "speed": 138,
+    "special_jutsu": 1141
+  },
+  "93": {
+    "id": 93,
+    "name": "Onoki",
+    "alt": "Onoki",
+    "xmlfile": "dayemu",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      4
+    ],
+    "hp": 1306,
+    "attack": 136,
+    "def": 144,
+    "speed": 136,
+    "special_jutsu": 1028
+  },
+  "94": {
+    "id": 94,
+    "name": "A",
+    "alt": "A",
+    "xmlfile": "ai",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      3
+    ],
+    "hp": 1270,
+    "attack": 140,
+    "def": 140,
+    "speed": 140,
+    "special_jutsu": 1096
+  },
+  "95": {
+    "id": 95,
+    "name": "Mu",
+    "alt": "Mu",
+    "xmlfile": "wu",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      4
+    ],
+    "hp": 1316,
+    "attack": 134,
+    "def": 146,
+    "speed": 134,
+    "special_jutsu": 1109
+  },
+  "96": {
+    "id": 96,
+    "name": "2nd Mizukage",
+    "alt": "2nd Mizukage",
+    "xmlfile": "erdaishuiying",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      5
+    ],
+    "hp": 1304,
+    "attack": 136,
+    "def": 144,
+    "speed": 136,
+    "special_jutsu": 1135
+  },
+  "97": {
+    "id": 97,
+    "name": "Kazekage Gaara",
+    "alt": "Kazekage Gaara",
+    "xmlfile": "fengyingwoailuo",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      4
+    ],
+    "hp": 1234,
+    "attack": 144,
+    "def": 140,
+    "speed": 148,
+    "special_jutsu": 1136
+  },
+  "98": {
+    "id": 98,
+    "name": "Obito",
+    "alt": "Obito",
+    "xmlfile": "daitu",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      1
+    ],
+    "hp": 1344,
+    "attack": 142,
+    "def": 142,
+    "speed": 136,
+    "special_jutsu": 1041
+  },
+  "99": {
+    "id": 99,
+    "name": "Minato",
+    "alt": "Minato",
+    "xmlfile": "shuimen",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      2
+    ],
+    "hp": 1950,
+    "attack": 184,
+    "def": 193,
+    "speed": 196,
+    "special_jutsu": 1087
+  },
+  "100": {
+    "id": 100,
+    "name": "3rd Hokage",
+    "alt": "3rd Hokage",
+    "xmlfile": "sandaihuoying",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      4
+    ],
+    "hp": 1940,
+    "attack": 177,
+    "def": 192,
+    "speed": 177,
+    "special_jutsu": 1115
+  },
+  "101": {
+    "id": 101,
+    "name": "Tobirama",
+    "alt": "Tobirama",
+    "xmlfile": "feijian",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      5
+    ],
+    "hp": 2000,
+    "attack": 190,
+    "def": 194,
+    "speed": 184,
+    "special_jutsu": 1034
+  },
+  "102": {
+    "id": 102,
+    "name": "Madara",
+    "alt": "Madara",
+    "xmlfile": "ban",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      1
+    ],
+    "hp": 1890,
+    "attack": 191,
+    "def": 195,
+    "speed": 201,
+    "special_jutsu": 1132
+  },
+  "103": {
+    "id": 103,
+    "name": "Hashirama",
+    "alt": "Hashirama",
+    "xmlfile": "zhujian",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      4
+    ],
+    "hp": 1888,
+    "attack": 198,
+    "def": 190,
+    "speed": 200,
+    "special_jutsu": 1140
+  },
+  "104": {
+    "id": 104,
+    "name": "Six Paths Obito",
+    "alt": "Six Paths Obito",
+    "xmlfile": "liudaodaitu",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      5
+    ],
+    "hp": 1910,
+    "attack": 199,
+    "def": 191,
+    "speed": 199,
+    "special_jutsu": 1137
+  },
+  "105": {
+    "id": 105,
+    "name": "Mangekyo Sasuke",
+    "alt": "Mangekyo Sasuke",
+    "xmlfile": "wanhuatongzuozhu",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      3
+    ],
+    "hp": 1970,
+    "attack": 196,
+    "def": 191,
+    "speed": 188,
+    "special_jutsu": 1132
+  },
+  "106": {
+    "id": 106,
+    "name": "Nine Tails Naruto",
+    "alt": "Nine Tails Naruto",
+    "xmlfile": "jiuweimingren",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      2
+    ],
+    "hp": 1960,
+    "attack": 200,
+    "def": 188,
+    "speed": 188,
+    "special_jutsu": 1150
+  },
+  "107": {
+    "id": 107,
+    "name": "Six Paths Madara",
+    "alt": "Six Paths Madara",
+    "xmlfile": "liudaoban",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      1
+    ],
+    "hp": 1950,
+    "attack": 203,
+    "def": 191,
+    "speed": 203,
+    "special_jutsu": 1110
+  },
+  "108": {
+    "id": 108,
+    "name": "Uchiha Sarada",
+    "alt": "Uchiha Sarada",
+    "xmlfile": "zuoliangna",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      3
+    ],
+    "hp": 2041,
+    "attack": 188,
+    "def": 198,
+    "speed": 193,
+    "special_jutsu": 1161
+  },
+  "109": {
+    "id": 109,
+    "name": "Sage Mitsuki",
+    "alt": "Sage Mitsuki",
+    "xmlfile": "siyue",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      5
+    ],
+    "hp": 2145,
+    "attack": 214,
+    "def": 216,
+    "speed": 215,
+    "special_jutsu": 1163
+  },
+  "110": {
+    "id": 110,
+    "name": "Kashin Koji",
+    "alt": "Kashin Koji",
+    "xmlfile": "guoxinjushi",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      1
+    ],
+    "hp": 1977,
+    "attack": 204,
+    "def": 197,
+    "speed": 205,
+    "special_jutsu": 1160
+  },
+  "111": {
+    "id": 111,
+    "name": "Momoshiki",
+    "alt": "Momoshiki",
+    "xmlfile": "taoshi",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      4
+    ],
+    "hp": 2310,
+    "attack": 214,
+    "def": 230,
+    "speed": 210,
+    "special_jutsu": 1159
+  },
+  "112": {
+    "id": 112,
+    "name": "Kawaki",
+    "alt": "Kawaki",
+    "xmlfile": "chuanmu",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      1
+    ],
+    "hp": 2345,
+    "attack": 234,
+    "def": 230,
+    "speed": 233,
+    "special_jutsu": 1158
+  },
+  "113": {
+    "id": 113,
+    "name": "Boruto Karma",
+    "alt": "Boruto Karma",
+    "xmlfile": "boren",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      2
+    ],
+    "hp": 2325,
+    "attack": 234,
+    "def": 231,
+    "speed": 234,
+    "special_jutsu": 1156
+  },
+  "114": {
+    "id": 114,
+    "name": "Rinegan Sasuke",
+    "alt": "Rinegan Sasuke",
+    "xmlfile": "zuozhulunhuiyan",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      3
+    ],
+    "hp": 2380,
+    "attack": 234,
+    "def": 231,
+    "speed": 235,
+    "special_jutsu": 1132
+  },
+  "115": {
+    "id": 115,
+    "name": "Kaguya",
+    "alt": "Kaguya",
+    "xmlfile": "huiye",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      4
+    ],
+    "hp": 2365,
+    "attack": 234,
+    "def": 240,
+    "speed": 231,
+    "special_jutsu": 1162
+  },
+  "116": {
+    "id": 116,
+    "name": "Naruto Hokage",
+    "alt": "Naruto Hokage",
+    "xmlfile": "narutohokage",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      2
+    ],
+    "hp": 2420,
+    "attack": 238,
+    "def": 232,
+    "speed": 230,
+    "special_jutsu": 1157
+  },
+  "117": {
+    "id": 117,
+    "name": "Isshiki",
+    "alt": "Isshiki",
+    "xmlfile": "yishi",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      4
+    ],
+    "hp": 2435,
+    "attack": 237,
+    "def": 229,
+    "speed": 234,
+    "special_jutsu": 1164
+  },
+  "118": {
+    "id": 118,
+    "name": "Boruto",
+    "alt": "Boruto",
+    "xmlfile": "boruto",
+    "quality": 5,
+    "grade": "S",
+    "chakra": [
+      2
+    ],
+    "hp": 1140,
+    "attack": 126,
+    "def": 124,
+    "speed": 128,
+    "special_jutsu": 1001
+  },
+  "119": {
+    "id": 119,
+    "name": "Deruta",
+    "alt": "Deruta",
+    "xmlfile": "deruta",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      3
+    ],
+    "hp": 1976,
+    "attack": 198,
+    "def": 198,
+    "speed": 198,
+    "special_jutsu": 1165
+  },
+  "120": {
+    "id": 120,
+    "name": "Boro",
+    "alt": "Boro",
+    "xmlfile": "boro",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      5
+    ],
+    "hp": 2009,
+    "attack": 196,
+    "def": 201,
+    "speed": 196,
+    "special_jutsu": 1166
+  },
+  "121": {
+    "id": 121,
+    "name": "Garo",
+    "alt": "Garo",
+    "xmlfile": "garo",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      1
+    ],
+    "hp": 1556,
+    "attack": 148,
+    "def": 155,
+    "speed": 148,
+    "special_jutsu": 1167
+  },
+  "122": {
+    "id": 122,
+    "name": "Jigen",
+    "alt": "Jigen",
+    "xmlfile": "jigen",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      4
+    ],
+    "hp": 1778,
+    "attack": 175,
+    "def": 179,
+    "speed": 175,
+    "special_jutsu": 1168
+  },
+  "123": {
+    "id": 123,
+    "name": "Jigen Karma",
+    "alt": "Jigen Karma",
+    "xmlfile": "jigenkarmamode",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      4
+    ],
+    "hp": 2390,
+    "attack": 230,
+    "def": 237,
+    "speed": 232,
+    "special_jutsu": 1168
+  },
+  "124": {
+    "id": 124,
+    "name": "Amado",
+    "alt": "Amado",
+    "xmlfile": "amado",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      2
+    ],
+    "hp": 1561,
+    "attack": 146,
+    "def": 156,
+    "speed": 146,
+    "special_jutsu": 1170
+  },
+  "125": {
+    "id": 125,
+    "name": "Ao Cyborg Mode",
+    "alt": "Ao Cyborg Mode",
+    "xmlfile": "aocyborgmode",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      5
+    ],
+    "hp": 1790,
+    "attack": 162,
+    "def": 172,
+    "speed": 156,
+    "special_jutsu": 1175
+  },
+  "126": {
+    "id": 126,
+    "name": "Kakashi D.S",
+    "alt": "Kakashi D.S",
+    "xmlfile": "kakashidoublesharingan",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      3
+    ],
+    "hp": 2335,
+    "attack": 235,
+    "def": 230,
+    "speed": 235,
+    "special_jutsu": 1171
+  },
+  "127": {
+    "id": 127,
+    "name": "Gaara War Captain",
+    "alt": "Gaara War Captain",
+    "xmlfile": "gaarashinobicommander",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      4
+    ],
+    "hp": 1751,
+    "attack": 172,
+    "def": 182,
+    "speed": 179,
+    "special_jutsu": 1173
+  },
+  "128": {
+    "id": 128,
+    "name": "Shikadai Nara",
+    "alt": "Shikadai Nara",
+    "xmlfile": "shikadainara",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      2
+    ],
+    "hp": 1946,
+    "attack": 200,
+    "def": 197,
+    "speed": 201,
+    "special_jutsu": 1174
+  },
+  "129": {
+    "id": 129,
+    "name": "Denki Kaminarimon",
+    "alt": "Denki Kaminarimon",
+    "xmlfile": "denkikaminarimon",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      3
+    ],
+    "hp": 1564,
+    "attack": 158,
+    "def": 155,
+    "speed": 160,
+    "special_jutsu": 1172
+  },
+  "130": {
+    "id": 130,
+    "name": "Victor",
+    "alt": "Victor",
+    "xmlfile": "victor",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      2
+    ],
+    "hp": 1734,
+    "attack": 172,
+    "def": 175,
+    "speed": 172,
+    "special_jutsu": 1176
+  },
+  "131": {
+    "id": 131,
+    "name": "Kinshiki",
+    "alt": "Kinshiki",
+    "xmlfile": "otsutsukikinshiki",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      1
+    ],
+    "hp": 2255,
+    "attack": 218,
+    "def": 222,
+    "speed": 215,
+    "special_jutsu": 1177
+  },
+  "132": {
+    "id": 132,
+    "name": "Urashiki",
+    "alt": "Urashiki",
+    "xmlfile": "otsutsukiurashiki",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      5
+    ],
+    "hp": 2250,
+    "attack": 216,
+    "def": 221,
+    "speed": 218,
+    "special_jutsu": 1178
+  },
+  "133": {
+    "id": 133,
+    "name": "Momoshiki Karma",
+    "alt": "Momoshiki Karma",
+    "xmlfile": "otsutsukimomoshiki",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      4
+    ],
+    "hp": 2355,
+    "attack": 231,
+    "def": 235,
+    "speed": 232,
+    "special_jutsu": 1179
+  },
+  "134": {
+    "id": 134,
+    "name": "Metal Lee ",
+    "alt": "Metal Lee ",
+    "xmlfile": "metallee",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      1
+    ],
+    "hp": 1870,
+    "attack": 180,
+    "def": 173,
+    "speed": 184,
+    "special_jutsu": 1180
+  },
+  "135": {
+    "id": 135,
+    "name": "Choco Akimichi",
+    "alt": "Choco Akimichi",
+    "xmlfile": "chocoakimichi",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      4
+    ],
+    "hp": 1870,
+    "attack": 167,
+    "def": 184,
+    "speed": 156,
+    "special_jutsu": 1181
+  },
+  "136": {
+    "id": 136,
+    "name": "Code",
+    "alt": "Code",
+    "xmlfile": "code",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      4
+    ],
+    "hp": 2365,
+    "attack": 232,
+    "def": 227,
+    "speed": 238,
+    "special_jutsu": 1185
+  },
+  "137": {
+    "id": 137,
+    "name": "Guy 8th Gate ",
+    "alt": "Guy 8th Gate ",
+    "xmlfile": "kaibamen",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      1
+    ],
+    "hp": 2365,
+    "attack": 237,
+    "def": 233,
+    "speed": 229,
+    "special_jutsu": 1183
+  },
+  "138": {
+    "id": 138,
+    "name": "Hagoromo",
+    "alt": "Hagoromo",
+    "xmlfile": "otsutsukihagoromo",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      3
+    ],
+    "hp": 2375,
+    "attack": 232,
+    "def": 234,
+    "speed": 234,
+    "special_jutsu": 1184
+  },
+  "139": {
+    "id": 139,
+    "name": "Sage Jiraiya",
+    "alt": "Sage Jiraiya",
+    "xmlfile": "sagejiraiya",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      2
+    ],
+    "hp": 2116,
+    "attack": 213,
+    "def": 209,
+    "speed": 213,
+    "special_jutsu": 1182
+  },
+  "140": {
+    "id": 140,
+    "name": "Himawari Uzumaki",
+    "alt": "Himawari Uzumaki",
+    "xmlfile": "himawariuzumaki",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      1
+    ],
+    "hp": 1790,
+    "attack": 179,
+    "def": 183,
+    "speed": 179,
+    "special_jutsu": 1187
+  },
+  "141": {
+    "id": 141,
+    "name": "Sakura Uchiha",
+    "alt": "Sakura Uchiha",
+    "xmlfile": "sagesakura",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      5
+    ],
+    "hp": 2200,
+    "attack": 220,
+    "def": 215,
+    "speed": 213,
+    "special_jutsu": 1186
+  },
+  "142": {
+    "id": 142,
+    "name": "Hinata Uzumaki",
+    "alt": "Hinata Uzumaki",
+    "xmlfile": "hinatauzumaki",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      1
+    ],
+    "hp": 1717,
+    "attack": 167,
+    "def": 175,
+    "speed": 168,
+    "special_jutsu": 1188
+  },
+  "143": {
+    "id": 143,
+    "name": "Hanabi Hyuga",
+    "alt": "Hanabi Hyuga",
+    "xmlfile": "hanabihyuga",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      3
+    ],
+    "hp": 1632,
+    "attack": 162,
+    "def": 168,
+    "speed": 160,
+    "special_jutsu": 1189
+  },
+  "144": {
+    "id": 144,
+    "name": "Menma Uzumaki",
+    "alt": "Menma Uzumaki",
+    "xmlfile": "menmauzumaki",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      2
+    ],
+    "hp": 2615,
+    "attack": 270,
+    "def": 265,
+    "speed": 272,
+    "special_jutsu": 1193
+  },
+  "145": {
+    "id": 145,
+    "name": "Madara Edo Tensei",
+    "alt": "Madara Edo Tensei",
+    "xmlfile": "madarasusanoo",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      4
+    ],
+    "hp": 2760,
+    "attack": 278,
+    "def": 270,
+    "speed": 277,
+    "special_jutsu": 1195
+  },
+  "146": {
+    "id": 146,
+    "name": "Sage Hashirama",
+    "alt": "Sage Hashirama",
+    "xmlfile": "hashiramasagemode",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      4
+    ],
+    "hp": 2800,
+    "attack": 274,
+    "def": 275,
+    "speed": 273,
+    "special_jutsu": 1190
+  },
+  "147": {
+    "id": 147,
+    "name": "Hiruzen Sarutobi",
+    "alt": "Hiruzen Sarutobi",
+    "xmlfile": "hiruzensarutobiwarmode",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      4
+    ],
+    "hp": 2680,
+    "attack": 274,
+    "def": 265,
+    "speed": 270,
+    "special_jutsu": 1191
+  },
+  "148": {
+    "id": 148,
+    "name": "Ten Tails Madara",
+    "alt": "Ten Tails Madara",
+    "xmlfile": "tentailsmadara",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      4
+    ],
+    "hp": 2785,
+    "attack": 279,
+    "def": 276,
+    "speed": 275,
+    "special_jutsu": 1196
+  },
+  "149": {
+    "id": 149,
+    "name": " Sumire Kakei",
+    "alt": " Sumire Kakei",
+    "xmlfile": "sumirekakei",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      5
+    ],
+    "hp": 1615,
+    "attack": 163,
+    "def": 170,
+    "speed": 160,
+    "special_jutsu": 1198
+  },
+  "150": {
+    "id": 150,
+    "name": "Shinki",
+    "alt": "Shinki",
+    "xmlfile": "shinki",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      4
+    ],
+    "hp": 2079,
+    "attack": 213,
+    "def": 209,
+    "speed": 203,
+    "special_jutsu": 1200
+  },
+  "151": {
+    "id": 151,
+    "name": "Human Cloning",
+    "alt": "Human Cloning",
+    "xmlfile": "humancloning",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      2
+    ],
+    "hp": 1683,
+    "attack": 175,
+    "def": 167,
+    "speed": 172,
+    "special_jutsu": 1199
+  },
+  "152": {
+    "id": 152,
+    "name": "Uchiha Shin",
+    "alt": "Uchiha Shin",
+    "xmlfile": "uchihashin",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      2
+    ],
+    "hp": 2079,
+    "attack": 213,
+    "def": 209,
+    "speed": 203,
+    "special_jutsu": 1197
+  },
+  "153": {
+    "id": 153,
+    "name": "Itachi Edo Tensei",
+    "alt": "Itachi Edo Tensei",
+    "xmlfile": "itachiedotensei",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      1
+    ],
+    "hp": 2725,
+    "attack": 275,
+    "def": 268,
+    "speed": 278,
+    "special_jutsu": 1201
+  },
+  "154": {
+    "id": 154,
+    "name": "Sasuke Wanderer",
+    "alt": "Sasuke Wanderer",
+    "xmlfile": "sasukewanderer",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      3
+    ],
+    "hp": 2700,
+    "attack": 279,
+    "def": 275,
+    "speed": 279,
+    "special_jutsu": 1202
+  },
+  "155": {
+    "id": 155,
+    "name": "Naruto The Last",
+    "alt": "Naruto The Last",
+    "xmlfile": "narutokyuubimode",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      2
+    ],
+    "hp": 2800,
+    "attack": 279,
+    "def": 274,
+    "speed": 272,
+    "special_jutsu": 1203
+  },
+  "156": {
+    "id": 156,
+    "name": "Daemon",
+    "alt": "Daemon",
+    "xmlfile": "daemon",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      2
+    ],
+    "hp": 2810,
+    "attack": 268,
+    "def": 282,
+    "speed": 272,
+    "special_jutsu": 1205
+  },
+  "157": {
+    "id": 157,
+    "name": "Eida",
+    "alt": "Eida",
+    "xmlfile": "eida",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      5
+    ],
+    "hp": 2700,
+    "attack": 278,
+    "def": 275,
+    "speed": 274,
+    "special_jutsu": 1211
+  },
+  "158": {
+    "id": 158,
+    "name": "Urashiki Karma",
+    "alt": "Urashiki Karma",
+    "xmlfile": "urashikikarma",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      5
+    ],
+    "hp": 2245,
+    "attack": 218,
+    "def": 225,
+    "speed": 217,
+    "special_jutsu": 1209
+  },
+  "159": {
+    "id": 159,
+    "name": "Sasuke Akatsuki",
+    "alt": "Sasuke Akatsuki",
+    "xmlfile": "sasukeakatsuki",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      3
+    ],
+    "hp": 1785,
+    "attack": 184,
+    "def": 180,
+    "speed": 189,
+    "special_jutsu": 1206
+  },
+  "160": {
+    "id": 160,
+    "name": "Shisui Uchiha",
+    "alt": "Shisui Uchiha",
+    "xmlfile": "shisuiuchiha",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      5
+    ],
+    "hp": 2712,
+    "attack": 270,
+    "def": 265,
+    "speed": 275,
+    "special_jutsu": 1207
+  },
+  "161": {
+    "id": 161,
+    "name": "Code No Limiter",
+    "alt": "Code No Limiter",
+    "xmlfile": "codenolimiter",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      4
+    ],
+    "hp": 2790,
+    "attack": 274,
+    "def": 270,
+    "speed": 277,
+    "special_jutsu": 1208
+  },
+  "162": {
+    "id": 162,
+    "name": "Hamura Otsutsuki",
+    "alt": "Hamura Otsutsuki",
+    "xmlfile": "hamuraotsutsuki",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      2
+    ],
+    "hp": 2820,
+    "attack": 280,
+    "def": 273,
+    "speed": 272,
+    "special_jutsu": 1204
+  },
+  "163": {
+    "id": 163,
+    "name": "Konohamaru Sarutobi",
+    "alt": "Konohamaru Sarutobi",
+    "xmlfile": "konohamarusarutobi",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      2
+    ],
+    "hp": 2680,
+    "attack": 262,
+    "def": 271,
+    "speed": 264,
+    "special_jutsu": 1210
+  },
+  "164": {
+    "id": 164,
+    "name": "Toneri",
+    "alt": "Toneri",
+    "xmlfile": "toneri",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      3
+    ],
+    "hp": 2715,
+    "attack": 273,
+    "def": 269,
+    "speed": 272,
+    "special_jutsu": 1212
+  },
+  "165": {
+    "id": 165,
+    "name": "Toneri\u00a0Tenseigan",
+    "alt": "Toneri\u00a0Tenseigan",
+    "xmlfile": "toneritenseigan",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      3
+    ],
+    "hp": 2770,
+    "attack": 274,
+    "def": 272,
+    "speed": 276,
+    "special_jutsu": 1213
+  },
+  "166": {
+    "id": 166,
+    "name": "Shikamaru\u00a0Hokage",
+    "alt": "Shikamaru\u00a0Hokage",
+    "xmlfile": "shikamaruhokage",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      4
+    ],
+    "hp": 2680,
+    "attack": 262,
+    "def": 261,
+    "speed": 270,
+    "special_jutsu": 1214
+  },
+  "167": {
+    "id": 167,
+    "name": "Kisame Shark",
+    "alt": "Kisame Shark",
+    "xmlfile": "kisameshark",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      5
+    ],
+    "hp": 2125,
+    "attack": 213,
+    "def": 209,
+    "speed": 217,
+    "special_jutsu": 1231
+  },
+  "168": {
+    "id": 168,
+    "name": "Sage Tsunade",
+    "alt": "Sage Tsunade",
+    "xmlfile": "tsunadesage",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      5
+    ],
+    "hp": 2700,
+    "attack": 272,
+    "def": 270,
+    "speed": 265,
+    "special_jutsu": 1232
+  },
+  "169": {
+    "id": 169,
+    "name": "Cursed Kimimaro",
+    "alt": "Cursed Kimimaro",
+    "xmlfile": "kimimarocursed",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      4
+    ],
+    "hp": 2655,
+    "attack": 258,
+    "def": 267,
+    "speed": 262,
+    "special_jutsu": 1233
+  },
+  "170": {
+    "id": 170,
+    "name": "Ashura Otsusuki",
+    "alt": "Ashura Otsusuki",
+    "xmlfile": "ashuraotsusuki",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      2
+    ],
+    "hp": 2800,
+    "attack": 278,
+    "def": 274,
+    "speed": 271,
+    "special_jutsu": 1234
+  },
+  "171": {
+    "id": 171,
+    "name": "Indra Otsusuki",
+    "alt": "Indra Otsusuki",
+    "xmlfile": "indraotsusuki",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      3
+    ],
+    "hp": 2745,
+    "attack": 273,
+    "def": 275,
+    "speed": 279,
+    "special_jutsu": 1235
+  },
+  "172": {
+    "id": 172,
+    "name": "Minato Kyuubi Mode",
+    "alt": "Minato Kyuubi Mode",
+    "xmlfile": "minatokyuubi",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      2
+    ],
+    "hp": 2740,
+    "attack": 275,
+    "def": 271,
+    "speed": 276,
+    "special_jutsu": 1236
+  },
+  "173": {
+    "id": 173,
+    "name": "Baryon Naruto",
+    "alt": "Baryon Naruto",
+    "xmlfile": "baryonnaruto",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      1
+    ],
+    "hp": 2810,
+    "attack": 279,
+    "def": 275,
+    "speed": 277,
+    "special_jutsu": 1273
+  },
+  "174": {
+    "id": 174,
+    "name": "Kurotsuchi",
+    "alt": "Kurotsuchi",
+    "xmlfile": "kurotsuchi",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      4
+    ],
+    "hp": 2690,
+    "attack": 271,
+    "def": 267,
+    "speed": 262,
+    "special_jutsu": 1238
+  },
+  "175": {
+    "id": 175,
+    "name": "Jirobo Cursed Mode",
+    "alt": "Jirobo Cursed Mode",
+    "xmlfile": "jirobocursed",
+    "quality": 6,
+    "grade": "SS",
+    "chakra": [
+      2
+    ],
+    "hp": 1819,
+    "attack": 184,
+    "def": 180,
+    "speed": 189,
+    "special_jutsu": 1239
+  },
+  "176": {
+    "id": 176,
+    "name": "Gara Jinchuriki",
+    "alt": "Gara Jinchuriki",
+    "xmlfile": "garajinchuriki",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      4
+    ],
+    "hp": 2198,
+    "attack": 206,
+    "def": 221,
+    "speed": 205,
+    "special_jutsu": 1240
+  },
+  "177": {
+    "id": 177,
+    "name": "Tayuya Cursed Mode",
+    "alt": "Tayuya Cursed Mode",
+    "xmlfile": "tayuyacursed",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      5
+    ],
+    "hp": 2067,
+    "attack": 210,
+    "def": 215,
+    "speed": 218,
+    "special_jutsu": 1241
+  },
+  "178": {
+    "id": 178,
+    "name": "Mitsuki",
+    "alt": "Mitsuki",
+    "xmlfile": "mitsuki",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      5
+    ],
+    "hp": 2017,
+    "attack": 210,
+    "def": 207,
+    "speed": 213,
+    "special_jutsu": 1242
+  },
+  "179": {
+    "id": 179,
+    "name": "Kushina Uzumaki",
+    "alt": "Kushina Uzumaki",
+    "xmlfile": "kushinauzumaki",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      1
+    ],
+    "hp": 2630,
+    "attack": 261,
+    "def": 269,
+    "speed": 271,
+    "special_jutsu": 1261
+  },
+  "180": {
+    "id": 180,
+    "name": "Kakashi Hokage",
+    "alt": "Kakashi Hokage",
+    "xmlfile": "kakashihokage",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      3
+    ],
+    "hp": 2705,
+    "attack": 276,
+    "def": 271,
+    "speed": 277,
+    "special_jutsu": 1262
+  },
+  "181": {
+    "id": 181,
+    "name": "Chojuro Mizukage",
+    "alt": "Chojuro Mizukage",
+    "xmlfile": "chojuromizukage",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      5
+    ],
+    "hp": 2690,
+    "attack": 266,
+    "def": 262,
+    "speed": 272,
+    "special_jutsu": 1263
+  },
+  "182": {
+    "id": 182,
+    "name": "Prime Isshiki",
+    "alt": "Prime Isshiki",
+    "xmlfile": "primelsshiki",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      4
+    ],
+    "hp": 2805,
+    "attack": 279,
+    "def": 274,
+    "speed": 279,
+    "special_jutsu": 1264
+  },
+  "183": {
+    "id": 183,
+    "name": "Kakuzu 4 Heart Mode",
+    "alt": "Kakuzu 4 Heart Mode",
+    "xmlfile": "kakuzu4heart",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      5
+    ],
+    "hp": 2300,
+    "attack": 208,
+    "def": 200,
+    "speed": 215,
+    "special_jutsu": 1265
+  },
+  "184": {
+    "id": 184,
+    "name": "Hidan Mode Jashin",
+    "alt": "Hidan Mode Jashin",
+    "xmlfile": "hidan",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      1
+    ],
+    "hp": 2715,
+    "attack": 256,
+    "def": 267,
+    "speed": 271,
+    "special_jutsu": 1266
+  },
+  "185": {
+    "id": 185,
+    "name": "Kidomaru Cursed Mode",
+    "alt": "Kidomaru Cursed Mode",
+    "xmlfile": "kidomarucursed",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      2
+    ],
+    "hp": 2080,
+    "attack": 218,
+    "def": 210,
+    "speed": 215,
+    "special_jutsu": 1267
+  },
+  "186": {
+    "id": 186,
+    "name": "Sakon & Ukon Cursed",
+    "alt": "Sakon & Ukon Cursed",
+    "xmlfile": "sakonukoncursed",
+    "quality": 7,
+    "grade": "SSS",
+    "chakra": [
+      1
+    ],
+    "hp": 2158,
+    "attack": 210,
+    "def": 211,
+    "speed": 215,
+    "special_jutsu": 1268
+  },
+  "187": {
+    "id": 187,
+    "name": "Prime Hagoromo",
+    "alt": "Prime Hagoromo",
+    "xmlfile": "primehagoromo",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      3
+    ],
+    "hp": 2800,
+    "attack": 279,
+    "def": 274,
+    "speed": 277,
+    "special_jutsu": 1269
+  },
+  "188": {
+    "id": 188,
+    "name": "Prime Kaguya",
+    "alt": "Prime Kaguya",
+    "xmlfile": "primekaguya",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      4
+    ],
+    "hp": 2775,
+    "attack": 278,
+    "def": 276,
+    "speed": 279,
+    "special_jutsu": 1271
+  },
+  "189": {
+    "id": 189,
+    "name": "T-Obito",
+    "alt": "T-Obito",
+    "xmlfile": "whitemaskobito",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      1
+    ],
+    "hp": 2760,
+    "attack": 273,
+    "def": 270,
+    "speed": 275,
+    "special_jutsu": 1270
+  },
+  "190": {
+    "id": 190,
+    "name": "Ten Tails Obito",
+    "alt": "Ten Tails Obito",
+    "xmlfile": "tentailsobito",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      5
+    ],
+    "hp": 2775,
+    "attack": 275,
+    "def": 277,
+    "speed": 277,
+    "special_jutsu": 1272
+  },
+  "191": {
+    "id": 191,
+    "name": "Boruto Timeskip",
+    "alt": "Boruto Timeskip",
+    "xmlfile": "borutotimeskip",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      2
+    ],
+    "hp": 2750,
+    "attack": 279,
+    "def": 274,
+    "speed": 278,
+    "special_jutsu": 1274
+  },
+  "192": {
+    "id": 192,
+    "name": "Byakugan Kaguya",
+    "alt": "Byakugan Kaguya",
+    "xmlfile": "byakugankaguya",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      4
+    ],
+    "hp": 2800,
+    "attack": 275,
+    "def": 278,
+    "speed": 278,
+    "special_jutsu": 1275
+  },
+  "193": {
+    "id": 193,
+    "name": "Kawaki Karma",
+    "alt": "Kawaki Karma",
+    "xmlfile": "kawakikarma",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      1
+    ],
+    "hp": 2795,
+    "attack": 276,
+    "def": 274,
+    "speed": 276,
+    "special_jutsu": 1276
+  },
+  "194": {
+    "id": 194,
+    "name": "Mangekyou Sarada",
+    "alt": "Mangekyou Sarada",
+    "xmlfile": "mangekyousarada",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      3
+    ],
+    "hp": 2775,
+    "attack": 273,
+    "def": 275,
+    "speed": 275,
+    "special_jutsu": 1277
+  },
+  "195": {
+    "id": 195,
+    "name": "Nagato Edo Tensei",
+    "alt": "Nagato Edo Tensei",
+    "xmlfile": "nagatoedotensei",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      5
+    ],
+    "hp": 2764,
+    "attack": 268,
+    "def": 275,
+    "speed": 274,
+    "special_jutsu": 1278
+  },
+  "196": {
+    "id": 196,
+    "name": "Sakumo Hatake",
+    "alt": "Sakumo Hatake",
+    "xmlfile": "sakumohatake",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      2
+    ],
+    "hp": 2740,
+    "attack": 268,
+    "def": 271,
+    "speed": 273,
+    "special_jutsu": 1279
+  },
+  "197": {
+    "id": 197,
+    "name": "Might Duy",
+    "alt": "Might Duy",
+    "xmlfile": "mightduy",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      1
+    ],
+    "hp": 2750,
+    "attack": 273,
+    "def": 270,
+    "speed": 272,
+    "special_jutsu": 1280
+  },
+  "198": {
+    "id": 198,
+    "name": "Himawari Timeskip",
+    "alt": "Himawari Timeskip",
+    "xmlfile": "himawaritimeskip",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      2
+    ],
+    "hp": 2770,
+    "attack": 277,
+    "def": 271,
+    "speed": 276,
+    "special_jutsu": 1281
+  },
+  "199": {
+    "id": 199,
+    "name": "Fukasaku",
+    "alt": "Fukasaku",
+    "xmlfile": "fukasaku",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      5
+    ],
+    "hp": 2630,
+    "attack": 262,
+    "def": 265,
+    "speed": 262,
+    "special_jutsu": 1282
+  },
+  "200": {
+    "id": 200,
+    "name": "Mamushi Shinju",
+    "alt": "Mamushi Shinju",
+    "xmlfile": "mamushishinju",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      5
+    ],
+    "hp": 2770,
+    "attack": 271,
+    "def": 278,
+    "speed": 275,
+    "special_jutsu": 1289
+  },
+  "201": {
+    "id": 201,
+    "name": "Matsuri Shinju",
+    "alt": "Matsuri Shinju",
+    "xmlfile": "matsurishinju",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      2
+    ],
+    "hp": 2750,
+    "attack": 275,
+    "def": 275,
+    "speed": 276,
+    "special_jutsu": 1290
+  },
+  "202": {
+    "id": 202,
+    "name": "Ryu Shinju",
+    "alt": "Ryu Shinju",
+    "xmlfile": "ryushinju",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      4
+    ],
+    "hp": 2760,
+    "attack": 275,
+    "def": 274,
+    "speed": 276,
+    "special_jutsu": 1291
+  },
+  "203": {
+    "id": 203,
+    "name": "Hidari Shinju",
+    "alt": "Hidari Shinju",
+    "xmlfile": "hidarishinju",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      3
+    ],
+    "hp": 2760,
+    "attack": 274,
+    "def": 275,
+    "speed": 279,
+    "special_jutsu": 1292
+  },
+  "204": {
+    "id": 204,
+    "name": "Jura Shinju",
+    "alt": "Jura Shinju",
+    "xmlfile": "jurashinju",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      4
+    ],
+    "hp": 2810,
+    "attack": 278,
+    "def": 272,
+    "speed": 278,
+    "special_jutsu": 1293
+  },
+  "205": {
+    "id": 205,
+    "name": "Hikari Uchiha",
+    "alt": "Hikari Uchiha",
+    "xmlfile": "hikariuchiha",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      3
+    ],
+    "hp": 2678,
+    "attack": 278,
+    "def": 277,
+    "speed": 278,
+    "special_jutsu": 1294
+  },
+  "206": {
+    "id": 206,
+    "name": "Nanashi Uchiha",
+    "alt": "Nanashi Uchiha",
+    "xmlfile": "nanashiuchiha",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      3
+    ],
+    "hp": 2690,
+    "attack": 278,
+    "def": 276,
+    "speed": 278,
+    "special_jutsu": 1295
+  },
+  "207": {
+    "id": 207,
+    "name": "Merz",
+    "alt": "Merz",
+    "xmlfile": "merz",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      5
+    ],
+    "hp": 2700,
+    "attack": 280,
+    "def": 275,
+    "speed": 278,
+    "special_jutsu": 1296
+  },
+  "208": {
+    "id": 208,
+    "name": "Prime Sasuke",
+    "alt": "Prime Sasuke",
+    "xmlfile": "sasukeindramode",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      3
+    ],
+    "hp": 2720,
+    "attack": 280,
+    "def": 280,
+    "speed": 280,
+    "special_jutsu": 1297
+  },
+  "209": {
+    "id": 209,
+    "name": "Prime Naruto",
+    "alt": "Prime Naruto",
+    "xmlfile": "narutoashuramode",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      2
+    ],
+    "hp": 2750,
+    "attack": 281,
+    "def": 278,
+    "speed": 279,
+    "special_jutsu": 1298
+  },
+  "210": {
+    "id": 210,
+    "name": "Reto Kazekage",
+    "alt": "Reto Kazekage",
+    "xmlfile": "retokazekage",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      2
+    ],
+    "hp": 2650,
+    "attack": 278,
+    "def": 281,
+    "speed": 278,
+    "special_jutsu": 1311
+  },
+  "211": {
+    "id": 211,
+    "name": "Chino Base Mode",
+    "alt": "Chino Base Mode",
+    "xmlfile": "chinobasemode",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      5
+    ],
+    "hp": 2700,
+    "attack": 273,
+    "def": 269,
+    "speed": 273,
+    "special_jutsu": 1312
+  },
+  "212": {
+    "id": 212,
+    "name": "Guren",
+    "alt": "Guren",
+    "xmlfile": "guren",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      5
+    ],
+    "hp": 2758,
+    "attack": 276,
+    "def": 271,
+    "speed": 280,
+    "special_jutsu": 1317
+  },
+  "213": {
+    "id": 213,
+    "name": "Uzumaki Ashina",
+    "alt": "Uzumaki Ashina",
+    "xmlfile": "uzumakiashina",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      2
+    ],
+    "hp": 2720,
+    "attack": 274,
+    "def": 276,
+    "speed": 280,
+    "special_jutsu": 1318
+  },
+  "214": {
+    "id": 214,
+    "name": "Shikaku Nara",
+    "alt": "Shikaku Nara",
+    "xmlfile": "shikakunara",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      4
+    ],
+    "hp": 2700,
+    "attack": 278,
+    "def": 275,
+    "speed": 278,
+    "special_jutsu": 1319
+  },
+  "215": {
+    "id": 215,
+    "name": "Choza Akimichi",
+    "alt": "Choza Akimichi",
+    "xmlfile": "chozaakimichi",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      4
+    ],
+    "hp": 2845,
+    "attack": 269,
+    "def": 280,
+    "speed": 270,
+    "special_jutsu": 1320
+  },
+  "216": {
+    "id": 216,
+    "name": "Konan Angel",
+    "alt": "Konan Angel",
+    "xmlfile": "konanangel",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      3
+    ],
+    "hp": 2845,
+    "attack": 269,
+    "def": 280,
+    "speed": 270,
+    "special_jutsu": 1325
+  },
+  "217": {
+    "id": 217,
+    "name": "Mitsuki Timeskip",
+    "alt": "Mitsuki Timeskip",
+    "xmlfile": "mitsukitimeskip",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      5
+    ],
+    "hp": 2845,
+    "attack": 269,
+    "def": 280,
+    "speed": 270,
+    "special_jutsu": 1326
+  },
+  "218": {
+    "id": 218,
+    "name": "Pain Tendo",
+    "alt": "Pain Tendo",
+    "xmlfile": "paintendo",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      2
+    ],
+    "hp": 2845,
+    "attack": 269,
+    "def": 280,
+    "speed": 270,
+    "special_jutsu": 1327
+  },
+  "219": {
+    "id": 219,
+    "name": "Prime Sakura",
+    "alt": "Prime Sakura",
+    "xmlfile": "primesakura",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      5
+    ],
+    "hp": 2845,
+    "attack": 269,
+    "def": 280,
+    "speed": 270,
+    "special_jutsu": 1328
+  },
+  "220": {
+    "id": 220,
+    "name": "Tobirama Edo Tensei",
+    "alt": "Tobirama Edo Tensei",
+    "xmlfile": "tobiramaedotensei",
+    "quality": 8,
+    "grade": "UR",
+    "chakra": [
+      5
+    ],
+    "hp": 2845,
+    "attack": 269,
+    "def": 280,
+    "speed": 270,
+    "special_jutsu": 1329
+  }
+}
