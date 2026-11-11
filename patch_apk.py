@@ -56,7 +56,7 @@ role_guard_code = f'''    // 2e. Safeguard Config.roleObject, GameUserInfor, Gam
                 "xianglin":1,"xianrenmingren":1,"xiaoli":1,"xiaonan":1,"xiaoying":1,"xie":1,
                 "xirihong":1,"yibixi":1,"yiluka":1,"yinjiao":1,"you":1,"yueguangjifeng":1,
                 "zaibuzhan":1,"zhaomeiming":1,"zhinai":1,"zhongwu":1,"zhouyinzuozhu":1,"zhujian":1,
-                "zilaiye":1,"zuojing":1,"zuojinyoujin":1,"zuozhu":1,"ashuraotsusuki":1,"fukasaku":1
+                "zilaiye":1,"zuojing":1,"zuojinyoujin":1,"zuozhu":1
             }};
 
             if (typeof ArmatureLoad !== "undefined" && ArmatureLoad.prototype) {{
@@ -75,14 +75,28 @@ role_guard_code = f'''    // 2e. Safeguard Config.roleObject, GameUserInfor, Gam
                 if (ArmatureTools.roleArmature) {{
                     var _origRoleArmature = ArmatureTools.roleArmature;
                     ArmatureTools.roleArmature = function(rid) {{
+                        var arm = null;
                         var cfg = (typeof Config !== "undefined" && Config.getInstance) ? Config.getInstance() : null;
                         var ro = (cfg && cfg.roleObject) ? cfg.roleObject[rid] : null;
-                        var origXml = null;
+                        var origXml = ro ? ro.xmlfile : null;
+
                         if (ro && ro.xmlfile && !_VALID_ARMS[ro.xmlfile]) {{
-                            origXml = ro.xmlfile;
                             ro.xmlfile = "xianrenmingren";
                         }}
-                        var arm = _origRoleArmature.apply(this, arguments);
+
+                        try {{
+                            arm = _origRoleArmature.apply(this, arguments);
+                        }} catch(eArm) {{}}
+
+                        if (!arm && ro) {{
+                            ro.xmlfile = "xianrenmingren";
+                            try {{ arm = _origRoleArmature.apply(this, arguments); }} catch(eArm2) {{}}
+                        }}
+                        if (!arm && ro) {{
+                            ro.xmlfile = "mingren";
+                            try {{ arm = _origRoleArmature.apply(this, arguments); }} catch(eArm3) {{}}
+                        }}
+
                         if (ro && origXml) {{
                             ro.xmlfile = origXml;
                         }}
@@ -516,9 +530,48 @@ role_guard_code = f'''    // 2e. Safeguard Config.roleObject, GameUserInfor, Gam
             }}
         }} catch (eNadHook) {{}}
 
-        // 2h. Permanent VIP Display Guard: keep VIP badge and level always visible
+        // 2h. Permanent VIP and Level Display Guard: keep VIP badge and level aligned and visible
         try {{
             if (typeof UserInfor !== "undefined" && UserInfor.prototype) {{
+                var _adjustLvPos = function (self) {{
+                    try {{
+                        if (self && self.lvNum) {{
+                            if (typeof self.lvNum.__nhBaseY === "undefined") {{
+                                self.lvNum.__nhBaseY = self.lvNum.getPositionY();
+                            }}
+                            self.lvNum.setPositionY(self.lvNum.__nhBaseY - 10);
+                        }}
+                    }} catch (eLvPos) {{}}
+                }};
+
+                var _origInitUI = UserInfor.prototype.initUI;
+                UserInfor.prototype.initUI = function () {{
+                    var r = _origInitUI ? _origInitUI.apply(this, arguments) : undefined;
+                    _adjustLvPos(this);
+                    try {{
+                        if (this.updatVip) this.updatVip();
+                    }} catch(eInitVip) {{}}
+                    return r;
+                }};
+
+                var _origUserDataChange = UserInfor.prototype.userDataChange;
+                if (typeof _origUserDataChange === "function") {{
+                    UserInfor.prototype.userDataChange = function () {{
+                        var r = _origUserDataChange ? _origUserDataChange.apply(this, arguments) : undefined;
+                        _adjustLvPos(this);
+                        return r;
+                    }};
+                }}
+
+                var _origUpdata = UserInfor.prototype.updata;
+                if (typeof _origUpdata === "function") {{
+                    UserInfor.prototype.updata = function () {{
+                        var r = _origUpdata ? _origUpdata.apply(this, arguments) : undefined;
+                        _adjustLvPos(this);
+                        return r;
+                    }};
+                }}
+
                 var _origUpdatVip = UserInfor.prototype.updatVip;
                 UserInfor.prototype.updatVip = function () {{
                     var res = _origUpdatVip ? _origUpdatVip.apply(this, arguments) : undefined;
@@ -532,21 +585,16 @@ role_guard_code = f'''    // 2e. Safeguard Config.roleObject, GameUserInfor, Gam
                         }}
                         if (this.viplvImg) {{
                             this.viplvImg.setVisible(true);
+                            if (typeof this.viplvImg.updata === "function") {{
+                                this.viplvImg.updata(vlv);
+                            }}
                         }}
-                        if (this.lvNum && typeof this.lvNum.updata === "function") {{
-                            this.lvNum.updata(vlv);
+                        if (this.lvNum && typeof this.lvNum.updata === "function" && ud && typeof ud.lv !== "undefined") {{
+                            this.lvNum.updata(ud.lv);
                         }}
+                        _adjustLvPos(this);
                     }} catch(eVip) {{}}
                     return res;
-                }};
-
-                var _origInitUI = UserInfor.prototype.initUI;
-                UserInfor.prototype.initUI = function () {{
-                    var r = _origInitUI ? _origInitUI.apply(this, arguments) : undefined;
-                    try {{
-                        if (this.updatVip) this.updatVip();
-                    }} catch(eInitVip) {{}}
-                    return r;
                 }};
             }}
         }} catch(eVipGuard) {{}}
@@ -610,10 +658,12 @@ with zipfile.ZipFile('OkkaNHNE-Private.apk', 'r') as zin:
         # Provide armature assets for ashuraotsusuki and fukasaku if xianrenmingren available
         if xianren_xml and xianren_plist and xianren_png:
             for custom_arm in ['ashuraotsusuki', 'fukasaku']:
-                zout.writestr(f'assets/armatures/resXML-iphonehd/{custom_arm}.xml', xianren_xml)
-                zout.writestr(f'assets/armatures/resXML-iphonehd/{custom_arm}.plist', xianren_plist)
+                c_xml = xianren_xml.replace(b'xianrenmingren', custom_arm.encode('utf-8'))
+                c_plist = xianren_plist.replace(b'xianrenmingren', custom_arm.encode('utf-8'))
+                zout.writestr(f'assets/armatures/resXML-iphonehd/{custom_arm}.xml', c_xml)
+                zout.writestr(f'assets/armatures/resXML-iphonehd/{custom_arm}.plist', c_plist)
                 zout.writestr(f'assets/armatures/resXML-iphonehd/{custom_arm}.png', xianren_png)
-            print(f"[+] Provided armature fallbacks for ashuraotsusuki and fukasaku")
+            print(f"[+] Provided armature assets with internal name for ashuraotsusuki and fukasaku")
 
 build_tools = r'C:\Users\Administrator\AppData\Local\Android\Sdk\build-tools\34.0.0'
 apksigner = os.path.join(build_tools, 'apksigner.bat')
