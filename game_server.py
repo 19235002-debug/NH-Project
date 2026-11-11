@@ -79,6 +79,9 @@ def get_player_full_data(user_identifier):
                 cur.execute("SELECT * FROM users WHERE username = %s OR email = %s LIMIT 1", (str(user_identifier), str(user_identifier)))
                 user = cur.fetchone()
             if not user:
+                cur.execute("SELECT * FROM users WHERE remember_token = %s LIMIT 1", (str(user_identifier),))
+                user = cur.fetchone()
+            if not user:
                 # Fallback to first user in DB or default admin
                 cur.execute("SELECT * FROM users ORDER BY id ASC LIMIT 1")
                 user = cur.fetchone()
@@ -352,11 +355,20 @@ def get_player_full_data(user_identifier):
                 },
                 "hes": heros_map,
                 "adventure": {
-                    "adv": (lambda ch, st: [
-                        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] if c < ch else list(range(1, st + 1))
-                        for c in range(1, ch + 1)
-                    ])(max(int(user.get("map_chapter") or 1), 1), max(int(user.get("map_stage") or 1), 1)),
-                    "maxAdv": max(int(user.get("map_chapter") or 1), 1)
+                    "adv": [
+                        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] if c < max(int(user.get("map_chapter") or 1), 1)
+                        else (list(range(1, max(int(user.get("map_stage") or 1), 1) + 1)) if c == max(int(user.get("map_chapter") or 1), 1) else [])
+                        for c in range(1, 15)
+                    ],
+                    "eadv": [[] for _ in range(14)],
+                    "maxAdv": max(int(user.get("map_chapter") or 1), 1),
+                    "chapter": max(int(user.get("map_chapter") or 1), 1),
+                    "currentChpater": max(int(user.get("map_chapter") or 1), 1),
+                    "currentStage": max(int(user.get("map_stage") or 1), 1),
+                    "lastCurrentChpater": max(int(user.get("map_chapter") or 1), 1),
+                    "lastStage": max(int(user.get("map_stage") or 1), 1),
+                    "currentAdventType": 1,
+                    "showMenu": 0
                 },
                 "buildings": {
                     "build": build_map
@@ -582,11 +594,67 @@ async def handler(websocket):
             # 1. Login packet (type: 8 = nad.LOG_IN)
             if pkt_type == 8:
                 source = pkt.get("source", [])
-                if isinstance(source, list) and len(source) > 0:
-                    current_user = str(source[0])
-                elif isinstance(source, dict) and "user" in source:
-                    current_user = str(source["user"])
-                print(f"[*] Player login request for user: '{current_user}'", flush=True)
+                print(f"[*] Player raw login packet: {pkt}", flush=True)
+
+                found_user = None
+                conn_u = get_db()
+                try:
+                    with conn_u.cursor() as c_u:
+                        candidates = []
+                        if isinstance(source, list):
+                            for s_item in source:
+                                if s_item is not None and str(s_item).strip():
+                                    candidates.append(str(s_item).strip())
+                        elif isinstance(source, dict):
+                            for k in ["user", "account", "username", "uid", "userId", "token", "sgin"]:
+                                if k in source and source[k]:
+                                    candidates.append(str(source[k]).strip())
+
+                        # 1. Look for exact username or email
+                        for cand in candidates:
+                            c_u.execute("SELECT * FROM users WHERE username = %s OR email = %s LIMIT 1", (cand, cand))
+                            row = c_u.fetchone()
+                            if row:
+                                found_user = row
+                                break
+
+                        # 2. Look for remember_token match
+                        if not found_user:
+                            for cand in candidates:
+                                c_u.execute("SELECT * FROM users WHERE remember_token = %s LIMIT 1", (cand,))
+                                row = c_u.fetchone()
+                                if row:
+                                    found_user = row
+                                    break
+
+                        # 3. Look for numeric user ID match (prioritizing IDs > 1 so serverId 1 is not confused with user 1)
+                        if not found_user:
+                            for cand in candidates:
+                                if cand.isdigit() and int(cand) > 1:
+                                    c_u.execute("SELECT * FROM users WHERE id = %s LIMIT 1", (int(cand),))
+                                    row = c_u.fetchone()
+                                    if row:
+                                        found_user = row
+                                        break
+
+                        # 4. Fallback numeric lookup (including ID 1)
+                        if not found_user:
+                            for cand in candidates:
+                                if cand.isdigit():
+                                    c_u.execute("SELECT * FROM users WHERE id = %s LIMIT 1", (int(cand),))
+                                    row = c_u.fetchone()
+                                    if row:
+                                        found_user = row
+                                        break
+
+                        if found_user:
+                            current_user = str(found_user["username"])
+                        elif candidates:
+                            current_user = str(candidates[0])
+                finally:
+                    conn_u.close()
+
+                print(f"[*] Resolved active player session: '{current_user}' (user ID: {found_user['id'] if found_user else 'unknown'})", flush=True)
 
                 # 1. Send LOG_IN_SUCCESS (type: 11 = nad.LOG_IN_SUCCESS) -> dismisses loading spinner & triggers client loginSuccess!
                 succ_evt = {
@@ -1046,6 +1114,61 @@ async def handler(websocket):
 
                             up_data = get_player_full_data(cur_uid)
 
+                            enemy_nid = 1
+                            if adv_info and adv_info.get("enemy"):
+                                try:
+                                    enemy_nid = int(adv_info["enemy"])
+                                    if enemy_nid > 107 or enemy_nid <= 0:
+                                        enemy_nid = 1
+                                except:
+                                    enemy_nid = 1
+
+                            c_adv.execute("SELECT * FROM player_ninjas WHERE user_id = %s ORDER BY is_main DESC, id ASC LIMIT 1", (cur_uid,))
+                            p_ninja = c_adv.fetchone()
+                            player_nid = 1
+                            player_lv = 1
+                            if p_ninja:
+                                player_lv = max(int(p_ninja.get("level") or 1), 1)
+                                try:
+                                    pn_val = int(p_ninja.get("ninja_id") or 1)
+                                    if 1 <= pn_val <= 107:
+                                        player_nid = pn_val
+                                except:
+                                    player_nid = 1
+
+                            p_hp = 1000 + (player_lv * 50)
+                            e_hp = 500 + (st * 30)
+
+                            combat_payload = {
+                                "win": 1,
+                                "pass": 1,
+                                "fighters": [
+                                    {
+                                        "id": player_nid,
+                                        "hp": p_hp,
+                                        "currHp": p_hp,
+                                        "skillList": [1149],
+                                        "lv": player_lv,
+                                        "exp": 0
+                                    },
+                                    {
+                                        "id": enemy_nid,
+                                        "hp": e_hp,
+                                        "currHp": e_hp,
+                                        "skillList": [1149],
+                                        "lv": max(st, 1),
+                                        "exp": 0
+                                    }
+                                ],
+                                "combat": [
+                                    {"idx": 0, "when": 1, "tid": 1, "sid": 1149, "bhp": -e_hp, "status": 1}
+                                ],
+                                "reward": {
+                                    "silver": silver_gain,
+                                    "rxp": exp_gain
+                                }
+                            }
+
                             await websocket.send(json.dumps({"type": 11, "source": 0, "timeStamp": now_ms()}))
 
                             reply = {
@@ -1056,6 +1179,7 @@ async def handler(websocket):
                                         "res": 0,
                                         "success": True
                                     },
+                                    "combat": combat_payload,
                                     "player": up_data["player"],
                                     "adventure": up_data["adventure"],
                                     "heros": up_data["heros"]

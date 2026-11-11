@@ -193,6 +193,9 @@ class GameClientAdapterController extends Controller
         }
 
         $token = 'tok_' . bin2hex(random_bytes(16));
+        try {
+            $user->update(['remember_token' => $token]);
+        } catch (\Exception $eToken) {}
 
         $payloadData = [
             'sgin' => $token,

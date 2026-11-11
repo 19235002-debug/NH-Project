@@ -104,135 +104,230 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
             }
         }
 
-        if (typeof GameUserInfor !== "undefined" && GameUserInfor.prototype) {
-            if (GameUserInfor.prototype.setImage) {
-                var _origSetImage = GameUserInfor.prototype.setImage;
-                GameUserInfor.prototype.setImage = function () {
+        // 2e2. Safeguard AdventureData and AdventureChapter against null chapter references
+        try {
+            if (typeof AdventureData !== "undefined" && AdventureData.prototype) {
+                var _origGetChapter = AdventureData.prototype.getChapter;
+                AdventureData.prototype.getChapter = function () {
+                    var res = _origGetChapter ? _origGetChapter.apply(this, arguments) : null;
+                    var num = parseInt(res);
+                    if (isNaN(num) || num < 1) num = 1;
+                    if (num > 14) num = 14;
+                    return num;
+                };
+                var _origGetEliteChapter = AdventureData.prototype.getEliteChapter;
+                AdventureData.prototype.getEliteChapter = function () {
+                    var res = _origGetEliteChapter ? _origGetEliteChapter.apply(this, arguments) : null;
+                    var num = parseInt(res);
+                    if (isNaN(num) || num < 1) num = 1;
+                    if (num > 14) num = 14;
+                    return num;
+                };
+            }
+            if (typeof AdventureChapter !== "undefined" && AdventureChapter.prototype) {
+                var _origAdvChBuildUI = AdventureChapter.prototype.buildUI;
+                AdventureChapter.prototype.buildUI = function () {
                     try {
-                        var cfg = typeof Config !== "undefined" && Config.getInstance ? Config.getInstance() : null;
-                        if (cfg && cfg.roleObject) {
-                            _polyFillAllRoles(cfg.roleObject);
-                        }
-                        if (this.roleList && Array.isArray(this.roleList)) {
-                            for (var i = 0; i < this.roleList.length; i++) {
-                                var f = this.roleList[i];
-                                if (f && (!f.id || (cfg && cfg.roleObject && !cfg.roleObject[f.id]))) {
-                                    f.id = 17;
-                                }
+                        for (var i = 1; i <= 14; i++) {
+                            if (!this["adven_" + i]) {
+                                this["adven_" + i] = this.adven_1 || cc.Node.create();
                             }
                         }
-                    } catch (ePreImg) {}
-                    try {
-                        return _origSetImage.apply(this, arguments);
-                    } catch (errSetImage) {
-                        if (typeof cc !== "undefined" && cc.log) {
-                            cc.log("[NH Guard] Intercepted GameUserInfor.setImage: " + errSetImage);
-                        }
+                    } catch(eAC) {}
+                    if (_origAdvChBuildUI) {
+                        return _origAdvChBuildUI.apply(this, arguments);
                     }
                 };
             }
-            if (GameUserInfor.prototype.setImageRefresh) {
-                var _origSetImageRefresh = GameUserInfor.prototype.setImageRefresh;
-                GameUserInfor.prototype.setImageRefresh = function () {
-                    try {
-                        var cfg = typeof Config !== "undefined" && Config.getInstance ? Config.getInstance() : null;
-                        if (cfg && cfg.roleObject) {
-                            _polyFillAllRoles(cfg.roleObject);
+            if (typeof GameData !== "undefined" && GameData.prototype) {
+                if (GameData.prototype.getFighters) {
+                    var _origGF = GameData.prototype.getFighters;
+                    GameData.prototype.getFighters = function () {
+                        var list = _origGF ? _origGF.apply(this, arguments) : null;
+                        if (!list || !Array.isArray(list) || list.length === 0) {
+                            return [
+                                { id: 1, hp: 1000, currHp: 1000, skillList: [1149], lv: 1, exp: 0 },
+                                { id: 17, hp: 500, currHp: 500, skillList: [1149], lv: 1, exp: 0 }
+                            ];
                         }
-                        if (this.roleList && Array.isArray(this.roleList)) {
-                            for (var i = 0; i < this.roleList.length; i++) {
-                                var f = this.roleList[i];
-                                if (f && (!f.id || (cfg && cfg.roleObject && !cfg.roleObject[f.id]))) {
-                                    f.id = 17;
-                                }
-                            }
+                        return list;
+                    };
+                }
+                if (GameData.prototype.getCombat) {
+                    var _origGC = GameData.prototype.getCombat;
+                    GameData.prototype.getCombat = function () {
+                        var c = _origGC ? _origGC.apply(this, arguments) : null;
+                        if (!c || !Array.isArray(c) || c.length === 0) {
+                            return [
+                                { idx: 0, when: 1, tid: 1, sid: 1149, bhp: -500, status: 1 }
+                            ];
                         }
-                    } catch (ePreRef) {}
-                    try {
-                        return _origSetImageRefresh.apply(this, arguments);
-                    } catch (errRef) {
-                        if (typeof cc !== "undefined" && cc.log) {
-                            cc.log("[NH Guard] Intercepted GameUserInfor.setImageRefresh: " + errRef);
-                        }
-                    }
-                };
+                        return c;
+                    };
+                }
             }
-        }
+        } catch (eAdvGuard) {}
 
-        if (typeof GameData !== "undefined" && GameData.prototype && GameData.prototype.getFighters) {
-            var _origGetFighters = GameData.prototype.getFighters;
-            GameData.prototype.getFighters = function () {
-                var list = _origGetFighters.apply(this, arguments);
-                try {
-                    var cfg = typeof Config !== "undefined" && Config.getInstance ? Config.getInstance() : null;
-                    if (cfg && cfg.roleObject) {
-                        _polyFillAllRoles(cfg.roleObject);
-                    }
-                    if (Array.isArray(list)) {
-                        for (var i = 0; i < list.length; i++) {
-                            var f = list[i];
-                            if (f && (!f.id || (cfg && cfg.roleObject && !cfg.roleObject[f.id]))) {
-                                f.id = 17;
-                            }
+        // 2f. Bypass strict validation in LoginScene & RegisterBox ("You can only use letter or number")
+        try {
+            if (typeof LoginScene !== "undefined" && LoginScene.prototype) {
+                LoginScene.prototype.validateMail = function (str) {
+                    return !!(str && String(str).trim().length >= 3);
+                };
+
+                LoginScene.prototype.checkAccountAndPwd = function (preset) {
+                    var acc = "", pwd = "";
+                    if (preset && typeof preset === "object") {
+                        acc = preset.accId || "";
+                        pwd = preset.pwd || "";
+                    } else {
+                        if (this.mailTTF && typeof this.mailTTF.getText === "function") {
+                            acc = this.mailTTF.getText();
+                        }
+                        if (this.pwdTTF1 && typeof this.pwdTTF1.getText === "function") {
+                            pwd = this.pwdTTF1.getText();
                         }
                     }
-                } catch(eGF) {}
-                return list;
-            };
-        }
+                    acc = String(acc || "").trim();
+                    pwd = String(pwd || "").trim();
 
-        if (typeof ArmatureTools !== "undefined") {
-            if (ArmatureTools.roleArmatureLoad) {
-                var _origRoleArmatureLoad = ArmatureTools.roleArmatureLoad;
-                var _inArmLoad = false;
-                ArmatureTools.roleArmatureLoad = function (id) {
-                    if (_inArmLoad) {
-                        return _origRoleArmatureLoad.apply(this, arguments);
+                    if (!acc || acc.length < 3) {
+                        if (typeof PromptView !== "undefined" && PromptView.setPageView) {
+                            PromptView.setPageView("loginTip", { target: this, text: "Username minimal 3 karakter." });
+                        }
+                        return;
                     }
-                    _inArmLoad = true;
-                    try {
-                        var res = _origRoleArmatureLoad.apply(this, arguments);
-                        if (res) return res;
-                    } catch(e) {}
-                    finally {
-                        _inArmLoad = false;
+                    if (!pwd || pwd.length < 1) {
+                        if (typeof PromptView !== "undefined" && PromptView.setPageView) {
+                            PromptView.setPageView("loginTip", { target: this, text: "Silakan masukkan password." });
+                        }
+                        return;
                     }
+
+                    var channel = 1;
+                    if (typeof serverUtil !== "undefined" && serverUtil.getChannel) {
+                        channel = serverUtil.getChannel();
+                    }
+
+                    return {
+                        accId: acc.toLowerCase(),
+                        pwd: pwd,
+                        channel: channel,
+                        lv: 1
+                    };
+                };
+
+                LoginScene.prototype.regCheck = function () {
+                    var acc = "", pwd1 = "", pwd2 = "";
+                    if (this.mailTTF && typeof this.mailTTF.getText === "function") acc = this.mailTTF.getText();
+                    if (this.pwdTTF1 && typeof this.pwdTTF1.getText === "function") pwd1 = this.pwdTTF1.getText();
+                    if (this.pwdTTF2 && typeof this.pwdTTF2.getText === "function") pwd2 = this.pwdTTF2.getText();
+
+                    acc = String(acc || "").trim();
+                    pwd1 = String(pwd1 || "").trim();
+                    pwd2 = String(pwd2 || "").trim();
+
+                    if (!acc || acc.length < 3) {
+                        if (typeof PromptView !== "undefined" && PromptView.setPageView) {
+                            PromptView.setPageView("loginTip", { target: this, text: "Username minimal 3 karakter." });
+                        }
+                        return;
+                    }
+                    if (!pwd1 || pwd1.length < 1) {
+                        if (typeof PromptView !== "undefined" && PromptView.setPageView) {
+                            PromptView.setPageView("loginTip", { target: this, text: "Silakan masukkan password." });
+                        }
+                        return;
+                    }
+                    if (pwd1 !== pwd2) {
+                        if (typeof PromptView !== "undefined" && PromptView.setPageView) {
+                            PromptView.setPageView("loginTip", { target: this, text: "Konfirmasi password tidak cocok." });
+                        }
+                        return;
+                    }
+
+                    var channel = 1;
+                    if (typeof serverUtil !== "undefined" && serverUtil.getChannel) {
+                        channel = serverUtil.getChannel();
+                    }
+
+                    return {
+                        accId: acc.toLowerCase(),
+                        pwd: pwd1,
+                        channel: channel,
+                        lv: 1
+                    };
+                };
+
+                // Add "GANTI AKUN" button to EntranceLayer and handle switchAccount
+                var _origLoginTouchesEnded = LoginScene.prototype.onTouchesEnded;
+                LoginScene.prototype.onTouchesEnded = function (touches) {
                     try {
-                        _inArmLoad = true;
-                        return _origRoleArmatureLoad.call(this, 17) || _origRoleArmatureLoad.call(this, 9);
-                    } catch(e2) {
-                        return null;
-                    } finally {
-                        _inArmLoad = false;
+                        var touch = touches && touches[0];
+                        if (touch && this.btn_switchAccount && this.currentLayer === this.EntranceLayer) {
+                            var p = touch.getLocation ? touch.getLocation() : cc.p(touch.x, touch.y);
+                            var box = this.btn_switchAccount.getBoundingBoxToWorld ? this.btn_switchAccount.getBoundingBoxToWorld() : this.btn_switchAccount.getBoundingBox();
+                            if (box && cc.rectContainsPoint(box, p)) {
+                                if (typeof accountUtil !== "undefined" && accountUtil.saveAccount) {
+                                    try { accountUtil.saveAccount(null); } catch (eClear) {}
+                                }
+                                if (typeof this.switchLayer === "function") {
+                                    this.switchLayer(this.RegButtonLayer || null);
+                                }
+                                return;
+                            }
+                        }
+                    } catch(eTouchSw) {}
+                    if (_origLoginTouchesEnded) {
+                        return _origLoginTouchesEnded.apply(this, arguments);
                     }
                 };
-            }
-            if (ArmatureTools.roleArmature) {
-                var _origRoleArmature = ArmatureTools.roleArmature;
-                var _inArmRole = false;
-                ArmatureTools.roleArmature = function (id, cos) {
-                    if (_inArmRole) {
-                        return _origRoleArmature.apply(this, arguments);
-                    }
-                    _inArmRole = true;
+
+                var _origShowEntranceLayer = LoginScene.prototype.showEntranceLayer;
+                LoginScene.prototype.showEntranceLayer = function () {
+                    var res = _origShowEntranceLayer ? _origShowEntranceLayer.apply(this, arguments) : undefined;
                     try {
-                        var res = _origRoleArmature.apply(this, arguments);
-                        if (res) return res;
-                    } catch(e) {}
-                    finally {
-                        _inArmRole = false;
-                    }
-                    try {
-                        _inArmRole = true;
-                        return _origRoleArmature.call(this, 17, 0) || _origRoleArmature.call(this, 9, 0);
-                    } catch(e2) {
-                        return null;
-                    } finally {
-                        _inArmRole = false;
-                    }
+                        if (this.EntranceLayer && !this.btn_switchAccount) {
+                            var winSize = cc.Director.getInstance().getVisibleSize();
+                            var origin = cc.Director.getInstance().getVisibleOrigin ? cc.Director.getInstance().getVisibleOrigin() : cc.p(0, 0);
+                            var cx = origin.x + winSize.width / 2;
+                            var cy = origin.y + winSize.height / 2;
+
+                            var swLabel = cc.LabelTTF.create("GANTI AKUN / LOGOUT", "Helvetica", 22);
+                            if (swLabel) {
+                                swLabel.setColor(cc.c3b(255, 220, 100));
+                                swLabel.setPosition(cc.p(cx, cy - 130));
+                                this.EntranceLayer.addChild(swLabel, 99);
+                                this.btn_switchAccount = swLabel;
+                            }
+                        }
+                    } catch (eAddSw) {}
+                    return res;
                 };
             }
-        }
+
+            if (typeof RegisterBox !== "undefined" && RegisterBox.prototype) {
+                RegisterBox.prototype.checkAccountAndPwd = function () {
+                    var acc = "", pwd = "";
+                    if (this.mailTTF && typeof this.mailTTF.getText === "function") acc = this.mailTTF.getText();
+                    if (this.pwdTTF && typeof this.pwdTTF.getText === "function") pwd = this.pwdTTF.getText();
+                    acc = String(acc || "").trim();
+                    pwd = String(pwd || "").trim();
+                    if (!acc || acc.length < 3) return;
+                    if (!pwd || pwd.length < 1) return;
+                    var channel = 1;
+                    if (typeof serverUtil !== "undefined" && serverUtil.getChannel) {
+                        channel = serverUtil.getChannel();
+                    }
+                    return {
+                        accId: acc.toLowerCase(),
+                        pwd: pwd,
+                        channel: channel,
+                        lv: 1
+                    };
+                };
+            }
+        } catch (eLoginFix) {}
     } catch (eRoleGuard) {
         if (typeof cc !== "undefined" && cc.log) cc.log("[NH Error] eRoleGuard: " + eRoleGuard);
     }
