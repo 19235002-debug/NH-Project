@@ -207,6 +207,20 @@ def get_player_full_data(user_identifier):
                 agi = base_spd + (lv * 10)
                 power = int(att * 2.5 + defe * 2.0 + hp * 0.6 + agi * 1.5)
 
+                active_skill_ids = equipped_skills if equipped_skills else ([spec_j] if spec_j > 0 else [1149])
+                q_val = max(1, min(8, int(row.get("quality", 1) or 1)))
+                skill_objs = []
+                for idx_s, s_id in enumerate(active_skill_ids):
+                    skill_objs.append({
+                        "id": s_id,
+                        "sid": s_id,
+                        "type": 1,
+                        "idx": idx_s,
+                        "star": 1,
+                        "sstar": 1,
+                        "quality": q_val
+                    })
+
                 hero_obj = {
                     "id": nid,
                     "hid": hid,
@@ -214,11 +228,11 @@ def get_player_full_data(user_identifier):
                     "lv": lv,
                     "exp": int(row.get("exp", 0) or 0),
                     "rxp": max(100, lv * 100),
-                    "quality": max(1, min(8, int(row.get("quality", 1) or 1))),
+                    "quality": q_val,
                     "chakra": [int(row.get("chakra_type") or 1)],
-                    "skill": equipped_skills if equipped_skills else ([spec_j] if spec_j > 0 else [1149]),
-                    "skills": equipped_skills if equipped_skills else ([spec_j] if spec_j > 0 else [1149]),
-                    "eskill": eskills if eskills else [1149],
+                    "skill": skill_objs,
+                    "skills": active_skill_ids,
+                    "eskill": active_skill_ids,
                     "star": 1,
                     "costume": 0,
                     "qlv": 0,

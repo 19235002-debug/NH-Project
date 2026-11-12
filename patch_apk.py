@@ -41,13 +41,13 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
             if (typeof qualityCol !== "undefined" && Array.isArray(qualityCol)) {
                 var _c = (typeof cc !== "undefined" && cc.c3b) ? cc.c3b : function(r, g, b) { return { r: r, g: g, b: b }; };
                 qualityCol[0] = _c(255, 255, 255);
-                qualityCol[1] = _c(180, 180, 180); // D - Gray
-                qualityCol[2] = _c(80, 200, 100);   // C - Green
-                qualityCol[3] = _c(50, 150, 255);  // B - Blue
-                qualityCol[4] = _c(190, 60, 230);  // A - Purple
-                qualityCol[5] = _c(245, 50, 50);   // S - Red
-                qualityCol[6] = _c(255, 200, 20);  // SS - Gold/Yellow
-                qualityCol[7] = _c(220, 50, 255);  // SSS - Bright Purple
+                qualityCol[1] = _c(180, 180, 180); // D - Gray (#b4b4b4)
+                qualityCol[2] = _c(80, 200, 100);   // C - Green (#50c864)
+                qualityCol[3] = _c(50, 150, 255);  // B - Blue (#3296ff)
+                qualityCol[4] = _c(190, 60, 230);  // A - Purple (#be3ce6)
+                qualityCol[5] = _c(245, 50, 50);   // S - Red (#f53232)
+                qualityCol[6] = _c(255, 200, 20);  // SS - Gold/Yellow (#ffc814)
+                qualityCol[7] = _c(220, 50, 255);  // SSS - Bright Purple/Magenta (#dc32ff)
                 qualityCol[8] = _c(0, 210, 255);   // UR - Electric Blue / Cyan (#00d2ff)
                 while (qualityCol.length <= 15) {
                     qualityCol.push(qualityCol[8]);
@@ -130,7 +130,7 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
             }
             if (!base) return;
 
-            if (ro.__nhRolesGuarded && ro[170] && ro[199] && ro[170].xmlfile === "ashuraotsusuki") return;
+            if (ro.__nhRolesGuarded && ro[170] && ro[199] && ro[170].xmlfile === "liudaoban") return;
             ro.__nhRolesGuarded = true;
 
             for (var nid = 0; nid <= 1000; nid++) {
@@ -629,46 +629,116 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
             }
         } catch(eVipGuard) {}
 
-        // 2i. InforNinJaScene: Replace "Sample Text" with real Ninja Name, grade text color (D..UR), and keep closeBtn active
+        // 2i. InforNinJaScene: Replace "Sample Text" with authentic Ninja Name, grade font color (D..UR), fill default ninjutsu, and enable closeBtn
         try {
             if (typeof InforNinJaScene !== "undefined" && InforNinJaScene.prototype) {
                 var _origInforNinJaUpdata = InforNinJaScene.prototype.updata;
                 InforNinJaScene.prototype.updata = function() {
-                    var ret = _origInforNinJaUpdata ? _origInforNinJaUpdata.apply(this, arguments) : undefined;
+                    // Prevent TypeError: Cannot read property 'setStringQLv' of undefined
+                    try {
+                        if (this.scene && this.scene.controller) {
+                            if (!this.scene.controller.alt) {
+                                this.scene.controller.alt = (this.controller && this.controller.alt) ? this.controller.alt : (this.alt || null);
+                            }
+                            if (this.scene.controller.alt && !this.scene.controller.alt.setStringQLv) {
+                                this.scene.controller.alt.setStringQLv = function(name) {
+                                    try { if (this.setString) this.setString(name); } catch(e) {}
+                                };
+                            }
+                        }
+                    } catch(ePre) {}
+
+                    var ret = undefined;
+                    try {
+                        if (_origInforNinJaUpdata) {
+                            ret = _origInforNinJaUpdata.apply(this, arguments);
+                        }
+                    } catch(eOrig) {
+                        if (typeof cc !== "undefined" && cc.log) cc.log("[NH Handled] _origInforNinJaUpdata: " + eOrig);
+                    }
+
                     try {
                         var rd = (typeof RoleData !== "undefined" && RoleData.getInstance) ? RoleData.getInstance() : null;
                         var key = this.curRoleKey || (rd ? rd.getCurrentKey() : null);
-                        var rid = rd ? (rd.getRoleID(key) || (rd.heros && rd.heros[key] ? rd.heros[key].id : null)) : null;
+                        var hero = (rd && rd.heros && key) ? rd.heros[key] : null;
+                        var rid = hero ? (hero.id || hero.rid) : (rd ? rd.getRoleID(key) : null);
                         var cfg = (typeof Config !== "undefined" && Config.getInstance) ? Config.getInstance() : null;
                         var ro = (cfg && cfg.roleObject && rid) ? cfg.roleObject[rid] : null;
-                        var quality = ro ? ro.quality : 1;
+                        var quality = ro ? ro.quality : (hero ? hero.quality : 1);
                         if (quality > 8) quality = 8;
                         if (quality < 1) quality = 1;
 
                         var col = (typeof qualityCol !== "undefined" && qualityCol[quality]) ? qualityCol[quality] : cc.c3b(255, 255, 255);
                         var qGrade = (typeof qualityIconlist !== "undefined" && qualityIconlist[quality]) ? qualityIconlist[quality] : "D";
-                        var ninjaName = (ro && (ro.name || ro.alt)) ? (ro.name || ro.alt) : "Shinobi";
+                        var ninjaName = (ro && (ro.name || ro.alt)) ? (ro.name || ro.alt) : (hero ? hero.name : "Shinobi");
+                        var lv = hero ? hero.lv : (ro ? (ro.lv || 1) : 1);
 
-                        var ctl = this.controller || (this.scene ? this.scene.controller : null);
-                        if (ctl) {
-                            if (ctl.alt && typeof ctl.alt.setString === "function") {
-                                ctl.alt.setString(ninjaName);
-                                if (typeof ctl.alt.setColor === "function") ctl.alt.setColor(col);
+                        var ctl = this.controller || this;
+
+                        // 1. Label Nama Ninja (gantikan "Sample Text" dengan nama asli dan warnai sesuai grade!)
+                        var altTargets = [ctl.alt, this.alt, (this.scene && this.scene.controller ? this.scene.controller.alt : null)];
+                        for (var a_i = 0; a_i < altTargets.length; a_i++) {
+                            var altObj = altTargets[a_i];
+                            if (altObj && typeof altObj.setString === "function") {
+                                altObj.setString(ninjaName);
+                                if (typeof altObj.setColor === "function") altObj.setColor(col);
                             }
-                            if (ctl.nameTF && typeof ctl.nameTF.setString === "function") {
-                                ctl.nameTF.setString(ninjaName);
-                                if (typeof ctl.nameTF.setColor === "function") ctl.nameTF.setColor(col);
+                        }
+
+                        // 2. Label Grade Ninja (gantikan "SS" dan beri warna sesuai grade: D=Gray, C=Green, B=Blue, A=Purple, S=Red, SS=Yellow, SSS=Purple, UR=Cyan)
+                        var qTargets = [ctl.qualityTF, this.qualityTF];
+                        for (var q_i = 0; q_i < qTargets.length; q_i++) {
+                            var qObj = qTargets[q_i];
+                            if (qObj && typeof qObj.setString === "function") {
+                                qObj.setString(qGrade);
+                                if (typeof qObj.setColor === "function") qObj.setColor(col);
                             }
-                            if (ctl.qualityTF && typeof ctl.qualityTF.setString === "function") {
-                                ctl.qualityTF.setString(qGrade);
-                                if (typeof ctl.qualityTF.setColor === "function") ctl.qualityTF.setColor(col);
+                        }
+
+                        // 3. Label Potensi Zhizi
+                        var zTargets = [ctl.zhiziTF, this.zhiziTF];
+                        for (var z_i = 0; z_i < zTargets.length; z_i++) {
+                            var zObj = zTargets[z_i];
+                            if (zObj) {
+                                if (typeof PropertyTools !== "undefined" && PropertyTools.roleQualifications && rid) {
+                                    try { zObj.setString(PropertyTools.roleQualifications(rid)); } catch(eZ) {}
+                                }
+                                if (typeof zObj.setColor === "function") zObj.setColor(col);
                             }
-                            if (ctl.zhiziTF && typeof ctl.zhiziTF.setColor === "function") {
-                                ctl.zhiziTF.setColor(col);
+                        }
+
+                        // 4. Label Level
+                        var lvTargets = [ctl.lvTF, this.lvTF];
+                        for (var l_i = 0; l_i < lvTargets.length; l_i++) {
+                            var lvObj = lvTargets[l_i];
+                            if (lvObj && typeof lvObj.setString === "function") {
+                                lvObj.setString("Lv." + lv);
                             }
-                            if (ctl.closeBtn && typeof ctl.closeBtn.setEnabled === "function") {
-                                ctl.closeBtn.setEnabled(true);
+                        }
+
+                        // 5. Ninjutsu Bawaan (Isi slot skill agar tidak kosong dari Grade D sampai UR!)
+                        var sList = ctl.skillList || this.skillList;
+                        if (sList && Array.isArray(sList)) {
+                            var defSkill = (ro && (ro.special_jutsu || (ro.skill && ro.skill[0]))) ? (ro.special_jutsu || ro.skill[0]) : 1149;
+                            var skills = (rd && rd.getSkillListAll) ? rd.getSkillListAll(key) : null;
+                            if (!skills || !Array.isArray(skills) || skills.length === 0) {
+                                skills = [{ id: defSkill, sid: defSkill, type: 1, idx: 0, star: 1, sstar: 1, quality: quality }];
                             }
+                            for (var s_i = 0; s_i < sList.length; s_i++) {
+                                var box = sList[s_i];
+                                if (box && skills[s_i]) {
+                                    if (typeof box.updataByRoledata === "function") {
+                                        try { box.updataByRoledata(skills[s_i]); } catch(eBox) {}
+                                    } else if (typeof box.updata === "function") {
+                                        try { box.updata(skills[s_i].id || skills[s_i].sid || defSkill, skills[s_i].quality || quality, s_i); } catch(eBox2) {}
+                                    }
+                                }
+                            }
+                        }
+
+                        // 6. Tombol X (Close Button) SELALU ENABLED DAN AMAN
+                        if (ctl.closeBtn && typeof ctl.closeBtn.setEnabled === "function") {
+                            ctl.closeBtn.setEnabled(true);
                         }
                         if (this.closeBtn && typeof this.closeBtn.setEnabled === "function") {
                             this.closeBtn.setEnabled(true);
@@ -679,30 +749,46 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
             }
         } catch(eInforGuard) {}
 
-        // 2j. RoleData getSkillListAll: Guarantee default ninjutsu is present in slot 1
+        // 2j. RoleData getSkillListAll: Guarantee authentic default ninjutsu object for all grades D..UR
         try {
             if (typeof RoleData !== "undefined" && RoleData.prototype && RoleData.prototype.getSkillListAll) {
                 var _origGetSkillListAll = RoleData.prototype.getSkillListAll;
                 RoleData.prototype.getSkillListAll = function(key) {
-                    var list = _origGetSkillListAll ? _origGetSkillListAll.apply(this, arguments) : null;
+                    var list = null;
                     try {
-                        var rid = this.getRoleID(key) || (this.heros && this.heros[key] ? this.heros[key].id : null);
+                        list = _origGetSkillListAll ? _origGetSkillListAll.apply(this, arguments) : null;
+                    } catch(eG) {}
+                    try {
+                        var rid = this.getRoleID(key) || (this.heros && this.heros[key] ? (this.heros[key].id || this.heros[key].rid) : null);
                         var cfg = (typeof Config !== "undefined" && Config.getInstance) ? Config.getInstance() : null;
                         var ro = (cfg && cfg.roleObject && rid) ? cfg.roleObject[rid] : null;
                         var defSkill = (ro && (ro.special_jutsu || (ro.skill && ro.skill[0]))) ? (ro.special_jutsu || ro.skill[0]) : 1149;
+                        var q = ro ? (ro.quality || 1) : 1;
                         var defObj = {
                             sid: defSkill,
                             id: defSkill,
                             type: 1,
                             idx: 0,
                             star: 1,
-                            quality: ro ? ro.quality : 1
+                            sstar: 1,
+                            quality: q
                         };
 
                         if (!list || !Array.isArray(list) || list.length === 0) {
                             list = [defObj];
-                        } else if (!list[0] || (typeof list[0] === "object" && !list[0].id && !list[0].sid)) {
-                            list[0] = defObj;
+                        } else {
+                            for (var k = 0; k < list.length; k++) {
+                                if (typeof list[k] === "number") {
+                                    list[k] = { sid: list[k], id: list[k], type: 1, idx: k, star: 1, sstar: 1, quality: q };
+                                } else if (list[k] && typeof list[k] === "object" && !list[k].sid && !list[k].id) {
+                                    list[k].sid = defSkill;
+                                    list[k].id = defSkill;
+                                    list[k].quality = q;
+                                }
+                            }
+                            if (!list[0] || (!list[0].id && !list[0].sid)) {
+                                list[0] = defObj;
+                            }
                         }
                     } catch(eDefSkill) {}
                     return list;
@@ -710,40 +796,20 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
             }
         } catch(eSkillListGuard) {}
 
-        // 2k. GainNinJaScene: Replace "Sample Text" with authentic ninja name & grade color
+        // 2k. SkillBox updataByRoledata guard: accept numeric skills or fallback gracefully
         try {
-            if (typeof GainNinJaScene !== "undefined" && GainNinJaScene.prototype && GainNinJaScene.prototype.updata) {
-                var _origGainNinJaUpdata = GainNinJaScene.prototype.updata;
-                GainNinJaScene.prototype.updata = function(rid) {
-                    var ret = _origGainNinJaUpdata ? _origGainNinJaUpdata.apply(this, arguments) : undefined;
+            if (typeof SkillBox !== "undefined" && SkillBox.prototype && SkillBox.prototype.updataByRoledata) {
+                var _origSkillBoxUpdataByRole = SkillBox.prototype.updataByRoledata;
+                SkillBox.prototype.updataByRoledata = function(data) {
                     try {
-                        var cfg = (typeof Config !== "undefined" && Config.getInstance) ? Config.getInstance() : null;
-                        var ro = (cfg && cfg.roleObject && rid) ? cfg.roleObject[rid] : null;
-                        var ninjaName = (ro && (ro.name || ro.alt)) ? (ro.name || ro.alt) : "Shinobi";
-                        var quality = ro ? ro.quality : 1;
-                        if (quality > 8) quality = 8;
-                        var col = (typeof qualityCol !== "undefined" && qualityCol[quality]) ? qualityCol[quality] : cc.c3b(255, 255, 255);
-                        var ctl = this.controller || (this.scene ? this.scene.controller : null);
-                        if (ctl) {
-                            if (ctl.alt && typeof ctl.alt.setString === "function") {
-                                ctl.alt.setString(ninjaName);
-                                if (typeof ctl.alt.setColor === "function") ctl.alt.setColor(col);
-                            }
-                            if (ctl.nameTF && typeof ctl.nameTF.setString === "function") {
-                                ctl.nameTF.setString(ninjaName);
-                                if (typeof ctl.nameTF.setColor === "function") ctl.nameTF.setColor(col);
-                            }
-                            if (ctl.qualityTF && typeof ctl.qualityTF.setString === "function") {
-                                var qGrade = (typeof qualityIconlist !== "undefined" && qualityIconlist[quality]) ? qualityIconlist[quality] : "D";
-                                ctl.qualityTF.setString(qGrade);
-                                if (typeof ctl.qualityTF.setColor === "function") ctl.qualityTF.setColor(col);
-                            }
+                        if (typeof data === "number") {
+                            data = { id: data, sid: data, type: 1, idx: (this.idx || 0), star: 1, sstar: 1, quality: 1 };
                         }
-                    } catch(eGain) {}
-                    return ret;
+                    } catch(eSk) {}
+                    return _origSkillBoxUpdataByRole.call(this, data);
                 };
             }
-        } catch(eGainGuard) {}
+        } catch(eSkillBoxGuard) {}
 
         // 2l. StartScene: Clean Switch Account / Logout button at top right
         try {
@@ -779,6 +845,24 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
                 };
             }
         } catch(eStartGuard) {}
+
+        // 2m. Safeguard modal close buttons (SelectRoleBox, InforNinJaScene, BeiBaoScene)
+        try {
+            if (typeof SelectRoleBox !== "undefined" && SelectRoleBox.prototype) {
+                var _origSRBBuildUI = SelectRoleBox.prototype.buildUI;
+                if (_origSRBBuildUI) {
+                    SelectRoleBox.prototype.buildUI = function() {
+                        var r = _origSRBBuildUI.apply(this, arguments);
+                        try {
+                            if (this.closeBtn && typeof this.closeBtn.setEnabled === "function") {
+                                this.closeBtn.setEnabled(true);
+                            }
+                        } catch(eSRB) {}
+                        return r;
+                    };
+                }
+            }
+        } catch(eCloseSafe) {}
     } catch (eRoleGuard) {
         if (typeof cc !== "undefined" && cc.log) cc.log("[NH Error] eRoleGuard: " + eRoleGuard);
     }
@@ -790,9 +874,6 @@ ui_main_fixed = ui_main.replace(hook_marker, role_guard_code + '\n    ' + hook_m
 with zipfile.ZipFile('OkkaNHNE-Private.apk', 'r') as zin:
     with zipfile.ZipFile('temp_repack.apk', 'w', compression=zipfile.ZIP_DEFLATED) as zout:
         existing_files = set()
-        xianren_xml = None
-        xianren_plist = None
-        xianren_png = None
 
         for item in zin.infolist():
             if item.filename.startswith('META-INF/'):
@@ -801,15 +882,7 @@ with zipfile.ZipFile('OkkaNHNE-Private.apk', 'r') as zin:
                 continue
             if item.filename.startswith('assets/UI/image/iskillicon/'):
                 continue
-            if 'ashuraotsusuki' in item.filename or 'fukasaku' in item.filename:
-                continue
             existing_files.add(item.filename)
-            if item.filename == 'assets/armatures/resXML-iphonehd/xianrenmingren.xml':
-                xianren_xml = zin.read(item.filename)
-            elif item.filename == 'assets/armatures/resXML-iphonehd/xianrenmingren.plist':
-                xianren_plist = zin.read(item.filename)
-            elif item.filename == 'assets/armatures/resXML-iphonehd/xianrenmingren.png':
-                xianren_png = zin.read(item.filename)
 
             if item.filename == 'assets/UI/main.js':
                 zout.writestr(item, ui_main_fixed.encode('utf-8'))
@@ -835,24 +908,6 @@ with zipfile.ZipFile('OkkaNHNE-Private.apk', 'r') as zin:
                     with open(os.path.join('public/images/skills', fname), 'rb') as sf:
                         zout.writestr(target_path, sf.read())
             print(f"[+] Injected authentic skill icons into assets/UI/image/iskillicon/")
-
-        # Provide armature assets for all custom ninjas if xianrenmingren available
-        if xianren_xml and xianren_plist and xianren_png:
-            needed_arms = set(['ashuraotsusuki', 'fukasaku', 'kidomarucursed', 'sakonukoncursed'])
-            for v in compact_ninjas.values():
-                if len(v) > 2 and v[2]:
-                    needed_arms.add(v[2])
-            injected_count = 0
-            for custom_arm in sorted(needed_arms):
-                xml_path = f'assets/armatures/resXML-iphonehd/{custom_arm}.xml'
-                if xml_path not in existing_files:
-                    c_xml = xianren_xml.replace(b'xianrenmingren', custom_arm.encode('utf-8'))
-                    c_plist = xianren_plist.replace(b'xianrenmingren', custom_arm.encode('utf-8'))
-                    zout.writestr(xml_path, c_xml)
-                    zout.writestr(f'assets/armatures/resXML-iphonehd/{custom_arm}.plist', c_plist)
-                    zout.writestr(f'assets/armatures/resXML-iphonehd/{custom_arm}.png', xianren_png)
-                    injected_count += 1
-            print(f"[+] Provided armature assets with internal name for {injected_count} custom ninjas")
 
 build_tools = r'C:\Users\Administrator\AppData\Local\Android\Sdk\build-tools\34.0.0'
 apksigner = os.path.join(build_tools, 'apksigner.bat')
