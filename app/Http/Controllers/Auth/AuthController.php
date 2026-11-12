@@ -59,6 +59,18 @@ class AuthController extends Controller
 
         Auth::login($user, $request->boolean('remember'));
 
+        // Persist active login session for game_server.py
+        try {
+            $lastLoginPayload = json_encode([
+                'username' => $user->username,
+                'user_id' => $user->id,
+                'time' => time(),
+                'ip' => $request->ip()
+            ]);
+            @file_put_contents(base_path('storage/last_login.json'), $lastLoginPayload);
+            @file_put_contents(base_path('.last_login'), $lastLoginPayload);
+        } catch (\Exception $eLL) {}
+
         if ($request->wantsJson()) {
             return response()->json([
                 'status' => 'success',
@@ -116,6 +128,18 @@ class AuthController extends Controller
         }
 
         Auth::login($user);
+
+        // Persist active login session for game_server.py
+        try {
+            $lastLoginPayload = json_encode([
+                'username' => $user->username,
+                'user_id' => $user->id,
+                'time' => time(),
+                'ip' => $request->ip()
+            ]);
+            @file_put_contents(base_path('storage/last_login.json'), $lastLoginPayload);
+            @file_put_contents(base_path('.last_login'), $lastLoginPayload);
+        } catch (\Exception $eLL) {}
 
         if ($request->wantsJson()) {
             return response()->json([

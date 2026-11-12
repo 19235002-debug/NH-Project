@@ -55,150 +55,63 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
             }
         } catch(eQual) {}
 
-        // 2e-armature: Safeguard ArmatureLoad, RoleStopBox, and ArmatureTools against missing skeletal models
+        // 2e-blue-border: UR Ninja Blue Border & Blue Star Hook in SpriteFrameCache
         try {
-            var _VALID_ARMS = {
-                "afei":1,"ai":1,"anbu1":1,"anbu2":1,"aomoyi":1,"asima":1,"bai":1,"ban":1,"banzang":1,
-                "bingzuleitong":1,"buzhihuoxuanjian":1,"changshilang":1,"chitongkai":1,"chutian":1,
-                "cilangfang":1,"dahe":1,"daitu":1,"daluyi":1,"dashedou":1,"dashewan":1,"dayemu":1,
-                "didala":1,"dingci":1,"dou":1,"duoyouye":1,"erdaishuiying":1,"erweirenzhuli":1,
-                "feiduan":1,"feijian":1,"fengyingwoailuo":1,"gangshou":1,"guijiao":1,"guitongwan":1,
-                "hongdou":1,"huibisi":1,"jianmeicheng":1,"jiaodu":1,"jingye":1,"jingyin":1,"jinjiao":1,
-                "jiuweimingren":1,"jue":1,"junmalv":1,"kai":1,"kakaxi":1,"kanjiulang":1,"karuyi":1,
-                "liudaoban":1,"liudaodaitu":1,"liuweirenzhuli":1,"luwan":1,"maji":1,"mingren":1,
-                "muyeshaobing":1,"muyeshouwei":1,"muyewan":1,"ningci":1,"peien":1,"qiandaipopo":1,
-                "qilabi":1,"qing":1,"qiweirenzhuli":1,"quanzhongya":1,"sakedeng":1,"sandaihuoying":1,
-                "sandaileiying":1,"sanweirenzhuli":1,"shanchengqingye":1,"shayinshaobing":1,
-                "shayinshouwei":1,"shouju":1,"shuimen":1,"shuimu":1,"shuiyue":1,"sidaifengying":1,
-                "siweirenzhuli":1,"tiantian":1,"tuanzang":1,"tuosizhen":1,"wanhuatongzuozhu":1,
-                "weapon":1,"woailuo":1,"wu":1,"wuweirenzhuli":1,"wuyinshaobing":1,"wuyinshouwei":1,
-                "xianglin":1,"xianrenmingren":1,"xiaoli":1,"xiaonan":1,"xiaoying":1,"xie":1,
-                "xirihong":1,"yibixi":1,"yiluka":1,"yinjiao":1,"you":1,"yueguangjifeng":1,
-                "zaibuzhan":1,"zhaomeiming":1,"zhinai":1,"zhongwu":1,"zhouyinzuozhu":1,"zhujian":1,
-                "zilaiye":1,"zuojing":1,"zuojinyoujin":1,"zuozhu":1
-            };
-
-            if (typeof ArmatureLoad !== "undefined" && ArmatureLoad.prototype) {
-                if (ArmatureLoad.prototype.addXML) {
-                    var _origAddXML = ArmatureLoad.prototype.addXML;
-                    ArmatureLoad.prototype.addXML = function(xmlfile) {
-                        if (!xmlfile || !_VALID_ARMS[xmlfile]) {
-                            xmlfile = "xianrenmingren";
-                        }
-                        return _origAddXML.call(this, xmlfile);
-                    };
-                }
-                if (ArmatureLoad.prototype.setDataList) {
-                    var _origSetDataList = ArmatureLoad.prototype.setDataList;
-                    ArmatureLoad.prototype.setDataList = function(xmlfile) {
-                        if (xmlfile && typeof xmlfile === "string" && !_VALID_ARMS[xmlfile]) {
-                            xmlfile = "xianrenmingren";
-                        }
-                        return _origSetDataList.call(this, xmlfile);
-                    };
-                }
-            }
-
-            if (typeof RoleStopBox !== "undefined" && RoleStopBox.prototype) {
-                var _origRSBUpdata = RoleStopBox.prototype.updata;
-                RoleStopBox.prototype.updata = function(rid, b, cid, qlv) {
-                    var cfg = (typeof Config !== "undefined" && Config.getInstance) ? Config.getInstance() : null;
-                    var ro = (cfg && cfg.roleObject) ? cfg.roleObject[rid] : null;
-                    var origXml = ro ? ro.xmlfile : null;
-                    if (ro && ro.xmlfile && !_VALID_ARMS[ro.xmlfile]) {
-                        ro.xmlfile = "xianrenmingren";
+            if (typeof cc !== "undefined" && cc.SpriteFrameCache && cc.SpriteFrameCache.prototype) {
+                var _origGetSF = cc.SpriteFrameCache.prototype.getSpriteFrame;
+                cc.SpriteFrameCache.prototype.getSpriteFrame = function(name) {
+                    if (name === "image/iRGB32/quality_bar_8.png") {
+                        return _origGetSF.call(this, "image/iRGB32/quality_bar_3.png"); // Blue border for UR!
                     }
-                    var ret = _origRSBUpdata ? _origRSBUpdata.apply(this, arguments) : undefined;
-                    if (ro && origXml) {
-                        ro.xmlfile = origXml;
+                    if (name === "image/iicon/quality_xx_8.png") {
+                        return _origGetSF.call(this, "image/iicon/quality_xx_3.png"); // Blue star for UR!
                     }
-                    return ret;
+                    if (name === "image/iicon/quality_item_UR.png") {
+                        return _origGetSF.call(this, "image/iicon/quality_item_B.png");
+                    }
+                    if (name === "image/iicon/quality_skill_UR.png") {
+                        return _origGetSF.call(this, "image/iicon/quality_skill_B.png");
+                    }
+                    var f = _origGetSF.apply(this, arguments);
+                    if (!f && name && typeof name === "string") {
+                        if (name.indexOf("quality_bar_") !== -1) {
+                            return _origGetSF.call(this, "image/iRGB32/quality_bar_3.png");
+                        }
+                        if (name.indexOf("quality_xx_") !== -1) {
+                            return _origGetSF.call(this, "image/iicon/quality_xx_3.png");
+                        }
+                    }
+                    return f;
                 };
-
-                if (RoleStopBox.prototype.addRole) {
-                    var _origRSBAddRole = RoleStopBox.prototype.addRole;
-                    RoleStopBox.prototype.addRole = function(rid) {
-                        var cfg = (typeof Config !== "undefined" && Config.getInstance) ? Config.getInstance() : null;
-                        var ro = (cfg && cfg.roleObject) ? cfg.roleObject[rid] : null;
-                        var origXml = ro ? ro.xmlfile : null;
-                        if (ro && ro.xmlfile && !_VALID_ARMS[ro.xmlfile]) {
-                            ro.xmlfile = "xianrenmingren";
-                        }
-                        var ret = _origRSBAddRole ? _origRSBAddRole.apply(this, arguments) : undefined;
-                        if (ro && origXml) {
-                            ro.xmlfile = origXml;
-                        }
-                        if (this.roleArmature) {
-                            this.roleArmature.setVisible(true);
-                            try {
-                                var anim = this.roleArmature.getAnimation ? this.roleArmature.getAnimation() : null;
-                                if (anim && typeof anim.play === "function") {
-                                    anim.play("stand");
-                                }
-                            } catch(eAnim) {}
-                        }
-                        return ret;
-                    };
-                }
             }
+        } catch(eBorder) {}
 
-            if (typeof ArmatureTools !== "undefined") {
-                if (ArmatureTools.roleArmature) {
-                    var _origRoleArmature = ArmatureTools.roleArmature;
-                    ArmatureTools.roleArmature = function(rid) {
-                        var arm = null;
-                        var cfg = (typeof Config !== "undefined" && Config.getInstance) ? Config.getInstance() : null;
-                        var ro = (cfg && cfg.roleObject) ? cfg.roleObject[rid] : null;
-                        var origXml = ro ? ro.xmlfile : null;
-
-                        if (ro && ro.xmlfile && !_VALID_ARMS[ro.xmlfile]) {
-                            ro.xmlfile = "xianrenmingren";
-                        }
-
-                        try {
-                            arm = _origRoleArmature.apply(this, arguments);
-                        } catch(eArm) {}
-
-                        if (!arm && ro) {
-                            ro.xmlfile = "xianrenmingren";
-                            try { arm = _origRoleArmature.apply(this, arguments); } catch(eArm2) {}
-                        }
-                        if (!arm && ro) {
-                            ro.xmlfile = "mingren";
-                            try { arm = _origRoleArmature.apply(this, arguments); } catch(eArm3) {}
-                        }
-
-                        if (ro && origXml) {
-                            ro.xmlfile = origXml;
-                        }
-                        return arm;
-                    };
-                }
-            }
-
-            if (typeof ccs !== "undefined" && ccs.Armature && ccs.Armature.create) {
-                var _origArmatureCreate = ccs.Armature.create;
-                ccs.Armature.create = function(name) {
-                    try {
-                        var adm = (ccs.ArmatureDataManager && ccs.ArmatureDataManager.getInstance) ? ccs.ArmatureDataManager.getInstance() : null;
-                        if (adm && typeof adm.getArmatureData === "function") {
-                            var armData = adm.getArmatureData(name);
-                            if (!armData) {
-                                if (adm.getArmatureData("xianrenmingren")) {
-                                    return _origArmatureCreate.call(this, "xianrenmingren");
-                                }
-                                if (adm.getArmatureData("mingren")) {
-                                    return _origArmatureCreate.call(this, "mingren");
-                                }
-                            }
-                        }
-                    } catch(eArmData) {}
-                    try {
-                        return _origArmatureCreate.apply(this, arguments);
-                    } catch(eCreate) {
-                        try { return _origArmatureCreate.call(this, "xianrenmingren"); } catch(eC2) {}
-                        try { return _origArmatureCreate.call(this, "mingren"); } catch(eC3) {}
+        // 2e-armature: Safe ArmatureLoad & ArmatureTools fallbacks without touching native RoleStopBox
+        try {
+            if (typeof ArmatureLoad !== "undefined" && ArmatureLoad.prototype && ArmatureLoad.prototype.addXML) {
+                var _origAddXML = ArmatureLoad.prototype.addXML;
+                ArmatureLoad.prototype.addXML = function(xmlfile) {
+                    if (!xmlfile) {
+                        xmlfile = "mingren";
                     }
+                    return _origAddXML.call(this, xmlfile);
+                };
+            }
+
+            if (typeof ArmatureTools !== "undefined" && ArmatureTools.roleArmature) {
+                var _origRoleArmature = ArmatureTools.roleArmature;
+                ArmatureTools.roleArmature = function(rid) {
+                    var arm = null;
+                    try {
+                        arm = _origRoleArmature.apply(this, arguments);
+                    } catch(eArm) {}
+
+                    if (!arm) {
+                        try {
+                            arm = _origRoleArmature.call(this, 17, 0) || _origRoleArmature.call(this, 1, 0);
+                        } catch(eArm2) {}
+                    }
+                    return arm;
                 };
             }
         } catch(eArmSafe) {}
@@ -248,6 +161,10 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
                     ro[nid].quality = d[1];
                     ro[nid].xmlfile = d[2];
                     ro[nid].chakra = d[3];
+                    ro[nid].hp = d[4];
+                    ro[nid].attack = d[5];
+                    ro[nid].def = d[6];
+                    ro[nid].speed = d[7];
                     if (d[8]) {
                         ro[nid].special_jutsu = d[8];
                         if (!ro[nid].skill || !Array.isArray(ro[nid].skill) || ro[nid].skill.length === 0) {
@@ -712,7 +629,7 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
             }
         } catch(eVipGuard) {}
 
-        // 2i. InforNinJaScene: Fix "Sample Text" to real Ninja Name, grade text color (D..UR), and default ninjutsu
+        // 2i. InforNinJaScene: Replace "Sample Text" with real Ninja Name, grade text color (D..UR), and keep closeBtn active
         try {
             if (typeof InforNinJaScene !== "undefined" && InforNinJaScene.prototype) {
                 var _origInforNinJaUpdata = InforNinJaScene.prototype.updata;
@@ -736,37 +653,25 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
                         if (ctl) {
                             if (ctl.alt && typeof ctl.alt.setString === "function") {
                                 ctl.alt.setString(ninjaName);
-                                ctl.alt.setColor(col);
+                                if (typeof ctl.alt.setColor === "function") ctl.alt.setColor(col);
                             }
                             if (ctl.nameTF && typeof ctl.nameTF.setString === "function") {
                                 ctl.nameTF.setString(ninjaName);
-                                ctl.nameTF.setColor(col);
+                                if (typeof ctl.nameTF.setColor === "function") ctl.nameTF.setColor(col);
                             }
                             if (ctl.qualityTF && typeof ctl.qualityTF.setString === "function") {
                                 ctl.qualityTF.setString(qGrade);
-                                ctl.qualityTF.setColor(col);
+                                if (typeof ctl.qualityTF.setColor === "function") ctl.qualityTF.setColor(col);
                             }
                             if (ctl.zhiziTF && typeof ctl.zhiziTF.setColor === "function") {
                                 ctl.zhiziTF.setColor(col);
                             }
-
-                            if (ctl.skillList && ctl.skillList.length > 0) {
-                                var s0 = ctl.skillList[0];
-                                var defaultSkill = (ro && (ro.special_jutsu || (ro.skill && ro.skill[0]))) ? (ro.special_jutsu || ro.skill[0]) : 1149;
-                                var sdata = {
-                                    sid: defaultSkill,
-                                    id: defaultSkill,
-                                    type: 1,
-                                    idx: 0,
-                                    star: 1,
-                                    quality: (ro && ro.quality) ? ro.quality : 1
-                                };
-                                if (typeof s0.updataByRoledata === "function") {
-                                    try { s0.updataByRoledata(sdata); } catch(eUp0) {}
-                                } else if (typeof s0.updata === "function") {
-                                    try { s0.updata(defaultSkill, 1, 0); } catch(eUp0b) {}
-                                }
+                            if (ctl.closeBtn && typeof ctl.closeBtn.setEnabled === "function") {
+                                ctl.closeBtn.setEnabled(true);
                             }
+                        }
+                        if (this.closeBtn && typeof this.closeBtn.setEnabled === "function") {
+                            this.closeBtn.setEnabled(true);
                         }
                     } catch(eInf) {}
                     return ret;
@@ -822,11 +727,16 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
                         if (ctl) {
                             if (ctl.alt && typeof ctl.alt.setString === "function") {
                                 ctl.alt.setString(ninjaName);
-                                ctl.alt.setColor(col);
+                                if (typeof ctl.alt.setColor === "function") ctl.alt.setColor(col);
                             }
                             if (ctl.nameTF && typeof ctl.nameTF.setString === "function") {
                                 ctl.nameTF.setString(ninjaName);
-                                ctl.nameTF.setColor(col);
+                                if (typeof ctl.nameTF.setColor === "function") ctl.nameTF.setColor(col);
+                            }
+                            if (ctl.qualityTF && typeof ctl.qualityTF.setString === "function") {
+                                var qGrade = (typeof qualityIconlist !== "undefined" && qualityIconlist[quality]) ? qualityIconlist[quality] : "D";
+                                ctl.qualityTF.setString(qGrade);
+                                if (typeof ctl.qualityTF.setColor === "function") ctl.qualityTF.setColor(col);
                             }
                         }
                     } catch(eGain) {}
@@ -834,6 +744,41 @@ role_guard_code = '''    // 2e. Safeguard Config.roleObject, GameUserInfor, Game
                 };
             }
         } catch(eGainGuard) {}
+
+        // 2l. StartScene: Clean Switch Account / Logout button at top right
+        try {
+            if (typeof StartScene !== "undefined" && StartScene.prototype && StartScene.prototype.onEnter) {
+                var _origStartOnEnter = StartScene.prototype.onEnter;
+                StartScene.prototype.onEnter = function() {
+                    var ret = _origStartOnEnter ? _origStartOnEnter.apply(this, arguments) : undefined;
+                    try {
+                        if (!this.__nhSwitchBtn && typeof cc !== "undefined" && cc.MenuItemLabel && cc.LabelTTF) {
+                            this.__nhSwitchBtn = true;
+                            var size = cc.Director.getInstance().getWinSize();
+                            var lbl = cc.LabelTTF.create("Ganti Akun", "Helvetica", 20);
+                            lbl.setColor(cc.c3b(255, 220, 100));
+                            var item = cc.MenuItemLabel.create(lbl, function() {
+                                try {
+                                    if (typeof sys !== "undefined" && sys.localStorage) {
+                                        sys.localStorage.removeItem("nh_active_account");
+                                    }
+                                    if (typeof GameConnection !== "undefined" && GameConnection.sessionClose) {
+                                        GameConnection.sessionClose();
+                                    }
+                                    if (typeof MainView !== "undefined" && MainView.setPageView) {
+                                        MainView.setPageView("login");
+                                    }
+                                } catch(eLogout) {}
+                            }, this);
+                            var menu = cc.Menu.create(item);
+                            menu.setPosition(cc.p(size.width - 70, size.height - 30));
+                            this.addChild(menu, 9999);
+                        }
+                    } catch(eStartBtn) {}
+                    return ret;
+                };
+            }
+        } catch(eStartGuard) {}
     } catch (eRoleGuard) {
         if (typeof cc !== "undefined" && cc.log) cc.log("[NH Error] eRoleGuard: " + eRoleGuard);
     }
