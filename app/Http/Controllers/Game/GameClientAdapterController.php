@@ -8,6 +8,7 @@ use App\Models\PlayerNinja;
 use App\Models\ServerNotice;
 use App\Models\ApkIncomingLog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class GameClientAdapterController extends Controller
 {
