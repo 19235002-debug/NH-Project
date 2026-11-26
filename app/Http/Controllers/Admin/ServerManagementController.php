@@ -8,8 +8,53 @@ use Illuminate\Support\Facades\DB;
 
 class ServerManagementController extends Controller
 {
+    private function ensureTables()
+    {
+        DB::statement("CREATE TABLE IF NOT EXISTS `game_servers` (
+            `id` INT AUTO_INCREMENT PRIMARY KEY,
+            `name` VARCHAR(100) NOT NULL,
+            `host` VARCHAR(100) NOT NULL DEFAULT '127.0.0.1',
+            `port` INT NOT NULL DEFAULT 8080,
+            `status` TINYINT NOT NULL DEFAULT 1,
+            `is_new` TINYINT NOT NULL DEFAULT 1,
+            `is_recommend` TINYINT NOT NULL DEFAULT 1,
+            `state_tag` VARCHAR(20) NOT NULL DEFAULT 'smooth',
+            `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
+
+        DB::statement("CREATE TABLE IF NOT EXISTS `server_players` (
+            `id` INT AUTO_INCREMENT PRIMARY KEY,
+            `user_id` INT NOT NULL,
+            `server_id` INT NOT NULL,
+            `player_name` VARCHAR(100) DEFAULT NULL,
+            `level` INT NOT NULL DEFAULT 1,
+            `exp` INT NOT NULL DEFAULT 0,
+            `silver` BIGINT NOT NULL DEFAULT 50000,
+            `gold` BIGINT NOT NULL DEFAULT 500,
+            `stamina` INT NOT NULL DEFAULT 100,
+            `vip_level` INT NOT NULL DEFAULT 0,
+            `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            UNIQUE KEY `uniq_user_server` (`user_id`, `server_id`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
+
+        if (DB::table('game_servers')->count() === 0) {
+            DB::table('game_servers')->insert([
+                'id' => 1,
+                'name' => 'S1 - Konoha Village',
+                'host' => 'nh.digislams.my.id',
+                'port' => 18080,
+                'status' => 1,
+                'is_new' => 1,
+                'is_recommend' => 1,
+                'state_tag' => 'smooth',
+                'created_at' => now(),
+            ]);
+        }
+    }
+
     public function index()
     {
+        $this->ensureTables();
         $servers = DB::table('game_servers')
             ->leftJoin('server_players', 'game_servers.id', '=', 'server_players.server_id')
             ->select(
