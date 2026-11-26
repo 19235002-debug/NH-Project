@@ -68,6 +68,9 @@
                 <a href="{{ route('admin.players') }}" class="px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all flex items-center gap-2 {{ request()->routeIs('admin.players*') ? 'bg-amber-500 text-slate-950 font-black shadow-glow-gold' : 'text-slate-400 hover:text-white hover:bg-white/5' }}">
                     <i class="fa-solid fa-users-gear"></i> Manajemen Pemain
                 </a>
+                <a href="{{ route('admin.servers') }}" class="px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all flex items-center gap-2 {{ request()->routeIs('admin.servers*') ? 'bg-amber-500 text-slate-950 font-black shadow-glow-gold' : 'text-slate-400 hover:text-white hover:bg-white/5' }}">
+                    <i class="fa-solid fa-server"></i> Manajemen Server
+                </a>
                 <a href="{{ route('admin.notices') }}" class="px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all flex items-center gap-2 {{ request()->routeIs('admin.notices*') ? 'bg-amber-500 text-slate-950 font-black shadow-glow-gold' : 'text-slate-400 hover:text-white hover:bg-white/5' }}">
                     <i class="fa-solid fa-bullhorn"></i> Pengumuman Server
                 </a>
