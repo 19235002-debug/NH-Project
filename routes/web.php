@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\PlayerManagementController;
 use App\Http\Controllers\Admin\NoticeManagementController;
 use App\Http\Controllers\Admin\PacketInspectorController;
+use App\Http\Controllers\Admin\ServerManagementController;
 use App\Http\Controllers\Game\GameClientAdapterController;
 
 /*
@@ -145,4 +146,10 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     // Packet Inspector
     Route::get('/inspector', [PacketInspectorController::class, 'index'])->name('inspector');
     Route::post('/inspector/clear', [PacketInspectorController::class, 'clear'])->name('inspector.clear');
+
+    // Server Management
+    Route::get('/servers', [ServerManagementController::class, 'index'])->name('servers');
+    Route::post('/servers', [ServerManagementController::class, 'store'])->name('servers.store');
+    Route::post('/servers/{id}/toggle', [ServerManagementController::class, 'toggle'])->name('servers.toggle');
+    Route::delete('/servers/{id}', [ServerManagementController::class, 'destroy'])->name('servers.destroy');
 });

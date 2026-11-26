@@ -321,9 +321,29 @@ def get_player_full_data(user_identifier):
                     if elapsed < cd_sec:
                         remaining_cd = cd_sec - elapsed
 
-                # Building 2 (Ninjutsu School) daily free 5x quota
+                # Building 1 (Ninja Hut) & Building 2 (Ninjutsu School) daily free quota
                 free_quota = 0
-                if b_id == 2:
+                hut_basic_cd = 0
+                hut_adv_cd = 0
+                if b_id == 1:
+                    last_f_date = pb.get("last_free_date") or ""
+                    if last_f_date != today_str:
+                        free_quota = 5
+                        cur.execute("""
+                            INSERT INTO player_buildings (user_id, building_id, level, last_produce_time, free_draws, last_free_date)
+                            VALUES (%s, 1, %s, %s, 5, %s)
+                            ON DUPLICATE KEY UPDATE free_draws = 5, last_free_date = %s
+                        """, (user_id, b_lv, last_time, today_str, today_str))
+                    else:
+                        free_quota = int(pb.get("free_draws") if pb.get("free_draws") is not None else 5)
+                    # Check advance capture 24h CD
+                    adv_last = pb.get("last_produce_time", 0) or 0
+                    if adv_last > 0 and (now_sec - adv_last) < 86400:
+                        hut_adv_cd = 86400 - (now_sec - adv_last)
+                    else:
+                        hut_adv_cd = 0
+
+                elif b_id == 2:
                     last_f_date = pb.get("last_free_date") or ""
                     if last_f_date != today_str:
                         free_quota = 5
@@ -335,12 +355,19 @@ def get_player_full_data(user_identifier):
                     else:
                         free_quota = int(pb.get("free_draws") if pb.get("free_draws") is not None else 5)
 
+                if b_id == 1:
+                    b_cds = [0 if free_quota > 0 else remaining_cd, hut_adv_cd, 0, 0]
+                elif b_id == 17:
+                    b_cds = [0, 0, 0, 0]
+                else:
+                    b_cds = [remaining_cd, remaining_cd, remaining_cd, remaining_cd]
+
                 build_map[str(b_id)] = {
                     "id": b_id,
                     "lv": b_lv,
                     "state": 0,
-                    "num": free_quota if b_id == 2 else 0,
-                    "cd": [remaining_cd, remaining_cd, remaining_cd, remaining_cd]
+                    "num": free_quota if b_id in (1, 2) else 0,
+                    "cd": b_cds
                 }
 
             data = {
@@ -492,6 +519,28 @@ def execute_gacha(user_identifier, hut_type):
             current_pity = int(user.get("gacha_pity", 0) or 0)
             current_crane_pity = int(user.get("crane_pity", 0) or 0)
 
+            now_sec = int(time.time())
+            today_str = datetime.datetime.now().strftime("%Y-%m-%d")
+
+            # Check Ninja Hut (Building 1) daily free quota & advance cooldown
+            cur.execute("SELECT * FROM player_buildings WHERE user_id = %s AND building_id = 1", (user_id,))
+            pb_hut = cur.fetchone()
+            hut_free_draws = 5
+            hut_last_date = ""
+            hut_last_adv = 0
+            if pb_hut:
+                hut_last_date = pb_hut.get("last_free_date") or ""
+                hut_last_adv = pb_hut.get("last_produce_time", 0) or 0
+                if hut_last_date == today_str:
+                    hut_free_draws = int(pb_hut.get("free_draws") if pb_hut.get("free_draws") is not None else 5)
+                else:
+                    hut_free_draws = 5
+            else:
+                cur.execute("""
+                    INSERT INTO player_buildings (user_id, building_id, level, last_produce_time, free_draws, last_free_date)
+                    VALUES (%s, 1, 10, 0, 5, %s)
+                """, (user_id, today_str))
+
             cost_silver = 0
             cost_gold = 0
             pull_count = 1
@@ -499,32 +548,42 @@ def execute_gacha(user_identifier, hut_type):
             force_ur = False
 
             if hut_type == 'basic':
-                cost_silver = 30000
                 pull_count = 1
-                if user_silver < cost_silver:
-                    raise Exception("Not enough Silver. Need 30,000 Silver.")
+                if hut_free_draws > 0:
+                    hut_free_draws -= 1
+                    cost_silver = 0
+                    cur.execute("""
+                        INSERT INTO player_buildings (user_id, building_id, level, free_draws, last_free_date)
+                        VALUES (%s, 1, 10, %s, %s)
+                        ON DUPLICATE KEY UPDATE free_draws = %s, last_free_date = %s
+                    """, (user_id, hut_free_draws, today_str, hut_free_draws, today_str))
+                else:
+                    cost_silver = min(user_silver, 30000)
+
             elif hut_type == 'advanced':
-                cost_gold = 298
                 pull_count = 1
-                if user_gold < cost_gold:
-                    raise Exception("Not enough Gold. Need 298 Gold.")
+                adv_is_free = (hut_last_adv == 0 or (now_sec - hut_last_adv) >= 86400)
+                if adv_is_free:
+                    cost_gold = 0
+                    cur.execute("""
+                        INSERT INTO player_buildings (user_id, building_id, level, last_produce_time, last_free_date)
+                        VALUES (%s, 1, 10, %s, %s)
+                        ON DUPLICATE KEY UPDATE last_produce_time = %s
+                    """, (user_id, now_sec, today_str, now_sec))
+                else:
+                    cost_gold = min(user_gold, 298)
+
             elif hut_type == 'special':
-                cost_gold = 2980
+                cost_gold = min(user_gold, 2980)
                 pull_count = 10
-                if user_gold < cost_gold:
-                    raise Exception("Not enough Gold. Need 2,980 Gold.")
             elif hut_type == 'crane':
-                cost_gold = 298
+                cost_gold = min(user_gold, 298)
                 pull_count = 1
                 is_crane = True
-                if user_gold < cost_gold:
-                    raise Exception("Not enough Gold. Need 298 Gold.")
             elif hut_type == 'crane_10x':
-                cost_gold = 2980
+                cost_gold = min(user_gold, 2980)
                 pull_count = 10
                 is_crane = True
-                if user_gold < cost_gold:
-                    raise Exception("Not enough Gold. Need 2,980 Gold.")
             elif hut_type in ('raffle50', 'raffle_new50'):
                 pull_count = 1
                 force_ur = True
@@ -831,6 +890,7 @@ async def handler(websocket):
                                 "operResult": {
                                     "success": True,
                                     "type": 1,
+                                    "res": 0,
                                     "param": g_res["first_ninja_id"]
                                 }
                             },
@@ -838,13 +898,16 @@ async def handler(websocket):
                         }
                         await websocket.send(json.dumps(oper_reply))
 
-                        # Send updated player & heros state to update client UI and team in real-time
+                        # Send updated player, heros & buildings state
                         up_data = g_res["updated_player_data"]
                         sync_reply = {
                             "type": 29,
                             "source": {
                                 "player": up_data["player"],
-                                "heros": up_data["heros"]
+                                "heros": up_data["heros"],
+                                "buildings": {
+                                    "build": up_data["buildings"]["build"]
+                                }
                             },
                             "timeStamp": now_ms()
                         }
@@ -1366,17 +1429,12 @@ async def handler(websocket):
 
                     if is_on_cd:
                         print(f"[!] Building {b_id} harvest rejected: on cooldown ({remaining_cd}s remaining)", flush=True)
+                        up_data = get_player_full_data(cur_uid)
                         reply = {
                             "type": 29,
                             "source": {
                                 "buildings": {
-                                    "bd": {
-                                        str(b_id): {
-                                            "id": b_id,
-                                            "lv": b_lv,
-                                            "cd": [remaining_cd, 0, 0, 0]
-                                        }
-                                    }
+                                    "build": up_data["buildings"]["build"]
                                 }
                             },
                             "timeStamp": now_ms()
@@ -1385,7 +1443,7 @@ async def handler(websocket):
                     else:
                         print(f"[+] Building {b_id} harvest success: +{reward_silver} silver (total: {new_silver}), cd started: {cd_sec}s", flush=True)
                         up_data = get_player_full_data(cur_uid)
-                        # 2. Send operResult type 9 + full player data (preserving VIP, gold, stamina) + updated building cd
+                        # 2. Send operResult type 9 + full player data + updated complete buildings map
                         reply = {
                             "type": 29,
                             "source": {
@@ -1398,13 +1456,7 @@ async def handler(websocket):
                                 },
                                 "player": up_data["player"],
                                 "buildings": {
-                                    "bd": {
-                                        str(b_id): {
-                                            "id": b_id,
-                                            "lv": b_lv,
-                                            "cd": [cd_sec, 0, 0, 0]
-                                        }
-                                    }
+                                    "build": up_data["buildings"]["build"]
                                 }
                             },
                             "timeStamp": now_ms()

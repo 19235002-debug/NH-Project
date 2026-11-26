@@ -66,18 +66,35 @@ class GameClientAdapterController extends Controller
 
         $wsPort = (int) env('GAME_WS_PORT', ($hostIp === 'nh.digislams.my.id' || str_contains($hostIp, 'digislams.my.id')) ? 80 : 8080);
 
-        $serverList = [
-            [
-                1,                      // 0: sid
-                'S1 - Konoha Village',  // 1: server name
-                $hostIp,                // 2: server IP
-                $wsPort,                // 3: server Port (WebSocket game server)
-                1,                      // 4: server status
-                1,                      // 5: isNew
-                1,                      // 6: isRecommend
-                'smooth'                // 7: state tag
-            ]
-        ];
+        $dbServers = DB::table('game_servers')->orderBy('id', 'asc')->get();
+        $serverList = [];
+        foreach ($dbServers as $srv) {
+            $serverList[] = [
+                (int) $srv->id,
+                $srv->name,
+                $srv->host ?: $hostIp,
+                (int) ($srv->port ?: $wsPort),
+                (int) $srv->status,
+                (int) $srv->is_new,
+                (int) $srv->is_recommend,
+                $srv->state_tag ?: 'smooth',
+            ];
+        }
+
+        if (empty($serverList)) {
+            $serverList = [
+                [
+                    1,
+                    'S1 - Konoha Village',
+                    $hostIp,
+                    $wsPort,
+                    1,
+                    1,
+                    1,
+                    'smooth',
+                ]
+            ];
+        }
 
         $encoded = base64_encode(json_encode($serverList));
 
