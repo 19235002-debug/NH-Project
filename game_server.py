@@ -1558,7 +1558,7 @@ async def main():
     bound_port = None
     bound_host = None
 
-    for host in ["127.0.0.1", "0.0.0.0"]:
+    for host in ["0.0.0.0", "127.0.0.1"]:
         for p in ports_to_try:
             try:
                 server_main = await serve(
