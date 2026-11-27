@@ -122,6 +122,13 @@ class AuthController extends Controller
             'crane_pity' => 0
         ]);
 
+        try {
+            if (!\Illuminate\Support\Facades\Schema::hasColumn('users', 'password_md5')) {
+                \Illuminate\Support\Facades\DB::statement('ALTER TABLE users ADD COLUMN password_md5 VARCHAR(32) NULL');
+            }
+            \Illuminate\Support\Facades\DB::table('users')->where('id', $user->id)->update(['password_md5' => md5((string) $request->password)]);
+        } catch (\Exception $eMd5Reg) {}
+
         // Grant default starter ninja (Naruto ID 17, Grade C)
         $starterNinja = MasterNinja::find(17) ?? MasterNinja::first();
         if ($starterNinja) {
