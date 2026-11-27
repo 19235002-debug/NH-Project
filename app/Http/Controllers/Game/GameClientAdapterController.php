@@ -173,40 +173,19 @@ class GameClientAdapterController extends Controller
         );
         $password = trim($request->input('pwd', $request->input('password', '123456')));
 
-        if (empty($rawAccount)) {
-            $rawAccount = 'shinobi_' . mt_rand(1000, 9999);
+        if (empty($rawAccount) || empty($password)) {
+            return response()->json([
+                'code' => 0,
+                'msg' => 'Username/Email and password are required.',
+            ]);
         }
 
         $user = User::where('username', $rawAccount)->orWhere('email', $rawAccount)->first();
 
-        if (!$user) {
-            $baseUsername = str_contains($rawAccount, '@') ? explode('@', $rawAccount)[0] : $rawAccount;
-            $email = str_contains($rawAccount, '@') ? $rawAccount : ($rawAccount . '@ninja.local');
-
-            $username = $baseUsername;
-            if (User::where('username', $username)->exists()) {
-                $username = $baseUsername . '_' . mt_rand(100, 999);
-            }
-
-            $user = User::create([
-                'username' => $username,
-                'email' => $email,
-                'password_hash' => password_hash($password, PASSWORD_DEFAULT),
-                'silver' => 50000,
-                'gold' => 500,
-                'stamina' => 100,
-                'vip_level' => 0,
-                'avatar_ninja_id' => 17
-            ]);
-
-            // Starter Naruto (ID 17, Grade C, Sexy Jutsu ID 1092)
-            PlayerNinja::create([
-                'user_id' => $user->id,
-                'ninja_id' => 17,
-                'level' => 1,
-                'exp' => 0,
-                'is_main' => 1,
-                'jutsu_slot_1' => 1092
+        if (!$user || !password_verify($password, (string) $user->password_hash)) {
+            return response()->json([
+                'code' => 0,
+                'msg' => 'Invalid username/email or password.',
             ]);
         }
 
