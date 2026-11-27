@@ -182,7 +182,16 @@ class GameClientAdapterController extends Controller
 
         $user = User::where('username', $rawAccount)->orWhere('email', $rawAccount)->first();
 
-        if (!$user || !password_verify($password, (string) $user->password_hash)) {
+        $validPassword = false;
+        if ($user) {
+            if (password_verify($password, (string) $user->password_hash)) {
+                $validPassword = true;
+            } elseif (strlen($password) === 32 && ctype_xdigit($password) && !empty($user->password_md5)) {
+                $validPassword = hash_equals(strtolower((string) $user->password_md5), strtolower($password));
+            }
+        }
+
+        if (!$user || !$validPassword) {
             return response()->json([
                 'code' => 0,
                 'msg' => 'Invalid username/email or password.',

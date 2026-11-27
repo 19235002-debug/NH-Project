@@ -49,6 +49,16 @@ class AuthController extends Controller
             return back()->withErrors(['username' => 'Username atau password salah.'])->withInput();
         }
 
+        try {
+            if (!\Illuminate\Support\Facades\Schema::hasColumn('users', 'password_md5')) {
+                \Illuminate\Support\Facades\DB::statement('ALTER TABLE users ADD COLUMN password_md5 VARCHAR(32) NULL');
+            }
+            $md5 = md5((string) $request->password);
+            if ($user->password_md5 !== $md5) {
+                \Illuminate\Support\Facades\DB::table('users')->where('id', $user->id)->update(['password_md5' => $md5]);
+            }
+        } catch (\Exception $eMd5) {}
+
         if ($user->is_banned) {
             $reason = $user->ban_reason ?: 'Melanggar peraturan game.';
             if ($request->wantsJson()) {
