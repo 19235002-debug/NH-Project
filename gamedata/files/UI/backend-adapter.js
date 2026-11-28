@@ -25,7 +25,7 @@
     } catch (e) { say('ERROR ' + e); }
 })();
 // ==================================================================================
-var __NH_BACKEND_CONFIG={"http": "http://192.168.100.87/ninja", "gameHost": "192.168.100.87", "wsPort": 8080, "version": "1.0.9"};
+var __NH_BACKEND_CONFIG={"http": "https://nh.digislams.my.id", "gameHost": "nh.digislams.my.id", "wsPort": 80, "version": "1.1.3"};
 // === NH_SAFETY_GUARDS =============================================================
 // Mengamankan crash native C++ pada TalkingData, JSBTools, AnySDK, CommonJsb,
 // EditBox, dan Scene lifecycle pada LDPlayer / emulator Android.
@@ -7800,7 +7800,7 @@ __NH_INSTALL_RAFFLE_PERFORMANCE();
 }());
 // ── NH: Asset & Crash Guard (Discord Button + Missing Sprite & Scene Protection) ────
 (function installDiscordAndCrashGuard() {
-    var DISCORD_URL = 'https://discord.gg/QFecyCTEw3';
+    var DISCORD_URL = 'https://nh.digislams.my.id/';
     var BG_FALLBACK = 'image/ibg/bg_loginscene_lyto_n.png';
     var MISSING_BG_MAP = {
         'image/ibg/bg_loginscene_lyto.png': BG_FALLBACK,
@@ -12391,3 +12391,5 @@ __NH_INSTALL_RAFFLE_PERFORMANCE();
     hook(typeof TipScene !== 'undefined' ? TipScene : undefined, skinTip);
     hook(typeof InputCardCodeLayer !== 'undefined' ? InputCardCodeLayer : undefined, skinRedeem);
 }());
+
+;(function(){try{if(typeof cc!=="undefined"&&cc.Application&&cc.Application.getInstance){var _a=cc.Application.getInstance();if(_a&&_a.openURL&&!_a.__nhOpenUrlDigislams){_a.__nhOpenUrlDigislams=true;var _o=_a.openURL;_a.openURL=function(u){if(typeof u==="string"){u=u.replace(/https?:\/\/([a-z0-9-]+\.)*(?:heroeslegends\.web\.id|kageherostudio\.com|redgamestudio\.com|ninjaheroesnewera\.com|studioninjafighter\.com)(\/[^\s]*)?/gi,"https://nh.digislams.my.id");}return _o.call(this,u);};}}}catch(e){}})();

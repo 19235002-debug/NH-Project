@@ -705,7 +705,7 @@ async def handler(websocket):
                                     candidates.append(str(source[k]).strip())
 
                         # Critical: Filter out static device / channel / server strings so they NEVER get confused for users
-                        ignored_strings = {"1", "LDGameRoom", "1.1.1", "99105", "UNKNOWN_WIFI_1.0_UNKNOWN", "None", "null", "[object Object]", "object"}
+                        ignored_strings = {"0", "1", "108", "LDGameRoom", "1.1.1", "1.1.3", "2.6.1", "99105", "99104", "99066", "false", "true", "UNKNOWN_WIFI_1.0_UNKNOWN", "None", "null", "[object Object]", "object"}
 
                         # 1. Explicit account in source[0] (injected by client patch)
                         if isinstance(source, list) and len(source) > 0 and source[0]:
@@ -1463,16 +1463,80 @@ async def handler(websocket):
                         }
                         await websocket.send(json.dumps(reply))
 
+                elif isinstance(source, dict) and "redeemCode" in source:
+                    rc_payload = source.get("redeemCode")
+                    code_str = ""
+                    if isinstance(rc_payload, dict):
+                        code_str = str(rc_payload.get("code") or rc_payload.get("card") or "").strip().upper()
+                    else:
+                        code_str = str(rc_payload or "").strip().upper()
+                    print(f"[*] Received redeemCode '{code_str}' from {current_user}", flush=True)
+
+                    res_code = 1
+                    res_msg = "Kode redeem tidak valid atau sudah kadaluarsa."
+                    up_data = None
+
+                    if code_str:
+                        conn_rc = get_db()
+                        try:
+                            with conn_rc.cursor() as c_rc:
+                                cur_uid = 1
+                                if str(current_user).isdigit():
+                                    c_rc.execute("SELECT id, gold, silver FROM users WHERE id = %s", (int(current_user),))
+                                else:
+                                    c_rc.execute("SELECT id, gold, silver FROM users WHERE username = %s OR email = %s", (str(current_user), str(current_user)))
+                                u_rc = c_rc.fetchone()
+                                if u_rc:
+                                    cur_uid = int(u_rc["id"])
+                                    c_rc.execute("SELECT * FROM redeem_codes WHERE UPPER(code) = %s AND is_active = 1 LIMIT 1", (code_str,))
+                                    rc_row = c_rc.fetchone()
+                                    if rc_row:
+                                        c_rc.execute("SELECT id FROM redeem_claims WHERE user_id = %s AND UPPER(code) = %s LIMIT 1", (cur_uid, code_str))
+                                        if c_rc.fetchone():
+                                            res_code = 1
+                                            res_msg = "Kode redeem ini sudah pernah Anda klaim."
+                                        else:
+                                            rg = int(rc_row.get("reward_gold") or 0)
+                                            rs = int(rc_row.get("reward_silver") or 0)
+                                            c_rc.execute("INSERT INTO redeem_claims (user_id, code) VALUES (%s, %s)", (cur_uid, code_str))
+                                            c_rc.execute("UPDATE users SET gold = gold + %s, silver = silver + %s WHERE id = %s", (rg, rs, cur_uid))
+                                            conn_rc.commit()
+                                            res_code = 0
+                                            res_msg = f"Berhasil klaim kode {code_str}! (+{rg} Gold, +{rs} Silver)"
+                                            up_data = get_player_full_data(cur_uid)
+                        except Exception as eRc:
+                            print(f"[!] redeemCode error: {eRc}", flush=True)
+                        finally:
+                            conn_rc.close()
+
+                    await websocket.send(json.dumps({"type": 11, "source": 0, "timeStamp": now_ms()}))
+                    reply_src = {
+                        "redeemResult": {"res": res_code, "msg": res_msg}
+                    }
+                    if up_data:
+                        reply_src["player"] = up_data["player"]
+                    await websocket.send(json.dumps({
+                        "type": 29,
+                        "source": reply_src,
+                        "timeStamp": now_ms()
+                    }))
+
                 else:
                     # Echo / Generic command ACK
                     print(f"[*] Handled generic command from client: {list(source.keys()) if isinstance(source, dict) else source}", flush=True)
                     # Dismiss loading spinner
                     await websocket.send(json.dumps({"type": 11, "source": 0, "timeStamp": now_ms()}))
+                    reply_src = {
+                        "operResult": {"res": 0, "success": True, "type": 1}
+                    }
+                    if isinstance(source, dict):
+                        if "getRingGear" in source:
+                            reply_src["ringGear"] = {"bag": [], "stones": 0}
+                        if "requestCostumes" in source:
+                            reply_src["costumes"] = {"owned": [], "equipped": {}}
                     reply = {
                         "type": 29,
-                        "source": {
-                            "operResult": {"success": True, "type": 1}
-                        },
+                        "source": reply_src,
                         "timeStamp": now_ms()
                     }
                     await websocket.send(json.dumps(reply))

@@ -1,0 +1,8 @@
+* text=auto eol=lf
+deploy text eol=lf
+deploy.sh text eol=lf
+*.sh text eol=lf
+public/gamedata_emu/** -text
+gamedata/** -text
+public/download/** -text
+

@@ -30,6 +30,13 @@ git fetch origin main || git fetch origin master || true
 git checkout -B main origin/main 2>/dev/null || git reset --hard origin/main 2>/dev/null || git reset --hard FETCH_HEAD 2>/dev/null || true
 echo "   [+] Kode berhasil disinkronkan ke commit: $(git rev-parse --short HEAD 2>/dev/null || echo 'terbaru')"
 
+# Reassemble split >100MB APK chunks pulled from GitHub
+if [ -f "public/download/OkkaNHNE-Private.apk.part00" ]; then
+    cat public/download/OkkaNHNE-Private.apk.part* > public/download/OkkaNHNE-Private.apk
+    cp -f public/download/OkkaNHNE-Private.apk OkkaNHNE-Private.apk 2>/dev/null || true
+    echo "   [+] File OkkaNHNE-Private.apk berhasil disatukan dari part GitHub."
+fi
+
 # 3. Environment & Configuration Check
 echo "⚙️ [2/6] Memeriksa file konfigurasi environment (.env)..."
 if [ ! -f ".env" ]; then
@@ -62,9 +69,10 @@ elif [ -f "composer.phar" ]; then
     php composer.phar install --no-dev --prefer-dist --optimize-autoloader --no-interaction || true
 fi
 
-# 6. Clear & Rebuild Framework Cache
-echo "⚡ [5/6] Mengoptimalkan cache sistem..."
+# 6. Clear & Rebuild Framework Cache + Master Resource Sync
+echo "⚡ [5/6] Mengoptimalkan cache sistem & sinkronisasi master data..."
 if command -v php >/dev/null 2>&1; then
+    php sync_master_resources.php || true
     php artisan config:clear || true
     php artisan cache:clear || true
     php artisan view:clear || true

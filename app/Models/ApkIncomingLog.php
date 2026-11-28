@@ -10,6 +10,16 @@ class ApkIncomingLog extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'id', 'method', 'endpoint', 'headers', 'body', 'ip', 'created_at'
+        'id', 'method', 'endpoint', 'headers', 'body', 'payload', 'ip', 'ip_address', 'created_at'
     ];
+
+    public function getIpAttribute($value)
+    {
+        return $value ?? ($this->attributes['ip_address'] ?? null);
+    }
+
+    public function getBodyAttribute($value)
+    {
+        return $value ?? ($this->attributes['payload'] ?? null);
+    }
 }

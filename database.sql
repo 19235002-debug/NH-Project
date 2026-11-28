@@ -1518,3 +1518,294 @@ UNLOCK TABLES;
 
 -- Dump completed on 2026-11-09 20:55:49
 
+-- === NH HERO LEGEND ORI v206 RESOURCE SYNC ===
+CREATE TABLE IF NOT EXISTS `game_servers` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(100) NOT NULL,
+  `host` VARCHAR(100) NOT NULL DEFAULT 'nh.digislams.my.id',
+  `port` INT NOT NULL DEFAULT 80,
+  `status` TINYINT NOT NULL DEFAULT 1,
+  `is_new` TINYINT NOT NULL DEFAULT 1,
+  `is_recommend` TINYINT NOT NULL DEFAULT 1,
+  `state_tag` VARCHAR(20) NOT NULL DEFAULT 'smooth',
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `game_servers` (`id`, `name`, `host`, `port`, `status`, `is_new`, `is_recommend`, `state_tag`)
+VALUES (1, 'S1 - Konoha Village', 'nh.digislams.my.id', 80, 1, 1, 1, 'smooth')
+ON DUPLICATE KEY UPDATE `host` = 'nh.digislams.my.id', `port` = 80;
+CREATE TABLE IF NOT EXISTS `redeem_codes` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `code` VARCHAR(32) NOT NULL UNIQUE,
+  `reward_gold` INT NOT NULL DEFAULT 500,
+  `reward_silver` INT NOT NULL DEFAULT 100000,
+  `is_active` TINYINT NOT NULL DEFAULT 1,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE IF NOT EXISTS `redeem_claims` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `user_id` INT NOT NULL,
+  `code` VARCHAR(32) NOT NULL,
+  `claimed_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE KEY `uniq_user_code` (`user_id`, `code`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `redeem_codes` (`code`, `reward_gold`, `reward_silver`, `is_active`)
+VALUES
+  ('NH2026', 1000, 250000, 1),
+  ('SHINOBI', 500, 100000, 1),
+  ('KONOHA', 800, 200000, 1)
+ON DUPLICATE KEY UPDATE `is_active` = VALUES(`is_active`);
+INSERT INTO `master_ninjas` (`id`,`name`,`xmlfile`,`quality`,`grade`,`chakra_type`,`element`,`base_hp`,`base_atk`,`base_def`,`base_speed`,`special_jutsu_id`,`learnable_jutsus`,`pos_top`,`pos_bottom`,`pos_left`,`pos_right`,`home_bg`,`description`,`gacha_available`,`image_url`,`title`)
+VALUES (216,'Konan Angel','konanangel',6,'SS',3,'Lightning',2000,176,191,171,1325,'1325|1016|1131|1142|1019|1143',2,4,4,4,3,'The only gentle girl in Akatsuki, Jiraiya\'s disciple who likes Origami and always follows Nagato and Yahiko.',1,'/images/ninja_heads/konanangel_h.png','Shinobi')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`xmlfile`=VALUES(`xmlfile`),`quality`=VALUES(`quality`),`grade`=VALUES(`grade`),`base_hp`=VALUES(`base_hp`),`base_atk`=VALUES(`base_atk`),`base_def`=VALUES(`base_def`),`base_speed`=VALUES(`base_speed`),`special_jutsu_id`=VALUES(`special_jutsu_id`),`learnable_jutsus`=VALUES(`learnable_jutsus`),`image_url`=VALUES(`image_url`);
+INSERT INTO `master_ninjas` (`id`,`name`,`xmlfile`,`quality`,`grade`,`chakra_type`,`element`,`base_hp`,`base_atk`,`base_def`,`base_speed`,`special_jutsu_id`,`learnable_jutsus`,`pos_top`,`pos_bottom`,`pos_left`,`pos_right`,`home_bg`,`description`,`gacha_available`,`image_url`,`title`)
+VALUES (217,'Mitsuki Timeskip','mitsukitimeskip',8,'UR',5,'Water',2845,269,280,270,1326,'1326|1227|1225|1163|1024|1147',2,4,1,2,1,'One of the man-made people made by Orochimaru, who is generally treated by Orochimaru as his own children.',1,'/images/ninja_heads/mitsukitimeskip_h.png','Shinobi')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`xmlfile`=VALUES(`xmlfile`),`quality`=VALUES(`quality`),`grade`=VALUES(`grade`),`base_hp`=VALUES(`base_hp`),`base_atk`=VALUES(`base_atk`),`base_def`=VALUES(`base_def`),`base_speed`=VALUES(`base_speed`),`special_jutsu_id`=VALUES(`special_jutsu_id`),`learnable_jutsus`=VALUES(`learnable_jutsus`),`image_url`=VALUES(`image_url`);
+INSERT INTO `master_ninjas` (`id`,`name`,`xmlfile`,`quality`,`grade`,`chakra_type`,`element`,`base_hp`,`base_atk`,`base_def`,`base_speed`,`special_jutsu_id`,`learnable_jutsus`,`pos_top`,`pos_bottom`,`pos_left`,`pos_right`,`home_bg`,`description`,`gacha_available`,`image_url`,`title`)
+VALUES (218,'Pain Tendo','paintendo',7,'SSS',2,'Wind',2435,214,236,213,1327,'1327|1016|1034|1042|1096|1091',4,1,3,3,3,'Nominal boss of the Akatsuki, Jiraiya\'s disciple and actually a corpse controlled by Nagato with the Rinnegan, whose Six Paths technique is strong enough to instantly kill the entire Hidden Leaf Village.',1,'/images/ninja_heads/paintendo_h.png','Shinobi')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`xmlfile`=VALUES(`xmlfile`),`quality`=VALUES(`quality`),`grade`=VALUES(`grade`),`base_hp`=VALUES(`base_hp`),`base_atk`=VALUES(`base_atk`),`base_def`=VALUES(`base_def`),`base_speed`=VALUES(`base_speed`),`special_jutsu_id`=VALUES(`special_jutsu_id`),`learnable_jutsus`=VALUES(`learnable_jutsus`),`image_url`=VALUES(`image_url`);
+INSERT INTO `master_ninjas` (`id`,`name`,`xmlfile`,`quality`,`grade`,`chakra_type`,`element`,`base_hp`,`base_atk`,`base_def`,`base_speed`,`special_jutsu_id`,`learnable_jutsus`,`pos_top`,`pos_bottom`,`pos_left`,`pos_right`,`home_bg`,`description`,`gacha_available`,`image_url`,`title`)
+VALUES (219,'Prime Sakura','primesakura',7,'SSS',5,'Water',2435,214,236,213,1328,'1328|1224|1229|1186|1123|1039|1125',2,4,4,1,1,'Marks spread all over the body, and the instant she is injured, she will continue to recover at high speed.',1,'/images/ninja_heads/primesakura_h.png','Shinobi')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`xmlfile`=VALUES(`xmlfile`),`quality`=VALUES(`quality`),`grade`=VALUES(`grade`),`base_hp`=VALUES(`base_hp`),`base_atk`=VALUES(`base_atk`),`base_def`=VALUES(`base_def`),`base_speed`=VALUES(`base_speed`),`special_jutsu_id`=VALUES(`special_jutsu_id`),`learnable_jutsus`=VALUES(`learnable_jutsus`),`image_url`=VALUES(`image_url`);
+INSERT INTO `master_ninjas` (`id`,`name`,`xmlfile`,`quality`,`grade`,`chakra_type`,`element`,`base_hp`,`base_atk`,`base_def`,`base_speed`,`special_jutsu_id`,`learnable_jutsus`,`pos_top`,`pos_bottom`,`pos_left`,`pos_right`,`home_bg`,`description`,`gacha_available`,`image_url`,`title`)
+VALUES (220,'Tobirama Edo Tensei','tobiramaedotensei',7,'SSS',5,'Water',2435,214,236,213,1329,'1329|1087|1043|1025|1012|1035|1034',4,4,2,1,1,'The 2nd Hokage, steady, sophisticated, cruel and restrained. He has tough political tactics and often manages his simple elder brother. He looks like an adviser but actually a housekeeper.',1,'/images/ninja_heads/tobiramaedotensei_h.png','Shinobi')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`xmlfile`=VALUES(`xmlfile`),`quality`=VALUES(`quality`),`grade`=VALUES(`grade`),`base_hp`=VALUES(`base_hp`),`base_atk`=VALUES(`base_atk`),`base_def`=VALUES(`base_def`),`base_speed`=VALUES(`base_speed`),`special_jutsu_id`=VALUES(`special_jutsu_id`),`learnable_jutsus`=VALUES(`learnable_jutsus`),`image_url`=VALUES(`image_url`);
+INSERT INTO `master_ninjas` (`id`,`name`,`xmlfile`,`quality`,`grade`,`chakra_type`,`element`,`base_hp`,`base_atk`,`base_def`,`base_speed`,`special_jutsu_id`,`learnable_jutsus`,`pos_top`,`pos_bottom`,`pos_left`,`pos_right`,`home_bg`,`description`,`gacha_available`,`image_url`,`title`)
+VALUES (221,'Shibai Otsutsuki','shibaiotsutsuki',8,'UR',5,'Water',3000,285,295,285,1329,'1329|1087|1043|1025|1012|1035|1034',4,4,2,1,1,'A horned Otsutsuki with a third eye on his forehead. Torn robes, silver hair and a calm, merciless gaze.',1,'/images/ninja_heads/shibaiotsutsuki_h.png','Shinobi')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`xmlfile`=VALUES(`xmlfile`),`quality`=VALUES(`quality`),`grade`=VALUES(`grade`),`base_hp`=VALUES(`base_hp`),`base_atk`=VALUES(`base_atk`),`base_def`=VALUES(`base_def`),`base_speed`=VALUES(`base_speed`),`special_jutsu_id`=VALUES(`special_jutsu_id`),`learnable_jutsus`=VALUES(`learnable_jutsus`),`image_url`=VALUES(`image_url`);
+INSERT INTO `master_jutsus` (`id`,`name`,`description`,`desc_dmg`,`desc_turn`,`probability`,`turn_limit`,`when_trigger`,`quality`,`grade`,`category`,`act_type`,`alter_target`,`icon`,`chakra_type`,`element`)
+VALUES (1325,'Paper Person of God','Splits the sea, concealing 600 billion paper bombs disguised beneath it to trigger continuous explosions. Deals 4% HP damage for 2 turns.','380%Strength',2,20,0,2,8,'UR','Ninjutsu','1','alter(when=2,type=1,ratios=380)|alter(when=1,type=3,ratios=4;4)','skill_325',3,'Lightning')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`quality`=VALUES(`quality`),`grade`=VALUES(`grade`),`icon`=VALUES(`icon`);
+INSERT INTO `master_jutsus` (`id`,`name`,`description`,`desc_dmg`,`desc_turn`,`probability`,`turn_limit`,`when_trigger`,`quality`,`grade`,`category`,`act_type`,`alter_target`,`icon`,`chakra_type`,`element`)
+VALUES (1326,'Snake Sage Mode Transformation','Activates Perfect Snake Sage Mode to attack and amplify the user\'s power, healing 5% HP, and dealing 5% poison damage on the next turn.','360%Strength',2,20,0,2,8,'UR','Ninjutsu','1','alter(when=2,type=1,ratios=360)|alter(when=1,type=3,ratios=5)','skill_326',3,'Lightning')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`quality`=VALUES(`quality`),`grade`=VALUES(`grade`),`icon`=VALUES(`icon`);
+INSERT INTO `master_jutsus` (`id`,`name`,`description`,`desc_dmg`,`desc_turn`,`probability`,`turn_limit`,`when_trigger`,`quality`,`grade`,`category`,`act_type`,`alter_target`,`icon`,`chakra_type`,`element`)
+VALUES (1327,'Shinra Tensei','Executes the maximum output of Almighty Push to instantly obliterate the entire place and sacrifice user 10% HP.','788%Strength',2,20,0,2,8,'UR','Ninjutsu','1','alter(when=2,type=1,ratios=788)','skill_327',2,'Wind')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`quality`=VALUES(`quality`),`grade`=VALUES(`grade`),`icon`=VALUES(`icon`);
+INSERT INTO `master_jutsus` (`id`,`name`,`description`,`desc_dmg`,`desc_turn`,`probability`,`turn_limit`,`when_trigger`,`quality`,`grade`,`category`,`act_type`,`alter_target`,`icon`,`chakra_type`,`element`)
+VALUES (1328,'Shannaro','Amplifies the user\'s power using the Strength of a Hundred Seal to unleash a powerful punch. Then releases the seal to heal 3% HP for 4 turns.','450%Strength',2,20,0,2,8,'UR','Ninjutsu','1','alter(when=2,type=1,ratios=450)','skill_328',5,'Water')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`quality`=VALUES(`quality`),`grade`=VALUES(`grade`),`icon`=VALUES(`icon`);
+INSERT INTO `master_jutsus` (`id`,`name`,`description`,`desc_dmg`,`desc_turn`,`probability`,`turn_limit`,`when_trigger`,`quality`,`grade`,`category`,`act_type`,`alter_target`,`icon`,`chakra_type`,`element`)
+VALUES (1329,'Tandem Paper Bombs','Place paper bomb which will be multiply and denotated after 2 rounds. Decrease 28% of current HP.','',3,20,0,2,8,'UR','Ninjutsu','1','alter(when=1,type=4,ratios=0;0;28)','skill_329',1,'Fire')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`quality`=VALUES(`quality`),`grade`=VALUES(`grade`),`icon`=VALUES(`icon`);
+INSERT INTO `master_jutsus` (`id`,`name`,`description`,`desc_dmg`,`desc_turn`,`probability`,`turn_limit`,`when_trigger`,`quality`,`grade`,`category`,`act_type`,`alter_target`,`icon`,`chakra_type`,`element`)
+VALUES (1330,'Katsuyu Rebirth','Summon Katsuyu to recover 20% of the Max HP instantly, then another 10% of the Max HP in each of the next 2 turns','',2,20,0,2,7,'SSS','Ninjutsu','1','','skill_288',0,'None')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`quality`=VALUES(`quality`),`grade`=VALUES(`grade`),`icon`=VALUES(`icon`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5900,'107Ninja Box','item_005','Obtain all of the 107 Ninjia',16,'<silver|500>',99,1,5,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5901,'1-36Ninja Box','item_005','Obtain 1-36 Ninjia',16,'<silver|500>',99,1,5,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5902,'37-72Ninja Box','item_005','Obtain 37-72 Ninjia',16,'<silver|500>',99,1,5,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5903,'73-107Ninja Box','item_005','Obtain 73-107 Ninjia',16,'<silver|500>',99,1,5,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5904,'1-6Ninja Box','item_004','1-6Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5905,'7-11Ninja Box','item_004','7-11Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5906,'12-18Ninja Box','item_004','12-18Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5907,'19-24Ninja Box','item_004','19-24Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5908,'25-30Ninja Box','item_004','25-30Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5909,'31-36Ninja Box','item_004','31-36Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5910,'37-42Ninja Box','item_004','37-42Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5911,'43-48Ninja Box','item_004','43-48Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5912,'49-54Ninja Box','item_004','49-54Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5913,'55-60Ninja Box','item_004','55-60Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5914,'61-66Ninja Box','item_004','61-66Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5915,'67-72Ninja Box','item_004','67-72Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5916,'73-78Ninja Box','item_004','73-78Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5917,'79-84Ninja Box','item_004','79-84Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5918,'85-90Ninja Box','item_004','85-90Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5919,'91-96Ninja Box','item_004','91-96Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5920,'97-102Ninja Box','item_004','97-102Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5921,'103-107Ninja Box','item_004','103-107Ninja Box',16,'<silver|500>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5995,'Secret Ninja Training Scroll','item_029','Item that required for Ninja Training, the attribute can be raised or lowered randomly',19,'<silver|100>',99,1,3,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5996,'Heaven Training Scroll','item_032','Item that required for Ninja Training, will reduce the attack and raised other attribute randomly',19,'<silver|100>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5997,'Earth Training Scroll','item_033','Item that required for Ninja Training, will reduce the defend and raised other attribute randomly',19,'<silver|100>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5998,'Ninja Training Scroll','item_034','Item that required for Ninja Training, will reduce the HP and raised other attribute randomly',19,'<silver|100>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5999,'Wood Training Scroll','item_035','Item that required for Ninja Training, will reduce the agility and raised other attribute randomly',19,'<silver|100>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5421,'Bronze Box','item_006','You could obtain : Class-B Ninja x1, Class-C Ninja x1, Class-B Gear x1, Class-B Gear Material x1, Class-C Gear x1, Class-C Gear Material x1, Wood Stone x1',10,'<silver|5000>',99,1,3,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5422,'Silver Box','item_007','You could obtain : Class-A Ninja x1, Class-S Ninja Card x1, Class-A Gear x1, Class-A Gear Material x1, Class-A Ninjutsu Scroll x1, Class-S Ninjutsu Scroll x1, Secret Scroll x1, Wood Stone x1, Gold',10,'<silver|5000>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5423,'Gold Box','item_008','You could obtain : Class-A Ninja x1, Class-S Ninja x1, Class-SS Ninja x1, Class-S Ninja Card x1, Class-SS Ninja Card x1, Class-A Gear x1, Class-A Gear Material x1, Class-S Gear Material x1, Class-SS Gear Material x1, Class-SSS Gear Material x1, Training Scroll x1, Class-A Ninjutsu Scroll x1, Class-S Ninjutsu Scroll x1, Class-SS Ninjutsu Scroll x1, Wood Stone x1, 0.01% chance to obtain 1000 Gold',10,'<silver|5000>',99,1,6,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5424,'Lower Exp Item','item_039','Ninja experience increased 50 points after use',20,'<silver|100>',99,1,3,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5425,'Intermediate Exp Item','item_040','Ninja experience increased 300 points after use',20,'<silver|100>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5426,'Advanced Exp Item','item_041','Ninja experience increased 1500 points after use',20,'<silver|100>',99,1,5,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5427,'Premium Exp Item','item_042','Ninja experience increased 7500 points after use',20,'<silver|100>',99,1,6,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5428,'Platinum Box','item_045','You could obtain : Chakra Mask x1, Stone of Inheritance x1, Ten Tailed Chakra x1',10,'<silver|10000>',99,1,8,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5429,'SSS Exp Item','item_047','Ninja experience increased 80000 points after use',20,'<silver|100>',99,1,7,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5430,'UR Exp Item','item_048','Ninja experience increased 500000 points after use',20,'<silver|100>',99,1,8,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5200,'Awakening Emblem','item_emblem_awakening','Emblem. Equip it in Player Profile > Emblem: +5% ATK, DEF, HP and AGI to all ninjas, and its banner shows on your Level card.',10,'<silver|1>',99,1,8,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5201,'Attacker Emblem','item_emblem_attacker','Emblem. Equip it in Player Profile > Emblem: +12% ATK and +4% AGI to all ninjas, and its banner shows on your Level card.',10,'<silver|1>',99,1,8,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5202,'Legendary Emblem','item_emblem_legendary','Emblem. Equip it in Player Profile > Emblem: +1% ATK, DEF, HP and AGI to all ninjas, and its banner shows on your Level card.',10,'<silver|1>',99,1,8,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5301,'D Attack Ring','item_ring_1','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Attack to that ninja.',10,'<silver|1>',99,1,1,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5302,'C Attack Ring','item_ring_2','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Attack to that ninja.',10,'<silver|1>',99,1,2,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5303,'B Attack Ring','item_ring_3','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Attack to that ninja.',10,'<silver|1>',99,1,3,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5304,'A Attack Ring','item_ring_4','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Attack to that ninja.',10,'<silver|1>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5305,'S Attack Ring','item_ring_5','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Attack to that ninja.',10,'<silver|1>',99,1,5,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5306,'UR Attack Ring','item_ring_6','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Attack to that ninja.',10,'<silver|1>',99,1,8,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5311,'D Defense Ring','item_ring_1','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Defense to that ninja.',10,'<silver|1>',99,1,1,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5312,'C Defense Ring','item_ring_2','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Defense to that ninja.',10,'<silver|1>',99,1,2,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5313,'B Defense Ring','item_ring_3','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Defense to that ninja.',10,'<silver|1>',99,1,3,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5314,'A Defense Ring','item_ring_4','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Defense to that ninja.',10,'<silver|1>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5315,'S Defense Ring','item_ring_5','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Defense to that ninja.',10,'<silver|1>',99,1,5,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5316,'UR Defense Ring','item_ring_6','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Defense to that ninja.',10,'<silver|1>',99,1,8,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5321,'D HP Ring','item_ring_1','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +HP to that ninja.',10,'<silver|1>',99,1,1,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5322,'C HP Ring','item_ring_2','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +HP to that ninja.',10,'<silver|1>',99,1,2,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5323,'B HP Ring','item_ring_3','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +HP to that ninja.',10,'<silver|1>',99,1,3,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5324,'A HP Ring','item_ring_4','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +HP to that ninja.',10,'<silver|1>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5325,'S HP Ring','item_ring_5','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +HP to that ninja.',10,'<silver|1>',99,1,5,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5326,'UR HP Ring','item_ring_6','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +HP to that ninja.',10,'<silver|1>',99,1,8,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5331,'D Agility Ring','item_ring_1','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Agility to that ninja.',10,'<silver|1>',99,1,1,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5332,'C Agility Ring','item_ring_2','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Agility to that ninja.',10,'<silver|1>',99,1,2,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5333,'B Agility Ring','item_ring_3','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Agility to that ninja.',10,'<silver|1>',99,1,3,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5334,'A Agility Ring','item_ring_4','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Agility to that ninja.',10,'<silver|1>',99,1,4,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5335,'S Agility Ring','item_ring_5','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Agility to that ninja.',10,'<silver|1>',99,1,5,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5336,'UR Agility Ring','item_ring_6','Ring. Goes straight to your ring bag. Equip it in Ninja > ring slot: flat +Agility to that ninja.',10,'<silver|1>',99,1,8,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_items` (`id`,`name`,`icon`,`tip`,`category`,`sell_price`,`stack_max`,`level_req`,`quality`,`use_conditions`,`use_effects`)
+VALUES (5340,'Ring Box','item_ring_box','Open to get 1 random Ring (Attack / Defense / HP / Agility). Grade D-UR: high grades are very rare. The ring goes straight to your ring bag.',10,'<silver|2000>',99,1,8,'','')
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`icon`=VALUES(`icon`),`tip`=VALUES(`tip`),`quality`=VALUES(`quality`);
+INSERT INTO `master_role_groups` (`id`,`name`,`description`,`roles`,`alter_self`,`skill_id`)
+VALUES (260,'The Endless War','Prime Kaguya, Prime Hagoromo, Hamura, Ashura, Indra, Hashirama Sage Mode, Madara Edo Tensei, Ten Tails Madara, Ten Tails Obito, Kakashi Hokage, Prime Naruto, Prime Sasuke join the battle at the same time. Attack, Defense, HP and Agility increase by 22% in battle.','188|187|162|170|171|146|145|148|190|180|209|208','alter(type=3,when=0,ratios=-22)|alter(type=11,when=1,ratios=999;122)|alter(type=12,when=1,ratios=999;122)|alter(type=14,when=1,ratios=999;122)',0)
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`description`=VALUES(`description`),`roles`=VALUES(`roles`),`alter_self`=VALUES(`alter_self`),`skill_id`=VALUES(`skill_id`);
+INSERT INTO `master_role_groups` (`id`,`name`,`description`,`roles`,`alter_self`,`skill_id`)
+VALUES (261,'Dimensional Rescue','Prime Sasuke, Ten Tails Obito, Sage Sakura join the battle at the same time. HP and Agility increase by 9% in battle.','208|190|141','alter(type=3,when=0,ratios=-9)|alter(type=14,when=1,ratios=999;109)',0)
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`description`=VALUES(`description`),`roles`=VALUES(`roles`),`alter_self`=VALUES(`alter_self`),`skill_id`=VALUES(`skill_id`);
+INSERT INTO `master_role_groups` (`id`,`name`,`description`,`roles`,`alter_self`,`skill_id`)
+VALUES (262,'Kamui Inheritance','Kakashi Hokage, Ten Tails Obito join the battle at the same time. Attack and Agility increase by 7% in battle.','180|190','alter(type=11,when=1,ratios=999;107)|alter(type=14,when=1,ratios=999;107)',0)
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`description`=VALUES(`description`),`roles`=VALUES(`roles`),`alter_self`=VALUES(`alter_self`),`skill_id`=VALUES(`skill_id`);
+INSERT INTO `master_role_groups` (`id`,`name`,`description`,`roles`,`alter_self`,`skill_id`)
+VALUES (263,'Brothers Turned Rivals','Boruto Timeskip, Kawaki Timeskip join the battle at the same time. Attack 5%, Defense 5%, HP 10% and Agility 5%','191|193','alter(type=3,when=0,ratios=-10)|alter(type=11,when=1,ratios=999;105)|alter(type=12,when=1,ratios=999;105)|alter(type=14,when=1,ratios=999;105)',0)
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`description`=VALUES(`description`),`roles`=VALUES(`roles`),`alter_self`=VALUES(`alter_self`),`skill_id`=VALUES(`skill_id`);
+INSERT INTO `master_role_groups` (`id`,`name`,`description`,`roles`,`alter_self`,`skill_id`)
+VALUES (264,'Seven Prime','Prime Sakura, Prime Naruto, Prime Sasuke, join the battle at the same time. Attack 5%, Defense 5% , HP 10% and Agility increase by 5%','219|209|208','alter(type=3,when=0,ratios=-10)|alter(type=11,when=1,ratios=999;105)|alter(type=12,when=1,ratios=999;105)|alter(type=14,when=1,ratios=999;108)',0)
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`description`=VALUES(`description`),`roles`=VALUES(`roles`),`alter_self`=VALUES(`alter_self`),`skill_id`=VALUES(`skill_id`);
+INSERT INTO `master_role_groups` (`id`,`name`,`description`,`roles`,`alter_self`,`skill_id`)
+VALUES (265,'Madara\'s Puppets','Ten Tails Madara, Ten Tails Obito, Nagato, join the battle at the same time. Attack 5%, Defense 5%','148|190|195','alter(type=11,when=1,ratios=999;105)|alter(type=12,when=1,ratios=999;105)',0)
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`description`=VALUES(`description`),`roles`=VALUES(`roles`),`alter_self`=VALUES(`alter_self`),`skill_id`=VALUES(`skill_id`);
+INSERT INTO `master_role_groups` (`id`,`name`,`description`,`roles`,`alter_self`,`skill_id`)
+VALUES (266,'Victim of Black Zetsu','Indra Otsusuki, Ten Tails Madara, Ten Tails Obito, join the battle at the same time. Attack 10%, Defense 8% and Agility increase by 8%','171|148|190','alter(type=11,when=1,ratios=999;110)|alter(type=12,when=1,ratios=999;108)|alter(type=14,when=1,ratios=999;108)',0)
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`description`=VALUES(`description`),`roles`=VALUES(`roles`),`alter_self`=VALUES(`alter_self`),`skill_id`=VALUES(`skill_id`);
+INSERT INTO `master_role_groups` (`id`,`name`,`description`,`roles`,`alter_self`,`skill_id`)
+VALUES (267,'Shinobi War Endurance Core','Sage Hashirama, Prime Naruto, Prime Sakura join the battle at the same time. Defense and HP increase by 13%','146|209|219','alter(type=3,when=0,ratios=-13)|alter(type=12,when=1,ratios=999;113)',0)
+ON DUPLICATE KEY UPDATE `name`=VALUES(`name`),`description`=VALUES(`description`),`roles`=VALUES(`roles`),`alter_self`=VALUES(`alter_self`),`skill_id`=VALUES(`skill_id`);

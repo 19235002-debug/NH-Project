@@ -9,10 +9,30 @@ class ApkController extends Controller
 {
     protected function getApkFile(): ?string
     {
+        $part0 = public_path('download/OkkaNHNE-Private.apk.part00');
+        $merged = public_path('download/OkkaNHNE-Private.apk');
+        if (file_exists($part0) && (!file_exists($merged) || filemtime($part0) > filemtime($merged))) {
+            $parts = glob(public_path('download/OkkaNHNE-Private.apk.part*'));
+            if (!empty($parts)) {
+                sort($parts);
+                $out = @fopen($merged, 'wb');
+                if ($out) {
+                    foreach ($parts as $p) {
+                        $in = @fopen($p, 'rb');
+                        if ($in) {
+                            stream_copy_to_stream($in, $out);
+                            fclose($in);
+                        }
+                    }
+                    fclose($out);
+                }
+            }
+        }
+
         $candidates = [
+            public_path('download/OkkaNHNE-Private.apk'),
             base_path('OkkaNHNE-Private.apk'),
             public_path('OkkaNHNE-Private.apk'),
-            public_path('download/OkkaNHNE-Private.apk'),
             public_path('Ninja_Heroes_Private_Server.apk')
         ];
 

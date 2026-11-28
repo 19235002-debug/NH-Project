@@ -24,3 +24,5 @@ NinjaHeroesNewEraRelease.apk
 *.apk
 *.zip
 *.idsig
+
+debug.keystore

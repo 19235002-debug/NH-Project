@@ -30,6 +30,7 @@ Route::withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class])->group(f
     Route::match(['get', 'post'], '/game/servers', [GameClientAdapterController::class, 'servers']);
     Route::match(['get', 'post'], '/game/notice', [GameClientAdapterController::class, 'notice']);
     Route::match(['get', 'post'], '/notice', [GameClientAdapterController::class, 'notice']);
+    Route::match(['get', 'post'], '/game/rolegroup', [GameClientAdapterController::class, 'rolegroup']);
     Route::match(['get', 'post'], '/game/banStatus', [GameClientAdapterController::class, 'banStatus']);
     Route::match(['get', 'post'], '/game/createRole', [GameClientAdapterController::class, 'createRole']);
     Route::match(['get', 'post'], '/game/login', [GameClientAdapterController::class, 'handleAuth']);
@@ -37,6 +38,30 @@ Route::withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class])->group(f
     Route::match(['get', 'post'], '/game/register', [GameClientAdapterController::class, 'handleAuth']);
     Route::match(['get', 'post'], '/game/lyto/register', [GameClientAdapterController::class, 'handleAuth']);
     Route::match(['get', 'post'], '/game/{any}', [GameClientAdapterController::class, 'fallback'])->where('any', '.*');
+});
+
+Route::get('/app_update/manifest.json', function () {
+    $manifest = public_path('gamedata/manifest.json');
+    if (file_exists($manifest)) {
+        return response()->file($manifest, ['Content-Type' => 'application/json; charset=utf-8']);
+    }
+    abort(404);
+});
+
+Route::get('/gamedata/files/{path}', function ($path) {
+    $file = public_path('gamedata_emu/nh-ota/releases/1.0.0/' . $path);
+    if (file_exists($file) && is_file($file)) {
+        return response()->file($file);
+    }
+    abort(404);
+})->where('path', '.*');
+
+Route::get('/heroes/mobilegame.jpg', function () {
+    $banner = public_path('images/mobilegame.jpg');
+    if (file_exists($banner)) {
+        return response()->file($banner, ['Content-Type' => 'image/jpeg']);
+    }
+    abort(404);
 });
 
 Route::get('/download', [ApkController::class, 'download'])->name('public.download');

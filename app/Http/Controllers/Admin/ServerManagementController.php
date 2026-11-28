@@ -42,7 +42,7 @@ class ServerManagementController extends Controller
                 'id' => 1,
                 'name' => 'S1 - Konoha Village',
                 'host' => 'nh.digislams.my.id',
-                'port' => 18080,
+                'port' => 80,
                 'status' => 1,
                 'is_new' => 1,
                 'is_recommend' => 1,
