@@ -1,0 +1,2 @@
+__NH_GAME_DATA["War"] = [{"id":1,"coin":15,"ratio":30},{"id":2,"coin":15,"ratio":30},{"id":3,"coin":15,"ratio":40},{"id":4,"coin":15,"ratio":40},{"id":5,"coin":15,"ratio":50},{"id":6,"coin":15,"ratio":50},{"id":7,"coin":15,"ratio":60},{"id":8,"coin":15,"ratio":70},{"id":9,"coin":15,"ratio":70},{"id":10,"coin":15,"ratio":80},{"id":11,"coin":25,"ratio":80},{"id":12,"coin":25,"ratio":90},{"id":13,"coin":25,"ratio":100},{"id":14,"coin":25,"ratio":100},{"id":15,"coin":25,"ratio":100}];
+//NH_END
