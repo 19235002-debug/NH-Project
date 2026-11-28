@@ -1,0 +1,53 @@
+<skeleton name="tuosizhen" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="tuosizhen">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="tuosizhen_s-leftFoot" pX="9.05" pY="15.65"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="tuosizhen_s-leftLeg" pX="9.8" pY="11.85"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="tuosizhen_s-rightFoot" pX="8.75" pY="15.8"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="tuosizhen_s-rightLeg" pX="10.25" pY="13.6"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="tuosizhen_s-leftArm" pX="9.25" pY="12.15"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="tuosizhen_s-leftHand" pX="11.75" pY="14.65"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="tuosizhen_s-body" pX="42.5" pY="34.95"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="tuosizhen_s-rightArm" pX="9.95" pY="12.6"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="tuosizhen_s-rightHand" pX="14.35" pY="15.25"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="tuosizhen_s-head_hurt" pX="54.5" pY="38.25"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="tuosizhen_s-head" pX="43.25" pY="42.25"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="tuosizhen" width="256" height="256">
+    <SubTexture name="tuosizhen_s-head" width="89" height="103" cocos2d_pX="43.25" cocos2d_pY="42.25" x="98" y="0"/>
+    <SubTexture name="tuosizhen_s-head_hurt" width="96" height="106" cocos2d_pX="54.5" cocos2d_pY="38.25" x="0" y="0"/>
+    <SubTexture name="tuosizhen_s-rightHand" width="23" height="32" cocos2d_pX="14.35" cocos2d_pY="15.25" x="214" y="68"/>
+    <SubTexture name="tuosizhen_s-rightArm" width="18" height="25" cocos2d_pX="9.95" cocos2d_pY="12.6" x="119" y="105"/>
+    <SubTexture name="tuosizhen_s-body" width="64" height="66" cocos2d_pX="42.5" cocos2d_pY="34.95" x="189" y="0"/>
+    <SubTexture name="tuosizhen_s-leftHand" width="23" height="32" cocos2d_pX="11.75" cocos2d_pY="14.65" x="189" y="68"/>
+    <SubTexture name="tuosizhen_s-leftArm" width="19" height="25" cocos2d_pX="9.25" cocos2d_pY="12.15" x="98" y="105"/>
+    <SubTexture name="tuosizhen_s-rightLeg" width="21" height="25" cocos2d_pX="10.25" cocos2d_pY="13.6" x="189" y="102"/>
+    <SubTexture name="tuosizhen_s-rightFoot" width="18" height="27" cocos2d_pX="8.75" cocos2d_pY="15.8" x="212" y="102"/>
+    <SubTexture name="tuosizhen_s-leftLeg" width="19" height="22" cocos2d_pX="9.8" cocos2d_pY="11.85" x="139" y="105"/>
+    <SubTexture name="tuosizhen_s-leftFoot" width="18" height="27" cocos2d_pX="9.05" cocos2d_pY="15.65" x="232" y="102"/>
+  </TextureAtlas>
+</skeleton>

@@ -1,0 +1,53 @@
+<skeleton name="denkikaminarimon" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="denkikaminarimon">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="denkikaminarimon_s-leftFoot" pX="8.5" pY="13.85"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="denkikaminarimon_s-leftLeg" pX="8.5" pY="9.55"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="denkikaminarimon_s-rightFoot" pX="6.9" pY="14.25"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="denkikaminarimon_s-rightLeg" pX="8.6" pY="11.95"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="denkikaminarimon_s-leftArm" pX="7.4" pY="7.5"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="denkikaminarimon_s-leftHand" pX="9.65" pY="12.2"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="denkikaminarimon_s-body" pX="16.2" pY="21.7"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="denkikaminarimon_s-rightArm" pX="7.5" pY="6.15"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="denkikaminarimon_s-rightHand" pX="10.2" pY="11.15"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="denkikaminarimon_s-head_hurt" pX="61.65" pY="35.55"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="denkikaminarimon_s-head" pX="45.7" pY="38.2"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="denkikaminarimon" width="256" height="256">
+    <SubTexture name="denkikaminarimon_s-head" width="109" height="104" cocos2d_pX="45.7" cocos2d_pY="38.2" x="111" y="0"/>
+    <SubTexture name="denkikaminarimon_s-head_hurt" width="109" height="107" cocos2d_pX="61.65" cocos2d_pY="35.55" x="0" y="0"/>
+    <SubTexture name="denkikaminarimon_s-rightHand" width="19" height="30" cocos2d_pX="10.2" cocos2d_pY="11.15" x="222" y="32"/>
+    <SubTexture name="denkikaminarimon_s-rightArm" width="15" height="21" cocos2d_pX="7.5" cocos2d_pY="6.15" x="182" y="106"/>
+    <SubTexture name="denkikaminarimon_s-body" width="35" height="46" cocos2d_pX="16.2" cocos2d_pY="21.7" x="111" y="106"/>
+    <SubTexture name="denkikaminarimon_s-leftHand" width="19" height="30" cocos2d_pX="9.65" cocos2d_pY="12.2" x="222" y="0"/>
+    <SubTexture name="denkikaminarimon_s-leftArm" width="15" height="21" cocos2d_pX="7.4" cocos2d_pY="7.5" x="199" y="106"/>
+    <SubTexture name="denkikaminarimon_s-rightLeg" width="20" height="25" cocos2d_pX="8.6" cocos2d_pY="11.95" x="222" y="64"/>
+    <SubTexture name="denkikaminarimon_s-rightFoot" width="15" height="24" cocos2d_pX="6.9" cocos2d_pY="14.25" x="148" y="106"/>
+    <SubTexture name="denkikaminarimon_s-leftLeg" width="20" height="22" cocos2d_pX="8.5" cocos2d_pY="9.55" x="222" y="91"/>
+    <SubTexture name="denkikaminarimon_s-leftFoot" width="15" height="24" cocos2d_pX="8.5" cocos2d_pY="13.85" x="165" y="106"/>
+  </TextureAtlas>
+</skeleton>

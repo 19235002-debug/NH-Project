@@ -1,0 +1,53 @@
+<skeleton name="sandaileiying" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="sandaileiying">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="sandaileiying_s-leftFoot" pX="8.55" pY="15.4"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="sandaileiying_s-leftLeg" pX="9.3" pY="11.85"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="sandaileiying_s-rightFoot" pX="8" pY="16.05"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="sandaileiying_s-rightLeg" pX="9" pY="10.35"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="sandaileiying_s-leftArm" pX="10.25" pY="10.9"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="sandaileiying_s-leftHand" pX="11.75" pY="14.15"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="sandaileiying_s-body" pX="30.25" pY="23.95"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="sandaileiying_s-rightArm" pX="9.45" pY="11.85"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="sandaileiying_s-rightHand" pX="11.35" pY="15"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="sandaileiying_s-head_hurt" pX="63.75" pY="37"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="sandaileiying_s-head" pX="65.75" pY="36.5"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="sandaileiying" width="256" height="256">
+    <SubTexture name="sandaileiying_s-head" width="125" height="112" cocos2d_pX="65.75" cocos2d_pY="36.5" x="127" y="0"/>
+    <SubTexture name="sandaileiying_s-head_hurt" width="125" height="112" cocos2d_pX="63.75" cocos2d_pY="37" x="0" y="0"/>
+    <SubTexture name="sandaileiying_s-rightHand" width="21" height="33" cocos2d_pX="11.35" cocos2d_pY="15" x="55" y="114"/>
+    <SubTexture name="sandaileiying_s-rightArm" width="18" height="24" cocos2d_pX="9.45" cocos2d_pY="11.85" x="206" y="114"/>
+    <SubTexture name="sandaileiying_s-body" width="53" height="55" cocos2d_pX="30.25" cocos2d_pY="23.95" x="0" y="114"/>
+    <SubTexture name="sandaileiying_s-leftHand" width="24" height="29" cocos2d_pX="11.75" cocos2d_pY="14.15" x="78" y="114"/>
+    <SubTexture name="sandaileiying_s-leftArm" width="20" height="23" cocos2d_pX="10.25" cocos2d_pY="10.9" x="142" y="114"/>
+    <SubTexture name="sandaileiying_s-rightLeg" width="19" height="24" cocos2d_pX="9" cocos2d_pY="10.35" x="164" y="114"/>
+    <SubTexture name="sandaileiying_s-rightFoot" width="17" height="27" cocos2d_pX="8" cocos2d_pY="16.05" x="104" y="114"/>
+    <SubTexture name="sandaileiying_s-leftLeg" width="19" height="23" cocos2d_pX="9.3" cocos2d_pY="11.85" x="185" y="114"/>
+    <SubTexture name="sandaileiying_s-leftFoot" width="17" height="27" cocos2d_pX="8.55" cocos2d_pY="15.4" x="123" y="114"/>
+  </TextureAtlas>
+</skeleton>

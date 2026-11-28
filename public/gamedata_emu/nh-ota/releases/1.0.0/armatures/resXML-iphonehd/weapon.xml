@@ -1,0 +1,129 @@
+<skeleton name="weapon" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="weapon">
+      <b name="jiaoji" x="87.5" y="34" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="weapon_s-jiaoji" pX="56.5" pY="51"/>
+      </b>
+      <b name="back_orbs" x="655.35" y="843.8" kX="0" kY="0" cX="1" cY="1" pX="128" pY="128" z="1">
+        <d name="weapon_s-back_orbs" pX="134" pY="166"/>
+      </b>
+      <b name="konanwing" x="49.95" y="662.8" kX="0" kY="0" cX="1" cY="1" pX="128" pY="128" z="2">
+        <d name="weapon_s-konanwing" pX="124.95" pY="133"/>
+      </b>
+      <b name="lightning" x="-111" y="643.95" kX="0" kY="0" cX="1" cY="1" pX="256" pY="256" z="3">
+        <d name="weapon_s-lightning" pX="253" pY="320"/>
+      </b>
+      <b name="9tails" x="380.35" y="935.95" kX="0" kY="0" cX="1" cY="1" pX="76.5" pY="100.5" z="4">
+        <d name="weapon_s-9tails" pX="83" pY="154.95"/>
+      </b>
+      <b name="ashura" x="-223.95" y="103.75" kX="0" kY="0" cX="1" cY="1" pX="72.5" pY="72.5" z="5">
+        <d name="weapon_s-ashura" pX="78" pY="118"/>
+      </b>
+      <b name="ci" x="381.85" y="687.3" kX="0" kY="0" cX="1" cY="1" pX="148" pY="101.5" z="6">
+        <d name="weapon_s-ci" pX="156" pY="131"/>
+      </b>
+      <b name="jiuwei" x="162.85" y="398.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="weapon_s-jiuwei" pX="85" pY="126.5"/>
+      </b>
+      <b name="sasukeball" x="730.95" y="2" kX="0" kY="0" cX="1" cY="1" pX="107.5" pY="80.5" z="8">
+        <d name="weapon_s-sasukeball" pX="126.95" pY="96"/>
+      </b>
+      <b name="ashuratail" x="426.8" y="-51" kX="0" kY="0" cX="1" cY="1" pX="76" pY="44" z="9">
+        <d name="weapon_s-ashuratail" pX="86" pY="38"/>
+      </b>
+      <b name="wuqi" x="2" y="2" kX="0" kY="0" cX="1" cY="1" pX="2" pY="2" z="10">
+        <d name="weapon_s-wuqi" pX="0" pY="0"/>
+      </b>
+      <b name="juanzhou" x="199.4" y="14" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="11">
+        <d name="weapon_s-juanzhou" pX="52.5" pY="28"/>
+      </b>
+      <b name="liandao" x="317.45" y="47" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="12">
+        <d name="weapon_s-liandao" pX="66.5" pY="60.5"/>
+      </b>
+      <b name="kuilei" x="-6.65" y="175" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="13">
+        <d name="weapon_s-kuilei" pX="69.5" pY="67.5"/>
+      </b>
+      <b name="shanzi" x="180.35" y="217.5" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="14">
+        <d name="weapon_s-shanzi" pX="110.5" pY="110"/>
+      </b>
+      <b name="bajiaoshan" x="804.5" y="70.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="15">
+        <d name="weapon_s-bajiaoshan" pX="124.05" pY="125.2"/>
+      </b>
+      <b name="jiuweibox" x="871.95" y="346.65" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="16">
+        <d name="weapon_s-jiuweibox" pX="87.5" pY="134.5"/>
+      </b>
+      <b name="wings" x="318.4" y="402.9" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="17">
+        <d name="weapon_s-wings" pX="63.5" pY="43"/>
+      </b>
+      <b name="wings2" x="845.3" y="590.3" kX="0" kY="0" cX="1" cY="1" pX="62.5" pY="47" z="18">
+        <d name="weapon_s-wings2" pX="69" pY="46"/>
+      </b>
+      <b name="box" x="467" y="22.5" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="19">
+        <d name="weapon_s-box" pX="36.5" pY="13.5"/>
+      </b>
+      <b name="chibang" x="349.95" y="316.5" kX="0" kY="0" cX="1" cY="1" pX="143.65" pY="-3.8" z="20">
+        <d name="weapon_s-chibang" pX="61" pY="31.5"/>
+      </b>
+      <b name="hulu" x="-7" y="312.45" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="21">
+        <d name="weapon_s-hulu" pX="68" pY="60.5"/>
+      </b>
+      <b name="hulu2" x="574.5" y="112.95" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="22">
+        <d name="weapon_s-hulu2" pX="76" pY="69"/>
+      </b>
+      <b name="gunzi" x="637.2" y="282.15" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="23">
+        <d name="weapon_s-gunzi" pX="93" pY="70"/>
+      </b>
+      <b name="juanzhou2" x="339.45" y="259" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="24">
+        <d name="weapon_s-juanzhou2" pX="45.5" pY="21"/>
+      </b>
+      <b name="juanzhou3" x="658.3" y="539.3" kX="0" kY="0" cX="1" cY="1" pX="104.5" pY="72.5" z="25">
+        <d name="weapon_s-juanzhou3" pX="106" pY="73"/>
+      </b>
+      <b name="shoubi" x="196.45" y="61.5" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="26">
+        <d name="weapon_s-shoubi" pX="54.5" pY="25.5"/>
+      </b>
+      <b name="shuangjian" x="396.95" y="149.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="27">
+        <d name="weapon_s-shuangjian" pX="61.5" pY="54.5"/>
+      </b>
+      <b name="fazhang" x="467.65" y="296" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="28">
+        <d name="weapon_s-fazhang" pX="65.25" pY="87.75"/>
+      </b>
+      <b name="dadao" x="-20.5" y="51.5" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="29">
+        <d name="weapon_s-dadao" pX="48.5" pY="37.5"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="weapon" width="1024" height="1024">
+    <SubTexture name="weapon_s-dadao" width="97" height="75" cocos2d_pX="48.5" cocos2d_pY="37.5" x="196" y="719"/>
+    <SubTexture name="weapon_s-fazhang" width="131" height="144" cocos2d_pX="65.25" cocos2d_pY="87.75" x="445" y="750"/>
+    <SubTexture name="weapon_s-shuangjian" width="123" height="109" cocos2d_pX="61.5" cocos2d_pY="54.5" x="892" y="677"/>
+    <SubTexture name="weapon_s-shoubi" width="109" height="51" cocos2d_pX="54.5" cocos2d_pY="25.5" x="696" y="952"/>
+    <SubTexture name="weapon_s-juanzhou3" width="209" height="145" cocos2d_pX="106" cocos2d_pY="73" x="772" y="327"/>
+    <SubTexture name="weapon_s-juanzhou2" width="91" height="42" cocos2d_pX="45.5" cocos2d_pY="21" x="927" y="474"/>
+    <SubTexture name="weapon_s-gunzi" width="194" height="141" cocos2d_pX="93" cocos2d_pY="70" x="0" y="719"/>
+    <SubTexture name="weapon_s-hulu2" width="142" height="120" cocos2d_pX="76" cocos2d_pY="69" x="297" y="846"/>
+    <SubTexture name="weapon_s-hulu" width="136" height="109" cocos2d_pX="68" cocos2d_pY="60.5" x="135" y="862"/>
+    <SubTexture name="weapon_s-chibang" width="112" height="55" cocos2d_pX="61" cocos2d_pY="31.5" x="441" y="896"/>
+    <SubTexture name="weapon_s-box" width="73" height="27" cocos2d_pX="36.5" cocos2d_pY="13.5" x="927" y="518"/>
+    <SubTexture name="weapon_s-wings2" width="125" height="94" cocos2d_pX="69" cocos2d_pY="46" x="892" y="788"/>
+    <SubTexture name="weapon_s-wings" width="116" height="88" cocos2d_pX="63.5" cocos2d_pY="43" x="578" y="887"/>
+    <SubTexture name="weapon_s-jiuweibox" width="165" height="183" cocos2d_pX="87.5" cocos2d_pY="134.5" x="725" y="677"/>
+    <SubTexture name="weapon_s-bajiaoshan" width="258" height="232" cocos2d_pX="124.05" cocos2d_pY="125.2" x="465" y="516"/>
+    <SubTexture name="weapon_s-shanzi" width="235" height="162" cocos2d_pX="110.5" cocos2d_pY="110" x="772" y="0"/>
+    <SubTexture name="weapon_s-kuilei" width="139" height="135" cocos2d_pX="69.5" cocos2d_pY="67.5" x="578" y="750"/>
+    <SubTexture name="weapon_s-liandao" width="133" height="121" cocos2d_pX="66.5" cocos2d_pY="60.5" x="0" y="862"/>
+    <SubTexture name="weapon_s-juanzhou" width="99" height="54" cocos2d_pX="52.5" cocos2d_pY="28" x="196" y="796"/>
+    <SubTexture name="weapon_s-wuqi" width="4" height="4" cocos2d_pX="0" cocos2d_pY="0" x="1009" y="0"/>
+    <SubTexture name="weapon_s-ashuratail" width="152" height="88" cocos2d_pX="86" cocos2d_pY="38" x="719" y="862"/>
+    <SubTexture name="weapon_s-sasukeball" width="215" height="161" cocos2d_pX="126.95" cocos2d_pY="96" x="772" y="164"/>
+    <SubTexture name="weapon_s-jiuwei" width="165" height="183" cocos2d_pX="85" cocos2d_pY="126.5" x="298" y="514"/>
+    <SubTexture name="weapon_s-ci" width="296" height="203" cocos2d_pX="156" cocos2d_pY="131" x="0" y="514"/>
+    <SubTexture name="weapon_s-ashura" width="145" height="145" cocos2d_pX="78" cocos2d_pY="118" x="298" y="699"/>
+    <SubTexture name="weapon_s-9tails" width="153" height="201" cocos2d_pX="83" cocos2d_pY="154.95" x="772" y="474"/>
+    <SubTexture name="weapon_s-lightning" width="512" height="512" cocos2d_pX="253" cocos2d_pY="320" x="0" y="0"/>
+    <SubTexture name="weapon_s-konanwing" width="256" height="256" cocos2d_pX="124.95" cocos2d_pY="133" x="514" y="0"/>
+    <SubTexture name="weapon_s-back_orbs" width="256" height="256" cocos2d_pX="134" cocos2d_pY="166" x="514" y="258"/>
+    <SubTexture name="weapon_s-jiaoji" width="113" height="102" cocos2d_pX="56.5" cocos2d_pY="51" x="873" y="884"/>
+  </TextureAtlas>
+</skeleton>

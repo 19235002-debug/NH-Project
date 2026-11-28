@@ -1,0 +1,53 @@
+<skeleton name="uchihashin" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="uchihashin">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="uchihashin_s-leftFoot" pX="8.95" pY="16.65"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="uchihashin_s-leftLeg" pX="8.6" pY="11.95"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="uchihashin_s-rightFoot" pX="8.15" pY="17.05"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="uchihashin_s-rightLeg" pX="6.9" pY="12.9"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="uchihashin_s-leftArm" pX="5.75" pY="12.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="uchihashin_s-leftHand" pX="9" pY="14.9"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="uchihashin_s-body" pX="24.6" pY="29.15"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="uchihashin_s-rightArm" pX="13.6" pY="11.7"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="uchihashin_s-rightHand" pX="19.1" pY="14.45"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="uchihashin_s-head_hurt" pX="47.4" pY="32.35"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="uchihashin_s-head" pX="35.65" pY="39.15"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="uchihashin" width="256" height="256">
+    <SubTexture name="uchihashin_s-head" width="90" height="99" cocos2d_pX="35.65" cocos2d_pY="39.15" x="92" y="0"/>
+    <SubTexture name="uchihashin_s-head_hurt" width="90" height="104" cocos2d_pX="47.4" cocos2d_pY="32.35" x="0" y="0"/>
+    <SubTexture name="uchihashin_s-rightHand" width="26" height="33" cocos2d_pX="19.1" cocos2d_pY="14.45" x="212" y="67"/>
+    <SubTexture name="uchihashin_s-rightArm" width="19" height="25" cocos2d_pX="13.6" cocos2d_pY="11.7" x="113" y="101"/>
+    <SubTexture name="uchihashin_s-body" width="52" height="65" cocos2d_pX="24.6" cocos2d_pY="29.15" x="184" y="0"/>
+    <SubTexture name="uchihashin_s-leftHand" width="26" height="33" cocos2d_pX="9" cocos2d_pY="14.9" x="184" y="67"/>
+    <SubTexture name="uchihashin_s-leftArm" width="19" height="25" cocos2d_pX="5.75" cocos2d_pY="12.4" x="92" y="101"/>
+    <SubTexture name="uchihashin_s-rightLeg" width="17" height="25" cocos2d_pX="6.9" cocos2d_pY="12.9" x="172" y="102"/>
+    <SubTexture name="uchihashin_s-rightFoot" width="17" height="27" cocos2d_pX="8.15" cocos2d_pY="17.05" x="134" y="101"/>
+    <SubTexture name="uchihashin_s-leftLeg" width="17" height="23" cocos2d_pX="8.6" cocos2d_pY="11.95" x="191" y="102"/>
+    <SubTexture name="uchihashin_s-leftFoot" width="17" height="27" cocos2d_pX="8.95" cocos2d_pY="16.65" x="153" y="101"/>
+  </TextureAtlas>
+</skeleton>

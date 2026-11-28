@@ -1,0 +1,53 @@
+<skeleton name="hikariuchiha" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="hikariuchiha">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="hikariuchiha_s-leftFoot" pX="8.3" pY="15.65"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="hikariuchiha_s-leftLeg" pX="7.85" pY="13.2"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="hikariuchiha_s-rightFoot" pX="8.15" pY="16.7"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="hikariuchiha_s-rightLeg" pX="7.6" pY="11.7"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="hikariuchiha_s-leftArm" pX="9.7" pY="12.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="hikariuchiha_s-leftHand" pX="9.85" pY="12.3"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="hikariuchiha_s-body" pX="24.45" pY="27.85"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="hikariuchiha_s-rightArm" pX="10.7" pY="11.6"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="hikariuchiha_s-rightHand" pX="14.55" pY="15.15"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="hikariuchiha_s-head_hurt" pX="80.8" pY="80.75"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="hikariuchiha_s-head" pX="72.15" pY="83.55"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="hikariuchiha" width="512" height="256">
+    <SubTexture name="hikariuchiha_s-head" width="164" height="198" cocos2d_pX="72.15" cocos2d_pY="83.55" x="0" y="0"/>
+    <SubTexture name="hikariuchiha_s-head_hurt" width="164" height="198" cocos2d_pX="80.8" cocos2d_pY="80.75" x="166" y="0"/>
+    <SubTexture name="hikariuchiha_s-rightHand" width="24" height="35" cocos2d_pX="14.55" cocos2d_pY="15.15" x="411" y="0"/>
+    <SubTexture name="hikariuchiha_s-rightArm" width="19" height="25" cocos2d_pX="10.7" cocos2d_pY="11.6" x="458" y="0"/>
+    <SubTexture name="hikariuchiha_s-body" width="51" height="66" cocos2d_pX="24.45" cocos2d_pY="27.85" x="332" y="0"/>
+    <SubTexture name="hikariuchiha_s-leftHand" width="24" height="35" cocos2d_pX="9.85" cocos2d_pY="12.3" x="385" y="0"/>
+    <SubTexture name="hikariuchiha_s-leftArm" width="19" height="25" cocos2d_pX="9.7" cocos2d_pY="12.4" x="437" y="0"/>
+    <SubTexture name="hikariuchiha_s-rightLeg" width="17" height="26" cocos2d_pX="7.6" cocos2d_pY="11.7" x="456" y="27"/>
+    <SubTexture name="hikariuchiha_s-rightFoot" width="17" height="27" cocos2d_pX="8.15" cocos2d_pY="16.7" x="479" y="0"/>
+    <SubTexture name="hikariuchiha_s-leftLeg" width="17" height="25" cocos2d_pX="7.85" cocos2d_pY="13.2" x="475" y="29"/>
+    <SubTexture name="hikariuchiha_s-leftFoot" width="17" height="27" cocos2d_pX="8.3" cocos2d_pY="15.65" x="437" y="27"/>
+  </TextureAtlas>
+</skeleton>

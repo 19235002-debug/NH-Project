@@ -1,0 +1,53 @@
+<skeleton name="garo" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="garo">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="garo_s-leftFoot" pX="8.25" pY="14.85"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="garo_s-leftLeg" pX="8.15" pY="15.25"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="garo_s-rightFoot" pX="8.1" pY="16.9"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="garo_s-rightLeg" pX="9.4" pY="13.6"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="garo_s-leftArm" pX="9.75" pY="19.45"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="garo_s-leftHand" pX="10.4" pY="18.65"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="garo_s-body" pX="29.45" pY="31.1"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="garo_s-rightArm" pX="13.8" pY="18.25"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="garo_s-rightHand" pX="21.5" pY="18.65"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="garo_s-head_hurt" pX="56.25" pY="28.55"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="garo_s-head" pX="42.6" pY="35.55"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="garo" width="256" height="256">
+    <SubTexture name="garo_s-head" width="91" height="100" cocos2d_pX="42.6" cocos2d_pY="35.55" x="95" y="0"/>
+    <SubTexture name="garo_s-head_hurt" width="93" height="100" cocos2d_pX="56.25" cocos2d_pY="28.55" x="0" y="0"/>
+    <SubTexture name="garo_s-rightHand" width="33" height="45" cocos2d_pX="21.5" cocos2d_pY="18.65" x="0" y="102"/>
+    <SubTexture name="garo_s-rightArm" width="26" height="26" cocos2d_pX="13.8" cocos2d_pY="18.25" x="223" y="85"/>
+    <SubTexture name="garo_s-body" width="56" height="55" cocos2d_pX="29.45" cocos2d_pY="31.1" x="188" y="0"/>
+    <SubTexture name="garo_s-leftHand" width="33" height="45" cocos2d_pX="10.4" cocos2d_pY="18.65" x="188" y="57"/>
+    <SubTexture name="garo_s-leftArm" width="26" height="26" cocos2d_pX="9.75" cocos2d_pY="19.45" x="223" y="57"/>
+    <SubTexture name="garo_s-rightLeg" width="20" height="24" cocos2d_pX="9.4" cocos2d_pY="13.6" x="35" y="102"/>
+    <SubTexture name="garo_s-rightFoot" width="16" height="26" cocos2d_pX="8.1" cocos2d_pY="16.9" x="97" y="102"/>
+    <SubTexture name="garo_s-leftLeg" width="20" height="24" cocos2d_pX="8.15" cocos2d_pY="15.25" x="57" y="102"/>
+    <SubTexture name="garo_s-leftFoot" width="16" height="26" cocos2d_pX="8.25" cocos2d_pY="14.85" x="79" y="102"/>
+  </TextureAtlas>
+</skeleton>

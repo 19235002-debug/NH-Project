@@ -1,0 +1,53 @@
+<skeleton name="dashewan" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="dashewan">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="dashewan_s-leftFoot" pX="8.55" pY="16.4"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="dashewan_s-leftLeg" pX="8.8" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="dashewan_s-rightFoot" pX="8.5" pY="16.05"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="dashewan_s-rightLeg" pX="12.75" pY="16.85"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="dashewan_s-leftArm" pX="9" pY="12.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="dashewan_s-leftHand" pX="10.5" pY="14.65"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="dashewan_s-body" pX="34.5" pY="28.7"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="dashewan_s-rightArm" pX="9.45" pY="13.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="dashewan_s-rightHand" pX="14.6" pY="16.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="dashewan_s-head_hurt" pX="59" pY="45.5"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="dashewan_s-head" pX="44.5" pY="44"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="dashewan" width="256" height="256">
+    <SubTexture name="dashewan_s-head" width="99" height="134" cocos2d_pX="44.5" cocos2d_pY="44" x="101" y="0"/>
+    <SubTexture name="dashewan_s-head_hurt" width="99" height="134" cocos2d_pX="59" cocos2d_pY="45.5" x="0" y="0"/>
+    <SubTexture name="dashewan_s-rightHand" width="22" height="35" cocos2d_pX="14.6" cocos2d_pY="16.5" x="202" y="0"/>
+    <SubTexture name="dashewan_s-rightArm" width="16" height="23" cocos2d_pX="9.45" cocos2d_pY="13.1" x="202" y="92"/>
+    <SubTexture name="dashewan_s-body" width="54" height="68" cocos2d_pX="34.5" cocos2d_pY="28.7" x="0" y="136"/>
+    <SubTexture name="dashewan_s-leftHand" width="22" height="31" cocos2d_pX="10.5" cocos2d_pY="14.65" x="226" y="0"/>
+    <SubTexture name="dashewan_s-leftArm" width="17" height="24" cocos2d_pX="9" cocos2d_pY="12.4" x="202" y="66"/>
+    <SubTexture name="dashewan_s-rightLeg" width="23" height="28" cocos2d_pX="12.75" cocos2d_pY="16.85" x="226" y="33"/>
+    <SubTexture name="dashewan_s-rightFoot" width="17" height="27" cocos2d_pX="8.5" cocos2d_pY="16.05" x="202" y="37"/>
+    <SubTexture name="dashewan_s-leftLeg" width="16" height="21" cocos2d_pX="8.8" cocos2d_pY="11.6" x="220" y="92"/>
+    <SubTexture name="dashewan_s-leftFoot" width="17" height="27" cocos2d_pX="8.55" cocos2d_pY="16.4" x="221" y="63"/>
+  </TextureAtlas>
+</skeleton>

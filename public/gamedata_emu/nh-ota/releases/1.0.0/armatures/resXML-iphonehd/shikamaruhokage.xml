@@ -1,0 +1,53 @@
+<skeleton name="shikamaruhokage" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="shikamaruhokage">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="shikamaruhokage_s-leftFoot" pX="7.55" pY="12"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="shikamaruhokage_s-leftLeg" pX="6.5" pY="10.5"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="shikamaruhokage_s-rightFoot" pX="7.7" pY="12.7"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="shikamaruhokage_s-rightLeg" pX="5.65" pY="10.05"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="shikamaruhokage_s-leftArm" pX="8.55" pY="7.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="shikamaruhokage_s-leftHand" pX="11.1" pY="13.35"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="shikamaruhokage_s-body" pX="38.3" pY="23"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="shikamaruhokage_s-rightArm" pX="11.45" pY="10.6"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="shikamaruhokage_s-rightHand" pX="12.6" pY="14.35"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="shikamaruhokage_s-head_hurt" pX="71.15" pY="63.85"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="shikamaruhokage_s-head" pX="65.95" pY="60.9"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="shikamaruhokage" width="256" height="512">
+    <SubTexture name="shikamaruhokage_s-head" width="141" height="130" cocos2d_pX="65.95" cocos2d_pY="60.9" x="0" y="133"/>
+    <SubTexture name="shikamaruhokage_s-head_hurt" width="141" height="131" cocos2d_pX="71.15" cocos2d_pY="63.85" x="0" y="0"/>
+    <SubTexture name="shikamaruhokage_s-rightHand" width="21" height="34" cocos2d_pX="12.6" cocos2d_pY="14.35" x="215" y="0"/>
+    <SubTexture name="shikamaruhokage_s-rightArm" width="19" height="23" cocos2d_pX="11.45" cocos2d_pY="10.6" x="164" y="65"/>
+    <SubTexture name="shikamaruhokage_s-body" width="70" height="63" cocos2d_pX="38.3" cocos2d_pY="23" x="143" y="0"/>
+    <SubTexture name="shikamaruhokage_s-leftHand" width="20" height="30" cocos2d_pX="11.1" cocos2d_pY="13.35" x="215" y="36"/>
+    <SubTexture name="shikamaruhokage_s-leftArm" width="19" height="24" cocos2d_pX="8.55" cocos2d_pY="7.4" x="143" y="65"/>
+    <SubTexture name="shikamaruhokage_s-rightLeg" width="17" height="21" cocos2d_pX="5.65" cocos2d_pY="10.05" x="237" y="50"/>
+    <SubTexture name="shikamaruhokage_s-rightFoot" width="16" height="23" cocos2d_pX="7.7" cocos2d_pY="12.7" x="238" y="0"/>
+    <SubTexture name="shikamaruhokage_s-leftLeg" width="15" height="19" cocos2d_pX="6.5" cocos2d_pY="10.5" x="185" y="65"/>
+    <SubTexture name="shikamaruhokage_s-leftFoot" width="16" height="23" cocos2d_pX="7.55" cocos2d_pY="12" x="238" y="25"/>
+  </TextureAtlas>
+</skeleton>

@@ -1,0 +1,53 @@
+<skeleton name="dingci" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="dingci">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="dingci_s-leftFoot" pX="9.05" pY="15.4"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="dingci_s-leftLeg" pX="10.8" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="dingci_s-rightFoot" pX="8.75" pY="16.3"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="dingci_s-rightLeg" pX="11.5" pY="13.85"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="dingci_s-leftArm" pX="8.75" pY="9.9"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="dingci_s-leftHand" pX="9.75" pY="13.65"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="dingci_s-body" pX="31" pY="22.95"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="dingci_s-rightArm" pX="9.95" pY="8.85"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="dingci_s-rightHand" pX="14.6" pY="14.25"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="dingci_s-head_hurt" pX="62.25" pY="41.5"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="dingci_s-head" pX="61.75" pY="44"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="dingci" width="256" height="256">
+    <SubTexture name="dingci_s-head" width="128" height="108" cocos2d_pX="61.75" cocos2d_pY="44" x="0" y="113"/>
+    <SubTexture name="dingci_s-head_hurt" width="128" height="111" cocos2d_pX="62.25" cocos2d_pY="41.5" x="0" y="0"/>
+    <SubTexture name="dingci_s-rightHand" width="24" height="33" cocos2d_pX="14.6" cocos2d_pY="14.25" x="199" y="0"/>
+    <SubTexture name="dingci_s-rightArm" width="19" height="24" cocos2d_pX="9.95" cocos2d_pY="8.85" x="173" y="63"/>
+    <SubTexture name="dingci_s-body" width="67" height="61" cocos2d_pX="31" cocos2d_pY="22.95" x="130" y="0"/>
+    <SubTexture name="dingci_s-leftHand" width="22" height="32" cocos2d_pX="9.75" cocos2d_pY="13.65" x="225" y="0"/>
+    <SubTexture name="dingci_s-leftArm" width="21" height="23" cocos2d_pX="8.75" cocos2d_pY="9.9" x="150" y="63"/>
+    <SubTexture name="dingci_s-rightLeg" width="23" height="28" cocos2d_pX="11.5" cocos2d_pY="13.85" x="225" y="34"/>
+    <SubTexture name="dingci_s-rightFoot" width="18" height="27" cocos2d_pX="8.75" cocos2d_pY="16.3" x="199" y="59"/>
+    <SubTexture name="dingci_s-leftLeg" width="23" height="22" cocos2d_pX="10.8" cocos2d_pY="11.6" x="199" y="35"/>
+    <SubTexture name="dingci_s-leftFoot" width="18" height="27" cocos2d_pX="9.05" cocos2d_pY="15.4" x="130" y="63"/>
+  </TextureAtlas>
+</skeleton>

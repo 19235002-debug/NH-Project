@@ -1,0 +1,53 @@
+<skeleton name="changshilang" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="changshilang">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="changshilang_s-leftFoot" pX="9.05" pY="15.15"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="changshilang_s-leftLeg" pX="9.55" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="changshilang_s-rightFoot" pX="8.5" pY="15.55"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="changshilang_s-rightLeg" pX="12.25" pY="11.35"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="changshilang_s-leftArm" pX="8.5" pY="10.15"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="changshilang_s-leftHand" pX="11.25" pY="13.15"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="changshilang_s-body" pX="21.25" pY="26.7"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="changshilang_s-rightArm" pX="11.7" pY="10.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="changshilang_s-rightHand" pX="16.85" pY="14.25"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="changshilang_s-head_hurt" pX="56.5" pY="46.25"/>
+      </b>
+      <b name="head" x="-4.75" y="-124.75" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="changshilang_s-head" pX="52" pY="47.5"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="changshilang" width="256" height="256">
+    <SubTexture name="changshilang_s-head" width="103" height="108" cocos2d_pX="52" cocos2d_pY="47.5" x="105" y="0"/>
+    <SubTexture name="changshilang_s-head_hurt" width="103" height="112" cocos2d_pX="56.5" cocos2d_pY="46.25" x="0" y="0"/>
+    <SubTexture name="changshilang_s-rightHand" width="25" height="33" cocos2d_pX="16.85" cocos2d_pY="14.25" x="210" y="91"/>
+    <SubTexture name="changshilang_s-rightArm" width="19" height="25" cocos2d_pX="11.7" cocos2d_pY="10.1" x="168" y="110"/>
+    <SubTexture name="changshilang_s-body" width="40" height="54" cocos2d_pX="21.25" cocos2d_pY="26.7" x="210" y="0"/>
+    <SubTexture name="changshilang_s-leftHand" width="25" height="33" cocos2d_pX="11.25" cocos2d_pY="13.15" x="210" y="56"/>
+    <SubTexture name="changshilang_s-leftArm" width="18" height="25" cocos2d_pX="8.5" cocos2d_pY="10.15" x="189" y="110"/>
+    <SubTexture name="changshilang_s-rightLeg" width="21" height="24" cocos2d_pX="12.25" cocos2d_pY="11.35" x="105" y="110"/>
+    <SubTexture name="changshilang_s-rightFoot" width="18" height="27" cocos2d_pX="8.5" cocos2d_pY="15.55" x="128" y="110"/>
+    <SubTexture name="changshilang_s-leftLeg" width="19" height="22" cocos2d_pX="9.55" cocos2d_pY="11.6" x="0" y="114"/>
+    <SubTexture name="changshilang_s-leftFoot" width="18" height="27" cocos2d_pX="9.05" cocos2d_pY="15.15" x="148" y="110"/>
+  </TextureAtlas>
+</skeleton>

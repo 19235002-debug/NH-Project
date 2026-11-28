@@ -1,0 +1,53 @@
+<skeleton name="xiaoli" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="xiaoli">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="xiaoli_s-leftFoot" pX="9.5" pY="13"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="xiaoli_s-leftLeg" pX="9" pY="11.5"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="xiaoli_s-rightFoot" pX="9" pY="15"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="xiaoli_s-rightLeg" pX="8.5" pY="13"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="xiaoli_s-leftArm" pX="5.5" pY="12.5"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="xiaoli_s-leftHand" pX="9.5" pY="16"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="xiaoli_s-body" pX="19" pY="22.5"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="xiaoli_s-rightArm" pX="8" pY="13"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="xiaoli_s-rightHand" pX="8.5" pY="15"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="xiaoli_s-head_hurt" pX="53" pY="35"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="xiaoli_s-head" pX="46" pY="34.5"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="xiaoli" width="256" height="128">
+    <SubTexture name="xiaoli_s-head" width="98" height="99" cocos2d_pX="46" cocos2d_pY="34.5" x="100" y="0"/>
+    <SubTexture name="xiaoli_s-head_hurt" width="98" height="104" cocos2d_pX="53" cocos2d_pY="35" x="0" y="0"/>
+    <SubTexture name="xiaoli_s-rightHand" width="17" height="30" cocos2d_pX="8.5" cocos2d_pY="15" x="219" y="47"/>
+    <SubTexture name="xiaoli_s-rightArm" width="16" height="24" cocos2d_pX="8" cocos2d_pY="13" x="238" y="75"/>
+    <SubTexture name="xiaoli_s-body" width="38" height="45" cocos2d_pX="19" cocos2d_pY="22.5" x="200" y="0"/>
+    <SubTexture name="xiaoli_s-leftHand" width="17" height="30" cocos2d_pX="9.5" cocos2d_pY="16" x="200" y="47"/>
+    <SubTexture name="xiaoli_s-leftArm" width="15" height="23" cocos2d_pX="5.5" cocos2d_pY="12.5" x="100" y="101"/>
+    <SubTexture name="xiaoli_s-rightLeg" width="17" height="24" cocos2d_pX="8.5" cocos2d_pY="13" x="219" y="79"/>
+    <SubTexture name="xiaoli_s-rightFoot" width="16" height="26" cocos2d_pX="9" cocos2d_pY="15" x="238" y="47"/>
+    <SubTexture name="xiaoli_s-leftLeg" width="16" height="21" cocos2d_pX="9" cocos2d_pY="11.5" x="117" y="101"/>
+    <SubTexture name="xiaoli_s-leftFoot" width="17" height="26" cocos2d_pX="9.5" cocos2d_pY="13" x="200" y="79"/>
+  </TextureAtlas>
+</skeleton>

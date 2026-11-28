@@ -1,0 +1,53 @@
+<skeleton name="sakonukoncursed" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="sakonukoncursed">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="sakonukoncursed_s-leftFoot" pX="7.8" pY="14.4"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="sakonukoncursed_s-leftLeg" pX="9.3" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="sakonukoncursed_s-rightFoot" pX="7.75" pY="15.3"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="sakonukoncursed_s-rightLeg" pX="13.5" pY="14.85"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="sakonukoncursed_s-leftArm" pX="7.5" pY="11.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="sakonukoncursed_s-leftHand" pX="8.75" pY="14.15"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="sakonukoncursed_s-body" pX="50" pY="39.45"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="sakonukoncursed_s-rightArm" pX="7.7" pY="11.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="sakonukoncursed_s-rightHand" pX="13.35" pY="14.75"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="sakonukoncursed_s-head_hurt" pX="100.5" pY="41.25"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="sakonukoncursed_s-head" pX="84.5" pY="41.25"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="sakonukoncursed" width="512" height="256">
+    <SubTexture name="sakonukoncursed_s-head" width="185" height="173" cocos2d_pX="84.5" cocos2d_pY="41.25" x="187" y="0"/>
+    <SubTexture name="sakonukoncursed_s-head_hurt" width="185" height="173" cocos2d_pX="100.5" cocos2d_pY="41.25" x="0" y="0"/>
+    <SubTexture name="sakonukoncursed_s-rightHand" width="24" height="33" cocos2d_pX="13.35" cocos2d_pY="14.75" x="472" y="0"/>
+    <SubTexture name="sakonukoncursed_s-rightArm" width="16" height="24" cocos2d_pX="7.7" cocos2d_pY="11.1" x="450" y="80"/>
+    <SubTexture name="sakonukoncursed_s-body" width="96" height="78" cocos2d_pX="50" cocos2d_pY="39.45" x="374" y="0"/>
+    <SubTexture name="sakonukoncursed_s-leftHand" width="21" height="31" cocos2d_pX="8.75" cocos2d_pY="14.15" x="472" y="35"/>
+    <SubTexture name="sakonukoncursed_s-leftArm" width="17" height="24" cocos2d_pX="7.5" cocos2d_pY="11.4" x="431" y="80"/>
+    <SubTexture name="sakonukoncursed_s-rightLeg" width="23" height="28" cocos2d_pX="13.5" cocos2d_pY="14.85" x="472" y="68"/>
+    <SubTexture name="sakonukoncursed_s-rightFoot" width="17" height="26" cocos2d_pX="7.75" cocos2d_pY="15.3" x="374" y="80"/>
+    <SubTexture name="sakonukoncursed_s-leftLeg" width="17" height="26" cocos2d_pX="9.3" cocos2d_pY="11.6" x="393" y="80"/>
+    <SubTexture name="sakonukoncursed_s-leftFoot" width="17" height="26" cocos2d_pX="7.8" cocos2d_pY="14.4" x="412" y="80"/>
+  </TextureAtlas>
+</skeleton>

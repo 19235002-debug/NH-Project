@@ -1,0 +1,53 @@
+<skeleton name="primesakura" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="primesakura">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="primesakura_s-leftFoot" pX="8.3" pY="13.45"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="primesakura_s-leftLeg" pX="8.3" pY="17.75"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="primesakura_s-rightFoot" pX="6.95" pY="13.85"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="primesakura_s-rightLeg" pX="8" pY="14.65"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="primesakura_s-leftArm" pX="9.05" pY="15.5"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="primesakura_s-leftHand" pX="11" pY="15.9"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="primesakura_s-body" pX="17.45" pY="25.75"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="primesakura_s-rightArm" pX="7.7" pY="14.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="primesakura_s-rightHand" pX="11.1" pY="15.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="primesakura_s-head_hurt" pX="76.55" pY="64.4"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="primesakura_s-head" pX="71.9" pY="70.7"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="primesakura" width="256" height="512">
+    <SubTexture name="primesakura_s-head" width="148" height="142" cocos2d_pX="71.9" cocos2d_pY="70.7" x="0" y="0"/>
+    <SubTexture name="primesakura_s-head_hurt" width="148" height="142" cocos2d_pX="76.55" cocos2d_pY="64.4" x="0" y="144"/>
+    <SubTexture name="primesakura_s-rightHand" width="20" height="32" cocos2d_pX="11.1" cocos2d_pY="15.5" x="207" y="0"/>
+    <SubTexture name="primesakura_s-rightArm" width="16" height="24" cocos2d_pX="7.7" cocos2d_pY="14.1" x="150" y="48"/>
+    <SubTexture name="primesakura_s-body" width="32" height="46" cocos2d_pX="17.45" cocos2d_pY="25.75" x="150" y="0"/>
+    <SubTexture name="primesakura_s-leftHand" width="21" height="32" cocos2d_pX="11" cocos2d_pY="15.9" x="184" y="0"/>
+    <SubTexture name="primesakura_s-leftArm" width="16" height="24" cocos2d_pX="9.05" cocos2d_pY="15.5" x="220" y="52"/>
+    <SubTexture name="primesakura_s-rightLeg" width="19" height="24" cocos2d_pX="8" cocos2d_pY="14.65" x="229" y="0"/>
+    <SubTexture name="primesakura_s-rightFoot" width="16" height="24" cocos2d_pX="6.95" cocos2d_pY="13.85" x="229" y="26"/>
+    <SubTexture name="primesakura_s-leftLeg" width="16" height="24" cocos2d_pX="8.3" cocos2d_pY="17.75" x="184" y="34"/>
+    <SubTexture name="primesakura_s-leftFoot" width="16" height="24" cocos2d_pX="8.3" cocos2d_pY="13.45" x="202" y="34"/>
+  </TextureAtlas>
+</skeleton>

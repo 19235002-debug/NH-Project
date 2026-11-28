@@ -1,0 +1,53 @@
+<skeleton name="kisameshark" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="kisameshark">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="kisameshark_s-leftFoot" pX="10.15" pY="17.15"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="kisameshark_s-leftLeg" pX="10.15" pY="20.15"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="kisameshark_s-rightFoot" pX="10.1" pY="17.95"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="kisameshark_s-rightLeg" pX="11.45" pY="14.4"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="kisameshark_s-leftArm" pX="7.35" pY="19.75"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="kisameshark_s-leftHand" pX="8.45" pY="15.9"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="kisameshark_s-body" pX="68.65" pY="28.3"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="kisameshark_s-rightArm" pX="28" pY="18.4"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="kisameshark_s-rightHand" pX="13.9" pY="15.3"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="kisameshark_s-head_hurt" pX="47.7" pY="27.35"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="kisameshark_s-head" pX="53.15" pY="31.25"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="kisameshark" width="256" height="256">
+    <SubTexture name="kisameshark_s-head" width="100" height="94" cocos2d_pX="53.15" cocos2d_pY="31.25" x="109" y="0"/>
+    <SubTexture name="kisameshark_s-head_hurt" width="107" height="94" cocos2d_pX="47.7" cocos2d_pY="27.35" x="0" y="0"/>
+    <SubTexture name="kisameshark_s-rightHand" width="24" height="35" cocos2d_pX="13.9" cocos2d_pY="15.3" x="211" y="33"/>
+    <SubTexture name="kisameshark_s-rightArm" width="37" height="31" cocos2d_pX="28" cocos2d_pY="18.4" x="211" y="0"/>
+    <SubTexture name="kisameshark_s-body" width="90" height="50" cocos2d_pX="68.65" cocos2d_pY="28.3" x="0" y="96"/>
+    <SubTexture name="kisameshark_s-leftHand" width="24" height="32" cocos2d_pX="8.45" cocos2d_pY="15.9" x="92" y="96"/>
+    <SubTexture name="kisameshark_s-leftArm" width="26" height="31" cocos2d_pX="7.35" cocos2d_pY="19.75" x="211" y="70"/>
+    <SubTexture name="kisameshark_s-rightLeg" width="21" height="25" cocos2d_pX="11.45" cocos2d_pY="14.4" x="183" y="96"/>
+    <SubTexture name="kisameshark_s-rightFoot" width="19" height="29" cocos2d_pX="10.1" cocos2d_pY="17.95" x="162" y="96"/>
+    <SubTexture name="kisameshark_s-leftLeg" width="21" height="28" cocos2d_pX="10.15" cocos2d_pY="20.15" x="118" y="96"/>
+    <SubTexture name="kisameshark_s-leftFoot" width="19" height="29" cocos2d_pX="10.15" cocos2d_pY="17.15" x="141" y="96"/>
+  </TextureAtlas>
+</skeleton>

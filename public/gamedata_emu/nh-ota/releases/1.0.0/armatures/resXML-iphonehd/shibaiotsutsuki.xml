@@ -1,0 +1,54 @@
+<skeleton name="shibaiotsutsuki" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="shibaiotsutsuki">
+      <b name="leftFoot" x="9.65" y="-13.10" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="shibaiotsutsuki_s-leftFoot" pX="8.5" pY="14.85"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.20" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="shibaiotsutsuki_s-leftLeg" pX="8.0" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.50" y="-11.20" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="shibaiotsutsuki_s-rightFoot" pX="8.25" pY="14.95"/>
+      </b>
+      <b name="rightLeg" x="-10.10" y="-27.30" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="shibaiotsutsuki_s-rightLeg" pX="7.4" pY="10.7"/>
+      </b>
+      <b name="leftArm" x="13.90" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="shibaiotsutsuki_s-leftArm" pX="8.0" pY="9.8"/>
+      </b>
+      <b name="leftHand" x="21.40" y="-38.80" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="shibaiotsutsuki_s-leftHand" pX="12.3" pY="13.8"/>
+      </b>
+      <b name="body" x="-0.55" y="-50.00" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="shibaiotsutsuki_s-body" pX="25.5" pY="22.85"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.30" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="shibaiotsutsuki_s-rightArm" pX="8.7" pY="9.9"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.30" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="shibaiotsutsuki_s-rightHand" pX="14.55" pY="13.95"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126.00" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="shibaiotsutsuki_s-head_hurt" pX="51.35" pY="59.0"/>
+      </b>
+      <b name="head" x="-8.65" y="-126.00" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="shibaiotsutsuki_s-head" pX="56.0" pY="61.95"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  
+  <TextureAtlas name="shibaiotsutsuki" width="256" height="512">
+    <SubTexture name="shibaiotsutsuki_s-head" width="140" height="168" cocos2d_pX="56.0" cocos2d_pY="61.95" x="0" y="0"/>
+    <SubTexture name="shibaiotsutsuki_s-head_hurt" width="140" height="168" cocos2d_pX="51.35" cocos2d_pY="59.0" x="0" y="170"/>
+    <SubTexture name="shibaiotsutsuki_s-rightHand" width="26" height="33" cocos2d_pX="14.55" cocos2d_pY="13.95" x="194" y="170"/>
+    <SubTexture name="shibaiotsutsuki_s-rightArm" width="17" height="23" cocos2d_pX="8.7" cocos2d_pY="9.9" x="38" y="340"/>
+    <SubTexture name="shibaiotsutsuki_s-body" width="50" height="64" cocos2d_pX="25.5" cocos2d_pY="22.85" x="142" y="170"/>
+    <SubTexture name="shibaiotsutsuki_s-leftHand" width="26" height="32" cocos2d_pX="12.3" cocos2d_pY="13.8" x="222" y="170"/>
+    <SubTexture name="shibaiotsutsuki_s-leftArm" width="16" height="23" cocos2d_pX="8.0" cocos2d_pY="9.8" x="57" y="340"/>
+    <SubTexture name="shibaiotsutsuki_s-rightLeg" width="17" height="23" cocos2d_pX="7.4" cocos2d_pY="10.7" x="75" y="340"/>
+    <SubTexture name="shibaiotsutsuki_s-rightFoot" width="17" height="26" cocos2d_pX="8.25" cocos2d_pY="14.95" x="0" y="340"/>
+    <SubTexture name="shibaiotsutsuki_s-leftLeg" width="16" height="23" cocos2d_pX="8.0" cocos2d_pY="11.6" x="94" y="340"/>
+    <SubTexture name="shibaiotsutsuki_s-leftFoot" width="17" height="26" cocos2d_pX="8.5" cocos2d_pY="14.85" x="19" y="340"/>
+  </TextureAtlas>
+</skeleton>

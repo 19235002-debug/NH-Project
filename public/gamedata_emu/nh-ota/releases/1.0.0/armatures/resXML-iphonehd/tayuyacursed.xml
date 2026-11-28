@@ -1,0 +1,53 @@
+<skeleton name="tayuyacursed" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="tayuyacursed">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="tayuyacursed_s-leftFoot" pX="8.3" pY="16.6"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="tayuyacursed_s-leftLeg" pX="7.65" pY="14.85"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="tayuyacursed_s-rightFoot" pX="8.15" pY="17.05"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="tayuyacursed_s-rightLeg" pX="12.3" pY="15.2"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="tayuyacursed_s-leftArm" pX="11.1" pY="12.75"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="tayuyacursed_s-leftHand" pX="9.45" pY="15.2"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="tayuyacursed_s-body" pX="31.35" pY="27.15"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="tayuyacursed_s-rightArm" pX="15.25" pY="11.8"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="tayuyacursed_s-rightHand" pX="12.55" pY="15.8"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="tayuyacursed_s-head_hurt" pX="73.95" pY="52.85"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="tayuyacursed_s-head" pX="80" pY="59.3"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="tayuyacursed" width="256" height="512">
+    <SubTexture name="tayuyacursed_s-head" width="164" height="147" cocos2d_pX="80" cocos2d_pY="59.3" x="0" y="149"/>
+    <SubTexture name="tayuyacursed_s-head_hurt" width="164" height="147" cocos2d_pX="73.95" cocos2d_pY="52.85" x="0" y="0"/>
+    <SubTexture name="tayuyacursed_s-rightHand" width="22" height="35" cocos2d_pX="12.55" cocos2d_pY="15.8" x="224" y="0"/>
+    <SubTexture name="tayuyacursed_s-rightArm" width="26" height="25" cocos2d_pX="15.25" cocos2d_pY="11.8" x="219" y="70"/>
+    <SubTexture name="tayuyacursed_s-body" width="56" height="68" cocos2d_pX="31.35" cocos2d_pY="27.15" x="166" y="0"/>
+    <SubTexture name="tayuyacursed_s-leftHand" width="23" height="31" cocos2d_pX="9.45" cocos2d_pY="15.2" x="224" y="37"/>
+    <SubTexture name="tayuyacursed_s-leftArm" width="26" height="25" cocos2d_pX="11.1" cocos2d_pY="12.75" x="191" y="70"/>
+    <SubTexture name="tayuyacursed_s-rightLeg" width="23" height="29" cocos2d_pX="12.3" cocos2d_pY="15.2" x="166" y="70"/>
+    <SubTexture name="tayuyacursed_s-rightFoot" width="18" height="28" cocos2d_pX="8.15" cocos2d_pY="17.05" x="191" y="97"/>
+    <SubTexture name="tayuyacursed_s-leftLeg" width="16" height="27" cocos2d_pX="7.65" cocos2d_pY="14.85" x="231" y="97"/>
+    <SubTexture name="tayuyacursed_s-leftFoot" width="18" height="28" cocos2d_pX="8.3" cocos2d_pY="16.6" x="211" y="97"/>
+  </TextureAtlas>
+</skeleton>

@@ -1,0 +1,53 @@
+<skeleton name="qilabi" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="qilabi">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="qilabi_s-leftFoot" pX="9.05" pY="15.15"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="qilabi_s-leftLeg" pX="9.3" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="qilabi_s-rightFoot" pX="9.25" pY="15.3"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="qilabi_s-rightLeg" pX="9" pY="10.35"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="qilabi_s-leftArm" pX="9.5" pY="13.65"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="qilabi_s-leftHand" pX="12.5" pY="18.15"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="qilabi_s-body" pX="42.5" pY="23.95"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="qilabi_s-rightArm" pX="9.95" pY="12.35"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="qilabi_s-rightHand" pX="13.6" pY="18"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="qilabi_s-head_hurt" pX="71" pY="47"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="qilabi_s-head" pX="73.25" pY="42.25"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="qilabi" width="256" height="256">
+    <SubTexture name="qilabi_s-head" width="121" height="106" cocos2d_pX="73.25" cocos2d_pY="42.25" x="123" y="0"/>
+    <SubTexture name="qilabi_s-head_hurt" width="121" height="106" cocos2d_pX="71" cocos2d_pY="47" x="0" y="0"/>
+    <SubTexture name="qilabi_s-rightHand" width="23" height="35" cocos2d_pX="13.6" cocos2d_pY="18" x="67" y="108"/>
+    <SubTexture name="qilabi_s-rightArm" width="17" height="24" cocos2d_pX="9.95" cocos2d_pY="12.35" x="198" y="108"/>
+    <SubTexture name="qilabi_s-body" width="65" height="76" cocos2d_pX="42.5" cocos2d_pY="23.95" x="0" y="108"/>
+    <SubTexture name="qilabi_s-leftHand" width="24" height="33" cocos2d_pX="12.5" cocos2d_pY="18.15" x="92" y="108"/>
+    <SubTexture name="qilabi_s-leftArm" width="18" height="24" cocos2d_pX="9.5" cocos2d_pY="13.65" x="158" y="108"/>
+    <SubTexture name="qilabi_s-rightLeg" width="18" height="23" cocos2d_pX="9" cocos2d_pY="10.35" x="178" y="108"/>
+    <SubTexture name="qilabi_s-rightFoot" width="18" height="26" cocos2d_pX="9.25" cocos2d_pY="15.3" x="118" y="108"/>
+    <SubTexture name="qilabi_s-leftLeg" width="17" height="21" cocos2d_pX="9.3" cocos2d_pY="11.6" x="217" y="108"/>
+    <SubTexture name="qilabi_s-leftFoot" width="18" height="26" cocos2d_pX="9.05" cocos2d_pY="15.15" x="138" y="108"/>
+  </TextureAtlas>
+</skeleton>

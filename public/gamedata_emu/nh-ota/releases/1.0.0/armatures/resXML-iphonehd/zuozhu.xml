@@ -1,0 +1,53 @@
+<skeleton name="zuozhu" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="zuozhu">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="zuozhu_s-leftFoot" pX="9.5" pY="15"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="zuozhu_s-leftLeg" pX="11" pY="12"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="zuozhu_s-rightFoot" pX="8" pY="15.5"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="zuozhu_s-rightLeg" pX="10" pY="13"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="zuozhu_s-leftArm" pX="9.5" pY="13.5"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="zuozhu_s-leftHand" pX="10" pY="16"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="zuozhu_s-body" pX="19.5" pY="21.5"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="zuozhu_s-rightArm" pX="12.5" pY="13"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="zuozhu_s-rightHand" pX="12.5" pY="17"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="zuozhu_s-head_hurt" pX="64" pY="45.5"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="zuozhu_s-head" pX="67" pY="46"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="zuozhu" width="256" height="256">
+    <SubTexture name="zuozhu_s-head" width="126" height="110" cocos2d_pX="67" cocos2d_pY="46" x="128" y="0"/>
+    <SubTexture name="zuozhu_s-head_hurt" width="126" height="113" cocos2d_pX="64" cocos2d_pY="45.5" x="0" y="0"/>
+    <SubTexture name="zuozhu_s-rightHand" width="21" height="34" cocos2d_pX="12.5" cocos2d_pY="17" x="169" y="112"/>
+    <SubTexture name="zuozhu_s-rightArm" width="21" height="24" cocos2d_pX="12.5" cocos2d_pY="13" x="23" y="115"/>
+    <SubTexture name="zuozhu_s-body" width="39" height="43" cocos2d_pX="19.5" cocos2d_pY="21.5" x="128" y="112"/>
+    <SubTexture name="zuozhu_s-leftHand" width="20" height="32" cocos2d_pX="10" cocos2d_pY="16" x="192" y="112"/>
+    <SubTexture name="zuozhu_s-leftArm" width="21" height="25" cocos2d_pX="9.5" cocos2d_pY="13.5" x="0" y="115"/>
+    <SubTexture name="zuozhu_s-rightLeg" width="22" height="26" cocos2d_pX="10" cocos2d_pY="13" x="214" y="112"/>
+    <SubTexture name="zuozhu_s-rightFoot" width="16" height="27" cocos2d_pX="8" cocos2d_pY="15.5" x="238" y="112"/>
+    <SubTexture name="zuozhu_s-leftLeg" width="22" height="22" cocos2d_pX="11" cocos2d_pY="12" x="46" y="115"/>
+    <SubTexture name="zuozhu_s-leftFoot" width="17" height="26" cocos2d_pX="9.5" cocos2d_pY="15" x="70" y="115"/>
+  </TextureAtlas>
+</skeleton>

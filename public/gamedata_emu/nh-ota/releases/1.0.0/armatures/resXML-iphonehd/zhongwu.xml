@@ -1,0 +1,53 @@
+<skeleton name="zhongwu" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="zhongwu">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="zhongwu_s-leftFoot" pX="8.55" pY="15.15"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="zhongwu_s-leftLeg" pX="8.8" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="zhongwu_s-rightFoot" pX="8.75" pY="15.3"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="zhongwu_s-rightLeg" pX="7.75" pY="13.35"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="zhongwu_s-leftArm" pX="8" pY="11.9"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="zhongwu_s-leftHand" pX="10.25" pY="14.9"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="zhongwu_s-body" pX="19.5" pY="23.2"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="zhongwu_s-rightArm" pX="8.95" pY="12.85"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="zhongwu_s-rightHand" pX="15.35" pY="15.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="zhongwu_s-head_hurt" pX="63.5" pY="60.5"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="zhongwu_s-head" pX="66.25" pY="63.75"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="zhongwu" width="256" height="512">
+    <SubTexture name="zhongwu_s-head" width="133" height="132" cocos2d_pX="66.25" cocos2d_pY="63.75" x="0" y="134"/>
+    <SubTexture name="zhongwu_s-head_hurt" width="133" height="132" cocos2d_pX="63.5" cocos2d_pY="60.5" x="0" y="0"/>
+    <SubTexture name="zhongwu_s-rightHand" width="28" height="38" cocos2d_pX="15.35" cocos2d_pY="15.5" x="177" y="0"/>
+    <SubTexture name="zhongwu_s-rightArm" width="17" height="24" cocos2d_pX="8.95" cocos2d_pY="12.85" x="177" y="40"/>
+    <SubTexture name="zhongwu_s-body" width="40" height="48" cocos2d_pX="19.5" cocos2d_pY="23.2" x="135" y="0"/>
+    <SubTexture name="zhongwu_s-leftHand" width="21" height="31" cocos2d_pX="10.25" cocos2d_pY="14.9" x="207" y="0"/>
+    <SubTexture name="zhongwu_s-leftArm" width="17" height="24" cocos2d_pX="8" cocos2d_pY="11.9" x="135" y="50"/>
+    <SubTexture name="zhongwu_s-rightLeg" width="18" height="25" cocos2d_pX="7.75" cocos2d_pY="13.35" x="207" y="33"/>
+    <SubTexture name="zhongwu_s-rightFoot" width="17" height="27" cocos2d_pX="8.75" cocos2d_pY="15.3" x="230" y="0"/>
+    <SubTexture name="zhongwu_s-leftLeg" width="16" height="22" cocos2d_pX="8.8" cocos2d_pY="11.6" x="154" y="50"/>
+    <SubTexture name="zhongwu_s-leftFoot" width="17" height="27" cocos2d_pX="8.55" cocos2d_pY="15.15" x="230" y="29"/>
+  </TextureAtlas>
+</skeleton>

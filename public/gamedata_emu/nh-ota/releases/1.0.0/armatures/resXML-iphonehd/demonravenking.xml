@@ -1,0 +1,53 @@
+<skeleton name="demonravenking" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="demonravenking">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="demonravenking_s-leftFoot" pX="8.5" pY="14.6"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="demonravenking_s-leftLeg" pX="8.9" pY="12"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="demonravenking_s-rightFoot" pX="8.5" pY="15.8"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="demonravenking_s-rightLeg" pX="9" pY="12.8"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="demonravenking_s-leftArm" pX="7" pY="12.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="demonravenking_s-leftHand" pX="8.4" pY="14.7"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="demonravenking_s-body" pX="107.5" pY="85.65"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="demonravenking_s-rightArm" pX="10.7" pY="11.9"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="demonravenking_s-rightHand" pX="15.1" pY="15.3"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="demonravenking_s-head_hurt" pX="57.95" pY="38"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="demonravenking_s-head" pX="40.85" pY="41.95"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="demonravenking" width="256" height="256">
+    <SubTexture name="demonravenking_s-head" width="101" height="108" cocos2d_pX="40.85" cocos2d_pY="41.95" x="0" y="125"/>
+    <SubTexture name="demonravenking_s-head_hurt" width="101" height="108" cocos2d_pX="57.95" cocos2d_pY="38" x="103" y="125"/>
+    <SubTexture name="demonravenking_s-rightHand" width="24" height="33" cocos2d_pX="15.1" cocos2d_pY="15.3" x="192" y="0"/>
+    <SubTexture name="demonravenking_s-rightArm" width="19" height="25" cocos2d_pX="10.7" cocos2d_pY="11.9" x="187" y="35"/>
+    <SubTexture name="demonravenking_s-body" width="164" height="123" cocos2d_pX="107.5" cocos2d_pY="85.65" x="0" y="0"/>
+    <SubTexture name="demonravenking_s-leftHand" width="24" height="33" cocos2d_pX="8.4" cocos2d_pY="14.7" x="166" y="0"/>
+    <SubTexture name="demonravenking_s-leftArm" width="19" height="25" cocos2d_pX="7" cocos2d_pY="12.4" x="166" y="35"/>
+    <SubTexture name="demonravenking_s-rightLeg" width="17" height="25" cocos2d_pX="9" cocos2d_pY="12.8" x="208" y="58"/>
+    <SubTexture name="demonravenking_s-rightFoot" width="18" height="27" cocos2d_pX="8.5" cocos2d_pY="15.8" x="218" y="29"/>
+    <SubTexture name="demonravenking_s-leftLeg" width="18" height="23" cocos2d_pX="8.9" cocos2d_pY="12" x="227" y="58"/>
+    <SubTexture name="demonravenking_s-leftFoot" width="18" height="27" cocos2d_pX="8.5" cocos2d_pY="14.6" x="218" y="0"/>
+  </TextureAtlas>
+</skeleton>

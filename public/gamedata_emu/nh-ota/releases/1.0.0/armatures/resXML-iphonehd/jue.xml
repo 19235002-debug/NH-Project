@@ -1,0 +1,53 @@
+<skeleton name="jue" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="jue">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="jue_s-leftFoot" pX="9.5" pY="15"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="jue_s-leftLeg" pX="8.5" pY="11.5"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="jue_s-rightFoot" pX="8" pY="14.5"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="jue_s-rightLeg" pX="8.5" pY="14"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="jue_s-leftArm" pX="9" pY="12.5"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="jue_s-leftHand" pX="11" pY="15.5"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="jue_s-body" pX="29.5" pY="38"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="jue_s-rightArm" pX="9" pY="12.5"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="jue_s-rightHand" pX="13" pY="16"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="jue_s-head_hurt" pX="84.5" pY="56"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="jue_s-head" pX="53.5" pY="57"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="jue" width="256" height="256">
+    <SubTexture name="jue_s-head" width="141" height="120" cocos2d_pX="53.5" cocos2d_pY="57" x="0" y="124"/>
+    <SubTexture name="jue_s-head_hurt" width="141" height="122" cocos2d_pX="84.5" cocos2d_pY="56" x="0" y="0"/>
+    <SubTexture name="jue_s-rightHand" width="24" height="32" cocos2d_pX="13" cocos2d_pY="16" x="212" y="0"/>
+    <SubTexture name="jue_s-rightArm" width="18" height="25" cocos2d_pX="9" cocos2d_pY="12.5" x="232" y="67"/>
+    <SubTexture name="jue_s-body" width="67" height="76" cocos2d_pX="29.5" cocos2d_pY="38" x="143" y="0"/>
+    <SubTexture name="jue_s-leftHand" width="24" height="31" cocos2d_pX="11" cocos2d_pY="15.5" x="212" y="34"/>
+    <SubTexture name="jue_s-leftArm" width="18" height="25" cocos2d_pX="9" cocos2d_pY="12.5" x="212" y="67"/>
+    <SubTexture name="jue_s-rightLeg" width="17" height="24" cocos2d_pX="8.5" cocos2d_pY="14" x="162" y="78"/>
+    <SubTexture name="jue_s-rightFoot" width="16" height="27" cocos2d_pX="8" cocos2d_pY="14.5" x="238" y="0"/>
+    <SubTexture name="jue_s-leftLeg" width="17" height="21" cocos2d_pX="8.5" cocos2d_pY="11.5" x="181" y="78"/>
+    <SubTexture name="jue_s-leftFoot" width="17" height="26" cocos2d_pX="9.5" cocos2d_pY="15" x="143" y="78"/>
+  </TextureAtlas>
+</skeleton>

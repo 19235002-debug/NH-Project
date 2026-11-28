@@ -1,0 +1,53 @@
+<skeleton name="xianglin" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="xianglin">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="xianglin_s-leftFoot" pX="8.55" pY="14.9"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="xianglin_s-leftLeg" pX="8.55" pY="10.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="xianglin_s-rightFoot" pX="7.75" pY="14.3"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="xianglin_s-rightLeg" pX="9" pY="11.35"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="xianglin_s-leftArm" pX="10.25" pY="11.9"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="xianglin_s-leftHand" pX="10.75" pY="15.4"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="xianglin_s-body" pX="21.25" pY="24.95"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="xianglin_s-rightArm" pX="8.7" pY="13.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="xianglin_s-rightHand" pX="11.1" pY="15.75"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="xianglin_s-head_hurt" pX="61" pY="39"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="xianglin_s-head" pX="43" pY="39.5"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="xianglin" width="256" height="256">
+    <SubTexture name="xianglin_s-head" width="107" height="124" cocos2d_pX="43" cocos2d_pY="39.5" x="0" y="0"/>
+    <SubTexture name="xianglin_s-head_hurt" width="107" height="124" cocos2d_pX="61" cocos2d_pY="39" x="109" y="0"/>
+    <SubTexture name="xianglin_s-rightHand" width="21" height="32" cocos2d_pX="11.1" cocos2d_pY="15.75" x="218" y="33"/>
+    <SubTexture name="xianglin_s-rightArm" width="17" height="24" cocos2d_pX="8.7" cocos2d_pY="13.1" x="218" y="122"/>
+    <SubTexture name="xianglin_s-body" width="45" height="53" cocos2d_pX="21.25" cocos2d_pY="24.95" x="0" y="126"/>
+    <SubTexture name="xianglin_s-leftHand" width="22" height="31" cocos2d_pX="10.75" cocos2d_pY="15.4" x="218" y="0"/>
+    <SubTexture name="xianglin_s-leftArm" width="18" height="20" cocos2d_pX="10.25" cocos2d_pY="11.9" x="47" y="126"/>
+    <SubTexture name="xianglin_s-rightLeg" width="18" height="25" cocos2d_pX="9" cocos2d_pY="11.35" x="218" y="67"/>
+    <SubTexture name="xianglin_s-rightFoot" width="17" height="26" cocos2d_pX="7.75" cocos2d_pY="14.3" x="218" y="94"/>
+    <SubTexture name="xianglin_s-leftLeg" width="16" height="21" cocos2d_pX="8.55" cocos2d_pY="10.6" x="238" y="67"/>
+    <SubTexture name="xianglin_s-leftFoot" width="17" height="26" cocos2d_pX="8.55" cocos2d_pY="14.9" x="237" y="94"/>
+  </TextureAtlas>
+</skeleton>

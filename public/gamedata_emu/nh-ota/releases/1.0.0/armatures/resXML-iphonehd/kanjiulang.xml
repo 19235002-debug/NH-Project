@@ -1,0 +1,53 @@
+<skeleton name="kanjiulang" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="kanjiulang">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="kanjiulang_s-leftFoot" pX="9.3" pY="15.4"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="kanjiulang_s-leftLeg" pX="13.8" pY="17.85"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="kanjiulang_s-rightFoot" pX="9.25" pY="16.05"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="kanjiulang_s-rightLeg" pX="12.5" pY="15.1"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="kanjiulang_s-leftArm" pX="11.25" pY="10.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="kanjiulang_s-leftHand" pX="13" pY="14.4"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="kanjiulang_s-body" pX="22.25" pY="27.45"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="kanjiulang_s-rightArm" pX="13.2" pY="10.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="kanjiulang_s-rightHand" pX="14.35" pY="13.75"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="kanjiulang_s-head_hurt" pX="53" pY="35.5"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="kanjiulang_s-head" pX="43.5" pY="37.5"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="kanjiulang" width="256" height="256">
+    <SubTexture name="kanjiulang_s-head" width="102" height="111" cocos2d_pX="43.5" cocos2d_pY="37.5" x="104" y="0"/>
+    <SubTexture name="kanjiulang_s-head_hurt" width="102" height="111" cocos2d_pX="53" cocos2d_pY="35.5" x="0" y="0"/>
+    <SubTexture name="kanjiulang_s-rightHand" width="25" height="35" cocos2d_pX="14.35" cocos2d_pY="13.75" x="208" y="52"/>
+    <SubTexture name="kanjiulang_s-rightArm" width="21" height="22" cocos2d_pX="13.2" cocos2d_pY="10.1" x="78" y="113"/>
+    <SubTexture name="kanjiulang_s-body" width="42" height="50" cocos2d_pX="22.25" cocos2d_pY="27.45" x="208" y="0"/>
+    <SubTexture name="kanjiulang_s-leftHand" width="24" height="33" cocos2d_pX="13" cocos2d_pY="14.4" x="208" y="89"/>
+    <SubTexture name="kanjiulang_s-leftArm" width="22" height="22" cocos2d_pX="11.25" cocos2d_pY="10.4" x="54" y="113"/>
+    <SubTexture name="kanjiulang_s-rightLeg" width="24" height="28" cocos2d_pX="12.5" cocos2d_pY="15.1" x="28" y="113"/>
+    <SubTexture name="kanjiulang_s-rightFoot" width="17" height="27" cocos2d_pX="9.25" cocos2d_pY="16.05" x="235" y="52"/>
+    <SubTexture name="kanjiulang_s-leftLeg" width="26" height="28" cocos2d_pX="13.8" cocos2d_pY="17.85" x="0" y="113"/>
+    <SubTexture name="kanjiulang_s-leftFoot" width="17" height="27" cocos2d_pX="9.3" cocos2d_pY="15.4" x="235" y="81"/>
+  </TextureAtlas>
+</skeleton>

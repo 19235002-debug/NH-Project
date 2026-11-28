@@ -1,0 +1,53 @@
+<skeleton name="madarasusanoo" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="madarasusanoo">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="madarasusanoo_s-leftFoot" pX="12.1" pY="14.9"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="madarasusanoo_s-leftLeg" pX="12.1" pY="13.2"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="madarasusanoo_s-rightFoot" pX="9.9" pY="15.3"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="madarasusanoo_s-rightLeg" pX="10.1" pY="13.1"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="madarasusanoo_s-leftArm" pX="20.7" pY="44.75"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="madarasusanoo_s-leftHand" pX="18.25" pY="38.9"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="madarasusanoo_s-body" pX="77.7" pY="47.4"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="madarasusanoo_s-rightArm" pX="19.7" pY="15.6"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="madarasusanoo_s-rightHand" pX="27.6" pY="19.7"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="madarasusanoo_s-head_hurt" pX="92.6" pY="81.1"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="madarasusanoo_s-head" pX="84.7" pY="92.5"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="madarasusanoo" width="512" height="512">
+    <SubTexture name="madarasusanoo_s-head" width="176" height="189" cocos2d_pX="84.7" cocos2d_pY="92.5" x="0" y="0"/>
+    <SubTexture name="madarasusanoo_s-head_hurt" width="174" height="180" cocos2d_pX="92.6" cocos2d_pY="81.1" x="178" y="0"/>
+    <SubTexture name="madarasusanoo_s-rightHand" width="117" height="57" cocos2d_pX="27.6" cocos2d_pY="19.7" x="354" y="158"/>
+    <SubTexture name="madarasusanoo_s-rightArm" width="41" height="35" cocos2d_pX="19.7" cocos2d_pY="15.6" x="469" y="116"/>
+    <SubTexture name="madarasusanoo_s-body" width="116" height="96" cocos2d_pX="77.7" cocos2d_pY="47.4" x="354" y="0"/>
+    <SubTexture name="madarasusanoo_s-leftHand" width="113" height="58" cocos2d_pX="18.25" cocos2d_pY="38.9" x="354" y="98"/>
+    <SubTexture name="madarasusanoo_s-leftArm" width="71" height="84" cocos2d_pX="20.7" cocos2d_pY="44.75" x="178" y="182"/>
+    <SubTexture name="madarasusanoo_s-rightLeg" width="21" height="26" cocos2d_pX="10.1" cocos2d_pY="13.1" x="472" y="62"/>
+    <SubTexture name="madarasusanoo_s-rightFoot" width="21" height="29" cocos2d_pX="9.9" cocos2d_pY="15.3" x="472" y="0"/>
+    <SubTexture name="madarasusanoo_s-leftLeg" width="21" height="24" cocos2d_pX="12.1" cocos2d_pY="13.2" x="472" y="90"/>
+    <SubTexture name="madarasusanoo_s-leftFoot" width="21" height="29" cocos2d_pX="12.1" cocos2d_pY="14.9" x="472" y="31"/>
+  </TextureAtlas>
+</skeleton>

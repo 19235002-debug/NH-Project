@@ -1,0 +1,53 @@
+<skeleton name="mitsukitimeskip" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="mitsukitimeskip">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="mitsukitimeskip_s-leftFoot" pX="7.65" pY="11.4"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="mitsukitimeskip_s-leftLeg" pX="7.95" pY="7"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="mitsukitimeskip_s-rightFoot" pX="4.9" pY="11.8"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="mitsukitimeskip_s-rightLeg" pX="6.4" pY="4.75"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="mitsukitimeskip_s-leftArm" pX="12.3" pY="7.55"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="mitsukitimeskip_s-leftHand" pX="15.1" pY="10.35"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="mitsukitimeskip_s-body" pX="18.55" pY="18"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="mitsukitimeskip_s-rightArm" pX="8.7" pY="5.85"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="mitsukitimeskip_s-rightHand" pX="11.9" pY="9.3"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="mitsukitimeskip_s-head_hurt" pX="81.5" pY="66.3"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="mitsukitimeskip_s-head" pX="74.15" pY="70.45"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="mitsukitimeskip" width="256" height="512">
+    <SubTexture name="mitsukitimeskip_s-head" width="150" height="146" cocos2d_pX="74.15" cocos2d_pY="70.45" x="0" y="0"/>
+    <SubTexture name="mitsukitimeskip_s-head_hurt" width="150" height="146" cocos2d_pX="81.5" cocos2d_pY="66.3" x="0" y="148"/>
+    <SubTexture name="mitsukitimeskip_s-rightHand" width="20" height="30" cocos2d_pX="11.9" cocos2d_pY="9.3" x="210" y="0"/>
+    <SubTexture name="mitsukitimeskip_s-rightArm" width="14" height="23" cocos2d_pX="8.7" cocos2d_pY="5.85" x="188" y="32"/>
+    <SubTexture name="mitsukitimeskip_s-body" width="34" height="44" cocos2d_pX="18.55" cocos2d_pY="18" x="152" y="0"/>
+    <SubTexture name="mitsukitimeskip_s-leftHand" width="20" height="30" cocos2d_pX="15.1" cocos2d_pY="10.35" x="188" y="0"/>
+    <SubTexture name="mitsukitimeskip_s-leftArm" width="15" height="23" cocos2d_pX="12.3" cocos2d_pY="7.55" x="232" y="0"/>
+    <SubTexture name="mitsukitimeskip_s-rightLeg" width="16" height="18" cocos2d_pX="6.4" cocos2d_pY="4.75" x="152" y="46"/>
+    <SubTexture name="mitsukitimeskip_s-rightFoot" width="14" height="23" cocos2d_pX="4.9" cocos2d_pY="11.8" x="232" y="25"/>
+    <SubTexture name="mitsukitimeskip_s-leftLeg" width="14" height="17" cocos2d_pX="7.95" cocos2d_pY="7" x="170" y="46"/>
+    <SubTexture name="mitsukitimeskip_s-leftFoot" width="14" height="23" cocos2d_pX="7.65" cocos2d_pY="11.4" x="204" y="32"/>
+  </TextureAtlas>
+</skeleton>

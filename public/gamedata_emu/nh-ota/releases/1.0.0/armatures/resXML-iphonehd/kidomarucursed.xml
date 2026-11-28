@@ -1,0 +1,53 @@
+<skeleton name="kidomarucursed" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="kidomarucursed">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="kidomarucursed_s-leftFoot" pX="8.3" pY="14.9"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="kidomarucursed_s-leftLeg" pX="8.55" pY="13.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="kidomarucursed_s-rightFoot" pX="8.5" pY="15.3"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="kidomarucursed_s-rightLeg" pX="13.25" pY="15.1"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="kidomarucursed_s-leftArm" pX="10.75" pY="38.9"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="kidomarucursed_s-leftHand" pX="10.5" pY="15.9"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="kidomarucursed_s-body" pX="72.25" pY="40.2"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="kidomarucursed_s-rightArm" pX="17.95" pY="18.6"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="kidomarucursed_s-rightHand" pX="13.1" pY="14.75"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="kidomarucursed_s-head_hurt" pX="59.25" pY="75"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="kidomarucursed_s-head" pX="97" pY="80.75"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="kidomarucursed" width="256" height="512">
+    <SubTexture name="kidomarucursed_s-head" width="150" height="151" cocos2d_pX="97" cocos2d_pY="80.75" x="0" y="153"/>
+    <SubTexture name="kidomarucursed_s-head_hurt" width="157" height="151" cocos2d_pX="59.25" cocos2d_pY="75" x="0" y="0"/>
+    <SubTexture name="kidomarucursed_s-rightHand" width="22" height="33" cocos2d_pX="13.1" cocos2d_pY="14.75" x="159" y="52"/>
+    <SubTexture name="kidomarucursed_s-rightArm" width="27" height="31" cocos2d_pX="17.95" cocos2d_pY="18.6" x="209" y="0"/>
+    <SubTexture name="kidomarucursed_s-body" width="96" height="79" cocos2d_pX="72.25" cocos2d_pY="40.2" x="152" y="153"/>
+    <SubTexture name="kidomarucursed_s-leftHand" width="23" height="33" cocos2d_pX="10.5" cocos2d_pY="15.9" x="209" y="33"/>
+    <SubTexture name="kidomarucursed_s-leftArm" width="48" height="50" cocos2d_pX="10.75" cocos2d_pY="38.9" x="159" y="0"/>
+    <SubTexture name="kidomarucursed_s-rightLeg" width="23" height="29" cocos2d_pX="13.25" cocos2d_pY="15.1" x="183" y="52"/>
+    <SubTexture name="kidomarucursed_s-rightFoot" width="17" height="26" cocos2d_pX="8.5" cocos2d_pY="15.3" x="234" y="33"/>
+    <SubTexture name="kidomarucursed_s-leftLeg" width="17" height="25" cocos2d_pX="8.55" cocos2d_pY="13.6" x="208" y="68"/>
+    <SubTexture name="kidomarucursed_s-leftFoot" width="17" height="26" cocos2d_pX="8.3" cocos2d_pY="14.9" x="234" y="61"/>
+  </TextureAtlas>
+</skeleton>

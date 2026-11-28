@@ -1,0 +1,53 @@
+<skeleton name="sagejiraiya" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="sagejiraiya">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="sagejiraiya_s-leftFoot" pX="8.35" pY="15.4"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="sagejiraiya_s-leftLeg" pX="9.3" pY="12.65"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="sagejiraiya_s-rightFoot" pX="7.5" pY="15.75"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="sagejiraiya_s-rightLeg" pX="9.95" pY="15"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="sagejiraiya_s-leftArm" pX="5.35" pY="14.7"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="sagejiraiya_s-leftHand" pX="6.9" pY="17.85"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="sagejiraiya_s-body" pX="22.1" pY="24.55"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="sagejiraiya_s-rightArm" pX="16.25" pY="18.05"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="sagejiraiya_s-rightHand" pX="18.2" pY="19.75"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="sagejiraiya_s-head_hurt" pX="66.75" pY="63.05"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="sagejiraiya_s-head" pX="62.95" pY="63.55"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="sagejiraiya" width="256" height="512">
+    <SubTexture name="sagejiraiya_s-head" width="134" height="162" cocos2d_pX="62.95" cocos2d_pY="63.55" x="0" y="164"/>
+    <SubTexture name="sagejiraiya_s-head_hurt" width="134" height="162" cocos2d_pX="66.75" cocos2d_pY="63.05" x="0" y="0"/>
+    <SubTexture name="sagejiraiya_s-rightHand" width="22" height="35" cocos2d_pX="18.2" cocos2d_pY="19.75" x="185" y="0"/>
+    <SubTexture name="sagejiraiya_s-rightArm" width="22" height="26" cocos2d_pX="16.25" cocos2d_pY="18.05" x="232" y="29"/>
+    <SubTexture name="sagejiraiya_s-body" width="47" height="48" cocos2d_pX="22.1" cocos2d_pY="24.55" x="136" y="0"/>
+    <SubTexture name="sagejiraiya_s-leftHand" width="21" height="33" cocos2d_pX="6.9" cocos2d_pY="17.85" x="209" y="0"/>
+    <SubTexture name="sagejiraiya_s-leftArm" width="21" height="25" cocos2d_pX="5.35" cocos2d_pY="14.7" x="209" y="35"/>
+    <SubTexture name="sagejiraiya_s-rightLeg" width="22" height="27" cocos2d_pX="9.95" cocos2d_pY="15" x="232" y="0"/>
+    <SubTexture name="sagejiraiya_s-rightFoot" width="17" height="26" cocos2d_pX="7.5" cocos2d_pY="15.75" x="136" y="50"/>
+    <SubTexture name="sagejiraiya_s-leftLeg" width="20" height="24" cocos2d_pX="9.3" cocos2d_pY="12.65" x="185" y="37"/>
+    <SubTexture name="sagejiraiya_s-leftFoot" width="17" height="26" cocos2d_pX="8.35" cocos2d_pY="15.4" x="155" y="50"/>
+  </TextureAtlas>
+</skeleton>

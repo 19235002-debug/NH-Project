@@ -1,0 +1,53 @@
+<skeleton name="summersakura" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="summersakura">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="summersakura_s-leftFoot" pX="9.05" pY="12.15"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="summersakura_s-leftLeg" pX="8.8" pY="11.85"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="summersakura_s-rightFoot" pX="6.75" pY="13.8"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="summersakura_s-rightLeg" pX="6" pY="8.35"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="summersakura_s-leftArm" pX="9" pY="12.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="summersakura_s-leftHand" pX="10.5" pY="13.9"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="summersakura_s-body" pX="23.25" pY="20.2"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="summersakura_s-rightArm" pX="8.7" pY="13.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="summersakura_s-rightHand" pX="11.6" pY="13.75"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="summersakura_s-head_hurt" pX="54.5" pY="49.25"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="summersakura_s-head" pX="68.5" pY="54.5"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="summersakura" width="256" height="256">
+    <SubTexture name="summersakura_s-head" width="124" height="129" cocos2d_pX="68.5" cocos2d_pY="54.5" x="0" y="0"/>
+    <SubTexture name="summersakura_s-head_hurt" width="124" height="129" cocos2d_pX="54.5" cocos2d_pY="49.25" x="126" y="0"/>
+    <SubTexture name="summersakura_s-rightHand" width="19" height="30" cocos2d_pX="11.6" cocos2d_pY="13.75" x="66" y="131"/>
+    <SubTexture name="summersakura_s-rightArm" width="17" height="23" cocos2d_pX="8.7" cocos2d_pY="13.1" x="87" y="131"/>
+    <SubTexture name="summersakura_s-body" width="43" height="58" cocos2d_pX="23.25" cocos2d_pY="20.2" x="0" y="131"/>
+    <SubTexture name="summersakura_s-leftHand" width="19" height="30" cocos2d_pX="10.5" cocos2d_pY="13.9" x="45" y="131"/>
+    <SubTexture name="summersakura_s-leftArm" width="17" height="23" cocos2d_pX="9" cocos2d_pY="12.4" x="106" y="131"/>
+    <SubTexture name="summersakura_s-rightLeg" width="16" height="19" cocos2d_pX="6" cocos2d_pY="8.35" x="178" y="131"/>
+    <SubTexture name="summersakura_s-rightFoot" width="16" height="23" cocos2d_pX="6.75" cocos2d_pY="13.8" x="125" y="131"/>
+    <SubTexture name="summersakura_s-leftLeg" width="15" height="22" cocos2d_pX="8.8" cocos2d_pY="11.85" x="161" y="131"/>
+    <SubTexture name="summersakura_s-leftFoot" width="16" height="23" cocos2d_pX="9.05" cocos2d_pY="12.15" x="143" y="131"/>
+  </TextureAtlas>
+</skeleton>

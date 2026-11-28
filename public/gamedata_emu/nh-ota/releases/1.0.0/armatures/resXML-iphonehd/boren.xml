@@ -1,0 +1,53 @@
+<skeleton name="boren" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="boren">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="boren_s-leftFoot" pX="8.05" pY="15.55"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="boren_s-leftLeg" pX="8.2" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="boren_s-rightFoot" pX="8.25" pY="16.05"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="boren_s-rightLeg" pX="7" pY="13.35"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="boren_s-leftArm" pX="6.7" pY="12.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="boren_s-leftHand" pX="12.2" pY="15.9"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="boren_s-body" pX="26.95" pY="26.75"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="boren_s-rightArm" pX="8.7" pY="9.4"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="boren_s-rightHand" pX="12.85" pY="13.4"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="boren_s-head_hurt" pX="50.1" pY="47.55"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="boren_s-head" pX="62.55" pY="55.65"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="boren" width="256" height="256">
+    <SubTexture name="boren_s-head" width="119" height="117" cocos2d_pX="62.55" cocos2d_pY="55.65" x="121" y="0"/>
+    <SubTexture name="boren_s-head_hurt" width="119" height="121" cocos2d_pX="50.1" cocos2d_pY="47.55" x="0" y="0"/>
+    <SubTexture name="boren_s-rightHand" width="21" height="32" cocos2d_pX="12.85" cocos2d_pY="13.4" x="198" y="119"/>
+    <SubTexture name="boren_s-rightArm" width="16" height="23" cocos2d_pX="8.7" cocos2d_pY="9.4" x="76" y="123"/>
+    <SubTexture name="boren_s-body" width="50" height="52" cocos2d_pX="26.95" cocos2d_pY="26.75" x="121" y="119"/>
+    <SubTexture name="boren_s-leftHand" width="23" height="32" cocos2d_pX="12.2" cocos2d_pY="15.9" x="173" y="119"/>
+    <SubTexture name="boren_s-leftArm" width="17" height="23" cocos2d_pX="6.7" cocos2d_pY="12.4" x="38" y="123"/>
+    <SubTexture name="boren_s-rightLeg" width="17" height="25" cocos2d_pX="7" cocos2d_pY="13.35" x="19" y="123"/>
+    <SubTexture name="boren_s-rightFoot" width="17" height="27" cocos2d_pX="8.25" cocos2d_pY="16.05" x="0" y="123"/>
+    <SubTexture name="boren_s-leftLeg" width="17" height="23" cocos2d_pX="8.2" cocos2d_pY="11.6" x="57" y="123"/>
+    <SubTexture name="boren_s-leftFoot" width="17" height="27" cocos2d_pX="8.05" cocos2d_pY="15.55" x="221" y="119"/>
+  </TextureAtlas>
+</skeleton>

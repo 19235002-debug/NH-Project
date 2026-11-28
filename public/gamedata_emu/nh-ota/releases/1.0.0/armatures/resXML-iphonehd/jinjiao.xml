@@ -1,0 +1,53 @@
+<skeleton name="jinjiao" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="jinjiao">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="jinjiao_s-leftFoot" pX="8.05" pY="14.65"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="jinjiao_s-leftLeg" pX="8.05" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="jinjiao_s-rightFoot" pX="8" pY="15.3"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="jinjiao_s-rightLeg" pX="8.75" pY="10.85"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="jinjiao_s-leftArm" pX="10.5" pY="11.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="jinjiao_s-leftHand" pX="11" pY="15.15"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="jinjiao_s-body" pX="22.25" pY="28.2"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="jinjiao_s-rightArm" pX="7.95" pY="12.6"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="jinjiao_s-rightHand" pX="12.6" pY="16.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="jinjiao_s-head_hurt" pX="71" pY="41.75"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="jinjiao_s-head" pX="60.25" pY="43.75"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="jinjiao" width="256" height="256">
+    <SubTexture name="jinjiao_s-head" width="125" height="120" cocos2d_pX="60.25" cocos2d_pY="43.75" x="0" y="125"/>
+    <SubTexture name="jinjiao_s-head_hurt" width="130" height="123" cocos2d_pX="71" cocos2d_pY="41.75" x="0" y="0"/>
+    <SubTexture name="jinjiao_s-rightHand" width="22" height="36" cocos2d_pX="12.6" cocos2d_pY="16.5" x="178" y="0"/>
+    <SubTexture name="jinjiao_s-rightArm" width="17" height="24" cocos2d_pX="7.95" cocos2d_pY="12.6" x="221" y="53"/>
+    <SubTexture name="jinjiao_s-body" width="44" height="59" cocos2d_pX="22.25" cocos2d_pY="28.2" x="132" y="0"/>
+    <SubTexture name="jinjiao_s-leftHand" width="24" height="31" cocos2d_pX="11" cocos2d_pY="15.15" x="202" y="0"/>
+    <SubTexture name="jinjiao_s-leftArm" width="20" height="23" cocos2d_pX="10.5" cocos2d_pY="11.4" x="228" y="0"/>
+    <SubTexture name="jinjiao_s-rightLeg" width="18" height="23" cocos2d_pX="8.75" cocos2d_pY="10.85" x="178" y="38"/>
+    <SubTexture name="jinjiao_s-rightFoot" width="17" height="26" cocos2d_pX="8" cocos2d_pY="15.3" x="228" y="25"/>
+    <SubTexture name="jinjiao_s-leftLeg" width="16" height="21" cocos2d_pX="8.05" cocos2d_pY="11.6" x="132" y="61"/>
+    <SubTexture name="jinjiao_s-leftFoot" width="17" height="26" cocos2d_pX="8.05" cocos2d_pY="14.65" x="202" y="33"/>
+  </TextureAtlas>
+</skeleton>

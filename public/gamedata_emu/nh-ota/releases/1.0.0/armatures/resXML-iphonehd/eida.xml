@@ -1,0 +1,53 @@
+<skeleton name="eida" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="eida">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="eida_s-leftFoot" pX="7.3" pY="13.35"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="eida_s-leftLeg" pX="10.3" pY="10.3"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="eida_s-rightFoot" pX="6.9" pY="13.75"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="eida_s-rightLeg" pX="6.1" pY="9"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="eida_s-leftArm" pX="8.65" pY="14.35"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="eida_s-leftHand" pX="11.8" pY="14.9"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="eida_s-body" pX="19.4" pY="25.55"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="eida_s-rightArm" pX="10.4" pY="11.45"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="eida_s-rightHand" pX="14.9" pY="17.15"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="eida_s-head_hurt" pX="86.95" pY="78.45"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="eida_s-head" pX="79.45" pY="76.1"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="eida" width="512" height="256">
+    <SubTexture name="eida_s-head" width="164" height="201" cocos2d_pX="79.45" cocos2d_pY="76.1" x="0" y="0"/>
+    <SubTexture name="eida_s-head_hurt" width="164" height="201" cocos2d_pX="86.95" cocos2d_pY="78.45" x="166" y="0"/>
+    <SubTexture name="eida_s-rightHand" width="23" height="34" cocos2d_pX="14.9" cocos2d_pY="17.15" x="395" y="0"/>
+    <SubTexture name="eida_s-rightArm" width="15" height="22" cocos2d_pX="10.4" cocos2d_pY="11.45" x="472" y="0"/>
+    <SubTexture name="eida_s-body" width="35" height="54" cocos2d_pX="19.4" cocos2d_pY="25.55" x="332" y="0"/>
+    <SubTexture name="eida_s-leftHand" width="24" height="34" cocos2d_pX="11.8" cocos2d_pY="14.9" x="369" y="0"/>
+    <SubTexture name="eida_s-leftArm" width="16" height="22" cocos2d_pX="8.65" cocos2d_pY="14.35" x="420" y="0"/>
+    <SubTexture name="eida_s-rightLeg" width="15" height="18" cocos2d_pX="6.1" cocos2d_pY="9" x="489" y="0"/>
+    <SubTexture name="eida_s-rightFoot" width="15" height="23" cocos2d_pX="6.9" cocos2d_pY="13.75" x="438" y="0"/>
+    <SubTexture name="eida_s-leftLeg" width="15" height="18" cocos2d_pX="10.3" cocos2d_pY="10.3" x="489" y="20"/>
+    <SubTexture name="eida_s-leftFoot" width="15" height="23" cocos2d_pX="7.3" cocos2d_pY="13.35" x="455" y="0"/>
+  </TextureAtlas>
+</skeleton>

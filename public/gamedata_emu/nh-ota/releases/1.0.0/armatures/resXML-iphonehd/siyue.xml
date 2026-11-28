@@ -1,0 +1,53 @@
+<skeleton name="siyue" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="siyue">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="siyue_s-leftFoot" pX="15.55" pY="14.8"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="siyue_s-leftLeg" pX="8.25" pY="12.1"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="siyue_s-rightFoot" pX="15.05" pY="15.4"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="siyue_s-rightLeg" pX="7.4" pY="12.8"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="siyue_s-leftArm" pX="9.25" pY="16.3"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="siyue_s-leftHand" pX="15.45" pY="28.75"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="siyue_s-body" pX="23.15" pY="28.1"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="siyue_s-rightArm" pX="29.9" pY="23.6"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="siyue_s-rightHand" pX="24.2" pY="16.8"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="siyue_s-head_hurt" pX="68.1" pY="62.95"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="siyue_s-head" pX="61.55" pY="69.85"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="siyue" width="256" height="256">
+    <SubTexture name="siyue_s-head" width="126" height="135" cocos2d_pX="61.55" cocos2d_pY="69.85" x="128" y="0"/>
+    <SubTexture name="siyue_s-head_hurt" width="126" height="136" cocos2d_pX="68.1" cocos2d_pY="62.95" x="0" y="0"/>
+    <SubTexture name="siyue_s-rightHand" width="35" height="38" cocos2d_pX="24.2" cocos2d_pY="16.8" x="41" y="138"/>
+    <SubTexture name="siyue_s-rightArm" width="39" height="34" cocos2d_pX="29.9" cocos2d_pY="23.6" x="0" y="138"/>
+    <SubTexture name="siyue_s-body" width="52" height="60" cocos2d_pX="23.15" cocos2d_pY="28.1" x="128" y="137"/>
+    <SubTexture name="siyue_s-leftHand" width="41" height="49" cocos2d_pX="15.45" cocos2d_pY="28.75" x="182" y="137"/>
+    <SubTexture name="siyue_s-leftArm" width="18" height="28" cocos2d_pX="9.25" cocos2d_pY="16.3" x="107" y="138"/>
+    <SubTexture name="siyue_s-rightLeg" width="17" height="25" cocos2d_pX="7.4" cocos2d_pY="12.8" x="107" y="168"/>
+    <SubTexture name="siyue_s-rightFoot" width="27" height="30" cocos2d_pX="15.05" cocos2d_pY="15.4" x="78" y="138"/>
+    <SubTexture name="siyue_s-leftLeg" width="17" height="23" cocos2d_pX="8.25" cocos2d_pY="12.1" x="225" y="169"/>
+    <SubTexture name="siyue_s-leftFoot" width="27" height="30" cocos2d_pX="15.55" cocos2d_pY="14.8" x="225" y="137"/>
+  </TextureAtlas>
+</skeleton>

@@ -1,0 +1,53 @@
+<skeleton name="yueguangjifeng" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="yueguangjifeng">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="yueguangjifeng_s-leftFoot" pX="8.3" pY="15.15"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="yueguangjifeng_s-leftLeg" pX="8.3" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="yueguangjifeng_s-rightFoot" pX="8.5" pY="15.3"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="yueguangjifeng_s-rightLeg" pX="9" pY="13.6"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="yueguangjifeng_s-leftArm" pX="8" pY="11.15"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="yueguangjifeng_s-leftHand" pX="11" pY="14.9"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="yueguangjifeng_s-body" pX="18.25" pY="24.2"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="yueguangjifeng_s-rightArm" pX="8.7" pY="12.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="yueguangjifeng_s-rightHand" pX="11.6" pY="15.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="yueguangjifeng_s-head_hurt" pX="50.75" pY="30.25"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="yueguangjifeng_s-head" pX="57" pY="33.5"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="yueguangjifeng" width="256" height="256">
+    <SubTexture name="yueguangjifeng_s-head" width="108" height="100" cocos2d_pX="57" cocos2d_pY="33.5" x="0" y="0"/>
+    <SubTexture name="yueguangjifeng_s-head_hurt" width="108" height="100" cocos2d_pX="50.75" cocos2d_pY="30.25" x="110" y="0"/>
+    <SubTexture name="yueguangjifeng_s-rightHand" width="21" height="32" cocos2d_pX="11.6" cocos2d_pY="15.5" x="220" y="34"/>
+    <SubTexture name="yueguangjifeng_s-rightArm" width="16" height="24" cocos2d_pX="8.7" cocos2d_pY="12.1" x="80" y="102"/>
+    <SubTexture name="yueguangjifeng_s-body" width="40" height="49" cocos2d_pX="18.25" cocos2d_pY="24.2" x="0" y="102"/>
+    <SubTexture name="yueguangjifeng_s-leftHand" width="21" height="32" cocos2d_pX="11" cocos2d_pY="14.9" x="220" y="0"/>
+    <SubTexture name="yueguangjifeng_s-leftArm" width="17" height="23" cocos2d_pX="8" cocos2d_pY="11.15" x="61" y="102"/>
+    <SubTexture name="yueguangjifeng_s-rightLeg" width="18" height="25" cocos2d_pX="9" cocos2d_pY="13.6" x="220" y="68"/>
+    <SubTexture name="yueguangjifeng_s-rightFoot" width="17" height="26" cocos2d_pX="8.5" cocos2d_pY="15.3" x="220" y="95"/>
+    <SubTexture name="yueguangjifeng_s-leftLeg" width="16" height="21" cocos2d_pX="8.3" cocos2d_pY="11.6" x="98" y="102"/>
+    <SubTexture name="yueguangjifeng_s-leftFoot" width="17" height="26" cocos2d_pX="8.3" cocos2d_pY="15.15" x="42" y="102"/>
+  </TextureAtlas>
+</skeleton>

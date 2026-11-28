@@ -1,0 +1,53 @@
+<skeleton name="minatokyuubi" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="minatokyuubi">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="minatokyuubi_s-leftFoot" pX="17.95" pY="22.05"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="minatokyuubi_s-leftLeg" pX="17.5" pY="25.4"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="minatokyuubi_s-rightFoot" pX="15.65" pY="22.05"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="minatokyuubi_s-rightLeg" pX="15.65" pY="23.3"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="minatokyuubi_s-leftArm" pX="16.65" pY="20.6"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="minatokyuubi_s-leftHand" pX="7.95" pY="12.3"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="minatokyuubi_s-body" pX="58.45" pY="54.45"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="minatokyuubi_s-rightArm" pX="23.55" pY="20.25"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="minatokyuubi_s-rightHand" pX="22.85" pY="17.55"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="minatokyuubi_s-head_hurt" pX="98.6" pY="108.55"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="minatokyuubi_s-head" pX="85.55" pY="113.25"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="minatokyuubi" width="512" height="256">
+    <SubTexture name="minatokyuubi_s-head" width="170" height="195" cocos2d_pX="85.55" cocos2d_pY="113.25" x="175" y="0"/>
+    <SubTexture name="minatokyuubi_s-head_hurt" width="173" height="195" cocos2d_pX="98.6" cocos2d_pY="108.55" x="0" y="0"/>
+    <SubTexture name="minatokyuubi_s-rightHand" width="34" height="39" cocos2d_pX="22.85" cocos2d_pY="17.55" x="383" y="104"/>
+    <SubTexture name="minatokyuubi_s-rightArm" width="37" height="41" cocos2d_pX="23.55" cocos2d_pY="20.25" x="452" y="0"/>
+    <SubTexture name="minatokyuubi_s-body" width="103" height="102" cocos2d_pX="58.45" cocos2d_pY="54.45" x="347" y="0"/>
+    <SubTexture name="minatokyuubi_s-leftHand" width="18" height="29" cocos2d_pX="7.95" cocos2d_pY="12.3" x="491" y="0"/>
+    <SubTexture name="minatokyuubi_s-leftArm" width="34" height="39" cocos2d_pX="16.65" cocos2d_pY="20.6" x="452" y="85"/>
+    <SubTexture name="minatokyuubi_s-rightLeg" width="35" height="40" cocos2d_pX="15.65" cocos2d_pY="23.3" x="452" y="43"/>
+    <SubTexture name="minatokyuubi_s-rightFoot" width="34" height="39" cocos2d_pX="15.65" cocos2d_pY="22.05" x="347" y="104"/>
+    <SubTexture name="minatokyuubi_s-leftLeg" width="32" height="39" cocos2d_pX="17.5" cocos2d_pY="25.4" x="455" y="126"/>
+    <SubTexture name="minatokyuubi_s-leftFoot" width="34" height="39" cocos2d_pX="17.95" cocos2d_pY="22.05" x="419" y="126"/>
+  </TextureAtlas>
+</skeleton>

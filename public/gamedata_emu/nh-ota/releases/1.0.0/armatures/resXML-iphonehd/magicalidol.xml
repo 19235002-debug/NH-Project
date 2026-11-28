@@ -1,0 +1,53 @@
+<skeleton name="magicalidol" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="magicalidol">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="magicalidol_s-leftFoot" pX="10.95" pY="15.75"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="magicalidol_s-leftLeg" pX="9.3" pY="14.95"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="magicalidol_s-rightFoot" pX="11" pY="15.8"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="magicalidol_s-rightLeg" pX="9" pY="14.2"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="magicalidol_s-leftArm" pX="9.8" pY="9.75"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="magicalidol_s-leftHand" pX="10.9" pY="14"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="magicalidol_s-body" pX="29.35" pY="24.2"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="magicalidol_s-rightArm" pX="11.45" pY="10.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="magicalidol_s-rightHand" pX="12.9" pY="13.8"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="magicalidol_s-head_hurt" pX="74.1" pY="37.8"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="magicalidol_s-head" pX="53.8" pY="41.15"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="magicalidol" width="256" height="512">
+    <SubTexture name="magicalidol_s-head" width="134" height="132" cocos2d_pX="53.8" cocos2d_pY="41.15" x="0" y="134"/>
+    <SubTexture name="magicalidol_s-head_hurt" width="134" height="132" cocos2d_pX="74.1" cocos2d_pY="37.8" x="0" y="0"/>
+    <SubTexture name="magicalidol_s-rightHand" width="24" height="34" cocos2d_pX="12.9" cocos2d_pY="13.8" x="189" y="0"/>
+    <SubTexture name="magicalidol_s-rightArm" width="20" height="24" cocos2d_pX="11.45" cocos2d_pY="10.1" x="233" y="62"/>
+    <SubTexture name="magicalidol_s-body" width="51" height="51" cocos2d_pX="29.35" cocos2d_pY="24.2" x="136" y="0"/>
+    <SubTexture name="magicalidol_s-leftHand" width="24" height="32" cocos2d_pX="10.9" cocos2d_pY="14" x="215" y="0"/>
+    <SubTexture name="magicalidol_s-leftArm" width="21" height="24" cocos2d_pX="9.8" cocos2d_pY="9.75" x="158" y="53"/>
+    <SubTexture name="magicalidol_s-rightLeg" width="21" height="26" cocos2d_pX="9" cocos2d_pY="14.2" x="215" y="34"/>
+    <SubTexture name="magicalidol_s-rightFoot" width="20" height="27" cocos2d_pX="11" cocos2d_pY="15.8" x="189" y="36"/>
+    <SubTexture name="magicalidol_s-leftLeg" width="20" height="25" cocos2d_pX="9.3" cocos2d_pY="14.95" x="211" y="62"/>
+    <SubTexture name="magicalidol_s-leftFoot" width="20" height="27" cocos2d_pX="10.95" cocos2d_pY="15.75" x="136" y="53"/>
+  </TextureAtlas>
+</skeleton>

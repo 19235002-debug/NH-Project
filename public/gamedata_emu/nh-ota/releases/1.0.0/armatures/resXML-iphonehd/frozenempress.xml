@@ -1,0 +1,53 @@
+<skeleton name="frozenempress" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="frozenempress">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="frozenempress_s-leftFoot" pX="8.05" pY="14.3"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="frozenempress_s-leftLeg" pX="7.65" pY="12.05"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="frozenempress_s-rightFoot" pX="8.1" pY="15.1"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="frozenempress_s-rightLeg" pX="8.2" pY="10.4"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="frozenempress_s-leftArm" pX="8.2" pY="12.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="frozenempress_s-leftHand" pX="10.5" pY="15.9"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="frozenempress_s-body" pX="61.25" pY="46.3"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="frozenempress_s-rightArm" pX="9.9" pY="11.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="frozenempress_s-rightHand" pX="10.6" pY="14.45"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="frozenempress_s-head_hurt" pX="54.2" pY="59.7"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="frozenempress_s-head" pX="55.6" pY="62.4"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="frozenempress" width="256" height="256">
+    <SubTexture name="frozenempress_s-head" width="108" height="154" cocos2d_pX="55.6" cocos2d_pY="62.4" x="110" y="0"/>
+    <SubTexture name="frozenempress_s-head_hurt" width="108" height="154" cocos2d_pX="54.2" cocos2d_pY="59.7" x="0" y="0"/>
+    <SubTexture name="frozenempress_s-rightHand" width="21" height="32" cocos2d_pX="10.6" cocos2d_pY="14.45" x="220" y="0"/>
+    <SubTexture name="frozenempress_s-rightArm" width="18" height="23" cocos2d_pX="9.9" cocos2d_pY="11.1" x="220" y="123"/>
+    <SubTexture name="frozenempress_s-body" width="103" height="96" cocos2d_pX="61.25" cocos2d_pY="46.3" x="0" y="156"/>
+    <SubTexture name="frozenempress_s-leftHand" width="21" height="31" cocos2d_pX="10.5" cocos2d_pY="15.9" x="220" y="34"/>
+    <SubTexture name="frozenempress_s-leftArm" width="18" height="23" cocos2d_pX="8.2" cocos2d_pY="12.4" x="220" y="148"/>
+    <SubTexture name="frozenempress_s-rightLeg" width="17" height="22" cocos2d_pX="8.2" cocos2d_pY="10.4" x="105" y="156"/>
+    <SubTexture name="frozenempress_s-rightFoot" width="17" height="26" cocos2d_pX="8.1" cocos2d_pY="15.1" x="220" y="67"/>
+    <SubTexture name="frozenempress_s-leftLeg" width="15" height="22" cocos2d_pX="7.65" cocos2d_pY="12.05" x="239" y="67"/>
+    <SubTexture name="frozenempress_s-leftFoot" width="17" height="26" cocos2d_pX="8.05" cocos2d_pY="14.3" x="220" y="95"/>
+  </TextureAtlas>
+</skeleton>

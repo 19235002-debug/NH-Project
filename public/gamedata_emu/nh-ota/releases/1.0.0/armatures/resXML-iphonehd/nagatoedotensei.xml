@@ -1,0 +1,53 @@
+<skeleton name="nagatoedotensei" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="nagatoedotensei">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="nagatoedotensei_s-leftFoot" pX="8.8" pY="14.65"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="nagatoedotensei_s-leftLeg" pX="8.3" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="nagatoedotensei_s-rightFoot" pX="8.25" pY="14.05"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="nagatoedotensei_s-rightLeg" pX="11" pY="9.35"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="nagatoedotensei_s-leftArm" pX="9" pY="10.9"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="nagatoedotensei_s-leftHand" pX="12.75" pY="13.4"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="nagatoedotensei_s-body" pX="25.75" pY="22.7"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="nagatoedotensei_s-rightArm" pX="8.7" pY="9.35"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="nagatoedotensei_s-rightHand" pX="14.35" pY="13.25"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="nagatoedotensei_s-head_hurt" pX="78.75" pY="69.65"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="nagatoedotensei_s-head" pX="68.75" pY="72.25"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="nagatoedotensei" width="256" height="512">
+    <SubTexture name="nagatoedotensei_s-head" width="147" height="147" cocos2d_pX="68.75" cocos2d_pY="72.25" x="0" y="150"/>
+    <SubTexture name="nagatoedotensei_s-head_hurt" width="147" height="148" cocos2d_pX="78.75" cocos2d_pY="69.65" x="0" y="0"/>
+    <SubTexture name="nagatoedotensei_s-rightHand" width="26" height="33" cocos2d_pX="14.35" cocos2d_pY="13.25" x="205" y="0"/>
+    <SubTexture name="nagatoedotensei_s-rightArm" width="17" height="26" cocos2d_pX="8.7" cocos2d_pY="9.35" x="233" y="53"/>
+    <SubTexture name="nagatoedotensei_s-body" width="54" height="69" cocos2d_pX="25.75" cocos2d_pY="22.7" x="149" y="0"/>
+    <SubTexture name="nagatoedotensei_s-leftHand" width="26" height="32" cocos2d_pX="12.75" cocos2d_pY="13.4" x="205" y="35"/>
+    <SubTexture name="nagatoedotensei_s-leftArm" width="16" height="23" cocos2d_pX="9" cocos2d_pY="10.9" x="167" y="71"/>
+    <SubTexture name="nagatoedotensei_s-rightLeg" width="20" height="23" cocos2d_pX="11" cocos2d_pY="9.35" x="233" y="0"/>
+    <SubTexture name="nagatoedotensei_s-rightFoot" width="17" height="26" cocos2d_pX="8.25" cocos2d_pY="14.05" x="233" y="25"/>
+    <SubTexture name="nagatoedotensei_s-leftLeg" width="16" height="23" cocos2d_pX="8.3" cocos2d_pY="11.6" x="149" y="71"/>
+    <SubTexture name="nagatoedotensei_s-leftFoot" width="17" height="26" cocos2d_pX="8.8" cocos2d_pY="14.65" x="205" y="69"/>
+  </TextureAtlas>
+</skeleton>

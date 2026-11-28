@@ -1,0 +1,53 @@
+<skeleton name="hiruzensarutobiwarmode" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="hiruzensarutobiwarmode">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="hiruzensarutobiwarmode_s-leftFoot" pX="30.15" pY="27.4"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="hiruzensarutobiwarmode_s-leftLeg" pX="9.3" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="hiruzensarutobiwarmode_s-rightFoot" pX="31" pY="27.75"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="hiruzensarutobiwarmode_s-rightLeg" pX="9" pY="13.6"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="hiruzensarutobiwarmode_s-leftArm" pX="10.65" pY="11.2"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="hiruzensarutobiwarmode_s-leftHand" pX="36.3" pY="29.4"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="hiruzensarutobiwarmode_s-body" pX="45.65" pY="36.55"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="hiruzensarutobiwarmode_s-rightArm" pX="9.5" pY="11.85"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="hiruzensarutobiwarmode_s-rightHand" pX="36.05" pY="29.15"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="hiruzensarutobiwarmode_s-head_hurt" pX="93.15" pY="94.5"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="hiruzensarutobiwarmode_s-head" pX="136.7" pY="99.2"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="hiruzensarutobiwarmode" width="512" height="512">
+    <SubTexture name="hiruzensarutobiwarmode_s-head" width="230" height="185" cocos2d_pX="136.7" cocos2d_pY="99.2" x="0" y="0"/>
+    <SubTexture name="hiruzensarutobiwarmode_s-head_hurt" width="230" height="185" cocos2d_pX="93.15" cocos2d_pY="94.5" x="232" y="0"/>
+    <SubTexture name="hiruzensarutobiwarmode_s-rightHand" width="69" height="62" cocos2d_pX="36.05" cocos2d_pY="29.15" x="226" y="187"/>
+    <SubTexture name="hiruzensarutobiwarmode_s-rightArm" width="19" height="24" cocos2d_pX="9.5" cocos2d_pY="11.85" x="486" y="0"/>
+    <SubTexture name="hiruzensarutobiwarmode_s-body" width="94" height="75" cocos2d_pX="45.65" cocos2d_pY="36.55" x="0" y="187"/>
+    <SubTexture name="hiruzensarutobiwarmode_s-leftHand" width="70" height="62" cocos2d_pX="36.3" cocos2d_pY="29.4" x="96" y="187"/>
+    <SubTexture name="hiruzensarutobiwarmode_s-leftArm" width="20" height="23" cocos2d_pX="10.65" cocos2d_pY="11.2" x="464" y="0"/>
+    <SubTexture name="hiruzensarutobiwarmode_s-rightLeg" width="18" height="25" cocos2d_pX="9" cocos2d_pY="13.6" x="464" y="25"/>
+    <SubTexture name="hiruzensarutobiwarmode_s-rightFoot" width="56" height="54" cocos2d_pX="31" cocos2d_pY="27.75" x="297" y="187"/>
+    <SubTexture name="hiruzensarutobiwarmode_s-leftLeg" width="17" height="23" cocos2d_pX="9.3" cocos2d_pY="11.6" x="484" y="26"/>
+    <SubTexture name="hiruzensarutobiwarmode_s-leftFoot" width="56" height="54" cocos2d_pX="30.15" cocos2d_pY="27.4" x="168" y="187"/>
+  </TextureAtlas>
+</skeleton>

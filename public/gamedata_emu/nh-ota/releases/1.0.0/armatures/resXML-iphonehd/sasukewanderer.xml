@@ -1,0 +1,53 @@
+<skeleton name="sasukewanderer" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="sasukewanderer_s/sasukewanderer">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="sasukewanderer_s-leftFoot" pX="14.15" pY="24.5"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="sasukewanderer_s-leftLeg" pX="18.45" pY="15.85"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="sasukewanderer_s-rightFoot" pX="11.4" pY="25.55"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="sasukewanderer_s-rightLeg" pX="13.55" pY="20.15"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="sasukewanderer_s-leftArm" pX="11.15" pY="11.7"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="sasukewanderer_s-leftHand" pX="11.85" pY="15.45"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="sasukewanderer_s-body" pX="44.65" pY="25.2"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="sasukewanderer_s-rightArm" pX="18.65" pY="14.4"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="sasukewanderer_s-rightHand" pX="21.25" pY="17.45"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="sasukewanderer_s-head_hurt" pX="79.95" pY="76.55"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="sasukewanderer_s-head" pX="77.45" pY="81.05"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="sasukewanderer" width="256" height="512">
+    <SubTexture name="sasukewanderer_s-head" width="155" height="156" cocos2d_pX="77.45" cocos2d_pY="81.05" x="0" y="0"/>
+    <SubTexture name="sasukewanderer_s-head_hurt" width="155" height="156" cocos2d_pX="79.95" cocos2d_pY="76.55" x="0" y="158"/>
+    <SubTexture name="sasukewanderer_s-rightHand" width="32" height="40" cocos2d_pX="21.25" cocos2d_pY="17.45" x="191" y="79"/>
+    <SubTexture name="sasukewanderer_s-rightArm" width="28" height="30" cocos2d_pX="18.65" cocos2d_pY="14.4" x="185" y="159"/>
+    <SubTexture name="sasukewanderer_s-body" width="87" height="77" cocos2d_pX="44.65" cocos2d_pY="25.2" x="157" y="0"/>
+    <SubTexture name="sasukewanderer_s-leftHand" width="32" height="40" cocos2d_pX="11.85" cocos2d_pY="15.45" x="157" y="79"/>
+    <SubTexture name="sasukewanderer_s-leftArm" width="28" height="30" cocos2d_pX="11.15" cocos2d_pY="11.7" x="216" y="152"/>
+    <SubTexture name="sasukewanderer_s-rightLeg" width="29" height="36" cocos2d_pX="13.55" cocos2d_pY="20.15" x="185" y="121"/>
+    <SubTexture name="sasukewanderer_s-rightFoot" width="26" height="40" cocos2d_pX="11.4" cocos2d_pY="25.55" x="157" y="121"/>
+    <SubTexture name="sasukewanderer_s-leftLeg" width="31" height="29" cocos2d_pX="18.45" cocos2d_pY="15.85" x="216" y="121"/>
+    <SubTexture name="sasukewanderer_s-leftFoot" width="26" height="40" cocos2d_pX="14.15" cocos2d_pY="24.5" x="225" y="79"/>
+  </TextureAtlas>
+</skeleton>

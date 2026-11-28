@@ -1,0 +1,53 @@
+<skeleton name="gaarashinobicommander" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="gaarashinobicommander">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="gaarashinobicommander_s-leftFoot" pX="7" pY="14"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="gaarashinobicommander_s-leftLeg" pX="7.1" pY="9.15"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="gaarashinobicommander_s-rightFoot" pX="6.55" pY="14.75"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="gaarashinobicommander_s-rightLeg" pX="6.1" pY="8.95"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="gaarashinobicommander_s-leftArm" pX="10.4" pY="12.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="gaarashinobicommander_s-leftHand" pX="10.5" pY="13.3"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="gaarashinobicommander_s-body" pX="16.25" pY="19.65"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="gaarashinobicommander_s-rightArm" pX="9.75" pY="10.2"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="gaarashinobicommander_s-rightHand" pX="12.85" pY="11.9"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="gaarashinobicommander_s-head_hurt" pX="61.5" pY="35.85"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="gaarashinobicommander_s-head" pX="48.9" pY="39.95"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="gaarashinobicommander" width="256" height="256">
+    <SubTexture name="gaarashinobicommander_s-head" width="109" height="105" cocos2d_pX="48.9" cocos2d_pY="39.95" x="111" y="0"/>
+    <SubTexture name="gaarashinobicommander_s-head_hurt" width="109" height="109" cocos2d_pX="61.5" cocos2d_pY="35.85" x="0" y="0"/>
+    <SubTexture name="gaarashinobicommander_s-rightHand" width="19" height="30" cocos2d_pX="12.85" cocos2d_pY="11.9" x="222" y="76"/>
+    <SubTexture name="gaarashinobicommander_s-rightArm" width="17" height="24" cocos2d_pX="9.75" cocos2d_pY="10.2" x="130" y="107"/>
+    <SubTexture name="gaarashinobicommander_s-body" width="32" height="42" cocos2d_pX="16.25" cocos2d_pY="19.65" x="222" y="0"/>
+    <SubTexture name="gaarashinobicommander_s-leftHand" width="19" height="30" cocos2d_pX="10.5" cocos2d_pY="13.3" x="222" y="44"/>
+    <SubTexture name="gaarashinobicommander_s-leftArm" width="17" height="25" cocos2d_pX="10.4" cocos2d_pY="12.4" x="111" y="107"/>
+    <SubTexture name="gaarashinobicommander_s-rightLeg" width="15" height="23" cocos2d_pX="6.1" cocos2d_pY="8.95" x="183" y="107"/>
+    <SubTexture name="gaarashinobicommander_s-rightFoot" width="15" height="25" cocos2d_pX="6.55" cocos2d_pY="14.75" x="149" y="107"/>
+    <SubTexture name="gaarashinobicommander_s-leftLeg" width="15" height="22" cocos2d_pX="7.1" cocos2d_pY="9.15" x="200" y="107"/>
+    <SubTexture name="gaarashinobicommander_s-leftFoot" width="15" height="25" cocos2d_pX="7" cocos2d_pY="14" x="166" y="107"/>
+  </TextureAtlas>
+</skeleton>

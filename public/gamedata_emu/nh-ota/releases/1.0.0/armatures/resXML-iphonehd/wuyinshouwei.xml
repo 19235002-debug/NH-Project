@@ -1,0 +1,53 @@
+<skeleton name="wuyinshouwei" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="wuyinshouwei">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="wuyinshouwei_s-leftFoot" pX="8.8" pY="14.65"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="wuyinshouwei_s-leftLeg" pX="14.3" pY="17.85"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="wuyinshouwei_s-rightFoot" pX="7.75" pY="15.05"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="wuyinshouwei_s-rightLeg" pX="11.75" pY="15.35"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="wuyinshouwei_s-leftArm" pX="9.5" pY="10.65"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="wuyinshouwei_s-leftHand" pX="13" pY="13.65"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="wuyinshouwei_s-body" pX="19.5" pY="27.7"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="wuyinshouwei_s-rightArm" pX="12.7" pY="11.6"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="wuyinshouwei_s-rightHand" pX="13.6" pY="14.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="wuyinshouwei_s-head_hurt" pX="52.25" pY="35.25"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="wuyinshouwei_s-head" pX="40.75" pY="35.5"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="wuyinshouwei" width="256" height="256">
+    <SubTexture name="wuyinshouwei_s-head" width="93" height="108" cocos2d_pX="40.75" cocos2d_pY="35.5" x="96" y="0"/>
+    <SubTexture name="wuyinshouwei_s-head_hurt" width="94" height="108" cocos2d_pX="52.25" cocos2d_pY="35.25" x="0" y="0"/>
+    <SubTexture name="wuyinshouwei_s-rightHand" width="24" height="36" cocos2d_pX="13.6" cocos2d_pY="14.5" x="191" y="52"/>
+    <SubTexture name="wuyinshouwei_s-rightArm" width="21" height="23" cocos2d_pX="12.7" cocos2d_pY="11.6" x="233" y="0"/>
+    <SubTexture name="wuyinshouwei_s-body" width="40" height="50" cocos2d_pX="19.5" cocos2d_pY="27.7" x="191" y="0"/>
+    <SubTexture name="wuyinshouwei_s-leftHand" width="25" height="32" cocos2d_pX="13" cocos2d_pY="13.65" x="217" y="53"/>
+    <SubTexture name="wuyinshouwei_s-leftArm" width="22" height="22" cocos2d_pX="9.5" cocos2d_pY="10.65" x="0" y="110"/>
+    <SubTexture name="wuyinshouwei_s-rightLeg" width="24" height="28" cocos2d_pX="11.75" cocos2d_pY="15.35" x="191" y="90"/>
+    <SubTexture name="wuyinshouwei_s-rightFoot" width="17" height="26" cocos2d_pX="7.75" cocos2d_pY="15.05" x="233" y="25"/>
+    <SubTexture name="wuyinshouwei_s-leftLeg" width="25" height="28" cocos2d_pX="14.3" cocos2d_pY="17.85" x="217" y="87"/>
+    <SubTexture name="wuyinshouwei_s-leftFoot" width="17" height="26" cocos2d_pX="8.8" cocos2d_pY="14.65" x="24" y="110"/>
+  </TextureAtlas>
+</skeleton>

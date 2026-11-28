@@ -1,0 +1,53 @@
+<skeleton name="codenolimiter" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="codenolimiter">
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="codenolimiter_s-leftLeg" pX="8.6" pY="10.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="codenolimiter_s-rightFoot" pX="7.55" pY="14.75"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="codenolimiter_s-rightLeg" pX="7.65" pY="12.95"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="codenolimiter_s-leftArm" pX="7.65" pY="12.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="codenolimiter_s-leftHand" pX="10.45" pY="13.3"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="codenolimiter_s-body" pX="38.8" pY="29.15"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="codenolimiter_s-rightArm" pX="10" pY="10.95"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="codenolimiter_s-rightHand" pX="13.85" pY="12.55"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="codenolimiter_s-head_hurt" pX="94.55" pY="91.5"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="codenolimiter_s-head" pX="83.65" pY="96.8"/>
+      </b>
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="codenolimiter_s-leftFoot" pX="8" pY="14.4"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="codenolimiter" width="512" height="256">
+    <SubTexture name="codenolimiter_s-leftFoot" width="16" height="26" cocos2d_pX="8" cocos2d_pY="14.4" x="463" y="0"/>
+    <SubTexture name="codenolimiter_s-head" width="172" height="187" cocos2d_pX="83.65" cocos2d_pY="96.8" x="0" y="0"/>
+    <SubTexture name="codenolimiter_s-head_hurt" width="172" height="187" cocos2d_pX="94.55" cocos2d_pY="91.5" x="174" y="0"/>
+    <SubTexture name="codenolimiter_s-rightHand" width="21" height="30" cocos2d_pX="13.85" cocos2d_pY="12.55" x="440" y="0"/>
+    <SubTexture name="codenolimiter_s-rightArm" width="16" height="21" cocos2d_pX="10" cocos2d_pY="10.95" x="440" y="32"/>
+    <SubTexture name="codenolimiter_s-body" width="67" height="65" cocos2d_pX="38.8" cocos2d_pY="29.15" x="348" y="0"/>
+    <SubTexture name="codenolimiter_s-leftHand" width="21" height="31" cocos2d_pX="10.45" cocos2d_pY="13.3" x="417" y="0"/>
+    <SubTexture name="codenolimiter_s-leftArm" width="16" height="22" cocos2d_pX="7.65" cocos2d_pY="12.4" x="481" y="28"/>
+    <SubTexture name="codenolimiter_s-rightLeg" width="16" height="23" cocos2d_pX="7.65" cocos2d_pY="12.95" x="463" y="28"/>
+    <SubTexture name="codenolimiter_s-rightFoot" width="16" height="26" cocos2d_pX="7.55" cocos2d_pY="14.75" x="481" y="0"/>
+    <SubTexture name="codenolimiter_s-leftLeg" width="14" height="17" cocos2d_pX="8.6" cocos2d_pY="10.6" x="417" y="33"/>
+  </TextureAtlas>
+</skeleton>

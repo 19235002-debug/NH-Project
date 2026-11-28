@@ -1,0 +1,53 @@
+<skeleton name="byakugankaguya" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="byakugankaguya">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="byakugankaguya_s-leftFoot" pX="8.7" pY="15"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="byakugankaguya_s-leftLeg" pX="9.5" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="byakugankaguya_s-rightFoot" pX="7.85" pY="15.4"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="byakugankaguya_s-rightLeg" pX="6.9" pY="10.9"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="byakugankaguya_s-leftArm" pX="9.2" pY="11.8"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="byakugankaguya_s-leftHand" pX="12.6" pY="14.7"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="byakugankaguya_s-body" pX="25.65" pY="22.95"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="byakugankaguya_s-rightArm" pX="8.2" pY="11.35"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="byakugankaguya_s-rightHand" pX="14.35" pY="14.85"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="byakugankaguya_s-head_hurt" pX="83.5" pY="54.8"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="byakugankaguya_s-head" pX="65.6" pY="54.45"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="byakugankaguya" width="512" height="512">
+    <SubTexture name="byakugankaguya_s-head" width="138" height="159" cocos2d_pX="65.6" cocos2d_pY="54.45" x="0" y="161"/>
+    <SubTexture name="byakugankaguya_s-head_hurt" width="138" height="159" cocos2d_pX="83.5" cocos2d_pY="54.8" x="0" y="0"/>
+    <SubTexture name="byakugankaguya_s-rightHand" width="26" height="34" cocos2d_pX="14.35" cocos2d_pY="14.85" x="194" y="0"/>
+    <SubTexture name="byakugankaguya_s-rightArm" width="16" height="23" cocos2d_pX="8.2" cocos2d_pY="11.35" x="194" y="64"/>
+    <SubTexture name="byakugankaguya_s-body" width="52" height="63" cocos2d_pX="25.65" cocos2d_pY="22.95" x="140" y="0"/>
+    <SubTexture name="byakugankaguya_s-leftHand" width="26" height="32" cocos2d_pX="12.6" cocos2d_pY="14.7" x="222" y="0"/>
+    <SubTexture name="byakugankaguya_s-leftArm" width="17" height="24" cocos2d_pX="9.2" cocos2d_pY="11.8" x="213" y="62"/>
+    <SubTexture name="byakugankaguya_s-rightLeg" width="17" height="24" cocos2d_pX="6.9" cocos2d_pY="10.9" x="232" y="62"/>
+    <SubTexture name="byakugankaguya_s-rightFoot" width="17" height="26" cocos2d_pX="7.85" cocos2d_pY="15.4" x="222" y="34"/>
+    <SubTexture name="byakugankaguya_s-leftLeg" width="16" height="23" cocos2d_pX="9.5" cocos2d_pY="11.6" x="140" y="65"/>
+    <SubTexture name="byakugankaguya_s-leftFoot" width="17" height="26" cocos2d_pX="8.7" cocos2d_pY="15" x="194" y="36"/>
+  </TextureAtlas>
+</skeleton>

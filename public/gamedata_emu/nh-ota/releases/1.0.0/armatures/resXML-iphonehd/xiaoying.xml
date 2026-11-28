@@ -1,0 +1,53 @@
+<skeleton name="xiaoying" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="xiaoying">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="xiaoying_s-leftFoot" pX="8.5" pY="13"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="xiaoying_s-leftLeg" pX="8.75" pY="11"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="xiaoying_s-rightFoot" pX="8.5" pY="13.5"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="xiaoying_s-rightLeg" pX="8.5" pY="13.25"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="xiaoying_s-leftArm" pX="8" pY="11.5"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="xiaoying_s-leftHand" pX="10.5" pY="16.4"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="xiaoying_s-body" pX="21.5" pY="21.7"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="xiaoying_s-rightArm" pX="7.5" pY="11.5"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="xiaoying_s-rightHand" pX="10.5" pY="16.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="xiaoying_s-head_hurt" pX="61.5" pY="36"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="xiaoying_s-head" pX="50" pY="37.55"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="xiaoying" width="256" height="256">
+    <SubTexture name="xiaoying_s-head" width="111" height="103" cocos2d_pX="50" cocos2d_pY="37.55" x="0" y="0"/>
+    <SubTexture name="xiaoying_s-head_hurt" width="111" height="103" cocos2d_pX="61.5" cocos2d_pY="36" x="113" y="0"/>
+    <SubTexture name="xiaoying_s-rightHand" width="21" height="33" cocos2d_pX="10.5" cocos2d_pY="16.5" x="226" y="35"/>
+    <SubTexture name="xiaoying_s-rightArm" width="15" height="23" cocos2d_pX="7.5" cocos2d_pY="11.5" x="82" y="105"/>
+    <SubTexture name="xiaoying_s-body" width="43" height="45" cocos2d_pX="21.5" cocos2d_pY="21.7" x="0" y="105"/>
+    <SubTexture name="xiaoying_s-leftHand" width="21" height="33" cocos2d_pX="10.5" cocos2d_pY="16.4" x="226" y="0"/>
+    <SubTexture name="xiaoying_s-leftArm" width="16" height="23" cocos2d_pX="8" cocos2d_pY="11.5" x="64" y="105"/>
+    <SubTexture name="xiaoying_s-rightLeg" width="17" height="24" cocos2d_pX="8.5" cocos2d_pY="13.25" x="45" y="105"/>
+    <SubTexture name="xiaoying_s-rightFoot" width="16" height="27" cocos2d_pX="8.5" cocos2d_pY="13.5" x="226" y="98"/>
+    <SubTexture name="xiaoying_s-leftLeg" width="16" height="21" cocos2d_pX="8.75" cocos2d_pY="11" x="99" y="105"/>
+    <SubTexture name="xiaoying_s-leftFoot" width="17" height="26" cocos2d_pX="8.5" cocos2d_pY="13" x="226" y="70"/>
+  </TextureAtlas>
+</skeleton>

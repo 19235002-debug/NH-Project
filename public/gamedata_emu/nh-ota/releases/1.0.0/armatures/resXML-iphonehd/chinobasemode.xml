@@ -1,0 +1,53 @@
+<skeleton name="chinobasemode" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="chinobasemode">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="chinobasemode_s-leftFoot" pX="9.3" pY="15.8"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="chinobasemode_s-leftLeg" pX="9.3" pY="13.2"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="chinobasemode_s-rightFoot" pX="8.5" pY="15.8"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="chinobasemode_s-rightLeg" pX="7.4" pY="13.6"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="chinobasemode_s-leftArm" pX="9" pY="12.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="chinobasemode_s-leftHand" pX="12.1" pY="15.9"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="chinobasemode_s-body" pX="21.95" pY="25"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="chinobasemode_s-rightArm" pX="9.1" pY="13.9"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="chinobasemode_s-rightHand" pX="13.05" pY="16.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="chinobasemode_s-head_hurt" pX="80.4" pY="74.05"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="chinobasemode_s-head" pX="64.6" pY="79.15"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="chinobasemode" width="256" height="512">
+    <SubTexture name="chinobasemode_s-head" width="151" height="170" cocos2d_pX="64.6" cocos2d_pY="79.15" x="0" y="0"/>
+    <SubTexture name="chinobasemode_s-head_hurt" width="151" height="170" cocos2d_pX="80.4" cocos2d_pY="74.05" x="0" y="172"/>
+    <SubTexture name="chinobasemode_s-rightHand" width="24" height="34" cocos2d_pX="13.05" cocos2d_pY="16.5" x="225" y="0"/>
+    <SubTexture name="chinobasemode_s-rightArm" width="17" height="24" cocos2d_pX="9.1" cocos2d_pY="13.9" x="212" y="65"/>
+    <SubTexture name="chinobasemode_s-body" width="44" height="52" cocos2d_pX="21.95" cocos2d_pY="25" x="153" y="0"/>
+    <SubTexture name="chinobasemode_s-leftHand" width="24" height="34" cocos2d_pX="12.1" cocos2d_pY="15.9" x="199" y="0"/>
+    <SubTexture name="chinobasemode_s-leftArm" width="17" height="24" cocos2d_pX="9" cocos2d_pY="12.4" x="193" y="65"/>
+    <SubTexture name="chinobasemode_s-rightLeg" width="18" height="26" cocos2d_pX="7.4" cocos2d_pY="13.6" x="153" y="54"/>
+    <SubTexture name="chinobasemode_s-rightFoot" width="18" height="27" cocos2d_pX="8.5" cocos2d_pY="15.8" x="219" y="36"/>
+    <SubTexture name="chinobasemode_s-leftLeg" width="18" height="25" cocos2d_pX="9.3" cocos2d_pY="13.2" x="173" y="54"/>
+    <SubTexture name="chinobasemode_s-leftFoot" width="18" height="27" cocos2d_pX="9.3" cocos2d_pY="15.8" x="199" y="36"/>
+  </TextureAtlas>
+</skeleton>

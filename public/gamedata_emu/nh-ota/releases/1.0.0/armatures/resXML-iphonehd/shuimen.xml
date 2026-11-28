@@ -1,0 +1,53 @@
+<skeleton name="shuimen" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="shuimen">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="shuimen_s-leftFoot" pX="9.05" pY="14.15"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="shuimen_s-leftLeg" pX="9.05" pY="11.1"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="shuimen_s-rightFoot" pX="8.5" pY="13.3"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="shuimen_s-rightLeg" pX="8.5" pY="13.1"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="shuimen_s-leftArm" pX="5.25" pY="9.9"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="shuimen_s-leftHand" pX="6.75" pY="9.15"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="shuimen_s-body" pX="39.25" pY="34.7"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="shuimen_s-rightArm" pX="13.7" pY="11.35"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="shuimen_s-rightHand" pX="15.1" pY="13.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="shuimen_s-head_hurt" pX="65.25" pY="53.5"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="shuimen_s-head" pX="72.25" pY="61.5"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="shuimen" width="256" height="512">
+    <SubTexture name="shuimen_s-head" width="140" height="124" cocos2d_pX="72.25" cocos2d_pY="61.5" x="0" y="132"/>
+    <SubTexture name="shuimen_s-head_hurt" width="140" height="130" cocos2d_pX="65.25" cocos2d_pY="53.5" x="0" y="0"/>
+    <SubTexture name="shuimen_s-rightHand" width="22" height="35" cocos2d_pX="15.1" cocos2d_pY="13.5" x="204" y="0"/>
+    <SubTexture name="shuimen_s-rightArm" width="22" height="25" cocos2d_pX="13.7" cocos2d_pY="11.35" x="228" y="33"/>
+    <SubTexture name="shuimen_s-body" width="60" height="76" cocos2d_pX="39.25" cocos2d_pY="34.7" x="142" y="0"/>
+    <SubTexture name="shuimen_s-leftHand" width="21" height="31" cocos2d_pX="6.75" cocos2d_pY="9.15" x="228" y="0"/>
+    <SubTexture name="shuimen_s-leftArm" width="21" height="25" cocos2d_pX="5.25" cocos2d_pY="9.9" x="204" y="37"/>
+    <SubTexture name="shuimen_s-rightLeg" width="18" height="25" cocos2d_pX="8.5" cocos2d_pY="13.1" x="142" y="78"/>
+    <SubTexture name="shuimen_s-rightFoot" width="17" height="27" cocos2d_pX="8.5" cocos2d_pY="13.3" x="227" y="60"/>
+    <SubTexture name="shuimen_s-leftLeg" width="16" height="21" cocos2d_pX="9.05" cocos2d_pY="11.1" x="162" y="78"/>
+    <SubTexture name="shuimen_s-leftFoot" width="17" height="27" cocos2d_pX="9.05" cocos2d_pY="14.15" x="204" y="64"/>
+  </TextureAtlas>
+</skeleton>

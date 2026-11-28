@@ -1,0 +1,53 @@
+<skeleton name="humancloning" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="humancloning">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="humancloning_s-leftFoot" pX="9.3" pY="15.3"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="humancloning_s-leftLeg" pX="8.25" pY="11.95"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="humancloning_s-rightFoot" pX="7.8" pY="15.3"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="humancloning_s-rightLeg" pX="6.2" pY="11.85"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="humancloning_s-leftArm" pX="6.35" pY="13.1"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="humancloning_s-leftHand" pX="11.85" pY="18"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="humancloning_s-body" pX="20.5" pY="34.7"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="humancloning_s-rightArm" pX="14.25" pY="12.05"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="humancloning_s-rightHand" pX="15.85" pY="17.45"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="humancloning_s-head_hurt" pX="42.15" pY="32.55"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="humancloning_s-head" pX="49.5" pY="35.35"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="humancloning" width="256" height="256">
+    <SubTexture name="humancloning_s-head" width="100" height="96" cocos2d_pX="49.5" cocos2d_pY="35.35" x="106" y="0"/>
+    <SubTexture name="humancloning_s-head_hurt" width="104" height="100" cocos2d_pX="42.15" cocos2d_pY="32.55" x="0" y="0"/>
+    <SubTexture name="humancloning_s-rightHand" width="24" height="36" cocos2d_pX="15.85" cocos2d_pY="17.45" x="106" y="98"/>
+    <SubTexture name="humancloning_s-rightArm" width="19" height="26" cocos2d_pX="14.25" cocos2d_pY="12.05" x="132" y="98"/>
+    <SubTexture name="humancloning_s-body" width="44" height="68" cocos2d_pX="20.5" cocos2d_pY="34.7" x="208" y="0"/>
+    <SubTexture name="humancloning_s-leftHand" width="25" height="36" cocos2d_pX="11.85" cocos2d_pY="18" x="208" y="70"/>
+    <SubTexture name="humancloning_s-leftArm" width="19" height="26" cocos2d_pX="6.35" cocos2d_pY="13.1" x="235" y="70"/>
+    <SubTexture name="humancloning_s-rightLeg" width="17" height="25" cocos2d_pX="6.2" cocos2d_pY="11.85" x="235" y="98"/>
+    <SubTexture name="humancloning_s-rightFoot" width="17" height="26" cocos2d_pX="7.8" cocos2d_pY="15.3" x="153" y="98"/>
+    <SubTexture name="humancloning_s-leftLeg" width="17" height="23" cocos2d_pX="8.25" cocos2d_pY="11.95" x="0" y="102"/>
+    <SubTexture name="humancloning_s-leftFoot" width="17" height="26" cocos2d_pX="9.3" cocos2d_pY="15.3" x="172" y="98"/>
+  </TextureAtlas>
+</skeleton>

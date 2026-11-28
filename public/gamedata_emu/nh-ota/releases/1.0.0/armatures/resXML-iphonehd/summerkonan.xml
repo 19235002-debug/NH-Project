@@ -1,0 +1,53 @@
+<skeleton name="summerkonan" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="summerkonan">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="summerkonan_s-leftFoot" pX="8.3" pY="13.4"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="summerkonan_s-leftLeg" pX="8.05" pY="12.1"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="summerkonan_s-rightFoot" pX="6" pY="13.3"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="summerkonan_s-rightLeg" pX="5.5" pY="8.6"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="summerkonan_s-leftArm" pX="7.5" pY="6.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="summerkonan_s-leftHand" pX="11.75" pY="11.65"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="summerkonan_s-body" pX="27.75" pY="19.2"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="summerkonan_s-rightArm" pX="11.45" pY="8.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="summerkonan_s-rightHand" pX="12.35" pY="11.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="summerkonan_s-head_hurt" pX="49.25" pY="51"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="summerkonan_s-head" pX="51" pY="54.75"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="summerkonan" width="256" height="256">
+    <SubTexture name="summerkonan_s-head" width="103" height="133" cocos2d_pX="51" cocos2d_pY="54.75" x="0" y="0"/>
+    <SubTexture name="summerkonan_s-head_hurt" width="103" height="133" cocos2d_pX="49.25" cocos2d_pY="51" x="105" y="0"/>
+    <SubTexture name="summerkonan_s-rightHand" width="20" height="32" cocos2d_pX="12.35" cocos2d_pY="11.5" x="232" y="0"/>
+    <SubTexture name="summerkonan_s-rightArm" width="19" height="25" cocos2d_pX="11.45" cocos2d_pY="8.1" x="210" y="34"/>
+    <SubTexture name="summerkonan_s-body" width="55" height="58" cocos2d_pX="27.75" cocos2d_pY="19.2" x="0" y="135"/>
+    <SubTexture name="summerkonan_s-leftHand" width="20" height="32" cocos2d_pX="11.75" cocos2d_pY="11.65" x="210" y="0"/>
+    <SubTexture name="summerkonan_s-leftArm" width="17" height="23" cocos2d_pX="7.5" cocos2d_pY="6.4" x="228" y="61"/>
+    <SubTexture name="summerkonan_s-rightLeg" width="17" height="22" cocos2d_pX="5.5" cocos2d_pY="8.6" x="228" y="86"/>
+    <SubTexture name="summerkonan_s-rightFoot" width="16" height="25" cocos2d_pX="6" cocos2d_pY="13.3" x="210" y="61"/>
+    <SubTexture name="summerkonan_s-leftLeg" width="15" height="24" cocos2d_pX="8.05" cocos2d_pY="12.1" x="210" y="88"/>
+    <SubTexture name="summerkonan_s-leftFoot" width="16" height="25" cocos2d_pX="8.3" cocos2d_pY="13.4" x="231" y="34"/>
+  </TextureAtlas>
+</skeleton>

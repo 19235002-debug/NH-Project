@@ -1,0 +1,53 @@
+<skeleton name="hongdou" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="hongdou">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="hongdou_s-leftFoot" pX="8.3" pY="14.65"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="hongdou_s-leftLeg" pX="8.3" pY="11.35"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="hongdou_s-rightFoot" pX="8.5" pY="14.8"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="hongdou_s-rightLeg" pX="9" pY="11.6"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="hongdou_s-leftArm" pX="9" pY="10.15"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="hongdou_s-leftHand" pX="10.25" pY="13.65"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="hongdou_s-body" pX="38.5" pY="28.7"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="hongdou_s-rightArm" pX="14.7" pY="10.6"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="hongdou_s-rightHand" pX="14.85" pY="16.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="hongdou_s-head_hurt" pX="58" pY="54.75"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="hongdou_s-head" pX="70.25" pY="55.5"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="hongdou" width="256" height="256">
+    <SubTexture name="hongdou_s-head" width="127" height="124" cocos2d_pX="70.25" cocos2d_pY="55.5" x="0" y="126"/>
+    <SubTexture name="hongdou_s-head_hurt" width="127" height="124" cocos2d_pX="58" cocos2d_pY="54.75" x="0" y="0"/>
+    <SubTexture name="hongdou_s-rightHand" width="22" height="35" cocos2d_pX="14.85" cocos2d_pY="16.5" x="194" y="0"/>
+    <SubTexture name="hongdou_s-rightArm" width="22" height="25" cocos2d_pX="14.7" cocos2d_pY="10.6" x="218" y="32"/>
+    <SubTexture name="hongdou_s-body" width="63" height="66" cocos2d_pX="38.5" cocos2d_pY="28.7" x="129" y="0"/>
+    <SubTexture name="hongdou_s-leftHand" width="20" height="30" cocos2d_pX="10.25" cocos2d_pY="13.65" x="218" y="0"/>
+    <SubTexture name="hongdou_s-leftArm" width="21" height="25" cocos2d_pX="9" cocos2d_pY="10.15" x="194" y="37"/>
+    <SubTexture name="hongdou_s-rightLeg" width="18" height="25" cocos2d_pX="9" cocos2d_pY="11.6" x="217" y="59"/>
+    <SubTexture name="hongdou_s-rightFoot" width="17" height="26" cocos2d_pX="8.5" cocos2d_pY="14.8" x="237" y="59"/>
+    <SubTexture name="hongdou_s-leftLeg" width="16" height="21" cocos2d_pX="8.3" cocos2d_pY="11.35" x="129" y="68"/>
+    <SubTexture name="hongdou_s-leftFoot" width="17" height="26" cocos2d_pX="8.3" cocos2d_pY="14.65" x="194" y="64"/>
+  </TextureAtlas>
+</skeleton>

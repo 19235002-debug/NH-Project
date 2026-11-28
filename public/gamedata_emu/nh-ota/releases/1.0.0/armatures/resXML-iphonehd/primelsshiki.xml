@@ -1,0 +1,53 @@
+<skeleton name="primelsshiki" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="primelsshiki">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="primelsshiki_s-leftFoot" pX="8.55" pY="15.4"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="primelsshiki_s-leftLeg" pX="7.8" pY="14.1"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="primelsshiki_s-rightFoot" pX="8.5" pY="16.05"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="primelsshiki_s-rightLeg" pX="8" pY="13.1"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="primelsshiki_s-leftArm" pX="9.25" pY="12.15"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="primelsshiki_s-leftHand" pX="14.75" pY="14.15"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="primelsshiki_s-body" pX="80.5" pY="90.45"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="primelsshiki_s-rightArm" pX="9.45" pY="11.85"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="primelsshiki_s-rightHand" pX="13.6" pY="14.75"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="primelsshiki_s-head_hurt" pX="87.25" pY="93"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="primelsshiki_s-head" pX="79" pY="93.25"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="primelsshiki" width="512" height="256">
+    <SubTexture name="primelsshiki_s-head" width="164" height="185" cocos2d_pX="79" cocos2d_pY="93.25" x="0" y="0"/>
+    <SubTexture name="primelsshiki_s-head_hurt" width="164" height="185" cocos2d_pX="87.25" cocos2d_pY="93" x="166" y="0"/>
+    <SubTexture name="primelsshiki_s-rightHand" width="25" height="32" cocos2d_pX="13.6" cocos2d_pY="14.75" x="360" y="137"/>
+    <SubTexture name="primelsshiki_s-rightArm" width="17" height="24" cocos2d_pX="9.45" cocos2d_pY="11.85" x="489" y="114"/>
+    <SubTexture name="primelsshiki_s-body" width="155" height="135" cocos2d_pX="80.5" cocos2d_pY="90.45" x="332" y="0"/>
+    <SubTexture name="primelsshiki_s-leftHand" width="26" height="31" cocos2d_pX="14.75" cocos2d_pY="14.15" x="332" y="137"/>
+    <SubTexture name="primelsshiki_s-leftArm" width="16" height="24" cocos2d_pX="9.25" cocos2d_pY="12.15" x="387" y="137"/>
+    <SubTexture name="primelsshiki_s-rightLeg" width="17" height="26" cocos2d_pX="8" cocos2d_pY="13.1" x="489" y="58"/>
+    <SubTexture name="primelsshiki_s-rightFoot" width="17" height="27" cocos2d_pX="8.5" cocos2d_pY="16.05" x="489" y="29"/>
+    <SubTexture name="primelsshiki_s-leftLeg" width="17" height="26" cocos2d_pX="7.8" cocos2d_pY="14.1" x="489" y="86"/>
+    <SubTexture name="primelsshiki_s-leftFoot" width="17" height="27" cocos2d_pX="8.55" cocos2d_pY="15.4" x="489" y="0"/>
+  </TextureAtlas>
+</skeleton>

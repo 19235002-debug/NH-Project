@@ -1,0 +1,53 @@
+<skeleton name="mechauchihasasuke" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="mechauchihasasuke">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="mechauchihasasuke_s-leftFoot" pX="12.1" pY="16.05"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="mechauchihasasuke_s-leftLeg" pX="10.55" pY="15.4"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="mechauchihasasuke_s-rightFoot" pX="11.2" pY="15.85"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="mechauchihasasuke_s-rightLeg" pX="11.4" pY="14.95"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="mechauchihasasuke_s-leftArm" pX="12.2" pY="12.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="mechauchihasasuke_s-leftHand" pX="10.5" pY="14.7"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="mechauchihasasuke_s-body" pX="92.85" pY="96.4"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="mechauchihasasuke_s-rightArm" pX="23.2" pY="16.6"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="mechauchihasasuke_s-rightHand" pX="13.45" pY="13.85"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="mechauchihasasuke_s-head_hurt" pX="79.05" pY="71.55"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="mechauchihasasuke_s-head" pX="98.3" pY="73.7"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="mechauchihasasuke" width="512" height="512">
+    <SubTexture name="mechauchihasasuke_s-head" width="179" height="155" cocos2d_pX="98.3" cocos2d_pY="73.7" x="178" y="0"/>
+    <SubTexture name="mechauchihasasuke_s-head_hurt" width="179" height="155" cocos2d_pX="79.05" cocos2d_pY="71.55" x="178" y="157"/>
+    <SubTexture name="mechauchihasasuke_s-rightHand" width="21" height="33" cocos2d_pX="13.45" cocos2d_pY="13.85" x="423" y="0"/>
+    <SubTexture name="mechauchihasasuke_s-rightArm" width="38" height="35" cocos2d_pX="23.2" cocos2d_pY="16.6" x="359" y="0"/>
+    <SubTexture name="mechauchihasasuke_s-body" width="176" height="166" cocos2d_pX="92.85" cocos2d_pY="96.4" x="0" y="0"/>
+    <SubTexture name="mechauchihasasuke_s-leftHand" width="22" height="32" cocos2d_pX="10.5" cocos2d_pY="14.7" x="399" y="0"/>
+    <SubTexture name="mechauchihasasuke_s-leftArm" width="26" height="27" cocos2d_pX="12.2" cocos2d_pY="12.4" x="446" y="0"/>
+    <SubTexture name="mechauchihasasuke_s-rightLeg" width="24" height="24" cocos2d_pX="11.4" cocos2d_pY="14.95" x="474" y="0"/>
+    <SubTexture name="mechauchihasasuke_s-rightFoot" width="21" height="27" cocos2d_pX="11.2" cocos2d_pY="15.85" x="474" y="26"/>
+    <SubTexture name="mechauchihasasuke_s-leftLeg" width="22" height="24" cocos2d_pX="10.55" cocos2d_pY="15.4" x="399" y="34"/>
+    <SubTexture name="mechauchihasasuke_s-leftFoot" width="21" height="27" cocos2d_pX="12.1" cocos2d_pY="16.05" x="446" y="29"/>
+  </TextureAtlas>
+</skeleton>

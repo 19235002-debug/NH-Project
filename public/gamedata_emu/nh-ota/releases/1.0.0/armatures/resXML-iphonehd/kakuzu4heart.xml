@@ -1,0 +1,53 @@
+<skeleton name="kakuzu4heart" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="kakuzu4heart">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="kakuzu4heart_s-leftFoot" pX="8.05" pY="15.15"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="kakuzu4heart_s-leftLeg" pX="8.3" pY="14.35"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="kakuzu4heart_s-rightFoot" pX="8.5" pY="15.55"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="kakuzu4heart_s-rightLeg" pX="8.25" pY="14.35"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="kakuzu4heart_s-leftArm" pX="7" pY="14.65"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="kakuzu4heart_s-leftHand" pX="8.75" pY="16.65"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="kakuzu4heart_s-body" pX="20" pY="27.5"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="kakuzu4heart_s-rightArm" pX="14.2" pY="13.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="kakuzu4heart_s-rightHand" pX="17.1" pY="15.25"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="kakuzu4heart_s-head_hurt" pX="93.25" pY="55.9"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="kakuzu4heart_s-head" pX="86.75" pY="58.75"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="kakuzu4heart" width="256" height="512">
+    <SubTexture name="kakuzu4heart_s-head" width="180" height="151" cocos2d_pX="86.75" cocos2d_pY="58.75" x="0" y="0"/>
+    <SubTexture name="kakuzu4heart_s-head_hurt" width="180" height="151" cocos2d_pX="93.25" cocos2d_pY="55.9" x="0" y="153"/>
+    <SubTexture name="kakuzu4heart_s-rightHand" width="22" height="33" cocos2d_pX="17.1" cocos2d_pY="15.25" x="226" y="35"/>
+    <SubTexture name="kakuzu4heart_s-rightArm" width="18" height="23" cocos2d_pX="14.2" cocos2d_pY="13.1" x="201" y="81"/>
+    <SubTexture name="kakuzu4heart_s-body" width="42" height="51" cocos2d_pX="20" cocos2d_pY="27.5" x="182" y="0"/>
+    <SubTexture name="kakuzu4heart_s-leftHand" width="22" height="33" cocos2d_pX="8.75" cocos2d_pY="16.65" x="226" y="0"/>
+    <SubTexture name="kakuzu4heart_s-leftArm" width="18" height="23" cocos2d_pX="7" cocos2d_pY="14.65" x="221" y="98"/>
+    <SubTexture name="kakuzu4heart_s-rightLeg" width="18" height="26" cocos2d_pX="8.25" cocos2d_pY="14.35" x="182" y="53"/>
+    <SubTexture name="kakuzu4heart_s-rightFoot" width="17" height="26" cocos2d_pX="8.5" cocos2d_pY="15.55" x="202" y="53"/>
+    <SubTexture name="kakuzu4heart_s-leftLeg" width="17" height="26" cocos2d_pX="8.3" cocos2d_pY="14.35" x="221" y="70"/>
+    <SubTexture name="kakuzu4heart_s-leftFoot" width="17" height="26" cocos2d_pX="8.05" cocos2d_pY="15.15" x="182" y="81"/>
+  </TextureAtlas>
+</skeleton>

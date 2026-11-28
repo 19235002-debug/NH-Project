@@ -1,0 +1,53 @@
+<skeleton name="daemon" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="daemon">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="daemon_s-leftFoot" pX="9.3" pY="15.35"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="daemon_s-leftLeg" pX="11.65" pY="16.3"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="daemon_s-rightFoot" pX="7.7" pY="15.8"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="daemon_s-rightLeg" pX="12.2" pY="14.4"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="daemon_s-leftArm" pX="7.7" pY="12.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="daemon_s-leftHand" pX="11.05" pY="18.5"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="daemon_s-body" pX="24.5" pY="23.9"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="daemon_s-rightArm" pX="13.9" pY="12.35"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="daemon_s-rightHand" pX="17.15" pY="17.3"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="daemon_s-head_hurt" pX="78.05" pY="71.6"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="daemon_s-head" pX="72.4" pY="78.05"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="daemon" width="256" height="512">
+    <SubTexture name="daemon_s-head" width="150" height="163" cocos2d_pX="72.4" cocos2d_pY="78.05" x="0" y="0"/>
+    <SubTexture name="daemon_s-head_hurt" width="150" height="163" cocos2d_pX="78.05" cocos2d_pY="71.6" x="0" y="165"/>
+    <SubTexture name="daemon_s-rightHand" width="24" height="36" cocos2d_pX="17.15" cocos2d_pY="17.3" x="230" y="0"/>
+    <SubTexture name="daemon_s-rightArm" width="19" height="23" cocos2d_pX="13.9" cocos2d_pY="12.35" x="219" y="68"/>
+    <SubTexture name="daemon_s-body" width="50" height="55" cocos2d_pX="24.5" cocos2d_pY="23.9" x="152" y="0"/>
+    <SubTexture name="daemon_s-leftHand" width="24" height="36" cocos2d_pX="11.05" cocos2d_pY="18.5" x="204" y="0"/>
+    <SubTexture name="daemon_s-leftArm" width="19" height="23" cocos2d_pX="7.7" cocos2d_pY="12.4" x="198" y="67"/>
+    <SubTexture name="daemon_s-rightLeg" width="25" height="27" cocos2d_pX="12.2" cocos2d_pY="14.4" x="152" y="57"/>
+    <SubTexture name="daemon_s-rightFoot" width="17" height="27" cocos2d_pX="7.7" cocos2d_pY="15.8" x="204" y="38"/>
+    <SubTexture name="daemon_s-leftLeg" width="25" height="28" cocos2d_pX="11.65" cocos2d_pY="16.3" x="223" y="38"/>
+    <SubTexture name="daemon_s-leftFoot" width="17" height="27" cocos2d_pX="9.3" cocos2d_pY="15.35" x="179" y="57"/>
+  </TextureAtlas>
+</skeleton>

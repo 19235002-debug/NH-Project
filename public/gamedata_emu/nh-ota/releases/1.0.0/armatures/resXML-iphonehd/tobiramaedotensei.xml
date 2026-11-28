@@ -1,0 +1,53 @@
+<skeleton name="tobiramaedotensei" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="tobiramaedotensei">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="tobiramaedotensei_s-leftFoot" pX="9.3" pY="13.9"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="tobiramaedotensei_s-leftLeg" pX="9.3" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="tobiramaedotensei_s-rightFoot" pX="8.5" pY="14.95"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="tobiramaedotensei_s-rightLeg" pX="9" pY="13.6"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="tobiramaedotensei_s-leftArm" pX="10.05" pY="10.85"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="tobiramaedotensei_s-leftHand" pX="11" pY="16.95"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="tobiramaedotensei_s-body" pX="17.45" pY="21.65"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="tobiramaedotensei_s-rightArm" pX="13.8" pY="11.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="tobiramaedotensei_s-rightHand" pX="14.2" pY="16"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="tobiramaedotensei_s-head_hurt" pX="78.7" pY="81.3"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="tobiramaedotensei_s-head" pX="77" pY="83.45"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="tobiramaedotensei" width="256" height="512">
+    <SubTexture name="tobiramaedotensei_s-head" width="152" height="155" cocos2d_pX="77" cocos2d_pY="83.45" x="0" y="157"/>
+    <SubTexture name="tobiramaedotensei_s-head_hurt" width="153" height="155" cocos2d_pX="78.7" cocos2d_pY="81.3" x="0" y="0"/>
+    <SubTexture name="tobiramaedotensei_s-rightHand" width="20" height="33" cocos2d_pX="14.2" cocos2d_pY="16" x="213" y="0"/>
+    <SubTexture name="tobiramaedotensei_s-rightArm" width="21" height="25" cocos2d_pX="13.8" cocos2d_pY="11.1" x="155" y="59"/>
+    <SubTexture name="tobiramaedotensei_s-body" width="34" height="57" cocos2d_pX="17.45" cocos2d_pY="21.65" x="155" y="0"/>
+    <SubTexture name="tobiramaedotensei_s-leftHand" width="20" height="33" cocos2d_pX="11" cocos2d_pY="16.95" x="191" y="0"/>
+    <SubTexture name="tobiramaedotensei_s-leftArm" width="22" height="25" cocos2d_pX="10.05" cocos2d_pY="10.85" x="210" y="35"/>
+    <SubTexture name="tobiramaedotensei_s-rightLeg" width="19" height="23" cocos2d_pX="9" cocos2d_pY="13.6" x="235" y="0"/>
+    <SubTexture name="tobiramaedotensei_s-rightFoot" width="17" height="24" cocos2d_pX="8.5" cocos2d_pY="14.95" x="191" y="35"/>
+    <SubTexture name="tobiramaedotensei_s-leftLeg" width="17" height="22" cocos2d_pX="9.3" cocos2d_pY="11.6" x="234" y="51"/>
+    <SubTexture name="tobiramaedotensei_s-leftFoot" width="17" height="24" cocos2d_pX="9.3" cocos2d_pY="13.9" x="235" y="25"/>
+  </TextureAtlas>
+</skeleton>

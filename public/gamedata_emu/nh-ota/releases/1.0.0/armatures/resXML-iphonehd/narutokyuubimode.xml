@@ -1,0 +1,53 @@
+<skeleton name="narutokyuubimode" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="narutokyuubimode">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="narutokyuubimode_s-leftFoot" pX="10.65" pY="22.55"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="narutokyuubimode_s-leftLeg" pX="9.35" pY="20.1"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="narutokyuubimode_s-rightFoot" pX="10.55" pY="23.45"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="narutokyuubimode_s-rightLeg" pX="9.95" pY="15.65"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="narutokyuubimode_s-leftArm" pX="9.15" pY="17.1"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="narutokyuubimode_s-leftHand" pX="12.9" pY="20.5"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="narutokyuubimode_s-body" pX="21.6" pY="29.8"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="narutokyuubimode_s-rightArm" pX="12.95" pY="17.3"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="narutokyuubimode_s-rightHand" pX="10.95" pY="27"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="narutokyuubimode_s-head_hurt" pX="80.9" pY="75.1"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="narutokyuubimode_s-head" pX="67.05" pY="81.5"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="narutokyuubimode" width="256" height="512">
+    <SubTexture name="narutokyuubimode_s-head" width="148" height="147" cocos2d_pX="67.05" cocos2d_pY="81.5" x="0" y="158"/>
+    <SubTexture name="narutokyuubimode_s-head_hurt" width="148" height="156" cocos2d_pX="80.9" cocos2d_pY="75.1" x="0" y="0"/>
+    <SubTexture name="narutokyuubimode_s-rightHand" width="24" height="44" cocos2d_pX="10.95" cocos2d_pY="27" x="202" y="0"/>
+    <SubTexture name="narutokyuubimode_s-rightArm" width="25" height="30" cocos2d_pX="12.95" cocos2d_pY="17.3" x="210" y="72"/>
+    <SubTexture name="narutokyuubimode_s-body" width="50" height="62" cocos2d_pX="21.6" cocos2d_pY="29.8" x="150" y="0"/>
+    <SubTexture name="narutokyuubimode_s-leftHand" width="29" height="38" cocos2d_pX="12.9" cocos2d_pY="20.5" x="150" y="64"/>
+    <SubTexture name="narutokyuubimode_s-leftArm" width="25" height="30" cocos2d_pX="9.15" cocos2d_pY="17.1" x="181" y="95"/>
+    <SubTexture name="narutokyuubimode_s-rightLeg" width="25" height="28" cocos2d_pX="9.95" cocos2d_pY="15.65" x="150" y="104"/>
+    <SubTexture name="narutokyuubimode_s-rightFoot" width="24" height="34" cocos2d_pX="10.55" cocos2d_pY="23.45" x="228" y="0"/>
+    <SubTexture name="narutokyuubimode_s-leftLeg" width="27" height="29" cocos2d_pX="9.35" cocos2d_pY="20.1" x="181" y="64"/>
+    <SubTexture name="narutokyuubimode_s-leftFoot" width="24" height="34" cocos2d_pX="10.65" cocos2d_pY="22.55" x="228" y="36"/>
+  </TextureAtlas>
+</skeleton>

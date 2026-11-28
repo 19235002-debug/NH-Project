@@ -1,0 +1,53 @@
+<skeleton name="whitemaskobito" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="whitemaskobito">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="whitemaskobito_s-leftFoot" pX="11.35" pY="17.85"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="whitemaskobito_s-leftLeg" pX="10.85" pY="16.8"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="whitemaskobito_s-rightFoot" pX="10.55" pY="18.65"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="whitemaskobito_s-rightLeg" pX="9.4" pY="11.35"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="whitemaskobito_s-leftArm" pX="9" pY="12.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="whitemaskobito_s-leftHand" pX="13.05" pY="17.8"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="whitemaskobito_s-body" pX="95.2" pY="95.05"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="whitemaskobito_s-rightArm" pX="11.2" pY="11"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="whitemaskobito_s-rightHand" pX="17.6" pY="14.95"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="whitemaskobito_s-head_hurt" pX="81.65" pY="87.35"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="whitemaskobito_s-head" pX="91.8" pY="87.45"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="whitemaskobito" width="512" height="512">
+    <SubTexture name="whitemaskobito_s-head" width="177" height="171" cocos2d_pX="91.8" cocos2d_pY="87.45" x="182" y="0"/>
+    <SubTexture name="whitemaskobito_s-head_hurt" width="180" height="171" cocos2d_pX="81.65" cocos2d_pY="87.35" x="0" y="0"/>
+    <SubTexture name="whitemaskobito_s-rightHand" width="29" height="35" cocos2d_pX="17.6" cocos2d_pY="14.95" x="391" y="0"/>
+    <SubTexture name="whitemaskobito_s-rightArm" width="20" height="25" cocos2d_pX="11.2" cocos2d_pY="11" x="422" y="35"/>
+    <SubTexture name="whitemaskobito_s-body" width="166" height="155" cocos2d_pX="95.2" cocos2d_pY="95.05" x="0" y="173"/>
+    <SubTexture name="whitemaskobito_s-leftHand" width="28" height="38" cocos2d_pX="13.05" cocos2d_pY="17.8" x="361" y="0"/>
+    <SubTexture name="whitemaskobito_s-leftArm" width="19" height="28" cocos2d_pX="9" cocos2d_pY="12.4" x="490" y="30"/>
+    <SubTexture name="whitemaskobito_s-rightLeg" width="20" height="27" cocos2d_pX="9.4" cocos2d_pY="11.35" x="468" y="30"/>
+    <SubTexture name="whitemaskobito_s-rightFoot" width="21" height="33" cocos2d_pX="10.55" cocos2d_pY="18.65" x="445" y="0"/>
+    <SubTexture name="whitemaskobito_s-leftLeg" width="22" height="28" cocos2d_pX="10.85" cocos2d_pY="16.8" x="468" y="0"/>
+    <SubTexture name="whitemaskobito_s-leftFoot" width="21" height="33" cocos2d_pX="11.35" cocos2d_pY="17.85" x="422" y="0"/>
+  </TextureAtlas>
+</skeleton>

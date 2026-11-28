@@ -1,0 +1,53 @@
+<skeleton name="zhujian" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="zhujian">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="zhujian_s-leftFoot" pX="9.05" pY="15.65"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="zhujian_s-leftLeg" pX="9.05" pY="11.35"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="zhujian_s-rightFoot" pX="9.25" pY="16.3"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="zhujian_s-rightLeg" pX="8.5" pY="11.85"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="zhujian_s-leftArm" pX="9.5" pY="10.65"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="zhujian_s-leftHand" pX="10.75" pY="14.4"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="zhujian_s-body" pX="19.75" pY="20.2"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="zhujian_s-rightArm" pX="9.7" pY="11.35"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="zhujian_s-rightHand" pX="14.6" pY="14"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="zhujian_s-head_hurt" pX="57.5" pY="38.75"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="zhujian_s-head" pX="54.5" pY="43.5"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="zhujian" width="256" height="256">
+    <SubTexture name="zhujian_s-head" width="110" height="126" cocos2d_pX="54.5" cocos2d_pY="43.5" x="112" y="0"/>
+    <SubTexture name="zhujian_s-head_hurt" width="110" height="126" cocos2d_pX="57.5" cocos2d_pY="38.75" x="0" y="0"/>
+    <SubTexture name="zhujian_s-rightHand" width="22" height="34" cocos2d_pX="14.6" cocos2d_pY="14" x="224" y="0"/>
+    <SubTexture name="zhujian_s-rightArm" width="20" height="24" cocos2d_pX="9.7" cocos2d_pY="11.35" x="44" y="128"/>
+    <SubTexture name="zhujian_s-body" width="42" height="53" cocos2d_pX="19.75" cocos2d_pY="20.2" x="0" y="128"/>
+    <SubTexture name="zhujian_s-leftHand" width="22" height="32" cocos2d_pX="10.75" cocos2d_pY="14.4" x="224" y="36"/>
+    <SubTexture name="zhujian_s-leftArm" width="20" height="24" cocos2d_pX="9.5" cocos2d_pY="10.65" x="66" y="128"/>
+    <SubTexture name="zhujian_s-rightLeg" width="18" height="24" cocos2d_pX="8.5" cocos2d_pY="11.85" x="88" y="128"/>
+    <SubTexture name="zhujian_s-rightFoot" width="18" height="27" cocos2d_pX="9.25" cocos2d_pY="16.3" x="224" y="70"/>
+    <SubTexture name="zhujian_s-leftLeg" width="17" height="22" cocos2d_pX="9.05" cocos2d_pY="11.35" x="108" y="128"/>
+    <SubTexture name="zhujian_s-leftFoot" width="18" height="27" cocos2d_pX="9.05" cocos2d_pY="15.65" x="224" y="99"/>
+  </TextureAtlas>
+</skeleton>

@@ -1,0 +1,53 @@
+<skeleton name="didala" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="didala">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="didala_s-leftFoot" pX="9.3" pY="16.05"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="didala_s-leftLeg" pX="8.65" pY="10.95"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="didala_s-rightFoot" pX="8.85" pY="16.15"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="didala_s-rightLeg" pX="8.35" pY="12.6"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="didala_s-leftArm" pX="8.3" pY="10.45"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="didala_s-leftHand" pX="11.9" pY="16.25"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="didala_s-body" pX="26.7" pY="30.25"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="didala_s-rightArm" pX="10.8" pY="10.75"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="didala_s-rightHand" pX="14.7" pY="15.8"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="didala_s-head_hurt" pX="81" pY="54.65"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="didala_s-head" pX="38.35" pY="56.85"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="didala" width="256" height="256">
+    <SubTexture name="didala_s-head" width="117" height="141" cocos2d_pX="38.35" cocos2d_pY="56.85" x="0" y="0"/>
+    <SubTexture name="didala_s-head_hurt" width="117" height="141" cocos2d_pX="81" cocos2d_pY="54.65" x="119" y="0"/>
+    <SubTexture name="didala_s-rightHand" width="24" height="33" cocos2d_pX="14.7" cocos2d_pY="15.8" x="79" y="143"/>
+    <SubTexture name="didala_s-rightArm" width="18" height="25" cocos2d_pX="10.8" cocos2d_pY="10.75" x="183" y="143"/>
+    <SubTexture name="didala_s-body" width="50" height="66" cocos2d_pX="26.7" cocos2d_pY="30.25" x="0" y="143"/>
+    <SubTexture name="didala_s-leftHand" width="25" height="33" cocos2d_pX="11.9" cocos2d_pY="16.25" x="52" y="143"/>
+    <SubTexture name="didala_s-leftArm" width="18" height="25" cocos2d_pX="8.3" cocos2d_pY="10.45" x="163" y="143"/>
+    <SubTexture name="didala_s-rightLeg" width="18" height="25" cocos2d_pX="8.35" cocos2d_pY="12.6" x="143" y="143"/>
+    <SubTexture name="didala_s-rightFoot" width="17" height="27" cocos2d_pX="8.85" cocos2d_pY="16.15" x="124" y="143"/>
+    <SubTexture name="didala_s-leftLeg" width="16" height="22" cocos2d_pX="8.65" cocos2d_pY="10.95" x="238" y="0"/>
+    <SubTexture name="didala_s-leftFoot" width="17" height="27" cocos2d_pX="9.3" cocos2d_pY="16.05" x="105" y="143"/>
+  </TextureAtlas>
+</skeleton>

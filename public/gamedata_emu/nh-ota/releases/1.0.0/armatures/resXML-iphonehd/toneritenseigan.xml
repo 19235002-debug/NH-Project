@@ -1,0 +1,53 @@
+<skeleton name="toneritenseigan" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="toneritenseigan">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="toneritenseigan_s-leftFoot" pX="21.45" pY="24.9"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="toneritenseigan_s-leftLeg" pX="14.2" pY="23.05"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="toneritenseigan_s-rightFoot" pX="21.55" pY="25.6"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="toneritenseigan_s-rightLeg" pX="10.95" pY="15.55"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="toneritenseigan_s-leftArm" pX="19.8" pY="19.9"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="toneritenseigan_s-leftHand" pX="22.95" pY="42.1"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="toneritenseigan_s-body" pX="99.15" pY="121.25"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="toneritenseigan_s-rightArm" pX="30.6" pY="24"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="toneritenseigan_s-rightHand" pX="32.55" pY="34.4"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="toneritenseigan_s-head_hurt" pX="94.3" pY="79.75"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="toneritenseigan_s-head" pX="84.25" pY="82.9"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="toneritenseigan" width="512" height="256">
+    <SubTexture name="toneritenseigan_s-head" width="163" height="178" cocos2d_pX="84.25" cocos2d_pY="82.9" x="177" y="0"/>
+    <SubTexture name="toneritenseigan_s-head_hurt" width="166" height="171" cocos2d_pX="94.3" cocos2d_pY="79.75" x="342" y="0"/>
+    <SubTexture name="toneritenseigan_s-rightHand" width="57" height="61" cocos2d_pX="32.55" cocos2d_pY="34.4" x="392" y="173"/>
+    <SubTexture name="toneritenseigan_s-rightArm" width="54" height="51" cocos2d_pX="30.6" cocos2d_pY="24" x="451" y="173"/>
+    <SubTexture name="toneritenseigan_s-body" width="175" height="172" cocos2d_pX="99.15" cocos2d_pY="121.25" x="0" y="0"/>
+    <SubTexture name="toneritenseigan_s-leftHand" width="48" height="73" cocos2d_pX="22.95" cocos2d_pY="42.1" x="342" y="173"/>
+    <SubTexture name="toneritenseigan_s-leftArm" width="38" height="41" cocos2d_pX="19.8" cocos2d_pY="19.9" x="88" y="174"/>
+    <SubTexture name="toneritenseigan_s-rightLeg" width="27" height="35" cocos2d_pX="10.95" cocos2d_pY="15.55" x="162" y="180"/>
+    <SubTexture name="toneritenseigan_s-rightFoot" width="42" height="47" cocos2d_pX="21.55" cocos2d_pY="25.6" x="0" y="174"/>
+    <SubTexture name="toneritenseigan_s-leftLeg" width="32" height="38" cocos2d_pX="14.2" cocos2d_pY="23.05" x="128" y="174"/>
+    <SubTexture name="toneritenseigan_s-leftFoot" width="42" height="47" cocos2d_pX="21.45" cocos2d_pY="24.9" x="44" y="174"/>
+  </TextureAtlas>
+</skeleton>

@@ -1,0 +1,53 @@
+<skeleton name="feijian" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="feijian">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="feijian_s-leftFoot" pX="8.55" pY="14.9"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="feijian_s-leftLeg" pX="9.05" pY="11.85"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="feijian_s-rightFoot" pX="8.75" pY="15.3"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="feijian_s-rightLeg" pX="10" pY="12.6"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="feijian_s-leftArm" pX="11" pY="9.9"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="feijian_s-leftHand" pX="10.25" pY="14.4"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="feijian_s-body" pX="19.75" pY="22.95"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="feijian_s-rightArm" pX="12.45" pY="12.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="feijian_s-rightHand" pX="14.85" pY="13.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="feijian_s-head_hurt" pX="73.25" pY="62.75"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="feijian_s-head" pX="58" pY="68"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="feijian" width="256" height="512">
+    <SubTexture name="feijian_s-head" width="129" height="138" cocos2d_pX="58" cocos2d_pY="68" x="0" y="140"/>
+    <SubTexture name="feijian_s-head_hurt" width="129" height="138" cocos2d_pX="73.25" cocos2d_pY="62.75" x="0" y="0"/>
+    <SubTexture name="feijian_s-rightHand" width="21" height="34" cocos2d_pX="14.85" cocos2d_pY="13.5" x="174" y="0"/>
+    <SubTexture name="feijian_s-rightArm" width="23" height="25" cocos2d_pX="12.45" cocos2d_pY="12.1" x="220" y="0"/>
+    <SubTexture name="feijian_s-body" width="41" height="57" cocos2d_pX="19.75" cocos2d_pY="22.95" x="131" y="0"/>
+    <SubTexture name="feijian_s-leftHand" width="21" height="31" cocos2d_pX="10.25" cocos2d_pY="14.4" x="197" y="0"/>
+    <SubTexture name="feijian_s-leftArm" width="20" height="23" cocos2d_pX="11" cocos2d_pY="9.9" x="174" y="36"/>
+    <SubTexture name="feijian_s-rightLeg" width="18" height="25" cocos2d_pX="10" cocos2d_pY="12.6" x="216" y="56"/>
+    <SubTexture name="feijian_s-rightFoot" width="17" height="27" cocos2d_pX="8.75" cocos2d_pY="15.3" x="220" y="27"/>
+    <SubTexture name="feijian_s-leftLeg" width="16" height="22" cocos2d_pX="9.05" cocos2d_pY="11.85" x="236" y="56"/>
+    <SubTexture name="feijian_s-leftFoot" width="17" height="27" cocos2d_pX="8.55" cocos2d_pY="14.9" x="197" y="33"/>
+  </TextureAtlas>
+</skeleton>

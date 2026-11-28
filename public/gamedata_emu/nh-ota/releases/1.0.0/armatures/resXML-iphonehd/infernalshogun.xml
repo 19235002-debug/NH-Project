@@ -1,0 +1,53 @@
+<skeleton name="infernalshogun" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="infernalshogun">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="infernalshogun_s-leftFoot" pX="11.45" pY="15.25"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="infernalshogun_s-leftLeg" pX="8.1" pY="16.65"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="infernalshogun_s-rightFoot" pX="11.55" pY="15.5"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="infernalshogun_s-rightLeg" pX="8.65" pY="13.45"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="infernalshogun_s-leftArm" pX="9" pY="21.55"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="infernalshogun_s-leftHand" pX="6.8" pY="20.3"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="infernalshogun_s-body" pX="43.35" pY="23.85"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="infernalshogun_s-rightArm" pX="17.3" pY="20.3"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="infernalshogun_s-rightHand" pX="16.15" pY="21.1"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="infernalshogun_s-head_hurt" pX="84.35" pY="64.75"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="infernalshogun_s-head" pX="60.65" pY="63.05"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="infernalshogun" width="256" height="512">
+    <SubTexture name="infernalshogun_s-head" width="153" height="153" cocos2d_pX="60.65" cocos2d_pY="63.05" x="0" y="0"/>
+    <SubTexture name="infernalshogun_s-head_hurt" width="149" height="157" cocos2d_pX="84.35" cocos2d_pY="64.75" x="0" y="155"/>
+    <SubTexture name="infernalshogun_s-rightHand" width="23" height="35" cocos2d_pX="16.15" cocos2d_pY="21.1" x="180" y="70"/>
+    <SubTexture name="infernalshogun_s-rightArm" width="27" height="30" cocos2d_pX="17.3" cocos2d_pY="20.3" x="205" y="102"/>
+    <SubTexture name="infernalshogun_s-body" width="78" height="68" cocos2d_pX="43.35" cocos2d_pY="23.85" x="155" y="0"/>
+    <SubTexture name="infernalshogun_s-leftHand" width="23" height="35" cocos2d_pX="6.8" cocos2d_pY="20.3" x="155" y="70"/>
+    <SubTexture name="infernalshogun_s-leftArm" width="27" height="30" cocos2d_pX="9" cocos2d_pY="21.55" x="205" y="70"/>
+    <SubTexture name="infernalshogun_s-rightLeg" width="17" height="25" cocos2d_pX="8.65" cocos2d_pY="13.45" x="235" y="0"/>
+    <SubTexture name="infernalshogun_s-rightFoot" width="21" height="27" cocos2d_pX="11.55" cocos2d_pY="15.5" x="155" y="107"/>
+    <SubTexture name="infernalshogun_s-leftLeg" width="17" height="25" cocos2d_pX="8.1" cocos2d_pY="16.65" x="235" y="27"/>
+    <SubTexture name="infernalshogun_s-leftFoot" width="21" height="27" cocos2d_pX="11.45" cocos2d_pY="15.25" x="178" y="107"/>
+  </TextureAtlas>
+</skeleton>

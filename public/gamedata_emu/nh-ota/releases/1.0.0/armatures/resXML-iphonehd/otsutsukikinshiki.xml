@@ -1,0 +1,53 @@
+<skeleton name="otsutsukikinshiki" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="otsutsukikinshiki">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="otsutsukikinshiki_s-leftFoot" pX="8.55" pY="16.15"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="otsutsukikinshiki_s-leftLeg" pX="12.3" pY="14.2"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="otsutsukikinshiki_s-rightFoot" pX="8.5" pY="16.5"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="otsutsukikinshiki_s-rightLeg" pX="12.15" pY="15.75"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="otsutsukikinshiki_s-leftArm" pX="9.55" pY="12.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="otsutsukikinshiki_s-leftHand" pX="11.3" pY="15.15"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="otsutsukikinshiki_s-body" pX="26.8" pY="22.8"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="otsutsukikinshiki_s-rightArm" pX="11.95" pY="11.15"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="otsutsukikinshiki_s-rightHand" pX="43.95" pY="12.15"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="otsutsukikinshiki_s-head_hurt" pX="77.45" pY="49.75"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="otsutsukikinshiki_s-head" pX="51.65" pY="50.65"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="otsutsukikinshiki" width="256" height="512">
+    <SubTexture name="otsutsukikinshiki_s-head" width="112" height="150" cocos2d_pX="51.65" cocos2d_pY="50.65" x="0" y="153"/>
+    <SubTexture name="otsutsukikinshiki_s-head_hurt" width="165" height="151" cocos2d_pX="77.45" cocos2d_pY="49.75" x="0" y="0"/>
+    <SubTexture name="otsutsukikinshiki_s-rightHand" width="117" height="56" cocos2d_pX="43.95" cocos2d_pY="12.15" x="114" y="153"/>
+    <SubTexture name="otsutsukikinshiki_s-rightArm" width="21" height="24" cocos2d_pX="11.95" cocos2d_pY="11.15" x="192" y="56"/>
+    <SubTexture name="otsutsukikinshiki_s-body" width="51" height="54" cocos2d_pX="26.8" cocos2d_pY="22.8" x="167" y="0"/>
+    <SubTexture name="otsutsukikinshiki_s-leftHand" width="25" height="32" cocos2d_pX="11.3" cocos2d_pY="15.15" x="220" y="0"/>
+    <SubTexture name="otsutsukikinshiki_s-leftArm" width="21" height="24" cocos2d_pX="9.55" cocos2d_pY="12.4" x="215" y="64"/>
+    <SubTexture name="otsutsukikinshiki_s-rightLeg" width="25" height="28" cocos2d_pX="12.15" cocos2d_pY="15.75" x="220" y="34"/>
+    <SubTexture name="otsutsukikinshiki_s-rightFoot" width="16" height="27" cocos2d_pX="8.5" cocos2d_pY="16.5" x="238" y="64"/>
+    <SubTexture name="otsutsukikinshiki_s-leftLeg" width="23" height="27" cocos2d_pX="12.3" cocos2d_pY="14.2" x="167" y="56"/>
+    <SubTexture name="otsutsukikinshiki_s-leftFoot" width="16" height="27" cocos2d_pX="8.55" cocos2d_pY="16.15" x="192" y="82"/>
+  </TextureAtlas>
+</skeleton>

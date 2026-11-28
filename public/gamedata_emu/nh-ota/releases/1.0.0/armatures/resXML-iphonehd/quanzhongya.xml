@@ -1,0 +1,53 @@
+<skeleton name="quanzhongya" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="quanzhongya">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="quanzhongya_s-leftFoot" pX="9.8" pY="15.4"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="quanzhongya_s-leftLeg" pX="11.05" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="quanzhongya_s-rightFoot" pX="8.5" pY="15.55"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="quanzhongya_s-rightLeg" pX="10.25" pY="14.6"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="quanzhongya_s-leftArm" pX="9.5" pY="9.15"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="quanzhongya_s-leftHand" pX="12" pY="15.65"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="quanzhongya_s-body" pX="21.75" pY="29.7"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="quanzhongya_s-rightArm" pX="12.95" pY="10.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="quanzhongya_s-rightHand" pX="19.1" pY="16.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="quanzhongya_s-head_hurt" pX="60.25" pY="55"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="quanzhongya_s-head" pX="48.25" pY="53.75"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="quanzhongya" width="256" height="256">
+    <SubTexture name="quanzhongya_s-head" width="111" height="127" cocos2d_pX="48.25" cocos2d_pY="53.75" x="113" y="0"/>
+    <SubTexture name="quanzhongya_s-head_hurt" width="111" height="127" cocos2d_pX="60.25" cocos2d_pY="55" x="0" y="0"/>
+    <SubTexture name="quanzhongya_s-rightHand" width="30" height="35" cocos2d_pX="19.1" cocos2d_pY="16.5" x="44" y="129"/>
+    <SubTexture name="quanzhongya_s-rightArm" width="22" height="22" cocos2d_pX="12.95" cocos2d_pY="10.1" x="226" y="88"/>
+    <SubTexture name="quanzhongya_s-body" width="42" height="57" cocos2d_pX="21.75" cocos2d_pY="29.7" x="0" y="129"/>
+    <SubTexture name="quanzhongya_s-leftHand" width="27" height="33" cocos2d_pX="12" cocos2d_pY="15.65" x="226" y="0"/>
+    <SubTexture name="quanzhongya_s-leftArm" width="22" height="22" cocos2d_pX="9.5" cocos2d_pY="9.15" x="226" y="112"/>
+    <SubTexture name="quanzhongya_s-rightLeg" width="22" height="27" cocos2d_pX="10.25" cocos2d_pY="14.6" x="226" y="35"/>
+    <SubTexture name="quanzhongya_s-rightFoot" width="17" height="27" cocos2d_pX="8.5" cocos2d_pY="15.55" x="76" y="129"/>
+    <SubTexture name="quanzhongya_s-leftLeg" width="23" height="22" cocos2d_pX="11.05" cocos2d_pY="11.6" x="226" y="64"/>
+    <SubTexture name="quanzhongya_s-leftFoot" width="17" height="27" cocos2d_pX="9.8" cocos2d_pY="15.4" x="95" y="129"/>
+  </TextureAtlas>
+</skeleton>

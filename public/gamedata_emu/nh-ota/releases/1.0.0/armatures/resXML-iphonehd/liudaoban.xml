@@ -1,0 +1,53 @@
+<skeleton name="liudaoban" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="liudaoban">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="liudaoban_s-leftFoot" pX="8.3" pY="15.4"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="liudaoban_s-leftLeg" pX="9.05" pY="11.1"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="liudaoban_s-rightFoot" pX="8.25" pY="16.05"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="liudaoban_s-rightLeg" pX="9.75" pY="13.1"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="liudaoban_s-leftArm" pX="8.25" pY="10.65"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="liudaoban_s-leftHand" pX="12.25" pY="15.65"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="liudaoban_s-body" pX="39" pY="31.2"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="liudaoban_s-rightArm" pX="9.7" pY="10.85"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="liudaoban_s-rightHand" pX="16.35" pY="15.25"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="liudaoban_s-head_hurt" pX="66.5" pY="45.25"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="liudaoban_s-head" pX="60.25" pY="46"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="liudaoban" width="256" height="256">
+    <SubTexture name="liudaoban_s-head" width="124" height="132" cocos2d_pX="60.25" cocos2d_pY="46" x="126" y="0"/>
+    <SubTexture name="liudaoban_s-head_hurt" width="124" height="132" cocos2d_pX="66.5" cocos2d_pY="45.25" x="0" y="0"/>
+    <SubTexture name="liudaoban_s-rightHand" width="26" height="33" cocos2d_pX="16.35" cocos2d_pY="15.25" x="79" y="134"/>
+    <SubTexture name="liudaoban_s-rightArm" width="18" height="23" cocos2d_pX="9.7" cocos2d_pY="10.85" x="195" y="134"/>
+    <SubTexture name="liudaoban_s-body" width="77" height="71" cocos2d_pX="39" cocos2d_pY="31.2" x="0" y="134"/>
+    <SubTexture name="liudaoban_s-leftHand" width="26" height="32" cocos2d_pX="12.25" cocos2d_pY="15.65" x="126" y="134"/>
+    <SubTexture name="liudaoban_s-leftArm" width="17" height="23" cocos2d_pX="8.25" cocos2d_pY="10.65" x="215" y="134"/>
+    <SubTexture name="liudaoban_s-rightLeg" width="20" height="24" cocos2d_pX="9.75" cocos2d_pY="13.1" x="154" y="134"/>
+    <SubTexture name="liudaoban_s-rightFoot" width="17" height="27" cocos2d_pX="8.25" cocos2d_pY="16.05" x="107" y="134"/>
+    <SubTexture name="liudaoban_s-leftLeg" width="18" height="21" cocos2d_pX="9.05" cocos2d_pY="11.1" x="234" y="134"/>
+    <SubTexture name="liudaoban_s-leftFoot" width="17" height="27" cocos2d_pX="8.3" cocos2d_pY="15.4" x="176" y="134"/>
+  </TextureAtlas>
+</skeleton>

@@ -1,0 +1,53 @@
+<skeleton name="qing" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="qing">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="qing_s-leftFoot" pX="9.3" pY="15.15"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="qing_s-leftLeg" pX="10.05" pY="11.35"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="qing_s-rightFoot" pX="9" pY="15.3"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="qing_s-rightLeg" pX="8" pY="12.1"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="qing_s-leftArm" pX="9" pY="10.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="qing_s-leftHand" pX="11.75" pY="15.4"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="qing_s-body" pX="27" pY="26.45"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="qing_s-rightArm" pX="11.2" pY="11.35"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="qing_s-rightHand" pX="15.35" pY="15.25"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="qing_s-head_hurt" pX="54.75" pY="68.25"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="qing_s-head" pX="63.5" pY="68.75"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="qing" width="256" height="256">
+    <SubTexture name="qing_s-head" width="115" height="152" cocos2d_pX="63.5" cocos2d_pY="68.75" x="117" y="0"/>
+    <SubTexture name="qing_s-head_hurt" width="115" height="152" cocos2d_pX="54.75" cocos2d_pY="68.25" x="0" y="0"/>
+    <SubTexture name="qing_s-rightHand" width="24" height="31" cocos2d_pX="15.35" cocos2d_pY="15.25" x="51" y="154"/>
+    <SubTexture name="qing_s-rightArm" width="19" height="26" cocos2d_pX="11.2" cocos2d_pY="11.35" x="234" y="0"/>
+    <SubTexture name="qing_s-body" width="49" height="66" cocos2d_pX="27" cocos2d_pY="26.45" x="0" y="154"/>
+    <SubTexture name="qing_s-leftHand" width="24" height="30" cocos2d_pX="11.75" cocos2d_pY="15.4" x="77" y="154"/>
+    <SubTexture name="qing_s-leftArm" width="19" height="25" cocos2d_pX="9" cocos2d_pY="10.4" x="234" y="28"/>
+    <SubTexture name="qing_s-rightLeg" width="18" height="25" cocos2d_pX="8" cocos2d_pY="12.1" x="234" y="111"/>
+    <SubTexture name="qing_s-rightFoot" width="18" height="26" cocos2d_pX="9" cocos2d_pY="15.3" x="234" y="55"/>
+    <SubTexture name="qing_s-leftLeg" width="17" height="21" cocos2d_pX="10.05" cocos2d_pY="11.35" x="234" y="138"/>
+    <SubTexture name="qing_s-leftFoot" width="18" height="26" cocos2d_pX="9.3" cocos2d_pY="15.15" x="234" y="83"/>
+  </TextureAtlas>
+</skeleton>

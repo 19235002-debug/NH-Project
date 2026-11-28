@@ -1,0 +1,53 @@
+<skeleton name="chozaakimichi" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="chozaakimichi">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="chozaakimichi_s-leftFoot" pX="8.6" pY="14.9"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="chozaakimichi_s-leftLeg" pX="9.65" pY="12.3"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="chozaakimichi_s-rightFoot" pX="8.5" pY="16.35"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="chozaakimichi_s-rightLeg" pX="10.75" pY="13.25"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="chozaakimichi_s-leftArm" pX="9.7" pY="12.4"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="chozaakimichi_s-leftHand" pX="11.9" pY="15.9"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="chozaakimichi_s-body" pX="34.65" pY="26.25"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="chozaakimichi_s-rightArm" pX="12.55" pY="13.1"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="chozaakimichi_s-rightHand" pX="13.75" pY="16.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="chozaakimichi_s-head_hurt" pX="82.15" pY="72.85"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="chozaakimichi_s-head" pX="89.45" pY="76.35"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="chozaakimichi" width="512" height="256">
+    <SubTexture name="chozaakimichi_s-head" width="175" height="180" cocos2d_pX="89.45" cocos2d_pY="76.35" x="0" y="0"/>
+    <SubTexture name="chozaakimichi_s-head_hurt" width="175" height="180" cocos2d_pX="82.15" cocos2d_pY="72.85" x="177" y="0"/>
+    <SubTexture name="chozaakimichi_s-rightHand" width="24" height="33" cocos2d_pX="13.75" cocos2d_pY="16.5" x="446" y="0"/>
+    <SubTexture name="chozaakimichi_s-rightArm" width="21" height="24" cocos2d_pX="12.55" cocos2d_pY="13.1" x="419" y="35"/>
+    <SubTexture name="chozaakimichi_s-body" width="63" height="57" cocos2d_pX="34.65" cocos2d_pY="26.25" x="354" y="0"/>
+    <SubTexture name="chozaakimichi_s-leftHand" width="25" height="33" cocos2d_pX="11.9" cocos2d_pY="15.9" x="419" y="0"/>
+    <SubTexture name="chozaakimichi_s-leftArm" width="22" height="24" cocos2d_pX="9.7" cocos2d_pY="12.4" x="472" y="27"/>
+    <SubTexture name="chozaakimichi_s-rightLeg" width="23" height="25" cocos2d_pX="10.75" cocos2d_pY="13.25" x="472" y="0"/>
+    <SubTexture name="chozaakimichi_s-rightFoot" width="17" height="27" cocos2d_pX="8.5" cocos2d_pY="16.35" x="465" y="53"/>
+    <SubTexture name="chozaakimichi_s-leftLeg" width="21" height="24" cocos2d_pX="9.65" cocos2d_pY="12.3" x="442" y="35"/>
+    <SubTexture name="chozaakimichi_s-leftFoot" width="17" height="27" cocos2d_pX="8.6" cocos2d_pY="14.9" x="484" y="53"/>
+  </TextureAtlas>
+</skeleton>

@@ -1,0 +1,53 @@
+<skeleton name="wu" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="wu">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="wu_s-leftFoot" pX="8.8" pY="15.4"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="wu_s-leftLeg" pX="9.3" pY="11.6"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="wu_s-rightFoot" pX="8.5" pY="15.05"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="wu_s-rightLeg" pX="8" pY="13.1"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="wu_s-leftArm" pX="10.25" pY="10.15"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="wu_s-leftHand" pX="12.25" pY="17.15"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="wu_s-body" pX="20" pY="23.45"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="wu_s-rightArm" pX="8.45" pY="10.35"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="wu_s-rightHand" pX="13.1" pY="16.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="wu_s-head_hurt" pX="60.25" pY="41"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="wu_s-head" pX="41.5" pY="42.25"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="wu" width="256" height="128">
+    <SubTexture name="wu_s-head" width="94" height="106" cocos2d_pX="41.5" cocos2d_pY="42.25" x="96" y="0"/>
+    <SubTexture name="wu_s-head_hurt" width="94" height="107" cocos2d_pX="60.25" cocos2d_pY="41" x="0" y="0"/>
+    <SubTexture name="wu_s-rightHand" width="22" height="34" cocos2d_pX="13.1" cocos2d_pY="16.5" x="192" y="55"/>
+    <SubTexture name="wu_s-rightArm" width="16" height="24" cocos2d_pX="8.45" cocos2d_pY="10.35" x="216" y="80"/>
+    <SubTexture name="wu_s-body" width="41" height="53" cocos2d_pX="20" cocos2d_pY="23.45" x="192" y="0"/>
+    <SubTexture name="wu_s-leftHand" width="22" height="32" cocos2d_pX="12.25" cocos2d_pY="17.15" x="192" y="91"/>
+    <SubTexture name="wu_s-leftArm" width="17" height="23" cocos2d_pX="10.25" cocos2d_pY="10.15" x="216" y="55"/>
+    <SubTexture name="wu_s-rightLeg" width="18" height="25" cocos2d_pX="8" cocos2d_pY="13.1" x="235" y="56"/>
+    <SubTexture name="wu_s-rightFoot" width="18" height="26" cocos2d_pX="8.5" cocos2d_pY="15.05" x="235" y="0"/>
+    <SubTexture name="wu_s-leftLeg" width="17" height="21" cocos2d_pX="9.3" cocos2d_pY="11.6" x="234" y="83"/>
+    <SubTexture name="wu_s-leftFoot" width="18" height="26" cocos2d_pX="8.8" cocos2d_pY="15.4" x="235" y="28"/>
+  </TextureAtlas>
+</skeleton>

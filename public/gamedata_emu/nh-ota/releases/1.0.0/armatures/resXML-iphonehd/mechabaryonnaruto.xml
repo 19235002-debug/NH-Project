@@ -1,0 +1,53 @@
+<skeleton name="mechabaryonnaruto" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="mechabaryonnaruto">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="mechabaryonnaruto_s-leftFoot" pX="17.5" pY="22.7"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="mechabaryonnaruto_s-leftLeg" pX="10.85" pY="18.8"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="mechabaryonnaruto_s-rightFoot" pX="18.25" pY="22.55"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="mechabaryonnaruto_s-rightLeg" pX="13.15" pY="16.1"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="mechabaryonnaruto_s-leftArm" pX="10.05" pY="15.35"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="mechabaryonnaruto_s-leftHand" pX="16.15" pY="21.55"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="mechabaryonnaruto_s-body" pX="127" pY="134.75"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="mechabaryonnaruto_s-rightArm" pX="32.8" pY="14.65"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="mechabaryonnaruto_s-rightHand" pX="26.45" pY="20.6"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="mechabaryonnaruto_s-head_hurt" pX="86.35" pY="73.1"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="mechabaryonnaruto_s-head" pX="95.45" pY="76.85"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="mechabaryonnaruto" width="512" height="512">
+    <SubTexture name="mechabaryonnaruto_s-head" width="174" height="145" cocos2d_pX="95.45" cocos2d_pY="76.85" x="210" y="152"/>
+    <SubTexture name="mechabaryonnaruto_s-head_hurt" width="174" height="150" cocos2d_pX="86.35" cocos2d_pY="73.1" x="210" y="0"/>
+    <SubTexture name="mechabaryonnaruto_s-rightHand" width="42" height="49" cocos2d_pX="26.45" cocos2d_pY="20.6" x="431" y="0"/>
+    <SubTexture name="mechabaryonnaruto_s-rightArm" width="42" height="30" cocos2d_pX="32.8" cocos2d_pY="14.65" x="425" y="93"/>
+    <SubTexture name="mechabaryonnaruto_s-body" width="208" height="168" cocos2d_pX="127" cocos2d_pY="134.75" x="0" y="0"/>
+    <SubTexture name="mechabaryonnaruto_s-leftHand" width="43" height="50" cocos2d_pX="16.15" cocos2d_pY="21.55" x="386" y="0"/>
+    <SubTexture name="mechabaryonnaruto_s-leftArm" width="24" height="23" cocos2d_pX="10.05" cocos2d_pY="15.35" x="475" y="27"/>
+    <SubTexture name="mechabaryonnaruto_s-rightLeg" width="23" height="25" cocos2d_pX="13.15" cocos2d_pY="16.1" x="475" y="0"/>
+    <SubTexture name="mechabaryonnaruto_s-rightFoot" width="37" height="40" cocos2d_pX="18.25" cocos2d_pY="22.55" x="386" y="52"/>
+    <SubTexture name="mechabaryonnaruto_s-leftLeg" width="21" height="25" cocos2d_pX="10.85" cocos2d_pY="18.8" x="470" y="52"/>
+    <SubTexture name="mechabaryonnaruto_s-leftFoot" width="37" height="40" cocos2d_pX="17.5" cocos2d_pY="22.7" x="431" y="51"/>
+  </TextureAtlas>
+</skeleton>

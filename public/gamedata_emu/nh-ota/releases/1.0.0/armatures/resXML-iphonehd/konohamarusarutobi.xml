@@ -1,0 +1,53 @@
+<skeleton name="konohamarusarutobi" frameRate="24" version="2.2">
+  <armatures>
+    <armature name="konohamarusarutobi">
+      <b name="leftFoot" x="9.65" y="-13.1" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+        <d name="konohamarusarutobi_s-leftFoot" pX="7.35" pY="14.75"/>
+      </b>
+      <b name="leftLeg" x="7.25" y="-25.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="1">
+        <d name="konohamarusarutobi_s-leftLeg" pX="8" pY="11.25"/>
+      </b>
+      <b name="rightFoot" x="-9.5" y="-11.2" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="2">
+        <d name="konohamarusarutobi_s-rightFoot" pX="7.8" pY="15.7"/>
+      </b>
+      <b name="rightLeg" x="-10.1" y="-27.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="3">
+        <d name="konohamarusarutobi_s-rightLeg" pX="7.6" pY="12"/>
+      </b>
+      <b name="leftArm" x="13.9" y="-55.35" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="4">
+        <d name="konohamarusarutobi_s-leftArm" pX="7" pY="14.65"/>
+      </b>
+      <b name="leftHand" x="21.4" y="-38.8" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="5">
+        <d name="konohamarusarutobi_s-leftHand" pX="11.15" pY="18.85"/>
+      </b>
+      <b name="body" x="-0.55" y="-50" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="6">
+        <d name="konohamarusarutobi_s-body" pX="24.1" pY="25.2"/>
+      </b>
+      <b name="rightArm" x="-12.55" y="-56.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="7">
+        <d name="konohamarusarutobi_s-rightArm" pX="9.7" pY="14.4"/>
+      </b>
+      <b name="rightHand" x="-18.55" y="-39.3" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="8">
+        <d name="konohamarusarutobi_s-rightHand" pX="12.6" pY="16.5"/>
+      </b>
+      <b name="head_hurt" x="6.75" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="9">
+        <d name="konohamarusarutobi_s-head_hurt" pX="81.95" pY="88.45"/>
+      </b>
+      <b name="head" x="-8.65" y="-126" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="10">
+        <d name="konohamarusarutobi_s-head" pX="83.85" pY="92.85"/>
+      </b>
+    </armature>
+  </armatures>
+  <animations/>
+  <TextureAtlas name="konohamarusarutobi" width="256" height="512">
+    <SubTexture name="konohamarusarutobi_s-head" width="163" height="154" cocos2d_pX="83.85" cocos2d_pY="92.85" x="0" y="157"/>
+    <SubTexture name="konohamarusarutobi_s-head_hurt" width="163" height="155" cocos2d_pX="81.95" cocos2d_pY="88.45" x="0" y="0"/>
+    <SubTexture name="konohamarusarutobi_s-rightHand" width="22" height="33" cocos2d_pX="12.6" cocos2d_pY="16.5" x="210" y="35"/>
+    <SubTexture name="konohamarusarutobi_s-rightArm" width="16" height="22" cocos2d_pX="9.7" cocos2d_pY="14.4" x="234" y="56"/>
+    <SubTexture name="konohamarusarutobi_s-body" width="43" height="50" cocos2d_pX="24.1" cocos2d_pY="25.2" x="165" y="0"/>
+    <SubTexture name="konohamarusarutobi_s-leftHand" width="22" height="33" cocos2d_pX="11.15" cocos2d_pY="18.85" x="210" y="0"/>
+    <SubTexture name="konohamarusarutobi_s-leftArm" width="16" height="22" cocos2d_pX="7" cocos2d_pY="14.65" x="184" y="52"/>
+    <SubTexture name="konohamarusarutobi_s-rightLeg" width="17" height="24" cocos2d_pX="7.6" cocos2d_pY="12" x="165" y="52"/>
+    <SubTexture name="konohamarusarutobi_s-rightFoot" width="16" height="26" cocos2d_pX="7.8" cocos2d_pY="15.7" x="234" y="28"/>
+    <SubTexture name="konohamarusarutobi_s-leftLeg" width="15" height="20" cocos2d_pX="8" cocos2d_pY="11.25" x="202" y="70"/>
+    <SubTexture name="konohamarusarutobi_s-leftFoot" width="16" height="26" cocos2d_pX="7.35" cocos2d_pY="14.75" x="234" y="0"/>
+  </TextureAtlas>
+</skeleton>
