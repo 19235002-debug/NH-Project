@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<AnimationProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectDir>D:\小小忍者\effect&amp;action\fightEffectA\penshui</ProjectDir>
+  <Version>1.6.0.0</Version>
+  <Resources>D:\小小忍者\effect&amp;action\fightEffectA\penshui\Resources</Resources>
+  <Name>penshui</Name>
+  <JsonFileName>penshui.json</JsonFileName>
+  <JsonFolder>D:\小小忍者\effect&amp;action\fightEffectA\penshui\Json</JsonFolder>
+  <JsonList />
+  <CanvasSize>
+    <Width>0</Width>
+    <Height>0</Height>
+  </CanvasSize>
+  <filePath>D:\小小忍者\effect&amp;action\fightEffectA\penshui\penshui.xml.animation</filePath>
+  <ProjectType>AnimationProject</ProjectType>
+  <ResRelativePath />
+  <ResourceFileList />
+  <bBatchImage>true</bBatchImage>
+</AnimationProject>
