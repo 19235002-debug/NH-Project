@@ -259,44 +259,84 @@ class GameClientAdapterController extends Controller
     {
         $this->logPacket($request);
 
-        $rawAccount = trim(
-            $request->input('accId', 
-            $request->input('account', 
-            $request->input('username', 
-            $request->input('user', 
-            $request->input('email', '')))))
-        );
-        $password = trim($request->input('pwd', $request->input('password', '123456')));
+        // Also parse raw body if sent without form Content-Type header
+        $extraParams = [];
+        $rawContent = trim((string) $request->getContent());
+        if ($rawContent !== '') {
+            $jsonBody = json_decode($rawContent, true);
+            if (is_array($jsonBody)) {
+                $extraParams = $jsonBody;
+            } else {
+                parse_str($rawContent, $extraParams);
+            }
+        }
+
+        $getParam = function (array $keys, string $default = '') use ($request, $extraParams): string {
+            foreach ($keys as $k) {
+                $v = $request->input($k);
+                if ($v !== null && trim((string) $v) !== '') {
+                    return trim((string) $v);
+                }
+                if (isset($extraParams[$k]) && trim((string) $extraParams[$k]) !== '') {
+                    return trim((string) $extraParams[$k]);
+                }
+            }
+            return $default;
+        };
+
+        $rawAccount = $getParam(['accId', 'account', 'username', 'user', 'email', 'name']);
+        $password = $getParam(['pwd', 'password', 'pass', 'passwd']);
 
         if (empty($rawAccount) || empty($password)) {
             return response()->json([
-                'code' => 0,
+                'code' => -1,
                 'msg' => 'Username/Email and password are required.',
             ]);
         }
 
         $isRegisterRoute = str_contains($request->path(), 'register');
-        $user = User::where('username', $rawAccount)->orWhere('email', $rawAccount)->first();
+        $lowerAcc = strtolower($rawAccount);
+        $user = User::whereRaw('LOWER(username) = ?', [$lowerAcc])
+            ->orWhereRaw('LOWER(email) = ?', [$lowerAcc])
+            ->first();
+
+        if (!$user && str_contains($lowerAcc, '@')) {
+            // Also try matching local-part before '@' against username if email column was null/different
+            $localPart = explode('@', $lowerAcc)[0];
+            $cand = User::whereRaw('LOWER(username) = ?', [$localPart])->first();
+            if ($cand && (empty($cand->email) || str_ends_with(strtolower((string) $cand->email), '@ninja.local') || str_ends_with(strtolower((string) $cand->email), '@shinobi.nh'))) {
+                $user = $cand;
+            }
+        }
 
         if (!$user && $isRegisterRoute) {
             try {
                 $isPlain = !(strlen($password) === 32 && ctype_xdigit($password));
-                $plainOrHash = $isPlain ? password_hash($password, PASSWORD_BCRYPT) : password_hash($password, PASSWORD_BCRYPT);
+                $plainOrHash = password_hash($password, PASSWORD_BCRYPT);
                 $md5Val = $isPlain ? md5($password) : strtolower($password);
+                $lowerMd5Val = $isPlain ? md5(strtolower($password)) : strtolower($password);
                 $emailVal = str_contains($rawAccount, '@') ? $rawAccount : ($rawAccount . '@shinobi.nh');
 
                 $user = User::create([
                     'username' => $rawAccount,
                     'email' => $emailVal,
                     'password_hash' => $plainOrHash,
-                    'role' => 'player',
+                    'role' => 'user',
                     'level' => 1,
                     'exp' => 0,
-                    'gold' => 1000,
-                    'silver' => 100000,
+                    'gold' => 500,
+                    'silver' => 50000,
                     'stamina' => 100,
                 ]);
-                DB::table('users')->where('id', $user->id)->update(['password_md5' => $md5Val]);
+                try {
+                    if (!\Illuminate\Support\Facades\Schema::hasColumn('users', 'password_lower_md5')) {
+                        DB::statement('ALTER TABLE users ADD COLUMN password_lower_md5 VARCHAR(32) NULL');
+                    }
+                    DB::table('users')->where('id', $user->id)->update([
+                        'password_md5' => $md5Val,
+                        'password_lower_md5' => $lowerMd5Val,
+                    ]);
+                } catch (\Exception $eCol) {}
                 $user->refresh();
             } catch (\Exception $eReg) {
                 return response()->json([
@@ -308,17 +348,30 @@ class GameClientAdapterController extends Controller
 
         $validPassword = false;
         if ($user) {
-            if (password_verify($password, (string) $user->password_hash)) {
+            $storedHash = (string) $user->password_hash;
+            $storedMd5 = strtolower((string) ($user->password_md5 ?? ''));
+            $storedLowerMd5 = strtolower((string) ($user->password_lower_md5 ?? ''));
+            $pwdMd5 = md5($password);
+            $pwdLowerMd5 = md5(strtolower($password));
+
+            if ($storedHash !== '' && (password_verify($password, $storedHash) || password_verify(strtolower($password), $storedHash))) {
                 $validPassword = true;
-            } elseif (strlen($password) === 32 && ctype_xdigit($password) && !empty($user->password_md5)) {
-                $validPassword = hash_equals(strtolower((string) $user->password_md5), strtolower($password));
+            } elseif ($storedMd5 !== '' && (hash_equals($storedMd5, $pwdMd5) || hash_equals($storedMd5, $pwdLowerMd5))) {
+                $validPassword = true;
+            } elseif ($storedLowerMd5 !== '' && (hash_equals($storedLowerMd5, $pwdMd5) || hash_equals($storedLowerMd5, $pwdLowerMd5))) {
+                $validPassword = true;
+            } elseif (strlen($password) === 32 && ctype_xdigit($password)) {
+                $hexPwd = strtolower($password);
+                if (($storedMd5 !== '' && hash_equals($storedMd5, $hexPwd)) || ($storedLowerMd5 !== '' && hash_equals($storedLowerMd5, $hexPwd))) {
+                    $validPassword = true;
+                }
             }
         }
 
         if (!$user || !$validPassword) {
             return response()->json([
-                'code' => 0,
-                'msg' => 'Invalid username/email or password.',
+                'code' => -1,
+                'msg' => 'Account does not exist or incorrect password',
             ]);
         }
 

@@ -35,7 +35,9 @@ try {
         echo "  Ninjas: " . json_encode($ninjas) . "\n";
     }
 
-    $logs = $pdo->query("SELECT id, method, endpoint, body, created_at FROM apk_incoming_logs ORDER BY id DESC LIMIT 5")->fetchAll(PDO::FETCH_ASSOC);
+    $logCol = in_array('payload', $pdo->query("SHOW COLUMNS FROM apk_incoming_logs")->fetchAll(PDO::FETCH_COLUMN)) ? 'payload' : 'body';
+    $ipCol = in_array('ip_address', $pdo->query("SHOW COLUMNS FROM apk_incoming_logs")->fetchAll(PDO::FETCH_COLUMN)) ? 'ip_address' : 'ip';
+    $logs = $pdo->query("SELECT id, method, endpoint, {$ipCol} as ip, {$logCol} as body, created_at FROM apk_incoming_logs ORDER BY id DESC LIMIT 10")->fetchAll(PDO::FETCH_ASSOC);
     echo "\nRecent 5 APK Incoming Logs:\n";
     foreach ($logs as $l) {
         echo json_encode($l) . "\n";

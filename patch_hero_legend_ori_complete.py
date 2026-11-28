@@ -23,7 +23,7 @@ EMU_REL_DIR = os.path.join(EMU_OTA_DIR, "releases", "1.0.0")
 TARGET_DOMAIN = "nh.digislams.my.id"
 TARGET_HTTP = f"https://{TARGET_DOMAIN}"
 TARGET_WS_PORT = 80
-MANIFEST_VERSION = 207
+MANIFEST_VERSION = 999
 
 SCRATCH_TOOLS = r"C:\Users\Administrator\.gemini\antigravity\brain\16458abb-41b1-4481-81c9-0bf769ffb882\scratch"
 BAKSMALI_JAR = os.path.join(SCRATCH_TOOLS, "baksmali.jar")
@@ -97,14 +97,38 @@ def patch_adapter_js_text(js_text: str, add_openurl_hook: bool = True) -> str:
     for old, new in replacements:
         js_text = js_text.replace(old, new)
 
-    if add_openurl_hook and "__nhOpenUrlDigislams" not in js_text:
+    # Strip any previous __nhOpenUrlDigislams hook before appending latest hook
+    if ";(function(){try{if(typeof cc!==\"undefined\"&&cc.Application" in js_text:
+        js_text = js_text[:js_text.index("\n;(function(){try{if(typeof cc!==\"undefined\"&&cc.Application")]
+
+    if add_openurl_hook and "__nhAuthPreserveCase" not in js_text:
         hook = (
-            '\n;(function(){try{if(typeof cc!=="undefined"&&cc.Application&&cc.Application.getInstance){'
+            '\n;(function(){try{'
+            'if(typeof cc!=="undefined"&&cc.Application&&cc.Application.getInstance){'
             'var _a=cc.Application.getInstance();if(_a&&_a.openURL&&!_a.__nhOpenUrlDigislams){'
             '_a.__nhOpenUrlDigislams=true;var _o=_a.openURL;_a.openURL=function(u){'
             'if(typeof u==="string"){u=u.replace(/https?:\\/\\/([a-z0-9-]+\\.)*(?:heroeslegends\\.web\\.id|kageherostudio\\.com|redgamestudio\\.com|ninjaheroesnewera\\.com|studioninjafighter\\.com)(\\/[^\\s]*)?/gi,"'
             + TARGET_HTTP +
-            '");}return _o.call(this,u);};}}}catch(e){}})();\n'
+            '");}return _o.call(this,u);};}}'
+            'if(typeof LoginScene!=="undefined"&&LoginScene.prototype&&!LoginScene.prototype.__nhAuthPreserveCase){'
+            'var _LP=LoginScene.prototype;_LP.__nhAuthPreserveCase=true;'
+            '_LP.validateMail=function(s){return typeof s==="string"&&s.replace(/^\\s+|\\s+$/g,"").length>=3;};'
+            '_LP.checkAccountAndPwd=function(preset){'
+            'var acc="",pwd="";'
+            'if(preset&&preset.accId){acc=String(preset.accId);pwd=String(preset.pwd||"");}'
+            'else{'
+            'if(this.mailTTF&&this.mailTTF.getText)acc=String(this.mailTTF.getText()||"");'
+            'if(this.pwdTTF1&&this.pwdTTF1.getText)pwd=String(this.pwdTTF1.getText()||"");'
+            'else if(this.pwdTTF&&this.pwdTTF.getText)pwd=String(this.pwdTTF.getText()||"");'
+            '}'
+            'acc=acc.replace(/^\\s+|\\s+$/g,"");'
+            'if(acc.length<3){if(typeof PromptView!=="undefined")PromptView.setPageView("loginTip",{target:this,text:"Masukkan Email atau Username yang valid."});return;}'
+            'if(!pwd||pwd.length<4){if(typeof PromptView!=="undefined")PromptView.setPageView("loginTip",{target:this,text:"Password minimal 4 karakter."});return;}'
+            'var ch=(typeof serverUtil!=="undefined"&&serverUtil.getChannel)?serverUtil.getChannel():"108";'
+            'return {accId:acc,pwd:pwd,channel:ch,lv:1};'
+            '};'
+            '}'
+            '}catch(e){}})();\n'
         )
         js_text += hook
 
@@ -387,6 +411,32 @@ def patch_and_sign_apk():
             "manifest": f"{TARGET_HTTP}/gamedata/manifest.json"
         }, indent=2).encode("utf-8") + b"\n"
 
+        loader_adapter_bytes = (
+            "// Loader adapter: hanya pakai salinan OTA jika sudah mengarah ke nh.digislams.my.id;\n"
+            "// cegah cache lama heroeslegends.web.id di emulator menimpa endpoint server!\n"
+            "(function NH_ADAPTER_LOADER() {\n"
+            "    function say(m) { try { if (typeof log === 'function') log('NH_ADAPTER_LOADER ' + m); } catch (e) { } }\n"
+            "    var used = false;\n"
+            "    try {\n"
+            "        var fu = cc.FileUtils.getInstance(), root = String(fu.getWritablePath());\n"
+            "        if (root.charAt(root.length - 1) !== '/') root += '/';\n"
+            "        var path = root + 'nh-ota/releases/1.0.0/UI/backend-adapter.js';\n"
+            "        if (fu.isFileExist(path)) {\n"
+            "            var txt = String(fu.getStringFromFile(path) || '');\n"
+            f"            if (txt.indexOf('{TARGET_DOMAIN}') !== -1 && txt.indexOf('__nhAuthPreserveCase') !== -1) {{\n"
+            "                say('pakai salinan unduhan valid nh.digislams.my.id');\n"
+            "                require(path);\n"
+            "                used = true;\n"
+            "            } else {\n"
+            "                say('abaikan cache OTA lama, pakai adapter APK terbaru');\n"
+            "            }\n"
+            "        } else say('salinan unduhan tidak ada, pakai bawaan APK');\n"
+            "    } catch (e) { say('GAGAL salinan unduhan: ' + e); }\n"
+            "    if (!used) require('UI/backend-adapter.apk.js');\n"
+            "})();\n"
+        ).encode("utf-8")
+        check_js_syntax(loader_adapter_bytes, "assets/UI/backend-adapter.js")
+
         embedded_tables = 0
         with zipfile.ZipFile(unsigned_apk, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as zout:
             for item in zin.infolist():
@@ -405,6 +455,8 @@ def patch_and_sign_apk():
                     raw = version_bytes
                 elif fn == "assets/nh_data_config.json":
                     raw = nh_data_cfg_bytes
+                elif fn == "assets/UI/backend-adapter.js":
+                    raw = loader_adapter_bytes
                 elif fn == "assets/UI/backend-adapter.apk.js":
                     raw = ba_apk_bytes
                 elif fn == "assets/UI/tables/backend-adapter.js":

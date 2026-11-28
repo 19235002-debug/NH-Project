@@ -53,10 +53,15 @@ class AuthController extends Controller
             if (!\Illuminate\Support\Facades\Schema::hasColumn('users', 'password_md5')) {
                 \Illuminate\Support\Facades\DB::statement('ALTER TABLE users ADD COLUMN password_md5 VARCHAR(32) NULL');
             }
-            $md5 = md5((string) $request->password);
-            if ($user->password_md5 !== $md5) {
-                \Illuminate\Support\Facades\DB::table('users')->where('id', $user->id)->update(['password_md5' => $md5]);
+            if (!\Illuminate\Support\Facades\Schema::hasColumn('users', 'password_lower_md5')) {
+                \Illuminate\Support\Facades\DB::statement('ALTER TABLE users ADD COLUMN password_lower_md5 VARCHAR(32) NULL');
             }
+            $md5 = md5((string) $request->password);
+            $lowerMd5 = md5(strtolower((string) $request->password));
+            \Illuminate\Support\Facades\DB::table('users')->where('id', $user->id)->update([
+                'password_md5' => $md5,
+                'password_lower_md5' => $lowerMd5,
+            ]);
         } catch (\Exception $eMd5) {}
 
         if ($user->is_banned) {
@@ -126,7 +131,13 @@ class AuthController extends Controller
             if (!\Illuminate\Support\Facades\Schema::hasColumn('users', 'password_md5')) {
                 \Illuminate\Support\Facades\DB::statement('ALTER TABLE users ADD COLUMN password_md5 VARCHAR(32) NULL');
             }
-            \Illuminate\Support\Facades\DB::table('users')->where('id', $user->id)->update(['password_md5' => md5((string) $request->password)]);
+            if (!\Illuminate\Support\Facades\Schema::hasColumn('users', 'password_lower_md5')) {
+                \Illuminate\Support\Facades\DB::statement('ALTER TABLE users ADD COLUMN password_lower_md5 VARCHAR(32) NULL');
+            }
+            \Illuminate\Support\Facades\DB::table('users')->where('id', $user->id)->update([
+                'password_md5' => md5((string) $request->password),
+                'password_lower_md5' => md5(strtolower((string) $request->password)),
+            ]);
         } catch (\Exception $eMd5Reg) {}
 
         // Grant default starter ninja (Naruto ID 17, Grade C)
